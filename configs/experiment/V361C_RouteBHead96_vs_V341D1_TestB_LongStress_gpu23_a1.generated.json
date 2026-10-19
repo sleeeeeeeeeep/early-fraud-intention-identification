@@ -1,0 +1,169 @@
+{
+  "policy": {
+    "test_b_report_only": true,
+    "long_stress_report_only": true,
+    "not_for_model_or_threshold_selection": true
+  },
+  "evaluation": {
+    "checkpoint_path": "runs/r_260727_042528_V341D1_Policy6500_MegatronBERT_DataCausal_DevOnly_s202_auto_a1/subruns/seed-202/best_model/pytorch_model.bin",
+    "longdoc_checkpoint_path": "runs/r_260911_204737_V361B_routeB_b320_4way_a1/subruns/b320_head96/best_model.pt",
+    "inference_script": "scripts/inference/evaluate_saved_ce_checkpoint.py",
+    "core_inference_script": "scripts/inference/run_ce_supervised_13class_external_eval.py"
+  },
+  "runner": {
+    "entry": "scripts/cascade/run_v361_final_eval_suite_entry.py",
+    "conda_env": "korean",
+    "offline": true,
+    "progress_contract": "standard_progress.v1",
+    "success_file": "metrics.json",
+    "flags": [],
+    "args": {}
+  },
+  "execution": {
+    "resume": false,
+    "skip_completed": false,
+    "fail_fast": true,
+    "history_poll_seconds": 30,
+    "max_parallel": 2
+  },
+  "output": {
+    "subrun_output": "@subrun",
+    "success_file": "metrics.json",
+    "history_required": false
+  },
+  "model": {
+    "architecture": "v361_longdoc_gated_attention",
+    "baseline_architecture": "ce_dual_head",
+    "baseline_max_length": 256,
+    "baseline_eval_batch_size": 16,
+    "official_subcategory_loss_weight": 0.2,
+    "v361_inference_script": "src/v361/inference/run_longdoc_inference.py",
+    "v361_chunker_module": "src/v361/data/longdoc_chunker.py",
+    "v361_collator_module": "src/v361/data/longdoc_collator.py",
+    "v361_role_markers_module": "src/v361/data/role_markers.py",
+    "v361_shared_chunk_encoder_module": "src/v361/models/shared_chunk_encoder.py",
+    "v361_longdoc_classifier_module": "src/v361/models/longdoc_multitask_classifier.py",
+    "v361_gated_aggregator_module": "src/v361/models/gated_attention_aggregator.py",
+    "v361_hierarchical_aggregator_module": "src/v361/models/hierarchical_transformer_aggregator.py",
+    "v361_evidence_pooling_module": "src/v361/models/evidence_pooling.py",
+    "v361_fixed_aggregator_module": "src/v361/models/fixed_logit_aggregator.py",
+    "v361_losses_module": "src/v361/training/longdoc_losses.py",
+    "v361_metrics_module": "src/v361/training/longdoc_metrics.py",
+    "v361_sampler_module": "src/v361/training/longdoc_sampler.py",
+    "v361_official_subcategories_module": "src/v361/scripts/inference/official_subcategories.py",
+    "v361_data_package_init": "src/v361/data/__init__.py",
+    "v361_models_package_init": "src/v361/models/__init__.py",
+    "v361_training_package_init": "src/v361/training/__init__.py",
+    "input_mode": "head_context_enhanced_chunks",
+    "chunk_length": 320,
+    "overlap": 64,
+    "head_context_length": 96,
+    "encoder_micro_batch_size": 12,
+    "eval_batch_size": 2,
+    "evidence_components": "attention,top1,top2,last,mean",
+    "model": "models/IDEA-CCNL-Erlangshen-MegatronBert-1.3B",
+    "asset_mode": "project"
+  },
+  "schema_version": "experiment_spec.v2",
+  "name": "V361C_RouteBHead96_vs_V341D1_TestB_LongStress_gpu23_a1",
+  "display_name": "V361-C Route-B head96 versus V341-D1 on Test-B and Long-Stress",
+  "summary": "Inference-only comparison of frozen Route-B head96 and the original 256-token truncation baseline on Test-B 1580 and Long-Stress 120.",
+  "tags": [
+    "V361",
+    "Route-B",
+    "head96",
+    "baseline-256",
+    "Test-B",
+    "Long-Stress",
+    "inference-only",
+    "frozen-checkpoints",
+    "report-only",
+    "parallel-comparison"
+  ],
+  "data": {
+    "eval_csvs": {
+      "fraud12k_eval": "data/processed/v311_auditclosed6500_deva1733_testb1580_20260721/test_b_auditclosed_1580.csv"
+    },
+    "long_dev_jsonl": "data/processed/v361_longdoc_text_route_20260824/long_stress_v361_120.jsonl"
+  },
+  "protocol": {
+    "id": "text.v361.routeB-head96-final-eval.v1",
+    "operation": "diagnostic"
+  },
+  "subruns": {
+    "naming": [
+      "name",
+      "kind"
+    ],
+    "sweep_args": [
+      "name",
+      "kind"
+    ],
+    "matrix": [
+      {
+        "name": "route_b_head96",
+        "kind": "route_b_head96",
+        "gpu": "2"
+      },
+      {
+        "name": "baseline_256",
+        "kind": "baseline_256",
+        "gpu": "3"
+      }
+    ],
+    "gpu_field": "gpu"
+  },
+  "input_lock": {
+    "schema_version": "experiment_input_lock.v1",
+    "dataset_id": "v361_testb1580_longstress120",
+    "source_name": "V361_TESTB1580_LONGSTRESS120_FINAL_REPORT_20260912",
+    "dataset_hashes": {
+      "test_csv": "0f764ffd98b59c94c430d0d5b77b4d09111d09dfb501f15111a0aa5aaddf171e",
+      "long_dev_jsonl": "f52e147b458055e5bf6622c00855ea1ed677305057e69de23d5d696717158b55"
+    },
+    "resolved_data_sha256": "262068494f29d145f11fa865d42ad0880494a1245957fbc1fea354cb13fbadcf"
+  },
+  "resolution_lock": {
+    "schema_version": "experiment_resolution_lock.v1",
+    "intent": "configs/intents/V361C_RouteBHead96_vs_V341D1_TestB_LongStress_gpu23_a1.intent.json",
+    "intent_sha256": "1af99865df55418284721f5bffb2c9b9792fb44efc9f64ae98a6ac46f30b6d86",
+    "operation": "diagnostic",
+    "protocol_id": "text.v361.routeB-head96-final-eval.v1",
+    "protocol_entry_sha256": "e0ca5396ede8b4385d47e13df318ddd72ba9b52ba3df03201ba136fd3bc5415f",
+    "protocol_source": "text_model/configs/profiles/text_v361_routeB_head96_final_eval.v1.json",
+    "protocol_source_sha256": "404f9d0b667227c9940e95803a1ea126e46ea7152cf957fd38c36a026e4dc970",
+    "registry": "shared/configs/experiment_registry.json",
+    "registry_sha256": "c6676f28ce46561ea653ed201f2e78505e6e9f26286680caae9bd978359e77c4",
+    "dataset_id": "v361_testb1580_longstress120",
+    "dataset_entry_sha256": "6e1e1150436f26f583d0a5f6e6eb10508ede924f9c1c25037e437b0aca3951ee",
+    "model_id": "erlangshen_megatronbert_1_3b",
+    "model_entry_sha256": "eabb1399f057fd4d57290a3948bd26c0a8fce22b7a3ce3b4400ff8a02b534b3c",
+    "resolved_data_sha256": "262068494f29d145f11fa865d42ad0880494a1245957fbc1fea354cb13fbadcf",
+    "resolved_model_path": "models/IDEA-CCNL-Erlangshen-MegatronBert-1.3B",
+    "subrun_matrix": [
+      {
+        "name": "route_b_head96",
+        "kind": "route_b_head96",
+        "gpu": "2"
+      },
+      {
+        "name": "baseline_256",
+        "kind": "baseline_256",
+        "gpu": "3"
+      }
+    ],
+    "gpu_assignment": [
+      {
+        "name": "route_b_head96",
+        "kind": "route_b_head96",
+        "gpu": "2"
+      },
+      {
+        "name": "baseline_256",
+        "kind": "baseline_256",
+        "gpu": "3"
+      }
+    ],
+    "resolved_spec_sha256": "3b94985a4ceca5dd434d027e299470e4ac9ff39266d746046f60ab86b0df20bb"
+  }
+}

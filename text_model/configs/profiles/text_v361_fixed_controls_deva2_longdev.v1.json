@@ -1,0 +1,134 @@
+{
+  "schema_version": "experiment_profile.v1",
+  "id": "text.v361.fixed-controls-deva2-longdev.v1",
+  "route": "text",
+  "operation": "diagnostic",
+  "dataset": "v361_phase1_deva2_longdev",
+  "resolved_output_dir": "text_model/configs/experiments",
+  "tags": [
+    "V361",
+    "V341-D1-frozen",
+    "inference-only",
+    "sliding-window",
+    "fixed-controls",
+    "Dev-A2",
+    "Long-Dev",
+    "no-OOF",
+    "Test-B-frozen"
+  ],
+  "constraints": {
+    "selection_path": "policy.phase1_controls_only",
+    "selection_value": true,
+    "max_seeds": 1,
+    "allowed_override_prefixes": [],
+    "forbidden_override_paths": ["data", "model", "checkpoint", "evaluation"]
+  },
+  "spec": {
+    "model": {
+      "architecture": "v361_fixed_controls",
+      "baseline_architecture": "ce_dual_head",
+      "model": "models/IDEA-CCNL-Erlangshen-MegatronBert-1.3B",
+      "baseline_max_length": 256,
+      "baseline_eval_batch_size": 16,
+      "ce_neck_dropout": -1.0,
+      "ce_neck_gate_bias": -1.0,
+      "ce_mid_adapter_layer": -1,
+      "ce_mid_adapter_bottleneck": 256,
+      "official_subcategory_loss_weight": 0.2,
+      "v361_training_script": "src/v361/inference/train_longdoc.py",
+      "v361_inference_script": "src/v361/inference/run_longdoc_inference.py",
+      "v361_chunker_module": "src/v361/data/longdoc_chunker.py",
+      "v361_collator_module": "src/v361/data/longdoc_collator.py",
+      "v361_role_markers_module": "src/v361/data/role_markers.py",
+      "v361_shared_chunk_encoder_module": "src/v361/models/shared_chunk_encoder.py",
+      "v361_longdoc_classifier_module": "src/v361/models/longdoc_multitask_classifier.py",
+      "v361_gated_aggregator_module": "src/v361/models/gated_attention_aggregator.py",
+      "v361_hierarchical_aggregator_module": "src/v361/models/hierarchical_transformer_aggregator.py",
+      "v361_evidence_pooling_module": "src/v361/models/evidence_pooling.py",
+      "v361_fixed_aggregator_module": "src/v361/models/fixed_logit_aggregator.py",
+      "v361_losses_module": "src/v361/training/longdoc_losses.py",
+      "v361_metrics_module": "src/v361/training/longdoc_metrics.py",
+      "v361_sampler_module": "src/v361/training/longdoc_sampler.py",
+      "v361_official_subcategories_module": "src/v361/scripts/inference/official_subcategories.py",
+      "v361_data_package_init": "src/v361/data/__init__.py",
+      "v361_models_package_init": "src/v361/models/__init__.py",
+      "v361_training_package_init": "src/v361/training/__init__.py",
+      "input_mode": "plain_sliding_chunks",
+      "chunk_length": 320,
+      "overlap": 64,
+      "head_context_length": 64,
+      "encoder_micro_batch_size": 12,
+      "fixed_eval_batch_size": 2,
+      "evidence_components": "attention,top1,top2,last,mean"
+    },
+    "evaluation": {
+      "checkpoint_id": "v341d1_policy6500_megatronbert_seed202_best_epoch3",
+      "checkpoint_path": "runs/r_260727_042528_V341D1_Policy6500_MegatronBERT_DataCausal_DevOnly_s202_auto_a1/subruns/seed-202/best_model/pytorch_model.bin",
+      "inference_script": "scripts/inference/evaluate_saved_ce_checkpoint.py",
+      "core_inference_script": "scripts/inference/run_ce_supervised_13class_external_eval.py"
+    },
+    "phase1": {
+        "max_parallel": 2,
+      "jobs": [
+        {
+          "name": "baseline256_dev_a2",
+          "kind": "v341_baseline_256",
+          "data_key": "external_dev_a2_jsonl",
+          "eval_name": "dev_a2_1801",
+          "gpu": 0
+        },
+        {
+          "name": "baseline256_long_dev",
+          "kind": "v341_baseline_256",
+          "data_key": "long_dev_jsonl",
+          "eval_name": "long_dev_240",
+          "gpu": 1
+        },
+        {
+          "name": "fixed320_dev_a2",
+          "kind": "fixed_320_all",
+          "data_key": "external_dev_a2_jsonl",
+          "gpu": 0
+        },
+        {
+          "name": "fixed320_long_dev",
+          "kind": "fixed_320_all",
+          "data_key": "long_dev_jsonl",
+          "gpu": 1
+        }
+      ]
+    },
+    "runner": {
+      "entry": "scripts/cascade/run_v361_fixed_controls_suite_entry.py",
+      "conda_env": "korean",
+      "offline": true,
+      "progress_contract": "standard_progress.v1",
+      "success_file": "metrics.json",
+      "flags": [],
+      "args": {}
+    },
+    "execution": {
+      "resume": false,
+      "skip_completed": false,
+      "fail_fast": true,
+      "history_poll_seconds": 30,
+      "max_parallel": 4
+    },
+    "policy": {
+      "formal_run": true,
+      "no_training": true,
+      "phase1_controls_only": true,
+      "test_b_frozen": true,
+      "oof_used": false,
+      "history_required": false
+    },
+    "output": {
+      "subrun_output": "@subrun",
+      "success_file": "metrics.json",
+      "history_required": false,
+      "metrics": {
+        "phase1_runs": "runs"
+      }
+    }
+  }
+}

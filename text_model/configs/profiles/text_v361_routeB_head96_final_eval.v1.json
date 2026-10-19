@@ -1,0 +1,72 @@
+{
+  "schema_version": "experiment_profile.v1",
+  "id": "text.v361.routeB-head96-final-eval.v1",
+  "route": "text",
+  "operation": "diagnostic",
+  "dataset": "v361_testb1580_longstress120",
+  "resolved_output_dir": "text_model/configs/experiments",
+  "tags": ["V361", "Route-B", "head96", "baseline-256", "Test-B", "Long-Stress", "inference-only"],
+  "constraints": {
+    "selection_path": "policy.test_b_report_only",
+    "selection_value": true,
+    "max_subruns": 2,
+    "required_external_eval": ["fraud12k_eval"],
+    "allowed_override_prefixes": [],
+    "forbidden_override_paths": ["data", "model", "evaluation"]
+  },
+  "spec": {
+    "policy": {
+      "test_b_report_only": true,
+      "long_stress_report_only": true,
+      "not_for_model_or_threshold_selection": true
+    },
+    "evaluation": {
+      "checkpoint_path": "runs/r_260727_042528_V341D1_Policy6500_MegatronBERT_DataCausal_DevOnly_s202_auto_a1/subruns/seed-202/best_model/pytorch_model.bin",
+      "longdoc_checkpoint_path": "runs/r_260911_204737_V361B_routeB_b320_4way_a1/subruns/b320_head96/best_model.pt",
+      "inference_script": "scripts/inference/evaluate_saved_ce_checkpoint.py",
+      "core_inference_script": "scripts/inference/run_ce_supervised_13class_external_eval.py"
+    },
+    "runner": {
+      "entry": "scripts/cascade/run_v361_final_eval_suite_entry.py",
+      "conda_env": "korean",
+      "offline": true,
+      "progress_contract": "standard_progress.v1",
+      "success_file": "metrics.json",
+      "flags": [],
+      "args": {}
+    },
+    "execution": {"resume": false, "skip_completed": false, "fail_fast": true, "history_poll_seconds": 30},
+    "output": {"subrun_output": "@subrun", "success_file": "metrics.json", "history_required": false},
+    "model": {
+      "architecture": "v361_longdoc_gated_attention",
+      "baseline_architecture": "ce_dual_head",
+      "baseline_max_length": 256,
+      "baseline_eval_batch_size": 16,
+      "official_subcategory_loss_weight": 0.2,
+      "v361_inference_script": "src/v361/inference/run_longdoc_inference.py",
+      "v361_chunker_module": "src/v361/data/longdoc_chunker.py",
+      "v361_collator_module": "src/v361/data/longdoc_collator.py",
+      "v361_role_markers_module": "src/v361/data/role_markers.py",
+      "v361_shared_chunk_encoder_module": "src/v361/models/shared_chunk_encoder.py",
+      "v361_longdoc_classifier_module": "src/v361/models/longdoc_multitask_classifier.py",
+      "v361_gated_aggregator_module": "src/v361/models/gated_attention_aggregator.py",
+      "v361_hierarchical_aggregator_module": "src/v361/models/hierarchical_transformer_aggregator.py",
+      "v361_evidence_pooling_module": "src/v361/models/evidence_pooling.py",
+      "v361_fixed_aggregator_module": "src/v361/models/fixed_logit_aggregator.py",
+      "v361_losses_module": "src/v361/training/longdoc_losses.py",
+      "v361_metrics_module": "src/v361/training/longdoc_metrics.py",
+      "v361_sampler_module": "src/v361/training/longdoc_sampler.py",
+      "v361_official_subcategories_module": "src/v361/scripts/inference/official_subcategories.py",
+      "v361_data_package_init": "src/v361/data/__init__.py",
+      "v361_models_package_init": "src/v361/models/__init__.py",
+      "v361_training_package_init": "src/v361/training/__init__.py",
+      "input_mode": "head_context_enhanced_chunks",
+      "chunk_length": 320,
+      "overlap": 64,
+      "head_context_length": 96,
+      "encoder_micro_batch_size": 12,
+      "eval_batch_size": 2,
+      "evidence_components": "attention,top1,top2,last,mean"
+    }
+  }
+}

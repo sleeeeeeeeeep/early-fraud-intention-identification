@@ -1,0 +1,119 @@
+{
+  "schema_version": "experiment_profile.v1",
+  "id": "text.v361.routeB-gated-attention-train.v1",
+  "route": "text",
+  "operation": "train",
+  "dataset": "v361_longdoc_train6500_deva2_longdev",
+  "resolved_output_dir": "text_model/configs/experiments",
+  "tags": [
+    "V361",
+    "route-B",
+    "gated-attention",
+    "long-context",
+    "Dev-A2",
+    "Long-Dev",
+    "no-OOF",
+    "Test-B-frozen",
+    "Long-Stress-frozen"
+  ],
+  "constraints": {
+    "selection_path": "policy.dev_a2_no_regression",
+    "selection_value": true,
+    "max_seeds": 1,
+    "max_subruns": 4,
+    "allowed_override_prefixes": [],
+    "forbidden_override_paths": [
+      "data",
+      "evaluation",
+      "model.model"
+    ]
+  },
+  "spec": {
+    "policy": {
+      "dev_a2_no_regression": true
+    },
+    "evaluation": {
+      "checkpoint_id": "v341d1_policy6500_megatronbert_seed202_best_epoch3",
+      "checkpoint_path": "runs/r_260727_042528_V341D1_Policy6500_MegatronBERT_DataCausal_DevOnly_s202_auto_a1/subruns/seed-202/best_model/pytorch_model.bin"
+    },
+    "runner": {
+      "entry": "scripts/cascade/run_v361_longdoc_suite_entry.py",
+      "conda_env": "korean",
+      "offline": true,
+      "progress_contract": "standard_progress.v1",
+      "success_file": "metrics.json",
+      "flags": [],
+      "args": {}
+    },
+    "output": {
+      "subrun_output": "@subrun",
+      "success_file": "metrics.json",
+      "history_required": false,
+      "metrics": {
+        "dev_a2_acc13": "dev_a2.label_13_accuracy",
+        "dev_a2_macro_f1": "dev_a2.observed_label_macro_f1",
+        "long_dev_acc13": "long_dev.label_13_accuracy",
+        "long_dev_fraud_recall": "long_dev.fraud_recall"
+      }
+    },
+    "execution": {
+      "resume": false,
+      "skip_completed": false,
+      "fail_fast": false,
+      "history_poll_seconds": 60,
+      "max_parallel": 4
+    },
+    "model": {
+      "architecture": "v361_longdoc_gated_attention",
+      "route": "B",
+      "model": "models/IDEA-CCNL-Erlangshen-MegatronBert-1.3B",
+      "v361_training_script": "src/v361/inference/train_longdoc.py",
+      "v361_inference_script": "src/v361/inference/run_longdoc_inference.py",
+      "v361_chunker_module": "src/v361/data/longdoc_chunker.py",
+      "v361_collator_module": "src/v361/data/longdoc_collator.py",
+      "v361_role_markers_module": "src/v361/data/role_markers.py",
+      "v361_shared_chunk_encoder_module": "src/v361/models/shared_chunk_encoder.py",
+      "v361_longdoc_classifier_module": "src/v361/models/longdoc_multitask_classifier.py",
+      "v361_gated_aggregator_module": "src/v361/models/gated_attention_aggregator.py",
+      "v361_hierarchical_aggregator_module": "src/v361/models/hierarchical_transformer_aggregator.py",
+      "v361_evidence_pooling_module": "src/v361/models/evidence_pooling.py",
+      "v361_fixed_aggregator_module": "src/v361/models/fixed_logit_aggregator.py",
+      "v361_losses_module": "src/v361/training/longdoc_losses.py",
+      "v361_metrics_module": "src/v361/training/longdoc_metrics.py",
+      "v361_sampler_module": "src/v361/training/longdoc_sampler.py",
+      "v361_official_subcategories_module": "src/v361/scripts/inference/official_subcategories.py",
+      "v361_data_package_init": "src/v361/data/__init__.py",
+      "v361_models_package_init": "src/v361/models/__init__.py",
+      "v361_training_package_init": "src/v361/training/__init__.py",
+      "input_mode": "plain_sliding_chunks",
+      "chunk_length": 320,
+      "overlap": 64,
+      "head_context_length": 64,
+      "diagnostic_max_chunks": 12,
+      "encoder_micro_batch_size": 12,
+      "batch_size": 1,
+      "eval_batch_size": 2,
+      "epochs": 6,
+      "patience": 2,
+      "gradient_accumulation_steps": 8,
+      "encoder_learning_rate": 5e-6,
+      "new_learning_rate": 5e-5,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.05,
+      "projection_dim": 512,
+      "fusion_hidden": 512,
+      "document_layers": 2,
+      "document_heads": 8,
+      "document_intermediate": 2048,
+      "evidence_components": "attention,top1,top2,last,mean",
+      "freeze_backbone_epochs": 1,
+      "top_layer_epochs": 2,
+      "top_layers": 6,
+      "long_exposure": 0.21,
+      "mil_weight": 0.2,
+      "window_evidence_weight": 0.1,
+      "amp": true,
+      "save_every_epoch": true
+    }
+  }
+}

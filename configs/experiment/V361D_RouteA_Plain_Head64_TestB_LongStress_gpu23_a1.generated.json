@@ -1,0 +1,182 @@
+{
+  "policy": {
+    "test_b_report_only": true,
+    "long_stress_report_only": true,
+    "not_for_model_or_threshold_selection": true
+  },
+  "evaluation": {
+    "checkpoint_path": "runs/r_260727_042528_V341D1_Policy6500_MegatronBERT_DataCausal_DevOnly_s202_auto_a1/subruns/seed-202/best_model/pytorch_model.bin",
+    "longdoc_checkpoint_paths": {
+      "a320_plain": "runs/r_260912_014635_V361A_routeA_a320_4way_a1/subruns/a320_plain/best_model.pt",
+      "a320_head64": "runs/r_260912_014635_V361A_routeA_a320_4way_a1/subruns/a320_head64/best_model.pt"
+    }
+  },
+  "runner": {
+    "entry": "scripts/cascade/run_v361_final_eval_suite_entry.py",
+    "conda_env": "korean",
+    "offline": true,
+    "progress_contract": "standard_progress.v1",
+    "success_file": "metrics.json",
+    "flags": [],
+    "args": {}
+  },
+  "execution": {
+    "resume": false,
+    "skip_completed": false,
+    "fail_fast": true,
+    "history_poll_seconds": 30,
+    "max_parallel": 2
+  },
+  "output": {
+    "subrun_output": "@subrun",
+    "success_file": "metrics.json",
+    "history_required": false
+  },
+  "model": {
+    "architecture": "v361_longdoc_hierarchical_transformer",
+    "v361_inference_script": "src/v361/inference/run_longdoc_inference.py",
+    "v361_chunker_module": "src/v361/data/longdoc_chunker.py",
+    "v361_collator_module": "src/v361/data/longdoc_collator.py",
+    "v361_role_markers_module": "src/v361/data/role_markers.py",
+    "v361_shared_chunk_encoder_module": "src/v361/models/shared_chunk_encoder.py",
+    "v361_longdoc_classifier_module": "src/v361/models/longdoc_multitask_classifier.py",
+    "v361_gated_aggregator_module": "src/v361/models/gated_attention_aggregator.py",
+    "v361_hierarchical_aggregator_module": "src/v361/models/hierarchical_transformer_aggregator.py",
+    "v361_evidence_pooling_module": "src/v361/models/evidence_pooling.py",
+    "v361_fixed_aggregator_module": "src/v361/models/fixed_logit_aggregator.py",
+    "v361_losses_module": "src/v361/training/longdoc_losses.py",
+    "v361_metrics_module": "src/v361/training/longdoc_metrics.py",
+    "v361_sampler_module": "src/v361/training/longdoc_sampler.py",
+    "v361_official_subcategories_module": "src/v361/scripts/inference/official_subcategories.py",
+    "v361_data_package_init": "src/v361/data/__init__.py",
+    "v361_models_package_init": "src/v361/models/__init__.py",
+    "v361_training_package_init": "src/v361/training/__init__.py",
+    "input_mode": "plain_sliding_chunks",
+    "chunk_length": 320,
+    "overlap": 64,
+    "head_context_length": 64,
+    "encoder_micro_batch_size": 8,
+    "eval_batch_size": 2,
+    "evidence_components": "attention,top1,top2,last,mean",
+    "model": "models/IDEA-CCNL-Erlangshen-MegatronBert-1.3B",
+    "asset_mode": "project"
+  },
+  "schema_version": "experiment_spec.v2",
+  "name": "V361D_RouteA_Plain_Head64_TestB_LongStress_gpu23_a1",
+  "display_name": "V361-D Route-A plain/head64 on Test-B and Long-Stress",
+  "summary": "Inference-only evaluation of frozen Route-A a320_plain and a320_head64 checkpoints on Test-B 1580 and Long-Stress 120.",
+  "tags": [
+    "V361",
+    "Route-A",
+    "a320-plain",
+    "a320-head64",
+    "Test-B",
+    "Long-Stress",
+    "inference-only",
+    "frozen-checkpoints",
+    "report-only",
+    "parallel-comparison"
+  ],
+  "data": {
+    "eval_csvs": {
+      "fraud12k_eval": "data/processed/v311_auditclosed6500_deva1733_testb1580_20260721/test_b_auditclosed_1580.csv"
+    },
+    "long_dev_jsonl": "data/processed/v361_longdoc_text_route_20260824/long_stress_v361_120.jsonl"
+  },
+  "protocol": {
+    "id": "text.v361.routeA-final-eval.v1",
+    "operation": "diagnostic"
+  },
+  "subruns": {
+    "naming": [
+      "name",
+      "kind",
+      "input_mode",
+      "head_context_length"
+    ],
+    "sweep_args": [
+      "name",
+      "kind",
+      "input_mode",
+      "head_context_length"
+    ],
+    "matrix": [
+      {
+        "name": "a320_plain",
+        "kind": "route_a",
+        "input_mode": "plain_sliding_chunks",
+        "head_context_length": 64,
+        "gpu": "2"
+      },
+      {
+        "name": "a320_head64",
+        "kind": "route_a",
+        "input_mode": "head_context_enhanced_chunks",
+        "head_context_length": 64,
+        "gpu": "3"
+      }
+    ],
+    "gpu_field": "gpu"
+  },
+  "input_lock": {
+    "schema_version": "experiment_input_lock.v1",
+    "dataset_id": "v361_testb1580_longstress120",
+    "source_name": "V361_TESTB1580_LONGSTRESS120_FINAL_REPORT_20260912",
+    "dataset_hashes": {
+      "test_csv": "0f764ffd98b59c94c430d0d5b77b4d09111d09dfb501f15111a0aa5aaddf171e",
+      "long_dev_jsonl": "f52e147b458055e5bf6622c00855ea1ed677305057e69de23d5d696717158b55"
+    },
+    "resolved_data_sha256": "262068494f29d145f11fa865d42ad0880494a1245957fbc1fea354cb13fbadcf"
+  },
+  "resolution_lock": {
+    "schema_version": "experiment_resolution_lock.v1",
+    "intent": "configs/intents/V361D_RouteA_Plain_Head64_TestB_LongStress_gpu23_a1.intent.json",
+    "intent_sha256": "7ebee5f60ffd73b4634be958a2ac8b8ac7fbaae4b094ee15b8b97a87fca68830",
+    "operation": "diagnostic",
+    "protocol_id": "text.v361.routeA-final-eval.v1",
+    "protocol_entry_sha256": "965e3ffc97368c5b9a88c7d618b6beaa3d8a58d76f0e9c2632405cd08ea61965",
+    "protocol_source": "text_model/configs/profiles/text_v361_routeA_final_eval.v1.json",
+    "protocol_source_sha256": "1e57b603f325ca5363b22caf9951f2db5226343d2133c2131f7b03676910f44d",
+    "registry": "shared/configs/experiment_registry.json",
+    "registry_sha256": "2cdabf6b1c1f0e35112a0309acc59ce42fa611a9e262061adaa668adaa1424dc",
+    "dataset_id": "v361_testb1580_longstress120",
+    "dataset_entry_sha256": "6e1e1150436f26f583d0a5f6e6eb10508ede924f9c1c25037e437b0aca3951ee",
+    "model_id": "erlangshen_megatronbert_1_3b",
+    "model_entry_sha256": "eabb1399f057fd4d57290a3948bd26c0a8fce22b7a3ce3b4400ff8a02b534b3c",
+    "resolved_data_sha256": "262068494f29d145f11fa865d42ad0880494a1245957fbc1fea354cb13fbadcf",
+    "resolved_model_path": "models/IDEA-CCNL-Erlangshen-MegatronBert-1.3B",
+    "subrun_matrix": [
+      {
+        "name": "a320_plain",
+        "kind": "route_a",
+        "input_mode": "plain_sliding_chunks",
+        "head_context_length": 64,
+        "gpu": "2"
+      },
+      {
+        "name": "a320_head64",
+        "kind": "route_a",
+        "input_mode": "head_context_enhanced_chunks",
+        "head_context_length": 64,
+        "gpu": "3"
+      }
+    ],
+    "gpu_assignment": [
+      {
+        "name": "a320_plain",
+        "kind": "route_a",
+        "input_mode": "plain_sliding_chunks",
+        "head_context_length": 64,
+        "gpu": "2"
+      },
+      {
+        "name": "a320_head64",
+        "kind": "route_a",
+        "input_mode": "head_context_enhanced_chunks",
+        "head_context_length": 64,
+        "gpu": "3"
+      }
+    ],
+    "resolved_spec_sha256": "75c921c4e01af3e91c9cd67e3ce8a9f956b490634e2755773fbfb832e14f2178"
+  }
+}

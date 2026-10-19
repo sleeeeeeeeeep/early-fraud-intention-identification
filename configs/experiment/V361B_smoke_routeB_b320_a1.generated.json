@@ -1,0 +1,211 @@
+{
+  "policy": {
+    "dev_a2_no_regression": true
+  },
+  "evaluation": {
+    "checkpoint_id": "v341d1_policy6500_megatronbert_seed202_best_epoch3",
+    "checkpoint_path": "runs/r_260727_042528_V341D1_Policy6500_MegatronBERT_DataCausal_DevOnly_s202_auto_a1/subruns/seed-202/best_model/pytorch_model.bin"
+  },
+  "runner": {
+    "entry": "scripts/cascade/run_v361_longdoc_suite_entry.py",
+    "conda_env": "korean",
+    "offline": true,
+    "progress_contract": "standard_progress.v1",
+    "success_file": "metrics.json",
+    "flags": [],
+    "args": {}
+  },
+  "output": {
+    "subrun_output": "@subrun",
+    "success_file": "metrics.json",
+    "history_required": false,
+    "metrics": {
+      "dev_a2_acc13": "dev_a2.label_13_accuracy",
+      "dev_a2_macro_f1": "dev_a2.observed_label_macro_f1",
+      "long_dev_acc13": "long_dev.label_13_accuracy",
+      "long_dev_fraud_recall": "long_dev.fraud_recall"
+    }
+  },
+  "execution": {
+    "resume": false,
+    "skip_completed": false,
+    "fail_fast": false,
+    "history_poll_seconds": 60,
+    "max_parallel": 1
+  },
+  "model": {
+    "architecture": "v361_longdoc_gated_attention",
+    "route": "B",
+    "model": "models/IDEA-CCNL-Erlangshen-MegatronBert-1.3B",
+    "v361_training_script": "src/v361/inference/train_longdoc.py",
+    "v361_inference_script": "src/v361/inference/run_longdoc_inference.py",
+    "v361_chunker_module": "src/v361/data/longdoc_chunker.py",
+    "v361_collator_module": "src/v361/data/longdoc_collator.py",
+    "v361_role_markers_module": "src/v361/data/role_markers.py",
+    "v361_shared_chunk_encoder_module": "src/v361/models/shared_chunk_encoder.py",
+    "v361_longdoc_classifier_module": "src/v361/models/longdoc_multitask_classifier.py",
+    "v361_gated_aggregator_module": "src/v361/models/gated_attention_aggregator.py",
+    "v361_hierarchical_aggregator_module": "src/v361/models/hierarchical_transformer_aggregator.py",
+    "v361_evidence_pooling_module": "src/v361/models/evidence_pooling.py",
+    "v361_fixed_aggregator_module": "src/v361/models/fixed_logit_aggregator.py",
+    "v361_losses_module": "src/v361/training/longdoc_losses.py",
+    "v361_metrics_module": "src/v361/training/longdoc_metrics.py",
+    "v361_sampler_module": "src/v361/training/longdoc_sampler.py",
+    "v361_official_subcategories_module": "src/v361/scripts/inference/official_subcategories.py",
+    "v361_data_package_init": "src/v361/data/__init__.py",
+    "v361_models_package_init": "src/v361/models/__init__.py",
+    "v361_training_package_init": "src/v361/training/__init__.py",
+    "input_mode": "plain_sliding_chunks",
+    "chunk_length": 320,
+    "overlap": 64,
+    "head_context_length": 64,
+    "diagnostic_max_chunks": 12,
+    "encoder_micro_batch_size": 12,
+    "batch_size": 1,
+    "eval_batch_size": 2,
+    "epochs": 6,
+    "patience": 2,
+    "gradient_accumulation_steps": 8,
+    "encoder_learning_rate": 5e-06,
+    "new_learning_rate": 5e-05,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.05,
+    "projection_dim": 512,
+    "fusion_hidden": 512,
+    "document_layers": 2,
+    "document_heads": 8,
+    "document_intermediate": 2048,
+    "evidence_components": "attention,top1,top2,last,mean",
+    "freeze_backbone_epochs": 1,
+    "top_layer_epochs": 2,
+    "top_layers": 6,
+    "long_exposure": 0.21,
+    "mil_weight": 0.2,
+    "window_evidence_weight": 0.1,
+    "amp": true,
+    "save_every_epoch": true,
+    "asset_mode": "project"
+  },
+  "schema_version": "experiment_spec.v2",
+  "name": "V361B_smoke_routeB_b320_a1",
+  "display_name": "V361 route-B gated attention smoke",
+  "summary": "Route-B gated-attention training smoke on 160 mixed short/long documents: verifies chunking, multi-window aggregation, MIL loss, AMP and checkpoint writing before the full two-GPU sweep.",
+  "tags": [
+    "V361",
+    "route-B",
+    "gated-attention",
+    "long-context",
+    "Dev-A2",
+    "Long-Dev",
+    "no-OOF",
+    "Test-B-frozen",
+    "Long-Stress-frozen",
+    "smoke"
+  ],
+  "data": {
+    "train_jsonl": "data/processed/v361_longdoc_text_route_20260824/smoke_train_192.jsonl",
+    "external_dev_a2_jsonl": "data/processed/v346_deva2_frozen_20260728/dev_a2_frozen_1801.jsonl",
+    "long_dev_jsonl": "data/processed/v361_longdoc_text_route_20260824/long_dev_v361_240.jsonl"
+  },
+  "protocol": {
+    "id": "text.v361.routeB-gated-attention-train.v1",
+    "operation": "train"
+  },
+  "subruns": {
+    "naming": [
+      "name",
+      "seed",
+      "epochs",
+      "patience",
+      "freeze_backbone_epochs",
+      "top_layer_epochs",
+      "dev_limit",
+      "long_dev_limit",
+      "save_every_epoch"
+    ],
+    "sweep_args": [
+      "name",
+      "seed",
+      "epochs",
+      "patience",
+      "freeze_backbone_epochs",
+      "top_layer_epochs",
+      "dev_limit",
+      "long_dev_limit",
+      "save_every_epoch"
+    ],
+    "matrix": [
+      {
+        "name": "smoke_b320_plain",
+        "seed": 202,
+        "epochs": 1,
+        "patience": 1,
+        "freeze_backbone_epochs": 0,
+        "top_layer_epochs": 1,
+        "dev_limit": 200,
+        "long_dev_limit": 40,
+        "save_every_epoch": false,
+        "gpu": "0"
+      }
+    ],
+    "gpu_field": "gpu"
+  },
+  "input_lock": {
+    "schema_version": "experiment_input_lock.v1",
+    "dataset_id": "v361_routeB_smoke_deva2_longdev",
+    "source_name": "V361_ROUTEB_SMOKE_160_DEVA2_1801_LONGDEV240_20260911",
+    "dataset_hashes": {
+      "train_jsonl": "94e284ef730c1c57cdbdb49e11487f736b113306e4fdbc0606cc1a41217f6137",
+      "external_dev_a2_jsonl": "c8e42fcdf82dc3dab785c105ffdf3034783db070ecca0ff38775c69924fcc99b",
+      "long_dev_jsonl": "771b32e5898f5aec2d7629dd499a771b845f2d3d63468ea397a21fe09f3da6bd"
+    },
+    "resolved_data_sha256": "f7cdcde7f11af1c5f860ef9c0a7690730ca84fe6e3ddc94d9e6b6eab6f8435c7"
+  },
+  "resolution_lock": {
+    "schema_version": "experiment_resolution_lock.v1",
+    "intent": "configs/intents/V361B_smoke_routeB_b320.intent.json",
+    "intent_sha256": "b00835243bd5b375c0407b8dbd3754f6e51fd3d8b273fd3edeaa02469214d32f",
+    "operation": "train",
+    "protocol_id": "text.v361.routeB-gated-attention-train.v1",
+    "protocol_entry_sha256": "7d82c415b2c38eaf3dec8f9a3616b863af5f3dab6b918341b498e4ff1c2101a1",
+    "protocol_source": "text_model/configs/profiles/text_v361_routeB_gated_attention_train.v1.json",
+    "protocol_source_sha256": "b1c96482eacb11d015c417f2a11d523f57a5a47d140237c4f8c5f39a1a1b9b8f",
+    "registry": "shared/configs/experiment_registry.json",
+    "registry_sha256": "16d8362cd848f4df8625f0ec92571b1b91bba449ba7f7001d74ee5366c5118f6",
+    "dataset_id": "v361_routeB_smoke_deva2_longdev",
+    "dataset_entry_sha256": "55590fd4a4caeb8913bb0644569241dbb443c0b40d61b9479aa58267dffa9a62",
+    "model_id": "erlangshen_megatronbert_1_3b",
+    "model_entry_sha256": "eabb1399f057fd4d57290a3948bd26c0a8fce22b7a3ce3b4400ff8a02b534b3c",
+    "resolved_data_sha256": "f7cdcde7f11af1c5f860ef9c0a7690730ca84fe6e3ddc94d9e6b6eab6f8435c7",
+    "resolved_model_path": "models/IDEA-CCNL-Erlangshen-MegatronBert-1.3B",
+    "subrun_matrix": [
+      {
+        "name": "smoke_b320_plain",
+        "seed": 202,
+        "epochs": 1,
+        "patience": 1,
+        "freeze_backbone_epochs": 0,
+        "top_layer_epochs": 1,
+        "dev_limit": 200,
+        "long_dev_limit": 40,
+        "save_every_epoch": false,
+        "gpu": "0"
+      }
+    ],
+    "gpu_assignment": [
+      {
+        "name": "smoke_b320_plain",
+        "seed": 202,
+        "epochs": 1,
+        "patience": 1,
+        "freeze_backbone_epochs": 0,
+        "top_layer_epochs": 1,
+        "dev_limit": 200,
+        "long_dev_limit": 40,
+        "save_every_epoch": false,
+        "gpu": "0"
+      }
+    ],
+    "resolved_spec_sha256": "37f25b782e4fe091421faaecb6a425d18fdfd614ff8057697a22cc9a191d34da"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": "experiment_intent.v1",
+  "name": "V361B_routeB_b320_head48_rerun_gpu0_a1",
+  "display_name": "V361 route-B head-context 48 rerun",
+  "summary": "Isolated rerun of the failed head-context 48 candidate on free GPU 0 with the original micro-batch and training settings.",
+  "route": "text",
+  "operation": "train",
+  "protocol": "text.v361.routeB-gated-attention-train.v1",
+  "registry": "shared/configs/experiment_registry.json",
+  "dataset": "v361_longdoc_train6500_deva2_longdev",
+  "model": "erlangshen_megatronbert_1_3b",
+  "checkpoint": "v341d1_policy6500_megatronbert_seed202_best_epoch3",
+  "resources": {
+    "gpus": [0],
+    "max_parallel": 1
+  },
+  "matrix": [
+    {
+      "name": "b320_head48",
+      "seed": 202,
+      "input_mode": "head_context_enhanced_chunks",
+      "head_context_length": 48
+    }
+  ],
+  "tags": [
+    "route-B",
+    "chunk320",
+    "head48",
+    "rerun"
+  ],
+  "notes": [
+    "Rerun uses the original encoder micro-batch size 12 on an otherwise free GPU for direct comparability."
+  ]
+}

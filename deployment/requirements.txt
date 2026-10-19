@@ -1,0 +1,9 @@
+torch==2.7.1
+transformers==5.19.0
+gradio==5.50.0
+accelerate>=1.0,<2
+huggingface-hub>=1.5,<2
+numpy>=1.26,<3
+scipy>=1.11,<2
+soundfile>=0.12,<1
+librosa>=0.10,<1

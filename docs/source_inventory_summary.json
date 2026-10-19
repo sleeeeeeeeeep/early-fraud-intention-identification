@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-19",
+  "training_files": 700,
+  "training_regular_bytes": 32589227646,
+  "deployment_zip_bytes": 4659353789,
+  "by_top_level": {
+    "CLEANUP_MANIFEST.md": {
+      "files": 1,
+      "bytes": 2086,
+      "symlinks": 0
+    },
+    "MISSING_RESOURCES.md": {
+      "files": 1,
+      "bytes": 925,
+      "symlinks": 0
+    },
+    "SERVER_DEPLOYMENT.md": {
+      "files": 1,
+      "bytes": 2466,
+      "symlinks": 0
+    },
+    "README.md": {
+      "files": 1,
+      "bytes": 4171,
+      "symlinks": 0
+    },
+    ".gitignore": {
+      "files": 1,
+      "bytes": 192,
+      "symlinks": 0
+    },
+    "runs": {
+      "files": 332,
+      "bytes": 30415521748,
+      "symlinks": 3
+    },
+    "configs": {
+      "files": 16,
+      "bytes": 69709,
+      "symlinks": 0
+    },
+    "reports": {
+      "files": 4,
+      "bytes": 12929,
+      "symlinks": 0
+    },
+    "text_model": {
+      "files": 123,
+      "bytes": 1632993,
+      "symlinks": 0
+    },
+    "shared": {
+      "files": 4,
+      "bytes": 180139,
+      "symlinks": 0
+    },
+    "models": {
+      "files": 2,
+      "bytes": 1591,
+      "symlinks": 1
+    },
+    "data": {
+      "files": 214,
+      "bytes": 2171798697,
+      "symlinks": 0
+    }
+  }
+}

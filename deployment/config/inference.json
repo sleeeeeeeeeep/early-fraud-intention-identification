@@ -1,0 +1,23 @@
+{
+  "model_version": "telefraud-longtext-m1-e1b-20261014",
+  "task": "binary_longtext_fraud_detection",
+  "labels": {"0": "normal", "1": "fraud"},
+  "score": "p_binary[1]",
+  "threshold": 0.5,
+  "route": "B",
+  "input_mode": "head_context_enhanced_chunks",
+  "chunk_length": 320,
+  "overlap": 64,
+  "head_context_length": 96,
+  "diagnostic_max_chunks": 12,
+  "hard_chunk_cap": null,
+  "evidence_components": ["attention", "top1", "top2", "last", "mean"],
+  "hard_last": true,
+  "precision": "float32",
+  "projection_dim": 512,
+  "fusion_hidden": 512,
+  "dropout": 0.1,
+  "weights": "models/m1_e1b/model_state.pt",
+  "encoder_config": "models/encoder_config",
+  "tokenizer": "models/tokenizer"
+}

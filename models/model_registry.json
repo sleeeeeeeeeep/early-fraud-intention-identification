@@ -1,0 +1,20 @@
+{
+  "schema_version": "telefraud.final_model_registry.v1",
+  "updated_date": "2026-10-19",
+  "server_project_root": ".",
+  "current_default": "m1_e1b",
+  "task": "binary_longtext_fraud_detection",
+  "fraud_score": "softmax(binary_logits)[1]",
+  "threshold": 0.5,
+  "local_mirror_note": "Weights remain on the server; this registry does not imply they are downloaded locally.",
+  "integrity_reference": "private_archive/telefraud_cleanup_backup_20261019/cleanup_receipt.json",
+  "models": [
+    {"id": "m0_v361", "role": "longtext_baseline_and_initialization", "weight": "runs/repro_v361b_b320_head96/best_model.pt"},
+    {"id": "m1_e1b", "role": "current_delivery", "weight": "runs/v362_e1b_binary_60prefix_40replay_s202_conservative/best_model.pt", "known_sha256": "0d4a6fdd08b3a371d1d29108a00fa5b683986a819532684f4c1965a8eb95e1ad"},
+    {"id": "e2a", "role": "comparison_candidate_not_promoted", "weight": "runs/v365_e2a_binary_te60_replay40_s202/best_model.pt"},
+    {"id": "e2b", "role": "fulltext_candidate_not_promoted", "weight": "runs/v365_e2b_boundary_balanced_s202/best_model.pt"},
+    {"id": "e2c", "role": "temporal_candidate_not_promoted", "weight": "runs/v365_e2c_k2_pair_s202/best_model.pt"},
+    {"id": "e2d_gate", "role": "temporal_gate_only_not_promoted", "weight": "runs/v365_e2d_temporal_gate_s202/temporal_gate.pt", "requires": "m1_e1b", "parameters": 193},
+    {"id": "legacy_e1b_rejected_20260920", "role": "legacy_rejected_not_current_delivery", "weight": "runs/legacy_v362_e1b_rejected_20260920/best_model.pt"}
+  ]
+}

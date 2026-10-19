@@ -1,0 +1,53 @@
+{
+  "schema_version": "experiment_intent.v1",
+  "name": "V361B_routeB_b320_4way_a1",
+  "display_name": "V361 route-B gated attention chunk320 input-mode sweep",
+  "summary": "Route-B gated-attention training on the 6500-row long-document mix with chunk320 overlap64, comparing plain sliding windows against head-context 48/64/96 on frozen Dev-A2 and Long-Dev with four GPUs.",
+  "route": "text",
+  "operation": "train",
+  "protocol": "text.v361.routeB-gated-attention-train.v1",
+  "registry": "shared/configs/experiment_registry.json",
+  "dataset": "v361_longdoc_train6500_deva2_longdev",
+  "model": "erlangshen_megatronbert_1_3b",
+  "checkpoint": "v341d1_policy6500_megatronbert_seed202_best_epoch3",
+  "resources": {
+    "gpus": [0, 1, 2, 3],
+    "max_parallel": 4
+  },
+  "matrix": [
+    {
+      "name": "b320_plain",
+      "seed": 202,
+      "input_mode": "plain_sliding_chunks",
+      "head_context_length": 64
+    },
+    {
+      "name": "b320_head48",
+      "seed": 202,
+      "input_mode": "head_context_enhanced_chunks",
+      "head_context_length": 48
+    },
+    {
+      "name": "b320_head64",
+      "seed": 202,
+      "input_mode": "head_context_enhanced_chunks",
+      "head_context_length": 64
+    },
+    {
+      "name": "b320_head96",
+      "seed": 202,
+      "input_mode": "head_context_enhanced_chunks",
+      "head_context_length": 96
+    }
+  ],
+  "tags": [
+    "route-B",
+    "chunk320",
+    "input-mode-sweep"
+  ],
+  "notes": [
+    "Four GPUs: one input-mode candidate runs on each GPU.",
+    "Model selection uses frozen Dev-A2 with a 0.3pp regression tolerance plus Long-Dev fraud recall.",
+    "Test-B and Long-Stress stay frozen."
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": "v365.e2d.preregistration.v1",
+  "experiment_id": "v365_e2d_temporal_gate_s202",
+  "created_at": "2026-10-14T16:05:00+08:00",
+  "status": "frozen_before_feature_inference_and_training",
+  "hypothesis": "An independent veto gate can reduce M1 two-hit premature and normal alarms while preserving effective recall and all fulltext outputs.",
+  "m1_checkpoint": "runs/v362_e1b_binary_60prefix_40replay_s202_conservative/best_model.pt",
+  "m1_sha256": "0d4a6fdd08b3a371d1d29108a00fa5b683986a819532684f4c1965a8eb95e1ad",
+  "score": "M1 p_binary[1]; gate only affects temporal alarms",
+  "threshold": 0.5,
+  "gate_threshold": 0.5,
+  "primary_alarm_policy": "p_prev>=0.5 AND p_current>=0.5 AND sigmoid(gate)>=0.5; k1 remains the M1 diagnostic policy",
+  "inference": {
+    "route": "B", "input_mode": "head_context_enhanced_chunks", "chunk_length": 320,
+    "overlap": 64, "head_context_length": 96, "max_chunks": 12,
+    "encoder_micro_batch_size": 12, "evidence_components": "attention,top1,top2,last,mean", "batch_size": 2
+  },
+  "pair_data": {
+    "source": "data/processed/v365_2000_final_20260923/data/v365_calls_train_final.jsonl",
+    "seed": 202,
+    "normal_rule": "up to 4 unique adjacent pairs per call: current turn 2 and final turn, plus 2 seeded random remaining turns",
+    "fraud_pre_rule": "up to 2 unique pairs with current<tE: current tE-1 prioritized then one seeded random remaining turn",
+    "fraud_post_rule": "up to 2 unique pairs with current>=tE: current max(2,tE) prioritized then final turn",
+    "pair_counts": {"normal_negative":2388,"fraud_pre_negative":1045,"fraud_post_positive":1200},
+    "pairs":4633, "unique_train_calls":1200, "unique_inference_prefixes":8258,
+    "ambiguous_used":0, "excluded_invalid_boundaries":0,
+    "weak_supervision_note": "normal call labels and tE boundary are projected mechanically; not independent blind prefix labels",
+    "future_in_features":false
+  },
+  "feature_names": ["previous_binary_margin","current_binary_margin","minimum_binary_margin","binary_margin_change","log_previous_token_length","log_current_token_length","log_current_turn","previous_chunk_count","current_chunk_count","chunk_count_change"],
+  "features": {
+    "binary_margin": "logit(clip(p_binary[1],1e-7,1-1e-7))",
+    "scaler": "Train-only group-weighted mean/std; std<1e-6 becomes1; z-score clipped to [-8,8]",
+    "forbidden": ["decision","scenario_tag","tE_turn","tA_turn","n_full_turns","future_length","future_text"],
+    "group_masses": {"normal_negative":0.25,"fraud_pre_negative":0.25,"fraud_post_positive":0.5},
+    "weight_rule": "group mass / scenarios in group / calls in scenario / pairs in call; random shuffle with mean-one sample-weighted BCE"
+  },
+  "gate_training": {
+    "seed":202,"epochs":20,"batch_size":64,"learning_rate":0.001,"weight_decay":0.0001,
+    "hidden_size":16,"initial_pass_probability":0.9,"gradient_clip_norm":1.0,"device":"cpu"
+  },
+  "gate_architecture": "Linear(10,16), Tanh, Linear(16,1), no dropout; torch seed202 initial first layer, last weight0 biaslog(9)",
+  "optimizer": "AdamW; all20 epochs, use final epoch only; no Dev checkpoint selection",
+  "validity": {
+    "expected_v365_dev_calls":200,"expected_v365_prefix_rows":4492,"expected_v361_longdev_rows":240,
+    "m1_fulltext_probability_delta_max":0.0,"m1_longdev_probability_delta_max":0.0,
+    "alarms_outside_m1_k2_max":0,"test_or_restricted_files_read_max":0,"scaler_scope":"train_only"
+  },
+  "gates": {
+    "noninferiority": {
+      "fulltext": {"early_hits_min":13,"explicit_hits_min":65,"fraud_hits_min":78,"normal_fp_max":6},
+      "temporal_k2": {"early_te_after_min":14,"all_te_after_min":79,"normal_ever_fp_max":11,"all_premature_max":57,"clean_effective_min":22,"explicit_before_ta_min":63,"all_delay_median_max":0.0,"all_delay_p75_max":1.0},
+      "longdev": {"fraud_hits_min":120,"normal_fp_max":2,"new_false_negative_max":0}
+    },
+    "improvement": {"temporal_k2": {"normal_ever_fp_max":10,"all_premature_max":56,"normal_fp_plus_premature_max":65,"clean_effective_min":23}}
+  },
+  "status_rules": {"invalid":"any validity failure","fail":"any noninferiority failure","hold":"noninferiority passes but any improvement failure","pass_for_freeze":"all pass; Test remains locked"},
+  "selection_policy": "one fixed run; no Dev selection of weight/threshold/epoch/features",
+  "test_policy": "never read or evaluate V365 Test/restricted labels",
+  "execution": {"gpu_for_frozen_m1":0,"timeout_hours":6,"monitor_every_seconds":30}
+}

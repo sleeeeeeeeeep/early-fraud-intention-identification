@@ -1,0 +1,3084 @@
+{
+  "schema_version": "experiment_registry.v2",
+  "datasets": {
+    "v309_text_6500": {
+      "route": "text",
+      "source_name": "V309_E3LEN_RESCUE_RARE218_LENFIX_6500",
+      "data": {
+        "train_jsonl": "data/processed/e3_length_controlled_v4_rare218_20260716/train_E3_length_controlled_rare218_lenfix_6500.jsonl",
+        "internal_val": {
+          "val_jsonl": "data/processed/internal_guard/D8R_selection_guard_val.jsonl"
+        },
+        "eval_csvs": {
+          "fraud12k_eval": "data/processed/remote_eval/fraud12k_eval/fraud12k_13class_eval.csv",
+          "THCHS": "data/processed/thchs30_concat_1min_20260618/metadata_label13.csv"
+        },
+        "external_audio_eval_config": "configs/external_audio_eval_datasets.json"
+      },
+      "hashes": {
+        "train_jsonl": "ea73899796cba5b33e966ef7bef2208aaf73bb609d605400994ea61443de37ce",
+        "val_jsonl": "5d3d434c4221bc9e9bcb45492b0b92ec84581102e3372ff3da533ca03c59b7d9"
+      }
+    },
+    "v309_auditclosed6500_deva1733_testb1580": {
+      "route": "text",
+      "source_name": "V309_AUDITCLOSED6500_DEVA1733_TESTB1580_20260721",
+      "data": {
+        "train_jsonl": "data/processed/v309_audit_closed_final_20260718/train_V309_audit_closed_final_6500.jsonl",
+        "internal_val": {
+          "val_jsonl": "data/processed/v311_auditclosed6500_deva1733_testb1580_20260721/dev_a_audit_keep_1733.jsonl"
+        },
+        "eval_csvs": {
+          "fraud12k_eval": "data/processed/v311_auditclosed6500_deva1733_testb1580_20260721/test_b_auditclosed_1580.csv",
+          "THCHS": "data/processed/thchs30_concat_1min_20260618/metadata_label13.csv"
+        },
+        "external_audio_eval_config": "configs/external_audio_eval_datasets.json"
+      },
+      "hashes": {
+        "train_jsonl": "580b2b5a17d8304c69215f8f1aa97e2e0c6d5abc49f4c2ca498ec00ba9651a60",
+        "val_jsonl": "9dc2151b785d9f9f750d259a00b0d1f2eb108f5099bd592cd06f4347c403e20e"
+      }
+    },
+    "v314_auditclosed6500_deva1801_testb1580": {
+      "route": "text",
+      "source_name": "V314_AUDITCLOSED6500_DEVA1801_TESTB1580_20260721",
+      "data": {
+        "train_jsonl": "data/processed/v309_audit_closed_final_20260718/train_V309_audit_closed_final_6500.jsonl",
+        "internal_val": {
+          "val_jsonl": "data/processed/v314_auditclosed6500_deva1801_testb1580_20260721/dev_a_complete_1801.jsonl"
+        },
+        "eval_csvs": {
+          "fraud12k_eval": "data/processed/v311_auditclosed6500_deva1733_testb1580_20260721/test_b_auditclosed_1580.csv",
+          "THCHS": "data/processed/thchs30_concat_1min_20260618/metadata_label13.csv"
+        },
+        "external_audio_eval_config": "configs/external_audio_eval_datasets.json"
+      },
+      "hashes": {
+        "train_jsonl": "580b2b5a17d8304c69215f8f1aa97e2e0c6d5abc49f4c2ca498ec00ba9651a60",
+        "val_jsonl": "69555a44ed9c842c6de81c7c5a1093829680ababf579ba1dfee3aabd0be2415d",
+        "test_csv": "0f764ffd98b59c94c430d0d5b77b4d09111d09dfb501f15111a0aa5aaddf171e"
+      }
+    },
+    "v315_d11b6500_deva1801_testb1580": {
+      "route": "text",
+      "source_name": "V306_D11B_BEST6500_WITH_CURRENT_DEVA1801_TESTB1580_20260721",
+      "data": {
+        "train_jsonl": "data/processed/v306_d11_diverse_boundary_v1/train_v306_d11_diverse_boundary_v1_6500.jsonl.gz",
+        "internal_val": {
+          "val_jsonl": "data/processed/v314_auditclosed6500_deva1801_testb1580_20260721/dev_a_complete_1801.jsonl"
+        },
+        "eval_csvs": {
+          "fraud12k_eval": "data/processed/v311_auditclosed6500_deva1733_testb1580_20260721/test_b_auditclosed_1580.csv",
+          "THCHS": "data/processed/thchs30_concat_1min_20260618/metadata_label13.csv"
+        },
+        "external_audio_eval_config": "configs/external_audio_eval_datasets.json"
+      },
+      "hashes": {
+        "train_jsonl": "47d0bc281753abb3f86ff92fd8685208a08e713f0862c2a1c6d6e7de6b787121",
+        "val_jsonl": "69555a44ed9c842c6de81c7c5a1093829680ababf579ba1dfee3aabd0be2415d",
+        "test_csv": "0f764ffd98b59c94c430d0d5b77b4d09111d09dfb501f15111a0aa5aaddf171e"
+      }
+    },
+    "v316_auditclosed6500_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V309_AUDITCLOSED6500_WITH_CURRENT_DEVA1801_DEVONLY_20260721",
+      "data": {
+        "train_jsonl": "data/processed/v309_audit_closed_final_20260718/train_V309_audit_closed_final_6500.jsonl",
+        "internal_val": {
+          "val_jsonl": "data/processed/v314_auditclosed6500_deva1801_testb1580_20260721/dev_a_complete_1801.jsonl"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "580b2b5a17d8304c69215f8f1aa97e2e0c6d5abc49f4c2ca498ec00ba9651a60",
+        "val_jsonl": "69555a44ed9c842c6de81c7c5a1093829680ababf579ba1dfee3aabd0be2415d"
+      }
+    },
+    "v320_qc_poolquota6500_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V320_QC_POOL_QUOTA_6500_WITH_CURRENT_DEVA1801_DEVONLY_20260723",
+      "data": {
+        "train_jsonl": "data/processed/v320_pool_quota_ablation/train_v320_qc_poolquota_6500.jsonl",
+        "internal_val": {
+          "val_jsonl": "data/processed/v314_auditclosed6500_deva1801_testb1580_20260721/dev_a_complete_1801.jsonl"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "90b24490799e5a8ab9d7c8bbfa2f93dc21f0975e9a731e994e89806efe50fe34",
+        "val_jsonl": "69555a44ed9c842c6de81c7c5a1093829680ababf579ba1dfee3aabd0be2415d"
+      },
+      "provenance": {
+        "manifest": "data/processed/v320_pool_quota_ablation/manifest_v320_qc_poolquota_6500.json",
+        "source_pool_sha256": "4304df9ff9d02eb379314f65dd5cbb260024c00fc664e3bae990359a76b1f8f2",
+        "quota_plan_sha256": "60702e2903d6393d8b8da5b534bfa343d9f45b910f52bddf139dec4a61bb5736",
+        "selected_reviewed_candidate_rows": 515
+      }
+    },
+    "v320_qm_poolquota6500_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V320_QM_POOL_QUOTA_6500_WITH_CURRENT_DEVA1801_DEVONLY_20260723",
+      "data": {
+        "train_jsonl": "data/processed/v320_pool_quota_ablation/train_v320_qm_poolquota_6500.jsonl",
+        "internal_val": {
+          "val_jsonl": "data/processed/v314_auditclosed6500_deva1801_testb1580_20260721/dev_a_complete_1801.jsonl"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "333b3bb37bdfd189d603a13c2f1fec07807ea604c78567928c9bde2efe5f5241",
+        "val_jsonl": "69555a44ed9c842c6de81c7c5a1093829680ababf579ba1dfee3aabd0be2415d"
+      },
+      "provenance": {
+        "manifest": "data/processed/v320_pool_quota_ablation/manifest_v320_qm_poolquota_6500.json",
+        "source_pool_sha256": "4304df9ff9d02eb379314f65dd5cbb260024c00fc664e3bae990359a76b1f8f2",
+        "quota_plan_sha256": "60702e2903d6393d8b8da5b534bfa343d9f45b910f52bddf139dec4a61bb5736",
+        "selected_reviewed_candidate_rows": 1383
+      }
+    },
+    "v322_nsem_normalcoverage6500_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V322_NSEM_NORMAL_TFIDF_COVERAGE_6500_WITH_CURRENT_DEVA1801_DEVONLY_20260723",
+      "data": {
+        "train_jsonl": "data/processed/v322_normal_coverage_ablation/train_v322_nsem_6500.jsonl",
+        "internal_val": {
+          "val_jsonl": "data/processed/v314_auditclosed6500_deva1801_testb1580_20260721/dev_a_complete_1801.jsonl"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "50121b592a4e9996e3bd39f48970a2d4fd1ece1dafd1971e47b9699500a818db",
+        "val_jsonl": "69555a44ed9c842c6de81c7c5a1093829680ababf579ba1dfee3aabd0be2415d"
+      },
+      "provenance": {
+        "manifest": "data/processed/v322_normal_coverage_ablation/manifest_v322_nsem_6500.json",
+        "source_pool_sha256": "6a0c5c833bebdecba2e54ebc7ee8195446669280ae654f75ddb839570de734f8",
+        "selection_manifest": "data/processed/v322_normal_coverage_ablation/selection_v322_nsem_normal1800.jsonl",
+        "selection_manifest_sha256": "ec7f7d29dec517f7227888b6902a8271e64417d627f62f4e8489c347e6abac25",
+        "selection_method": "tfidf_char_2_4_cosine_kcenter",
+        "normal_rows": 1800,
+        "fraud_rows_reused_from_v320_qm": 4700,
+        "dev_or_test_predictions_used": false
+      }
+    },
+    "v322_nhard_normalcoverage6500_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V322_NHARD_NORMAL_TFIDF_BOUNDARY_6500_WITH_CURRENT_DEVA1801_DEVONLY_20260723",
+      "data": {
+        "train_jsonl": "data/processed/v322_normal_coverage_ablation/train_v322_nhard_6500.jsonl",
+        "internal_val": {
+          "val_jsonl": "data/processed/v314_auditclosed6500_deva1801_testb1580_20260721/dev_a_complete_1801.jsonl"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "18e70fb4f583c1b448ba711fec4bc2c57633302c223ebe10c4bc8cec212add24",
+        "val_jsonl": "69555a44ed9c842c6de81c7c5a1093829680ababf579ba1dfee3aabd0be2415d"
+      },
+      "provenance": {
+        "manifest": "data/processed/v322_normal_coverage_ablation/manifest_v322_nhard_6500.json",
+        "source_pool_sha256": "6a0c5c833bebdecba2e54ebc7ee8195446669280ae654f75ddb839570de734f8",
+        "selection_manifest": "data/processed/v322_normal_coverage_ablation/selection_v322_nhard_normal1800.jsonl",
+        "selection_manifest_sha256": "c8fe05799c65122a29e6e9b0d6fbdd5bf8ca3ef3e85ab6c5910ae7a45db4c328",
+        "selection_method": "1200_tfidf_kcenter_plus_600_max_fraud_cosine_similarity",
+        "normal_rows": 1800,
+        "fraud_rows_reused_from_v320_qm": 4700,
+        "dev_or_test_predictions_used": false
+      }
+    },
+    "v320_ql_poolquota6500_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V320_QL_POOL_QUOTA_6500_WITH_CURRENT_DEVA1801_DEVONLY_20260723",
+      "data": {
+        "train_jsonl": "data/processed/v320_pool_quota_ablation/train_v320_ql_poolquota_6500.jsonl",
+        "internal_val": {
+          "val_jsonl": "data/processed/v314_auditclosed6500_deva1801_testb1580_20260721/dev_a_complete_1801.jsonl"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "dd498997a59855007c8703d628c0eaba23ddd8466409071bb80ab1013f143dbd",
+        "val_jsonl": "69555a44ed9c842c6de81c7c5a1093829680ababf579ba1dfee3aabd0be2415d"
+      },
+      "provenance": {
+        "manifest": "data/processed/v320_pool_quota_ablation/manifest_v320_ql_poolquota_6500.json",
+        "source_pool_sha256": "4304df9ff9d02eb379314f65dd5cbb260024c00fc664e3bae990359a76b1f8f2",
+        "quota_plan_sha256": "60702e2903d6393d8b8da5b534bfa343d9f45b910f52bddf139dec4a61bb5736",
+        "selected_reviewed_candidate_rows": 1890
+      }
+    },
+    "v327_error_directed_quota6500_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V327_ERROR_DIRECTED_QUOTA_ED1_6500_WITH_CURRENT_DEVA1801_DEVONLY_20260724",
+      "data": {
+        "train_jsonl": "data/processed/v327_error_directed_quota_20260724/train_v327_ed1_error_directed_6500.jsonl",
+        "internal_val": {
+          "val_jsonl": "data/processed/v314_auditclosed6500_deva1801_testb1580_20260721/dev_a_complete_1801.jsonl"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "730443442bed2b1dc84b28c68c680356d983b59a53e4e4a3c3272115cc21de70",
+        "val_jsonl": "69555a44ed9c842c6de81c7c5a1093829680ababf579ba1dfee3aabd0be2415d"
+      },
+      "provenance": {
+        "manifest": "data/processed/v327_error_directed_quota_20260724/manifest_v327_ed1_error_directed_6500.json",
+        "source_pool_sha256": "6a0c5c833bebdecba2e54ebc7ee8195446669280ae654f75ddb839570de734f8",
+        "quota_plan": "data/sample_pool/quota_plan_v327_error_directed_v1.json",
+        "quota_plan_sha256": "df1d894e9e4a4235548965e5dbc50a254836d3ca6e1ef5d27503df51263c4537",
+        "selection_manifest": "data/processed/v327_error_directed_quota_20260724/selection_v327_ed1_error_directed_6500.jsonl",
+        "selection_manifest_sha256": "197a7692faac42b49437ba46964ac770125294f95ebb29dd15fce090568eddac",
+        "selected_reviewed_candidate_rows": 1389,
+        "dev_aggregate_error_used": true,
+        "individual_dev_rows_or_test_b_used_for_selection": false,
+        "evaluation_tier": "exposed_dev"
+      }
+    },
+    "v328c_qm_cross_encoder_pack_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V328C_QM_CROSS_ENCODER_PACK_DEVA1801_DEVONLY_20260724",
+      "data": {
+        "train_pairs_jsonl": "data/processed/v328c_qm_cross_encoder_pack_20260724/train_v328c_qm_pairs_hardneg.jsonl.gz",
+        "dev_queue_jsonl": "data/processed/v328c_qm_cross_encoder_pack_20260724/dev_a_v328c_blind_queue.jsonl",
+        "dev_eval_key_jsonl": "data/processed/v328c_qm_cross_encoder_pack_20260724/dev_a_v328c_eval_key.jsonl",
+        "dev_pairs_jsonl": "data/processed/v328c_qm_cross_encoder_pack_20260724/dev_a_v328c_triggered_pairs_blind.jsonl"
+      },
+      "hashes": {
+        "train_pairs_jsonl": "99d2e9fd3b6c53edc4c3b405e71763a28e0105630ac0e20be4217bd458ba94b2",
+        "dev_queue_jsonl": "d4f165013c60ca7cc6b61bd873cb1bf3512d928e8f9632fe1a7303e46728d3d3",
+        "dev_eval_key_jsonl": "5264fa884e1d0551758c8ebeea8d62feec4298ad670108bd17102c75698f43de",
+        "dev_pairs_jsonl": "921277c881118327b36b42d323d71a3cd130840c15ef92ee5cbc3073d14de8ff"
+      },
+      "provenance": {
+        "manifest": "data/processed/v328c_qm_cross_encoder_pack_20260724/manifest_v328c_cross_encoder_pack.json",
+        "scope": "Train Q-M 6500 + Dev-A blind/eval only; no Test-B; no sample-pool mutation.",
+        "dev_gold_in_model_input": false,
+        "test_b_used": false,
+        "evaluation_tier": "exposed_dev",
+        "train_pairs_transport": {
+          "codec": "gzip",
+          "canonical_sha256": "d9e6cb3a8351535b5b8d7dd7e516eb9e294d26ff029d1f3b554e4f767684429b",
+          "transport_sha256": "99d2e9fd3b6c53edc4c3b405e71763a28e0105630ac0e20be4217bd458ba94b2",
+          "content_preserved": true
+        }
+      }
+    },
+    "v328c_qm_listwise_reranker_pack_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V328C_QM_LISTWISE_RERANKER_PACK_DEVA1801_DEVONLY_20260724",
+      "data": {
+        "train_listwise_jsonl": "data/processed/v328c_qm_cross_encoder_pack_20260724/train_v328c_qm_listwise_hardneg.jsonl.gz",
+        "dev_queue_jsonl": "data/processed/v328c_qm_cross_encoder_pack_20260724/dev_a_v328c_blind_queue.jsonl",
+        "dev_eval_key_jsonl": "data/processed/v328c_qm_cross_encoder_pack_20260724/dev_a_v328c_eval_key.jsonl",
+        "dev_pairs_jsonl": "data/processed/v328c_qm_cross_encoder_pack_20260724/dev_a_v328c_triggered_pairs_blind.jsonl"
+      },
+      "hashes": {
+        "train_listwise_jsonl": "3c33682416c3b6f96650e7b54047e1ebc220024ffe8c0aeee4d83da24dcc5c37",
+        "dev_queue_jsonl": "d4f165013c60ca7cc6b61bd873cb1bf3512d928e8f9632fe1a7303e46728d3d3",
+        "dev_eval_key_jsonl": "5264fa884e1d0551758c8ebeea8d62feec4298ad670108bd17102c75698f43de",
+        "dev_pairs_jsonl": "921277c881118327b36b42d323d71a3cd130840c15ef92ee5cbc3073d14de8ff"
+      },
+      "provenance": {
+        "manifest": "data/processed/v328c_qm_cross_encoder_pack_20260724/manifest_v328c_cross_encoder_pack.json",
+        "scope": "Train Q-M 6500 listwise hard-negative groups + Dev-A blind/eval only; no Test-B; no sample-pool mutation.",
+        "dev_gold_in_model_input": false,
+        "test_b_used": false,
+        "evaluation_tier": "exposed_dev",
+        "train_listwise_transport": {
+          "codec": "gzip",
+          "canonical_sha256": "418169a6decf4fa39ca959d841ec40e2d5924b7862d43c8d025c8790e541ae9a",
+          "transport_sha256": "3c33682416c3b6f96650e7b54047e1ebc220024ffe8c0aeee4d83da24dcc5c37",
+          "content_preserved": true
+        }
+      }
+    },
+    "v309_clean_audio_6500_fraud12k_dev260": {
+      "route": "audio",
+      "source_name": "V309_STRICT_CLEAN_TTS6500_SPEED11_WITH_FRAUD12K_DEV260",
+      "data": {
+        "train_jsonl": "data/processed/v309_full_clean_tts6500_calibrated_speed11_v1/train_audio_clean.jsonl",
+        "internal_val": {
+          "val_jsonl": "data/processed/fraud12k_dev260_v1/selection_spec.jsonl"
+        },
+        "checkpoint_selection": {
+          "eval_csv": "data/processed/fraud12k_dev260_v1/selection_spec.jsonl"
+        },
+        "eval_csvs": {
+          "fraud12k_eval": "data/processed/remote_eval/fraud12k_eval/fraud12k_13class_eval.csv",
+          "fraud12k_test": "data/processed/fraud12k_dev260_v1/fraud12k_holdout_contract.json",
+          "THCHS": "data/processed/thchs30_concat_1min_20260618/metadata_label13.csv"
+        },
+        "external_audio_eval_config": "configs/external_audio_eval_datasets.json"
+      },
+      "hashes": {
+        "train_jsonl": "341ee78c278473eb29462b017c5407afb2c7d139bf7447278c5330fe62c08867",
+        "val_jsonl": "f3fadfe7d608f9ddbe8f9c9e8c71d78d44ed9736d5461945c8935f034ae8f19f"
+      }
+    },
+    "v309_clean_audio_6500_fraud12k_dev1300": {
+      "route": "audio",
+      "source_name": "V309_STRICT_CLEAN_TTS6500_SPEED11_WITH_FRAUD12K_STATIC_DEV1300",
+      "data": {
+        "train_jsonl": "data/processed/v309_full_clean_tts6500_calibrated_speed11_v1/train_audio_clean.jsonl",
+        "internal_val": {
+          "val_jsonl": "data/processed/fraud12k_dev1300_test1300_v1/dev_selection.jsonl"
+        },
+        "checkpoint_selection": {
+          "eval_csv": "data/processed/fraud12k_dev1300_test1300_v1/dev_selection.jsonl"
+        },
+        "eval_csvs": {
+          "fraud12k_eval": "data/processed/remote_eval/fraud12k_eval/fraud12k_13class_eval.csv"
+        },
+        "external_audio_eval_config": "configs/external_audio_eval_datasets.json"
+      },
+      "hashes": {
+        "train_jsonl": "341ee78c278473eb29462b017c5407afb2c7d139bf7447278c5330fe62c08867",
+        "val_jsonl": "b4eff3a13c92e2350a5dc816f644de3c76adca1251de4bf05287eb4469b63f28"
+      }
+    },
+    "v328k_qm_child39_reranker_pack_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V328K_QM_CHILD39_RERANKER_PACK_DEVA1801_DEVONLY_20260724",
+      "data": {
+        "train_listwise_jsonl": "data/processed/v328k_qm_child39_reranker_pack_20260724/train_v328k_qm_child39_listwise_hardneg.jsonl.gz",
+        "dev_queue_jsonl": "data/processed/v328c_qm_cross_encoder_pack_20260724/dev_a_v328c_blind_queue.jsonl",
+        "dev_eval_key_jsonl": "data/processed/v328c_qm_cross_encoder_pack_20260724/dev_a_v328c_eval_key.jsonl",
+        "dev_pairs_jsonl": "data/processed/v328k_qm_child39_reranker_pack_20260724/dev_a_v328k_triggered_child39_pairs_blind.jsonl.gz"
+      },
+      "hashes": {
+        "train_listwise_jsonl": "c80ec4f1c47314334f64f746096c816fc13e856d32de558b0fd85e0d5f1b9419",
+        "dev_queue_jsonl": "d4f165013c60ca7cc6b61bd873cb1bf3512d928e8f9632fe1a7303e46728d3d3",
+        "dev_eval_key_jsonl": "5264fa884e1d0551758c8ebeea8d62feec4298ad670108bd17102c75698f43de",
+        "dev_pairs_jsonl": "ee1f08a5db846c187ca4498c6170cf311ad3cb14979385eefee2b2848640681e"
+      },
+      "provenance": {
+        "manifest": "data/processed/v328k_qm_child39_reranker_pack_20260724/manifest_v328k_child39_reranker_pack.json",
+        "scope": "Accuracy-first Q-M Train 6500 child39 listwise groups + Dev-A blind/eval only; no Test-B; no sample-pool mutation.",
+        "dev_gold_in_model_input": false,
+        "test_b_used": false,
+        "evaluation_tier": "exposed_dev",
+        "evaluation_aggregation": "max child verifier score per parent label",
+        "forced_normal_dev_parent_rows": 250,
+        "train_transport": {
+          "codec": "gzip",
+          "canonical_sha256": "5f37ce31a8b9db45aaef30f9729b5763ae0fc27c4b37436b8672e9f5e3a867b1",
+          "transport_sha256": "c80ec4f1c47314334f64f746096c816fc13e856d32de558b0fd85e0d5f1b9419",
+          "content_preserved": true
+        },
+        "dev_pairs_transport": {
+          "codec": "gzip",
+          "canonical_sha256": "ee97ae5f7571bfc2d4364330f86d2b0f9c230519fb9251bc5c2231eced3a89fe",
+          "transport_sha256": "ee1f08a5db846c187ca4498c6170cf311ad3cb14979385eefee2b2848640681e",
+          "content_preserved": true
+        }
+      }
+    },
+    "v329_qm_oof_fold0": {
+      "route": "text",
+      "source_name": "V329_QM_LINEAGE_AWARE_OOF_FOLD0_20260724",
+      "data": {
+        "train_jsonl": "data/processed/v320_pool_quota_ablation/train_v320_qm_poolquota_6500.jsonl",
+        "internal_val": {
+          "val_id_file": "data/processed/v329_qm_oof_foundation_20260724/folds/fold-0_val_ids.txt"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "333b3bb37bdfd189d603a13c2f1fec07807ea604c78567928c9bde2efe5f5241",
+        "val_id_file": "737c6c3b243e25930d24c01cad9843ed90983bfbe9ec0ce95a2621536040dc56"
+      },
+      "provenance": {
+        "manifest": "data/processed/v329_qm_oof_foundation_20260724/manifest_v329_oof_foundation.json",
+        "fold_manifest": "data/processed/v329_qm_oof_foundation_20260724/folds/fold_manifest.json",
+        "fold_index": 0,
+        "fold_rows": 1300,
+        "core_train_rows": 6500,
+        "lineage_group_overlap_count": 0,
+        "scope": "Core-Train Q-M only; held-out OOF fold; no Dev-A and no Test-B.",
+        "dev_used": false,
+        "test_b_used": false
+      }
+    },
+    "v329_qm_oof_fold1": {
+      "route": "text",
+      "source_name": "V329_QM_LINEAGE_AWARE_OOF_FOLD1_20260724",
+      "data": {
+        "train_jsonl": "data/processed/v320_pool_quota_ablation/train_v320_qm_poolquota_6500.jsonl",
+        "internal_val": {
+          "val_id_file": "data/processed/v329_qm_oof_foundation_20260724/folds/fold-1_val_ids.txt"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "333b3bb37bdfd189d603a13c2f1fec07807ea604c78567928c9bde2efe5f5241",
+        "val_id_file": "46ec927926abbf11c90cd1b5ce18457da3c3611e6ae137359bcdd718677deec7"
+      },
+      "provenance": {
+        "manifest": "data/processed/v329_qm_oof_foundation_20260724/manifest_v329_oof_foundation.json",
+        "fold_manifest": "data/processed/v329_qm_oof_foundation_20260724/folds/fold_manifest.json",
+        "fold_index": 1,
+        "fold_rows": 1300,
+        "core_train_rows": 6500,
+        "lineage_group_overlap_count": 0,
+        "scope": "Core-Train Q-M only; held-out OOF fold; no Dev-A and no Test-B.",
+        "dev_used": false,
+        "test_b_used": false
+      }
+    },
+    "v329_qm_oof_fold2": {
+      "route": "text",
+      "source_name": "V329_QM_LINEAGE_AWARE_OOF_FOLD2_20260724",
+      "data": {
+        "train_jsonl": "data/processed/v320_pool_quota_ablation/train_v320_qm_poolquota_6500.jsonl",
+        "internal_val": {
+          "val_id_file": "data/processed/v329_qm_oof_foundation_20260724/folds/fold-2_val_ids.txt"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "333b3bb37bdfd189d603a13c2f1fec07807ea604c78567928c9bde2efe5f5241",
+        "val_id_file": "3b1bfd13add2dfff264bc217e34d2e4af1db9e4d6747e2b777037b066a2d3c3c"
+      },
+      "provenance": {
+        "manifest": "data/processed/v329_qm_oof_foundation_20260724/manifest_v329_oof_foundation.json",
+        "fold_manifest": "data/processed/v329_qm_oof_foundation_20260724/folds/fold_manifest.json",
+        "fold_index": 2,
+        "fold_rows": 1300,
+        "core_train_rows": 6500,
+        "lineage_group_overlap_count": 0,
+        "scope": "Core-Train Q-M only; held-out OOF fold; no Dev-A and no Test-B.",
+        "dev_used": false,
+        "test_b_used": false
+      }
+    },
+    "v329_qm_oof_fold3": {
+      "route": "text",
+      "source_name": "V329_QM_LINEAGE_AWARE_OOF_FOLD3_20260724",
+      "data": {
+        "train_jsonl": "data/processed/v320_pool_quota_ablation/train_v320_qm_poolquota_6500.jsonl",
+        "internal_val": {
+          "val_id_file": "data/processed/v329_qm_oof_foundation_20260724/folds/fold-3_val_ids.txt"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "333b3bb37bdfd189d603a13c2f1fec07807ea604c78567928c9bde2efe5f5241",
+        "val_id_file": "7033d2c31a36b06eb5e1071ba79eab5192412f84c64da2bb6107788228c4af36"
+      },
+      "provenance": {
+        "manifest": "data/processed/v329_qm_oof_foundation_20260724/manifest_v329_oof_foundation.json",
+        "fold_manifest": "data/processed/v329_qm_oof_foundation_20260724/folds/fold_manifest.json",
+        "fold_index": 3,
+        "fold_rows": 1300,
+        "core_train_rows": 6500,
+        "lineage_group_overlap_count": 0,
+        "scope": "Core-Train Q-M only; held-out OOF fold; no Dev-A and no Test-B.",
+        "dev_used": false,
+        "test_b_used": false
+      }
+    },
+    "v329_qm_oof_fold4": {
+      "route": "text",
+      "source_name": "V329_QM_LINEAGE_AWARE_OOF_FOLD4_20260724",
+      "data": {
+        "train_jsonl": "data/processed/v320_pool_quota_ablation/train_v320_qm_poolquota_6500.jsonl",
+        "internal_val": {
+          "val_id_file": "data/processed/v329_qm_oof_foundation_20260724/folds/fold-4_val_ids.txt"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "333b3bb37bdfd189d603a13c2f1fec07807ea604c78567928c9bde2efe5f5241",
+        "val_id_file": "436960cea9062240a7e259713c4700fcb0e106ced046f92a62285262b35a682d"
+      },
+      "provenance": {
+        "manifest": "data/processed/v329_qm_oof_foundation_20260724/manifest_v329_oof_foundation.json",
+        "fold_manifest": "data/processed/v329_qm_oof_foundation_20260724/folds/fold_manifest.json",
+        "fold_index": 4,
+        "fold_rows": 1300,
+        "core_train_rows": 6500,
+        "lineage_group_overlap_count": 0,
+        "scope": "Core-Train Q-M only; held-out OOF fold; no Dev-A and no Test-B.",
+        "dev_used": false,
+        "test_b_used": false
+      }
+    },
+    "v330_qm_oof_top3normal_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V330_QM_OOF_TOP3NORMAL_DEVA1801_DEVONLY_20260724",
+      "data": {
+        "train_groups_jsonl": "data/processed/v329_qm_oof_audit_pack_20260724/train_v329_qm_oof_top3normal_groups.jsonl",
+        "dev_queue_jsonl": "data/processed/v329_qm_oof_foundation_20260724/dev_a_v329_stage1_full_blind_queue.jsonl",
+        "dev_eval_key_jsonl": "data/processed/v328c_qm_cross_encoder_pack_20260724/dev_a_v328c_eval_key.jsonl",
+        "label_cards_json": "data/processed/v329_qm_oof_audit_pack_20260724/label_cards_v329_v2.json"
+      },
+      "hashes": {
+        "train_groups_jsonl": "0f1f6e53de7704c417330f05f60fdaced3289ae40a92822669410b625cf0b29c",
+        "dev_queue_jsonl": "b88a0f2af95050a66bde7ffe7282a80759d6a32fa55eee736de25cfd46f64851",
+        "dev_eval_key_jsonl": "5264fa884e1d0551758c8ebeea8d62feec4298ad670108bd17102c75698f43de",
+        "label_cards_json": "a9ca9801a4ff7702cce38e428b04ab6f829512686255bfef0c19e9c0aea78e66"
+      },
+      "provenance": {
+        "manifest": "data/processed/v329_qm_oof_audit_pack_20260724/manifest_v329_oof_audit_pack.json",
+        "core_train_rows": 6500,
+        "fold_count": 5,
+        "fold_rows": 1300,
+        "lineage_group_overlap_count": 0,
+        "train_oof_accuracy": 0.9655384615384616,
+        "train_top3_plus_normal_oracle": 0.9955384615384615,
+        "dev_rows": 1801,
+        "dev_gold_in_model_input": false,
+        "audit_gate_status": "pending_human_dual_review",
+        "evaluation_tier": "exposed_dev",
+        "test_b_used": false
+      }
+    },
+    "v329_audited6500_route_a_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V329_AUDITED_BACKFILL6500_ROUTE_A_DEVA1801_DEVONLY_20260725",
+      "data": {
+        "train_jsonl": "data/processed/v329_qm_audited_backfill6500_20260725/train_v329_qm_audited_backfill_6500.jsonl",
+        "dev_queue_jsonl": "data/processed/v329_qm_oof_foundation_20260724/dev_a_v329_stage1_full_blind_queue.jsonl",
+        "dev_eval_key_jsonl": "data/processed/v328c_qm_cross_encoder_pack_20260724/dev_a_v328c_eval_key.jsonl",
+        "dev_child_key_jsonl": "data/processed/v329_qm_oof_foundation_20260724/dev_a_v329_child_eval_key.jsonl",
+        "child_rubrics_json": "data/processed/v329_qm_audited_backfill6500_20260725/label_subcategory_rubrics_official_v1.json"
+      },
+      "hashes": {
+        "train_jsonl": "9af60303f4749471119574eef697ac53b3f1779ba46f1a118e7709f68fceb52e",
+        "dev_queue_jsonl": "b88a0f2af95050a66bde7ffe7282a80759d6a32fa55eee736de25cfd46f64851",
+        "dev_eval_key_jsonl": "5264fa884e1d0551758c8ebeea8d62feec4298ad670108bd17102c75698f43de",
+        "dev_child_key_jsonl": "2cc35a6b6a607c9caf5d36f374ba2f445915ea1851acd1e25b7d041634f78854",
+        "child_rubrics_json": "ac83f2ae347ffef3de7dda88164aa4573283222fe9dbd1c3859d9d3cd824366d"
+      },
+      "provenance": {
+        "manifest": "data/processed/v329_qm_audited_backfill6500_20260725/manifest_v329_audited_backfill_6500.json",
+        "scope": "V329 audited 6444 retained + 56 explicit reviewed-candidate backfills = physical 6500; all 6500 enter Route-A optimization; exposed Dev-A only; no Test-B.",
+        "train_rows": 6500,
+        "optimizer_train_rows": 6500,
+        "audit_excluded_rows_restored": 0,
+        "explicit_backfill_rows": 56,
+        "dev_gold_in_model_input": false,
+        "dev_evaluation_tier": "exposed_dev",
+        "test_b_used": false
+      }
+    },
+    "v329_audited6500_oof_fold0": {
+      "route": "text",
+      "source_name": "V329_AUDITED6500_LINEAGE_AWARE_OOF_FOLD0_20260725",
+      "data": {
+        "train_jsonl": "data/processed/v329_qm_audited_backfill6500_20260725/train_v329_qm_audited_backfill_6500.jsonl",
+        "internal_val": {
+          "val_id_file": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold-0_val_ids.txt"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "9af60303f4749471119574eef697ac53b3f1779ba46f1a118e7709f68fceb52e",
+        "val_id_file": "f29a60f53a5717c8e892fbe75cb84785689e3664fa5c21d761b4ac25a085141b"
+      },
+      "provenance": {
+        "manifest": "data/processed/v329_qm_audited_backfill6500_20260725/manifest_v329_audited_oof_foundation.json",
+        "fold_manifest": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold_manifest.json",
+        "fold_index": 0,
+        "fold_rows": 1300,
+        "core_train_rows": 6500,
+        "lineage_group_overlap_count": 0,
+        "scope": "V329 audited physical 6500 only; held-out lineage-safe OOF fold; no Dev-A and no Test-B.",
+        "dev_used": false,
+        "test_b_used": false
+      }
+    },
+    "v329_audited6500_oof_fold1": {
+      "route": "text",
+      "source_name": "V329_AUDITED6500_LINEAGE_AWARE_OOF_FOLD1_20260725",
+      "data": {
+        "train_jsonl": "data/processed/v329_qm_audited_backfill6500_20260725/train_v329_qm_audited_backfill_6500.jsonl",
+        "internal_val": {
+          "val_id_file": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold-1_val_ids.txt"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "9af60303f4749471119574eef697ac53b3f1779ba46f1a118e7709f68fceb52e",
+        "val_id_file": "601a121069df310760fa2789ecf6f52d44592534c144b521e774f2437450309f"
+      },
+      "provenance": {
+        "manifest": "data/processed/v329_qm_audited_backfill6500_20260725/manifest_v329_audited_oof_foundation.json",
+        "fold_manifest": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold_manifest.json",
+        "fold_index": 1,
+        "fold_rows": 1300,
+        "core_train_rows": 6500,
+        "lineage_group_overlap_count": 0,
+        "scope": "V329 audited physical 6500 only; held-out lineage-safe OOF fold; no Dev-A and no Test-B.",
+        "dev_used": false,
+        "test_b_used": false
+      }
+    },
+    "v329_audited6500_oof_fold2": {
+      "route": "text",
+      "source_name": "V329_AUDITED6500_LINEAGE_AWARE_OOF_FOLD2_20260725",
+      "data": {
+        "train_jsonl": "data/processed/v329_qm_audited_backfill6500_20260725/train_v329_qm_audited_backfill_6500.jsonl",
+        "internal_val": {
+          "val_id_file": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold-2_val_ids.txt"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "9af60303f4749471119574eef697ac53b3f1779ba46f1a118e7709f68fceb52e",
+        "val_id_file": "5a12e556225281463caa2ede2b822f8a149a481ec0ca79f625f7f123d1a01d44"
+      },
+      "provenance": {
+        "manifest": "data/processed/v329_qm_audited_backfill6500_20260725/manifest_v329_audited_oof_foundation.json",
+        "fold_manifest": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold_manifest.json",
+        "fold_index": 2,
+        "fold_rows": 1300,
+        "core_train_rows": 6500,
+        "lineage_group_overlap_count": 0,
+        "scope": "V329 audited physical 6500 only; held-out lineage-safe OOF fold; no Dev-A and no Test-B.",
+        "dev_used": false,
+        "test_b_used": false
+      }
+    },
+    "v329_audited6500_oof_fold3": {
+      "route": "text",
+      "source_name": "V329_AUDITED6500_LINEAGE_AWARE_OOF_FOLD3_20260725",
+      "data": {
+        "train_jsonl": "data/processed/v329_qm_audited_backfill6500_20260725/train_v329_qm_audited_backfill_6500.jsonl",
+        "internal_val": {
+          "val_id_file": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold-3_val_ids.txt"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "9af60303f4749471119574eef697ac53b3f1779ba46f1a118e7709f68fceb52e",
+        "val_id_file": "f07b7e0c6dcba66e7b2db7ebe610c5cc762a5659f529c8cec63da12cd902f39e"
+      },
+      "provenance": {
+        "manifest": "data/processed/v329_qm_audited_backfill6500_20260725/manifest_v329_audited_oof_foundation.json",
+        "fold_manifest": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold_manifest.json",
+        "fold_index": 3,
+        "fold_rows": 1300,
+        "core_train_rows": 6500,
+        "lineage_group_overlap_count": 0,
+        "scope": "V329 audited physical 6500 only; held-out lineage-safe OOF fold; no Dev-A and no Test-B.",
+        "dev_used": false,
+        "test_b_used": false
+      }
+    },
+    "v329_audited6500_oof_fold4": {
+      "route": "text",
+      "source_name": "V329_AUDITED6500_LINEAGE_AWARE_OOF_FOLD4_20260725",
+      "data": {
+        "train_jsonl": "data/processed/v329_qm_audited_backfill6500_20260725/train_v329_qm_audited_backfill_6500.jsonl",
+        "internal_val": {
+          "val_id_file": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold-4_val_ids.txt"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "9af60303f4749471119574eef697ac53b3f1779ba46f1a118e7709f68fceb52e",
+        "val_id_file": "143c0f27e58d7eff80674d3f712c0f3d250263adec1ad441a7890e2d6c0a6f43"
+      },
+      "provenance": {
+        "manifest": "data/processed/v329_qm_audited_backfill6500_20260725/manifest_v329_audited_oof_foundation.json",
+        "fold_manifest": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold_manifest.json",
+        "fold_index": 4,
+        "fold_rows": 1300,
+        "core_train_rows": 6500,
+        "lineage_group_overlap_count": 0,
+        "scope": "V329 audited physical 6500 only; held-out lineage-safe OOF fold; no Dev-A and no Test-B.",
+        "dev_used": false,
+        "test_b_used": false
+      }
+    },
+    "v330_audited6500_oof_top3normal_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V330_AUDITED6500_OOF_TOP3NORMAL_DEVA1801_DEVONLY_20260725",
+      "data": {
+        "train_groups_jsonl": "data/processed/v330_audited6500_oof_top3normal_20260725/train_v330_audited6500_oof_top3normal_groups.jsonl",
+        "dev_queue_jsonl": "data/processed/v329_qm_oof_foundation_20260724/dev_a_v329_stage1_full_blind_queue.jsonl",
+        "dev_eval_key_jsonl": "data/processed/v328c_qm_cross_encoder_pack_20260724/dev_a_v328c_eval_key.jsonl",
+        "label_cards_json": "data/processed/v330_audited6500_oof_top3normal_20260725/label_cards_v330_audited_v1.json"
+      },
+      "hashes": {
+        "train_groups_jsonl": "a0eb1a275398d88d772abdd693c349d98dbfd3f68c61bf592835c96fccd1d997",
+        "dev_queue_jsonl": "b88a0f2af95050a66bde7ffe7282a80759d6a32fa55eee736de25cfd46f64851",
+        "dev_eval_key_jsonl": "5264fa884e1d0551758c8ebeea8d62feec4298ad670108bd17102c75698f43de",
+        "label_cards_json": "a9ca9801a4ff7702cce38e428b04ab6f829512686255bfef0c19e9c0aea78e66"
+      },
+      "provenance": {
+        "manifest": "data/processed/v330_audited6500_oof_top3normal_20260725/manifest_v330_audited_candidate_pack.json",
+        "scope": "V330 audited physical 6500 five-fold lineage-disjoint Train OOF Top-3+Normal candidate groups; all 6500 enter verifier optimization and Train-OOF fusion fitting; exposed Dev-A only; no Test-B.",
+        "physical_train_rows": 6500,
+        "optimizer_train_rows": 6500,
+        "oof_rows": 6500,
+        "fold_count": 5,
+        "fold_size": 1300,
+        "lineage_group_overlap_count": 0,
+        "oof_accuracy": 0.9675384615384616,
+        "oof_top3_plus_normal_oracle": 0.9966153846153846,
+        "pair_margin_enabled_rows": 115,
+        "child_subcategory_count": 39,
+        "train_dev_normalized_overlap": 0,
+        "audit_excluded_rows_restored": 0,
+        "dev_gold_in_model_input": false,
+        "dev_evaluation_tier": "exposed_dev",
+        "test_b_used": false
+      }
+    },
+    "v331_matched_ensemble_pairwise_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V331_MATCHED_ENSEMBLE_PAIRWISE_DEVA1801_DEVONLY_20260725",
+      "data": {
+        "train_groups_jsonl": "data/processed/v331_matched_ensemble_pairwise_20260725/train_v331_pairwise_groups_6500.jsonl",
+        "dev_queue_jsonl": "data/processed/v329_qm_oof_foundation_20260724/dev_a_v329_stage1_full_blind_queue.jsonl",
+        "dev_eval_key_jsonl": "data/processed/v328c_qm_cross_encoder_pack_20260724/dev_a_v328c_eval_key.jsonl",
+        "dev_child_key_jsonl": "data/processed/v329_qm_oof_foundation_20260724/dev_a_v329_child_eval_key.jsonl",
+        "label_cards_json": "data/processed/v331_matched_ensemble_pairwise_20260725/label_cards_v331_pairwise_compact.json"
+      },
+      "hashes": {
+        "train_groups_jsonl": "64d31c5c0713d04b16a38a6aa89efeb7bc9f6dd6de37f9673f4369f74d22f1b5",
+        "dev_queue_jsonl": "b88a0f2af95050a66bde7ffe7282a80759d6a32fa55eee736de25cfd46f64851",
+        "dev_eval_key_jsonl": "5264fa884e1d0551758c8ebeea8d62feec4298ad670108bd17102c75698f43de",
+        "dev_child_key_jsonl": "2cc35a6b6a607c9caf5d36f374ba2f445915ea1851acd1e25b7d041634f78854",
+        "label_cards_json": "8df017f643a64ea5a3b15d9dce796e77b2359c16c98d3e4352f5e285b8bbc4f2"
+      },
+      "provenance": {
+        "manifest": "data/processed/v331_matched_ensemble_pairwise_20260725/manifest_v331_matched_ensemble_pairwise.json",
+        "scope": "V331 audited physical 6500, lineage-disjoint five-fold matched 13/42/202 Train-OOF Top-3+Normal pairwise groups; fold0 is held out from gradient only for B1 checkpoint/calibrator selection; exposed Dev-A only; no Test-B.",
+        "physical_train_rows": 6500,
+        "gradient_selection_rows": 5200,
+        "train_oof_calibration_rows": 1300,
+        "oof_rows": 6500,
+        "fold_count": 5,
+        "fold_size": 1300,
+        "ensemble_seeds": [
+          13,
+          42,
+          202
+        ],
+        "lineage_group_overlap_count": 0,
+        "oof_accuracy": 0.9696923076923077,
+        "oof_error_rows": 197,
+        "oof_top3_plus_normal_oracle": 0.9967692307692307,
+        "pairwise_preference_rows": 17678,
+        "pair_margin_preference_rows": 98,
+        "pair_margin_risk_pairs": [
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            0,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            2,
+            7
+          ]
+        ],
+        "child_subcategory_count": 39,
+        "qwen_tokenizer_min_dialogue_budget_at_256": 124,
+        "max_per_gold_preferred_position_gap": 0.0855106888361045,
+        "dev_gold_in_model_input": false,
+        "dev_child_key_metric_only": true,
+        "dev_evaluation_tier": "exposed_dev",
+        "test_b_used": false
+      }
+    },
+    "v331_pairwise_epoch1_recovery_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V331_PAIRWISE_EPOCH1_RECOVERY_DEVA1801_DEVONLY_20260725",
+      "data": {
+        "train_groups_jsonl": "data/processed/v331_matched_ensemble_pairwise_20260725/train_v331_pairwise_groups_6500.jsonl",
+        "dev_queue_jsonl": "data/processed/v329_qm_oof_foundation_20260724/dev_a_v329_stage1_full_blind_queue.jsonl",
+        "dev_eval_key_jsonl": "data/processed/v328c_qm_cross_encoder_pack_20260724/dev_a_v328c_eval_key.jsonl",
+        "dev_child_key_jsonl": "data/processed/v329_qm_oof_foundation_20260724/dev_a_v329_child_eval_key.jsonl",
+        "label_cards_json": "data/processed/v331_matched_ensemble_pairwise_20260725/label_cards_v331_pairwise_compact.json",
+        "eval_only_adapter_pt": "runs/v331_results_20260725/r_260725_151824/selected_adapter.pt",
+        "eval_only_calibrator_json": "runs/v331_results_20260725/r_260725_151824/subruns/seed-202/selected_calibrator.json"
+      },
+      "hashes": {
+        "train_groups_jsonl": "64d31c5c0713d04b16a38a6aa89efeb7bc9f6dd6de37f9673f4369f74d22f1b5",
+        "dev_queue_jsonl": "b88a0f2af95050a66bde7ffe7282a80759d6a32fa55eee736de25cfd46f64851",
+        "dev_eval_key_jsonl": "5264fa884e1d0551758c8ebeea8d62feec4298ad670108bd17102c75698f43de",
+        "dev_child_key_jsonl": "2cc35a6b6a607c9caf5d36f374ba2f445915ea1851acd1e25b7d041634f78854",
+        "label_cards_json": "8df017f643a64ea5a3b15d9dce796e77b2359c16c98d3e4352f5e285b8bbc4f2",
+        "eval_only_adapter_pt": "0fd26a07c62e95ad762b035d5c838c1b09ae5c487ea10e9e8388784ca3921bc9",
+        "eval_only_calibrator_json": "0e61ff72f173c33ff226c30fe1f80a700d5f00a5fd7b74f8c253134f703b0b6e"
+      },
+      "provenance": {
+        "source_run": "runs/r_260725_151824_V331B1_Audited6500_Qwen25_7B_PairwiseChoice_DevOnly_s202_auto_a1",
+        "source_epoch": 1,
+        "execution_mode": "eval_only_recovery",
+        "physical_core_train_rows": 6500,
+        "source_gradient_train_rows": 5200,
+        "gradient_rows_in_recovery": 0,
+        "train_oof_calibration_rows": 1300,
+        "child_subcategory_count": 39,
+        "dev_rows": 1801,
+        "dev_gold_in_model_input": false,
+        "dev_child_key_metric_only": true,
+        "evaluation_tier": "exposed_dev",
+        "test_b_used": false
+      }
+    },
+    "v333_preexpert_audited6500_causal_labels_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V333_PREEXPERT_AUDITED6500_CAUSAL_LABELS_DEVA1801_DEVONLY_20260725",
+      "data": {
+        "train_jsonl": "data/processed/v329_qm_audited_backfill6500_20260725/train_v329_qm_audited_backfill_6500.jsonl",
+        "dev_queue_jsonl": "data/processed/v329_qm_oof_foundation_20260724/dev_a_v329_stage1_full_blind_queue.jsonl",
+        "dev_eval_key_jsonl": "data/processed/v328c_qm_cross_encoder_pack_20260724/dev_a_v328c_eval_key.jsonl",
+        "dev_child_key_jsonl": "data/processed/v329_qm_oof_foundation_20260724/dev_a_v329_child_eval_key.jsonl",
+        "child_rubrics_json": "data/processed/v329_qm_audited_backfill6500_20260725/label_subcategory_rubrics_official_v1.json",
+        "verbalizers_json": "data/processed/v333_causal_labels_20260725/v333_qwen_causal_verbalizers.v1.json"
+      },
+      "hashes": {
+        "train_jsonl": "9af60303f4749471119574eef697ac53b3f1779ba46f1a118e7709f68fceb52e",
+        "dev_queue_jsonl": "b88a0f2af95050a66bde7ffe7282a80759d6a32fa55eee736de25cfd46f64851",
+        "dev_eval_key_jsonl": "5264fa884e1d0551758c8ebeea8d62feec4298ad670108bd17102c75698f43de",
+        "dev_child_key_jsonl": "2cc35a6b6a607c9caf5d36f374ba2f445915ea1851acd1e25b7d041634f78854",
+        "child_rubrics_json": "ac83f2ae347ffef3de7dda88164aa4573283222fe9dbd1c3859d9d3cd824366d",
+        "verbalizers_json": "337fd8199c754ca1635a29eca7fd96167867dd2b9c471fb22abbcda10d910b2a"
+      },
+      "provenance": {
+        "manifest": "data/processed/v329_qm_audited_backfill6500_20260725/manifest_v329_audited_backfill_6500.json",
+        "scope": "V333 causal-label implementation branch on the provisional AI-audited/backfilled physical 6500; exposed Dev-A only; no Test-B. Final promotion is blocked until the V332 external full-6500 audit is closed.",
+        "train_rows": 6500,
+        "parent_count": 13,
+        "child_count": 39,
+        "external_full6500_audit_closed": false,
+        "formal_promotion_allowed": false,
+        "verbalizer_source": "shared/configs/v333_qwen_causal_verbalizers.v1.json",
+        "dev_gold_in_model_input": false,
+        "dev_evaluation_tier": "exposed_dev",
+        "test_b_used": false
+      }
+    },
+    "v333_v332audit6500_causal_labels_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V333_V332AUDIT6500_CAUSAL_LABELS_DEVA1801_DEVONLY_20260726",
+      "data": {
+        "train_jsonl": "data/processed/v332_full6500_triple_consensus_20260726/train_v332_qm_triple_consensus_6500.jsonl",
+        "dev_queue_jsonl": "data/processed/v329_qm_oof_foundation_20260724/dev_a_v329_stage1_full_blind_queue.jsonl",
+        "dev_eval_key_jsonl": "data/processed/v328c_qm_cross_encoder_pack_20260724/dev_a_v328c_eval_key.jsonl",
+        "dev_child_key_jsonl": "data/processed/v329_qm_oof_foundation_20260724/dev_a_v329_child_eval_key.jsonl",
+        "child_rubrics_json": "data/processed/v329_qm_audited_backfill6500_20260725/label_subcategory_rubrics_official_v1.json",
+        "verbalizers_json": "data/processed/v333_causal_labels_20260725/v333_qwen_causal_verbalizers.v1.json"
+      },
+      "hashes": {
+        "train_jsonl": "3fa01032afb8dec4de42eb3410efc9b7bc87d6d4d4c5b2e646512be56eef0680",
+        "dev_queue_jsonl": "b88a0f2af95050a66bde7ffe7282a80759d6a32fa55eee736de25cfd46f64851",
+        "dev_eval_key_jsonl": "5264fa884e1d0551758c8ebeea8d62feec4298ad670108bd17102c75698f43de",
+        "dev_child_key_jsonl": "2cc35a6b6a607c9caf5d36f374ba2f445915ea1851acd1e25b7d041634f78854",
+        "child_rubrics_json": "ac83f2ae347ffef3de7dda88164aa4573283222fe9dbd1c3859d9d3cd824366d",
+        "verbalizers_json": "337fd8199c754ca1635a29eca7fd96167867dd2b9c471fb22abbcda10d910b2a"
+      },
+      "provenance": {
+        "manifest": "data/processed/v332_full6500_triple_consensus_20260726/manifest_v332_full6500_triple_consensus.json",
+        "manifest_sha256": "cd45e9eaf4208988b74e1bd903e662b20297f42de08c0f0472d97938174b05a9",
+        "scope": "Three independent ChatGPT Pro reviews accepted by project owner; physical Core-Train remains exactly 6500; 76 normalized-template clusters are loss-weight normalized; exposed Dev-A only; no Test-B.",
+        "train_rows": 6500,
+        "effective_training_weight": 6319.24999979,
+        "parent_count": 13,
+        "child_count": 39,
+        "relabel_rows": 130,
+        "ambiguous_low_weight_rows": 1,
+        "duplicate_clusters": 76,
+        "redundant_template_rows": 180,
+        "external_full6500_audit_closed": true,
+        "formal_promotion_allowed": true,
+        "human_domain_expert_review": false,
+        "verbalizer_source": "shared/configs/v333_qwen_causal_verbalizers.v1.json",
+        "dev_gold_in_model_input": false,
+        "dev_evaluation_tier": "exposed_dev",
+        "test_b_used": false
+      }
+    },
+    "v334_v332audit6500_roberta_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V334_V332AUDIT6500_ROBERTA_DEVA1801_DEVONLY_20260726",
+      "data": {
+        "train_jsonl": "data/processed/v332_full6500_triple_consensus_20260726/train_v332_qm_triple_consensus_6500.jsonl",
+        "internal_val": {
+          "val_jsonl": "data/processed/v314_auditclosed6500_deva1801_testb1580_20260721/dev_a_complete_1801.jsonl"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "3fa01032afb8dec4de42eb3410efc9b7bc87d6d4d4c5b2e646512be56eef0680",
+        "val_jsonl": "69555a44ed9c842c6de81c7c5a1093829680ababf579ba1dfee3aabd0be2415d"
+      },
+      "provenance": {
+        "manifest": "data/processed/v332_full6500_triple_consensus_20260726/manifest_v332_full6500_triple_consensus.json",
+        "manifest_sha256": "cd45e9eaf4208988b74e1bd903e662b20297f42de08c0f0472d97938174b05a9",
+        "scope": "Closed V332 three-review consensus physical-6500 Core-Train plus fixed exposed Dev-A 1801; no Test-B.",
+        "train_rows": 6500,
+        "unique_sample_ids": 6500,
+        "unique_text_hashes": 6500,
+        "effective_training_weight": 6319.24999979,
+        "parent_count": 13,
+        "child_count": 39,
+        "relabel_rows": 130,
+        "downweighted_rows": 257,
+        "external_full6500_audit_closed": true,
+        "dev_evaluation_tier": "exposed_dev",
+        "test_b_used": false
+      }
+    },
+    "v334_v332_clean_tts_delta1433": {
+      "route": "audio",
+      "source_name": "V334_V332_ALIGNED_STRICT_CLEAN_TTS_DELTA1433_20260726",
+      "data": {
+        "input_jsonl": "data/processed/v334_v332_aligned_clean_audio_20260726/tts_delta_input.jsonl",
+        "train_jsonl": "data/processed/v334_v332_aligned_clean_audio_20260726/tts_delta_input.jsonl",
+        "source_dataset": "V332_QM_EXTERNAL_FULL6500_TRIPLE_CONSENSUS_DELTA1433",
+        "expected_rows": 1433,
+        "expected_label_counts": {
+          "0": 30,
+          "1": 116,
+          "2": 211,
+          "3": 0,
+          "4": 151,
+          "5": 1,
+          "6": 100,
+          "7": 234,
+          "8": 176,
+          "9": 57,
+          "10": 204,
+          "11": 61,
+          "12": 92
+        }
+      },
+      "hashes": {
+        "input_jsonl": "57627f5b667f660fd7e4791c6280dec1b96acc758388fb0821bb15ecaa138693",
+        "train_jsonl": "57627f5b667f660fd7e4791c6280dec1b96acc758388fb0821bb15ecaa138693"
+      },
+      "provenance": {
+        "plan_manifest": "data/processed/v334_v332_aligned_clean_audio_20260726/plan_manifest.json",
+        "source_text_sha256": "3fa01032afb8dec4de42eb3410efc9b7bc87d6d4d4c5b2e646512be56eef0680",
+        "rows": 1433,
+        "clean_audio_only": true,
+        "fraud12k_used_for_training": false,
+        "test1300_used": false
+      }
+    },
+    "v334_v332_reuse5067_technical_smoke_fraud12k_dev1300": {
+      "route": "audio",
+      "source_name": "V334_V332_EXACT_AUDIO_REUSE5067_TECHNICAL_SMOKE_WITH_FRAUD12K_DEV1300",
+      "data": {
+        "train_jsonl": "data/processed/v334_v332_aligned_clean_audio_20260726/reuse_v309_clean_audio.jsonl",
+        "expected_physical_rows": 5067,
+        "internal_val": {
+          "val_jsonl": "data/processed/fraud12k_dev1300_test1300_v1/dev_selection.jsonl"
+        },
+        "checkpoint_selection": {
+          "eval_csv": "data/processed/fraud12k_dev1300_test1300_v1/dev_selection.jsonl"
+        },
+        "eval_csvs": {
+          "fraud12k_eval": "data/processed/remote_eval/fraud12k_eval/fraud12k_13class_eval.csv"
+        },
+        "external_audio_eval_config": "configs/external_audio_eval_datasets.json"
+      },
+      "hashes": {
+        "train_jsonl": "642b603f300edcb1fd3d995be571c34bbbe13efb685e22e74262ce2143297ece",
+        "val_jsonl": "b4eff3a13c92e2350a5dc816f644de3c76adca1251de4bf05287eb4469b63f28"
+      },
+      "provenance": {
+        "scope": "Engineering compatibility smoke only; 5067 exact-content reusable clean audios cover all 39 child labels.",
+        "physical_rows": 5067,
+        "model_selection_allowed": false,
+        "asr_used": false,
+        "test1300_used": false
+      }
+    },
+    "v334_v332_aligned_clean_audio_6500_fraud12k_dev1300": {
+      "route": "audio",
+      "source_name": "V334_V332_AUDITED_ALIGNED_STRICT_CLEAN_AUDIO6500_WITH_FRAUD12K_STATIC_DEV1300",
+      "data": {
+        "train_jsonl": "data/processed/v334_v332_aligned_clean_audio_20260726/train_v334_v332_aligned_clean_audio_6500.jsonl",
+        "expected_physical_rows": 6500,
+        "internal_val": {
+          "val_jsonl": "data/processed/fraud12k_dev1300_test1300_v1/dev_selection.jsonl"
+        },
+        "checkpoint_selection": {
+          "eval_csv": "data/processed/fraud12k_dev1300_test1300_v1/dev_selection.jsonl"
+        },
+        "eval_csvs": {
+          "fraud12k_eval": "data/processed/remote_eval/fraud12k_eval/fraud12k_13class_eval.csv"
+        },
+        "external_audio_eval_config": "configs/external_audio_eval_datasets.json"
+      },
+      "hashes": {
+        "train_jsonl": "0571442c7fdea02cfa9ec7574aa1799098c68bf158aba6422a376bcc0a0eacfd",
+        "val_jsonl": "b4eff3a13c92e2350a5dc816f644de3c76adca1251de4bf05287eb4469b63f28"
+      },
+      "provenance": {
+        "manifest": "data/processed/v334_v332_aligned_clean_audio_20260726/manifest_v334_v332_aligned_clean_audio.json",
+        "manifest_sha256": "5ed18d0de80b06a9b03093278b3f7f0114a1f068c899889eb80def53779f367b",
+        "source_text_dataset": "V332_QM_EXTERNAL_FULL6500_TRIPLE_CONSENSUS",
+        "physical_rows": 6500,
+        "child_count": 39,
+        "reuse_rows": 5067,
+        "delta_tts_rows": 1433,
+        "clean_audio_only": true,
+        "asr_used": false,
+        "fraud12k_used_for_training": false,
+        "test1300_used": false
+      }
+    },
+    "v335_v332audit6500_megatron_pairwise_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V335_V332AUDIT6500_MEGATRON_PAIRWISE_DEVA1801_DEVONLY_20260726",
+      "data": {
+        "train_groups_jsonl": "data/processed/v335_v332_megatron_pairwise_20260726/train_v335_v332_pairwise_groups_6500.jsonl",
+        "dev_queue_jsonl": "data/processed/v329_qm_oof_foundation_20260724/dev_a_v329_stage1_full_blind_queue.jsonl",
+        "dev_eval_key_jsonl": "data/processed/v328c_qm_cross_encoder_pack_20260724/dev_a_v328c_eval_key.jsonl",
+        "dev_child_key_jsonl": "data/processed/v329_qm_oof_foundation_20260724/dev_a_v329_child_eval_key.jsonl",
+        "label_cards_json": "data/processed/v335_v332_megatron_pairwise_20260726/label_cards_v335_compact_39.json"
+      },
+      "hashes": {
+        "train_groups_jsonl": "9929e82bdd20792ee97d1bd2ec8b36b31e02a5f32d1226bb1c055d84ca07a726",
+        "dev_queue_jsonl": "b88a0f2af95050a66bde7ffe7282a80759d6a32fa55eee736de25cfd46f64851",
+        "dev_eval_key_jsonl": "5264fa884e1d0551758c8ebeea8d62feec4298ad670108bd17102c75698f43de",
+        "dev_child_key_jsonl": "2cc35a6b6a607c9caf5d36f374ba2f445915ea1851acd1e25b7d041634f78854",
+        "label_cards_json": "95504823771cb2acef6367d93122abeec4c7633ce2b6787b1c1248d9e26cc840"
+      },
+      "provenance": {
+        "manifest": "data/processed/v335_v332_megatron_pairwise_20260726/manifest_v335_v332_megatron_pairwise.json",
+        "scope": "V332 triple-consensus physical 6500 labels/weights joined to fixed lineage-disjoint V331 three-seed Train-OOF Top-3+Normal candidates; fold0 held out for checkpoint/calibrator selection; exposed Dev-A only; no Test-B.",
+        "physical_train_rows": 6500,
+        "gradient_selection_rows": 5200,
+        "train_oof_calibration_rows": 1300,
+        "fold_count": 5,
+        "fold_size": 1300,
+        "lineage_group_overlap_count": 0,
+        "v332_duplicate_cluster_cross_fold_count": 0,
+        "source_v331_gold_parent_changes": 107,
+        "source_v331_gold_child_changes": 130,
+        "updated_oof_accuracy": 0.9576923076923077,
+        "oof_top3_plus_normal_oracle": 0.9944615384615385,
+        "train_only_added_gold_rows": 36,
+        "pairwise_preference_rows": 17693,
+        "pair_margin_preference_rows": 169,
+        "child_subcategory_count": 39,
+        "candidate_cards_include_official_child_codes_and_names": true,
+        "dev_gold_in_model_input": false,
+        "dev_child_key_metric_only": true,
+        "dev_evaluation_tier": "exposed_dev",
+        "test_b_used": false
+      }
+    },
+    "v336_v332audit6500_semantic_boundary_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V336_V332AUDIT6500_SEMANTIC_BOUNDARY_DEVA1801_DEVONLY_20260726",
+      "data": {
+        "train_jsonl": "data/processed/v336_v332_semantic_boundary_20260726/train_v336_semantic_boundary_6500.jsonl",
+        "dev_queue_jsonl": "data/processed/v329_qm_oof_foundation_20260724/dev_a_v329_stage1_full_blind_queue.jsonl",
+        "dev_eval_key_jsonl": "data/processed/v328c_qm_cross_encoder_pack_20260724/dev_a_v328c_eval_key.jsonl",
+        "dev_child_key_jsonl": "data/processed/v329_qm_oof_foundation_20260724/dev_a_v329_child_eval_key.jsonl",
+        "compact_cards_json": "data/processed/v335_v332_megatron_pairwise_20260726/label_cards_v335_compact_39.json",
+        "label_definitions_json": "data/processed/v336_v332_semantic_boundary_20260726/label_definitions_v336_13x39.json"
+      },
+      "hashes": {
+        "train_jsonl": "87c69071406a01f57fec0c62b07ec5bf36540f98a499c43eb142e5789712cb1a",
+        "dev_queue_jsonl": "b88a0f2af95050a66bde7ffe7282a80759d6a32fa55eee736de25cfd46f64851",
+        "dev_eval_key_jsonl": "5264fa884e1d0551758c8ebeea8d62feec4298ad670108bd17102c75698f43de",
+        "dev_child_key_jsonl": "2cc35a6b6a607c9caf5d36f374ba2f445915ea1851acd1e25b7d041634f78854",
+        "compact_cards_json": "95504823771cb2acef6367d93122abeec4c7633ce2b6787b1c1248d9e26cc840",
+        "label_definitions_json": "11d6c0c1d254bf22a6ffb0587dd98ddb03555fc5a12b173734e14511ff71dac3"
+      },
+      "provenance": {
+        "manifest": "data/processed/v336_v332_semantic_boundary_20260726/manifest_v336_semantic_boundary.json",
+        "manifest_sha256": "1a225bb753474fe0e8f392996c9d5a446a7ca4ff2c39c6912898d3af85cde752",
+        "scope": "V332 triple-consensus physical 6500 joined with lineage-disjoint Train-OOF candidates; all 6500 rows receive gradients; parent13/child39 definitions are encoded separately from full dialogue; exposed Dev-A only; no Test-B.",
+        "physical_train_rows": 6500,
+        "gradient_train_rows": 6500,
+        "unique_sample_ids": 6500,
+        "unique_text_hashes": 6500,
+        "parent_count": 13,
+        "child_count": 39,
+        "boundary_pair_count": 10,
+        "lineage_group_overlap_count": 0,
+        "oof_top3_plus_normal_oracle": 0.9944615384615385,
+        "train_only_appended_gold_rows": 36,
+        "max_text_length": 256,
+        "label_definitions_share_text_budget": false,
+        "dev_gold_in_model_input": false,
+        "dev_used_for_checkpoint_threshold_or_fusion": false,
+        "dev_evaluation_tier": "exposed_dev",
+        "test_b_used": false
+      }
+    },
+    "v337_boundary_repair6500_roberta_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V337_BOUNDARY_REPAIR6500_ROBERTA_DEVA1801_DEVONLY_20260726",
+      "data": {
+        "train_jsonl": "data/processed/v337_boundary_distribution_repair_20260726/admission_r2/train_v337_boundary_repair_6500.jsonl",
+        "internal_val": {
+          "val_jsonl": "data/processed/v314_auditclosed6500_deva1801_testb1580_20260721/dev_a_complete_1801.jsonl"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "090b057ff03073f05359c68560e56dc7da3af1c2c7b8d35532df3fcec70e2a28",
+        "val_jsonl": "69555a44ed9c842c6de81c7c5a1093829680ababf579ba1dfee3aabd0be2415d"
+      },
+      "provenance": {
+        "manifest": "data/processed/v337_boundary_distribution_repair_20260726/admission_r2/manifest_v337_boundary_repair_6500.json",
+        "manifest_sha256": "456d00bb5d2932320f3cc971fe4f317fb599e339e70bdf1fabbdce7b48ee324f",
+        "scope": "Exact physical Core-Train 6500: retain 6200 V332 rows and replace 300 rows with 150 independently triple-reviewed cross-class boundary pairs; fixed exposed Dev-A 1801 only; no Test-B.",
+        "train_rows": 6500,
+        "retained_source_rows": 6200,
+        "reviewed_boundary_rows": 300,
+        "boundary_pairs": 150,
+        "unique_sample_ids": 6500,
+        "unique_text_hashes": 6500,
+        "train_dev_a_text_hash_overlap": 0,
+        "parent_count": 13,
+        "child_count": 39,
+        "rare_child_counts": {
+          "06_0603": 31,
+          "07_0703": 30,
+          "10_1004": 30
+        },
+        "three_reviewer_consensus_closed": true,
+        "dev_evaluation_tier": "exposed_dev",
+        "dev_gold_in_model_input": false,
+        "test_b_used": false
+      }
+    },
+    "v337_boundary_repair6500_pairaware_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V337_BOUNDARY_REPAIR6500_PAIRAWARE_DEVA1801_DEVONLY_20260726",
+      "data": {
+        "train_jsonl": "data/processed/v337_boundary_distribution_repair_20260726/admission_r2/train_v337_boundary_repair_6500.jsonl",
+        "external_dev_a_jsonl": "data/processed/v314_auditclosed6500_deva1801_testb1580_20260721/dev_a_complete_1801.jsonl"
+      },
+      "hashes": {
+        "train_jsonl": "090b057ff03073f05359c68560e56dc7da3af1c2c7b8d35532df3fcec70e2a28",
+        "external_dev_a_jsonl": "69555a44ed9c842c6de81c7c5a1093829680ababf579ba1dfee3aabd0be2415d"
+      },
+      "provenance": {
+        "manifest": "data/processed/v337_boundary_distribution_repair_20260726/admission_r2/manifest_v337_boundary_repair_6500.json",
+        "manifest_sha256": "456d00bb5d2932320f3cc971fe4f317fb599e339e70bdf1fabbdce7b48ee324f",
+        "scope": "Exact physical Core-Train 6500 with 6200 ordinary rows and 300 rows grouped into 150 complete reviewed boundary pairs; fixed exposed Dev-A 1801 evaluated once; no Test-B.",
+        "train_rows": 6500,
+        "ordinary_rows": 6200,
+        "boundary_pair_rows": 300,
+        "boundary_pairs": 150,
+        "unique_sample_ids": 6500,
+        "unique_text_hashes": 6500,
+        "train_dev_a_text_hash_overlap": 0,
+        "parent_count": 13,
+        "child_count": 39,
+        "three_reviewer_consensus_closed": true,
+        "dev_evaluation_tier": "exposed_dev",
+        "dev_gold_in_model_input": false,
+        "test_b_used": false
+      }
+    },
+    "v338_v332_audited_audio6500_fraud12k_dev1300": {
+      "route": "audio",
+      "source_name": "V338_V332_AUDITED_AUDIO6500_WITH_SOURCE_AUDIT_AND_FRAUD12K_STATIC_DEV1300",
+      "data": {
+        "train_jsonl": "data/processed/v334_v332_aligned_clean_audio_20260726/train_v334_v332_aligned_clean_audio_6500.jsonl",
+        "source_audit_jsonl": "data/processed/v334_v332_aligned_clean_audio_20260726/delta_clean_audio/manifest.jsonl",
+        "expected_physical_rows": 6500,
+        "internal_val": {
+          "val_jsonl": "data/processed/fraud12k_dev1300_test1300_v1/dev_selection.jsonl"
+        },
+        "checkpoint_selection": {
+          "eval_csv": "data/processed/fraud12k_dev1300_test1300_v1/dev_selection.jsonl"
+        },
+        "eval_csvs": {
+          "fraud12k_eval": "data/processed/remote_eval/fraud12k_eval/fraud12k_13class_eval.csv"
+        },
+        "external_audio_eval_config": "configs/external_audio_eval_datasets.json"
+      },
+      "hashes": {
+        "train_jsonl": "0571442c7fdea02cfa9ec7574aa1799098c68bf158aba6422a376bcc0a0eacfd",
+        "source_audit_jsonl": "e847a839660d29e871b8759472730d85be660bab78351672fab707a376e8733d",
+        "val_jsonl": "b4eff3a13c92e2350a5dc816f644de3c76adca1251de4bf05287eb4469b63f28"
+      },
+      "provenance": {
+        "manifest": "data/processed/v334_v332_aligned_clean_audio_20260726/manifest_v334_v332_aligned_clean_audio.json",
+        "manifest_sha256": "5ed18d0de80b06a9b03093278b3f7f0114a1f068c899889eb80def53779f367b",
+        "source_text_dataset": "V332_QM_EXTERNAL_FULL6500_TRIPLE_CONSENSUS",
+        "physical_rows": 6500,
+        "child_count": 39,
+        "clean_audio_only": true,
+        "waveform_augmentation_runtime_only": true,
+        "asr_used": false,
+        "text_teacher_used": false,
+        "fraud12k_used_for_training": false,
+        "test1300_used": false
+      }
+    },
+    "v341_policy_aligned_coretrain6500_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V341_POLICY_ALIGNED_CORETRAIN6500_DEVA1801_DEVONLY_20260727",
+      "data": {
+        "train_jsonl": "data/processed/v340_policy_aligned_coretrain6500/train_v340_policy_aligned_coretrain_6500.jsonl",
+        "internal_val": {
+          "val_jsonl": "data/processed/v314_auditclosed6500_deva1801_testb1580_20260721/dev_a_complete_1801.jsonl"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "fdd38d203c3257f20d4fba6a6c6ead556bdeeeca16bc4fe4ed5fef98ceb9bc3f",
+        "val_jsonl": "69555a44ed9c842c6de81c7c5a1093829680ababf579ba1dfee3aabd0be2415d"
+      },
+      "provenance": {
+        "manifest": "data/processed/v340_policy_aligned_coretrain6500/manifest_v340_policy_aligned_coretrain6500.json",
+        "manifest_sha256": "3efaeea6d1d494b2960f08b7be0227492e70d6288215f01e42e5ce9b7e6dc9cb",
+        "policy_decisions": "outputs/v343_core433_policy_review_20260727/policy_decisions_completed.jsonl",
+        "policy_decisions_sha256": "41f36cb04f22fe900e4a7a071ae87d298372829995441282954e7c0eda326a19",
+        "policy_version": "internal_policy_v1",
+        "scope": "Physical 6500 Core-Train policy overlay from V332 plus fixed exposed Dev-A 1801; Pro A + Pro B + Think C strict majority, supplemental Think A only for unresolved signatures; no Test-B.",
+        "train_rows": 6500,
+        "unique_sample_ids": 6500,
+        "unique_text_hashes": 6500,
+        "effective_training_weight": 6303.25,
+        "parent_count": 13,
+        "child_count": 39,
+        "policy_changed_label_rows": 257,
+        "downweighted_rows": 279,
+        "boundary_margin_rows": 246,
+        "external_core433_audit_closed": true,
+        "dev_evaluation_tier": "exposed_dev",
+        "test_b_used": false
+      }
+    },
+    "v334_qwen25omni_best_epoch2_fraud12k_test1300_exposed": {
+      "route": "audio",
+      "source_name": "V334_QWEN25OMNI_BEST_EPOCH2_FRAUD12K_TEST1300_EXPOSED_20260727",
+      "data": {
+        "internal_val": {
+          "val_jsonl": "data/processed/fraud12k_dev1300_test1300_v1/test_selection.jsonl"
+        },
+        "eval_csvs": {
+          "fraud12k_eval": "data/processed/remote_eval/fraud12k_eval/fraud12k_13class_eval.csv"
+        },
+        "external_audio_eval_config": "configs/external_audio_eval_datasets.json"
+      },
+      "hashes": {
+        "val_jsonl": "eaac564aaffb8c812f8d00e4abd56cb4dc2e037754dd05bec857d0151a26dcce"
+      },
+      "provenance": {
+        "selection_spec": "data/processed/fraud12k_dev1300_test1300_v1/selection_spec.json",
+        "scope": "Fixed Test1300: 13 parent labels x 100; zero overlap with Dev1300.",
+        "evaluation_tier": "exposed_test",
+        "checkpoint_frozen_before_test": true,
+        "test_result_must_not_be_used_for_tuning": true,
+        "text_fields_written": false
+      }
+    },
+    "v340_v332_aligned_audio6500_taxonomy_dev1300": {
+      "route": "audio",
+      "source_name": "V340_V332_AUDITED_ALIGNED_AUDIO6500_WITH_FIXED_TAXONOMY_AND_FRAUD12K_DEV1300",
+      "data": {
+        "train_jsonl": "data/processed/v334_v332_aligned_clean_audio_20260726/train_v334_v332_aligned_clean_audio_6500.jsonl",
+        "expected_physical_rows": 6500,
+        "internal_val": {
+          "val_jsonl": "data/processed/fraud12k_dev1300_test1300_v1/dev_selection.jsonl"
+        },
+        "checkpoint_selection": {
+          "eval_csv": "data/processed/fraud12k_dev1300_test1300_v1/dev_selection.jsonl"
+        },
+        "eval_csvs": {
+          "fraud12k_eval": "data/processed/remote_eval/fraud12k_eval/fraud12k_13class_eval.csv"
+        },
+        "external_audio_eval_config": "configs/external_audio_eval_datasets.json",
+        "label_definitions_json": "data/processed/v336_v332_semantic_boundary_20260726/label_definitions_v336_13x39.json"
+      },
+      "hashes": {
+        "train_jsonl": "0571442c7fdea02cfa9ec7574aa1799098c68bf158aba6422a376bcc0a0eacfd",
+        "val_jsonl": "b4eff3a13c92e2350a5dc816f644de3c76adca1251de4bf05287eb4469b63f28",
+        "label_definitions_json": "11d6c0c1d254bf22a6ffb0587dd98ddb03555fc5a12b173734e14511ff71dac3"
+      },
+      "provenance": {
+        "source_dataset": "v334_v332_aligned_clean_audio_6500_fraud12k_dev1300",
+        "taxonomy_manifest": "data/processed/v336_v332_semantic_boundary_20260726/manifest_v336_semantic_boundary.json",
+        "physical_rows": 6500,
+        "parent_count": 13,
+        "child_count": 39,
+        "audio_only": true,
+        "fixed_taxonomy_metadata_only": true,
+        "asr_used": false,
+        "test1300_used": false
+      }
+    },
+    "v340_thchs100_qwen_latency_diagnostic": {
+      "id": "v340_thchs100_qwen_latency_diagnostic",
+      "route": "audio",
+      "source_name": "V340_THCHS100_QWEN25OMNI_LATENCY_DIAGNOSTIC_20260727",
+      "data": {
+        "eval_csvs": {
+          "THCHS": "data/processed/thchs30_concat_1min_20260618/metadata_label13.csv"
+        },
+        "external_audio_eval_config": "configs/external_audio_eval_datasets.json"
+      },
+      "hashes": {
+        "THCHS": "c11d6d50bb20f07dfc2f37bbb8ebf06ae8a765c5e52c92837210eb4ca9e37c60",
+        "external_audio_eval_config": "7807a61ac528d9d839a19c7da36aad991760b183b3b078207445bbb4450b4750"
+      },
+      "provenance": {
+        "scope": "Deterministic 100-call sample from the registered THCHS normal-only 329-call corpus.",
+        "selection_seed": 20260727,
+        "sample_count": 100,
+        "audio_only": true,
+        "transcript_used": false,
+        "asr_used": false,
+        "test1300_used": false,
+        "evaluation_tier": "exposed_external_normal_diagnostic"
+      }
+    },
+    "v346_policy122_coretrain6500_oof": {
+      "route": "text",
+      "source_name": "V346_POLICY122_CORETRAIN6500_LINEAGE_OOF_20260728",
+      "data": {
+        "train_jsonl": "data/processed/v340_policy_aligned_coretrain6500/train_v340_policy_aligned_coretrain_6500.jsonl",
+        "axis_sidecar_jsonl": "data/processed/v346_policy_prototype_multiaxis_20260728/v346_semantic_axis_sidecar.jsonl",
+        "prototype_json": "shared/configs/v346_policy_prototypes_internal_policy_v1.json",
+        "axes_json": "shared/configs/v341_semantic_axes_internal_policy_v1.json",
+        "fold_manifest_json": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold_manifest.json",
+        "lineage_manifest_jsonl": "data/processed/v329_qm_audited_backfill6500_20260725/folds/lineage_manifest.jsonl",
+        "fold0_ids": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold-0_val_ids.txt",
+        "fold1_ids": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold-1_val_ids.txt",
+        "fold2_ids": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold-2_val_ids.txt",
+        "fold3_ids": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold-3_val_ids.txt",
+        "fold4_ids": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold-4_val_ids.txt"
+      },
+      "hashes": {
+        "train_jsonl": "fdd38d203c3257f20d4fba6a6c6ead556bdeeeca16bc4fe4ed5fef98ceb9bc3f",
+        "axis_sidecar_jsonl": "5dd915b7faa3fce43b55d330f6ef4766a077c3e10dd8d08a5e134a8abc89fae0",
+        "prototype_json": "5e36d539cfdb076b446a54a096850d757de8cb4e447788b2d5437ed9bc8c0c6b",
+        "axes_json": "41788070b0874ee356f5e6e4dffe2e1fa6f8d58bd88efaf96d94b1f0ef270f3f",
+        "fold_manifest_json": "34c2c23c0e2647aa2835a86baf2b0c669c504aa4e6effa982a74f4c70f291551",
+        "lineage_manifest_jsonl": "5e6f914072ef255acad31ddc6f74e23f9a7cd81da343c43d14ecb3130b39adea",
+        "fold0_ids": "f29a60f53a5717c8e892fbe75cb84785689e3664fa5c21d761b4ac25a085141b",
+        "fold1_ids": "601a121069df310760fa2789ecf6f52d44592534c144b521e774f2437450309f",
+        "fold2_ids": "5a12e556225281463caa2ede2b822f8a149a481ec0ca79f625f7f123d1a01d44",
+        "fold3_ids": "f07b7e0c6dcba66e7b2db7ebe610c5cc762a5659f529c8cec63da12cd902f39e",
+        "fold4_ids": "143c0f27e58d7eff80674d3f712c0f3d250263adec1ad441a7890e2d6c0a6f43"
+      },
+      "provenance": {
+        "manifest": "data/processed/v346_policy_prototype_multiaxis_20260728/manifest_v346_policy_contracts.json",
+        "prototype_review_manifest": "outputs/v346_policy_prototype_review_20260728/final3_merge/manifest_v346_policy_prototype_final3_merge.json",
+        "prototype_review_manifest_sha256": "b931c3ccd22fd106e5adeca0aa6e1e0a2d5f7a70aa8b3182b63c1e3774777451",
+        "scope": "Core-Train 6500 plus 122 externally reviewed classification policy anchors and 2150 genuinely reviewed three-axis sidecar; five lineage-disjoint folds; no Dev/Test.",
+        "core_train_rows": 6500,
+        "reviewed_axis_rows": 2150,
+        "unreviewed_placeholder_rows_used": 0,
+        "prototype_count": 122,
+        "prototype_status": "frozen_after_external_double_review",
+        "prototype_final3_accepted": 3,
+        "prototype_final3_unresolved": 0,
+        "fold_count": 5,
+        "fold_size": 1300,
+        "lineage_groups": 6181,
+        "lineage_overlap_count": 0,
+        "dev_used": false,
+        "test_b_used": false
+      }
+    },
+    "v348_ccl2023_case_narrative_ood_pilot2400": {
+      "route": "text",
+      "source_name": "V348_CCL2023_REAL_CASE_NARRATIVE_OOD_PILOT2400_20260728",
+      "data": {
+        "internal_val": {
+          "val_jsonl": "data/processed/v348_ccl2023_case_narrative_ood_pilot_20260728/ccl2023_case_ood_balanced_2400.jsonl"
+        },
+        "direct11_jsonl": "data/processed/v348_ccl2023_case_narrative_ood_pilot_20260728/ccl2023_case_ood_direct11_2200.jsonl",
+        "label_mapping_json": "data/processed/v348_ccl2023_case_narrative_ood_pilot_20260728/label_mapping_v1.json"
+      },
+      "hashes": {
+        "val_jsonl": "cc21605c2e4f53c0675ad994ac1369f764c31d2c027c8ccb0940aa6f2ab3fce8",
+        "direct11_jsonl": "9bae98504e4026cfd186199feba6a9bbca985a420de6a91d774d8899dea07c86",
+        "label_mapping_json": "fa68f3dc68a78239ef3cb974af2635041d5bef4e54ce22319f16c3b6dbde1d2d"
+      },
+      "provenance": {
+        "manifest": "data/processed/v348_ccl2023_case_narrative_ood_pilot_20260728/manifest_v348_ccl2023_case_ood.json",
+        "manifest_sha256": "570ebe835275a42766f2f6b4d8e67f31b477dfc4f945561726a84e2ec78e0a15",
+        "source_sha256": "3646a2e4503a3368efbdd107f48ba27a5e6005a97cff790294680391ce5476af",
+        "scope": "Deterministic balanced 200x12 pilot from CCL2023 official labeled train split; globally normalized-text deduplicated; 2200 direct-name mapped rows plus 200 网黑 parent-12 proxy rows.",
+        "rows": 2400,
+        "direct11_rows": 2200,
+        "unique_sample_ids": 2400,
+        "unique_text_hashes": 2400,
+        "core_train_overlap": 0,
+        "dev_a2_overlap": 0,
+        "test_b_used": false,
+        "train_eligible": false,
+        "evaluation_tier": "real_case_narrative_ood_diagnostic",
+        "is_call_transcript": false
+      }
+    },
+    "v347_nested_candidate_groups_oof": {
+      "route": "text",
+      "source_name": "V347_NESTED_CANDIDATE_GROUPS_D1_20260729",
+      "data": {
+        "prototype_json": "shared/configs/v346_policy_prototypes_internal_policy_v1.json",
+        "taxonomy_json": "shared/configs/label_subcategory_rubrics_official_v1.json",
+        "outer_fold_0": "data/processed/v347_nested_candidate_groups_d1/outer_fold_0.jsonl",
+        "outer_fold_1": "data/processed/v347_nested_candidate_groups_d1/outer_fold_1.jsonl",
+        "outer_fold_2": "data/processed/v347_nested_candidate_groups_d1/outer_fold_2.jsonl",
+        "outer_fold_3": "data/processed/v347_nested_candidate_groups_d1/outer_fold_3.jsonl",
+        "outer_fold_4": "data/processed/v347_nested_candidate_groups_d1/outer_fold_4.jsonl"
+      },
+      "hashes": {
+        "prototype_json": "5e36d539cfdb076b446a54a096850d757de8cb4e447788b2d5437ed9bc8c0c6b",
+        "taxonomy_json": "ac83f2ae347ffef3de7dda88164aa4573283222fe9dbd1c3859d9d3cd824366d",
+        "outer_fold_0": "5fd63f0442bf26717576bea9a4c5482695bd7f9ab46cc30cdac581cc9dc2689d",
+        "outer_fold_1": "17c017fc808f64b85299ca1e9396bc5ef64a4e0e4e0bdd72fb6ce351625e0832",
+        "outer_fold_2": "42b78f4c0dbd5b54777c3bf3f7e122accd9bdfe4259ad17cabe12537bdd67157",
+        "outer_fold_3": "959f7c5580b72ddab584ca58bec99716a9b1818e23a415c56bd054d22a16981d",
+        "outer_fold_4": "104fb96bfc80091052925a1b1c6e468e16cc9c99a97370de47fcf2af77cb6db7"
+      },
+      "provenance": {
+        "manifest": "data/processed/v347_nested_candidate_groups_d1/manifest_v347_nested_candidate_groups.json",
+        "manifest_sha256": "97c57ddae8cc67c98cee5c521f041668cb51af338430989cccbb4d1ff9956b25",
+        "stage1_mode": "d1",
+        "physical_stage1_fits": 15,
+        "outer_folds": 5,
+        "outer_train_rows": 5200,
+        "outer_validation_rows": 1300,
+        "validation_gold_recall_mean": 0.9967692307692307,
+        "dev_used": false,
+        "test_b_used": false
+      }
+    },
+    "v350_joint_policy_candidate_groups_oof": {
+      "route": "text",
+      "source_name": "V350_JOINT_POLICY_CANDIDATE_GROUPS_D1_20260729",
+      "data": {
+        "prototype_json": "shared/configs/v346_policy_prototypes_internal_policy_v1.json",
+        "taxonomy_json": "shared/configs/label_subcategory_rubrics_official_v1.json",
+        "lineage_manifest_jsonl": "data/processed/v329_qm_audited_backfill6500_20260725/folds/lineage_manifest.jsonl",
+        "outer_fold_0": "data/processed/v347_nested_candidate_groups_d1/outer_fold_0.jsonl",
+        "outer_fold_1": "data/processed/v347_nested_candidate_groups_d1/outer_fold_1.jsonl",
+        "outer_fold_2": "data/processed/v347_nested_candidate_groups_d1/outer_fold_2.jsonl",
+        "outer_fold_3": "data/processed/v347_nested_candidate_groups_d1/outer_fold_3.jsonl",
+        "outer_fold_4": "data/processed/v347_nested_candidate_groups_d1/outer_fold_4.jsonl"
+      },
+      "hashes": {
+        "prototype_json": "5e36d539cfdb076b446a54a096850d757de8cb4e447788b2d5437ed9bc8c0c6b",
+        "taxonomy_json": "ac83f2ae347ffef3de7dda88164aa4573283222fe9dbd1c3859d9d3cd824366d",
+        "lineage_manifest_jsonl": "5e6f914072ef255acad31ddc6f74e23f9a7cd81da343c43d14ecb3130b39adea",
+        "outer_fold_0": "5fd63f0442bf26717576bea9a4c5482695bd7f9ab46cc30cdac581cc9dc2689d",
+        "outer_fold_1": "17c017fc808f64b85299ca1e9396bc5ef64a4e0e4e0bdd72fb6ce351625e0832",
+        "outer_fold_2": "42b78f4c0dbd5b54777c3bf3f7e122accd9bdfe4259ad17cabe12537bdd67157",
+        "outer_fold_3": "959f7c5580b72ddab584ca58bec99716a9b1818e23a415c56bd054d22a16981d",
+        "outer_fold_4": "104fb96bfc80091052925a1b1c6e468e16cc9c99a97370de47fcf2af77cb6db7"
+      },
+      "provenance": {
+        "base_dataset_id": "v347_nested_candidate_groups_oof",
+        "stage1_mode": "d1",
+        "physical_stage1_fits": 15,
+        "outer_folds": 5,
+        "outer_train_rows": 5200,
+        "outer_validation_rows": 1300,
+        "lineage_groups": 6181,
+        "cross_fold_lineage_overlap": 0,
+        "content_labels_changed": false,
+        "new_labels": false,
+        "dev_used": false,
+        "test_b_used": false
+      }
+    },
+    "v351_thchs100_text_diagnostic": {
+      "id": "v351_thchs100_text_diagnostic",
+      "route": "text",
+      "source_name": "V351_THCHS100_TEXT_DIAGNOSTIC_20260730",
+      "data": {
+        "internal_val": {
+          "val_jsonl": "data/processed/v351_thchs100_text_diagnostic_20260730/thchs100_text_seed20260727.jsonl"
+        },
+        "manifest": "data/processed/v351_thchs100_text_diagnostic_20260730/manifest_v351_thchs100_text.json"
+      },
+      "hashes": {
+        "val_jsonl": "a9c8cc4edbe34b34fd4508358a3ef6b60294ab0c1666c56bae1a70c997e02dc3",
+        "manifest": "0aba971dd09df777f62be944df334708d418dfc78d996f5fd0655423b9c28d6e"
+      },
+      "provenance": {
+        "scope": "Exact same 100 THCHS call IDs as V340T audio diagnostic, using registered transcripts only.",
+        "selection_seed": 20260727,
+        "sample_count": 100,
+        "source_metadata_rows": 1904,
+        "audio_available_rows": 329,
+        "all_labels_normal": true,
+        "audio_used": false,
+        "asr_used": false,
+        "test_b_used": false,
+        "train_eligible": false,
+        "evaluation_tier": "exposed_external_normal_text_diagnostic"
+      }
+    },
+    "v352_policy6500_oof_fold0": {
+      "route": "text",
+      "source_name": "V352_POLICY6500_LINEAGE_AWARE_OOF_FOLD0_20260731",
+      "data": {
+        "train_jsonl": "data/processed/v340_policy_aligned_coretrain6500/train_v340_policy_aligned_coretrain_6500.jsonl",
+        "internal_val": {
+          "val_id_file": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold-0_val_ids.txt"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "fdd38d203c3257f20d4fba6a6c6ead556bdeeeca16bc4fe4ed5fef98ceb9bc3f",
+        "val_id_file": "f29a60f53a5717c8e892fbe75cb84785689e3664fa5c21d761b4ac25a085141b"
+      },
+      "provenance": {
+        "manifest": "data/processed/v340_policy_aligned_coretrain6500/manifest_v340_policy_aligned_coretrain6500.json",
+        "fold_manifest": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold_manifest.json",
+        "fold_index": 0,
+        "fold_rows": 1300,
+        "core_train_rows": 6500,
+        "lineage_group_overlap_count": 0,
+        "policy_version": "internal_policy_v1",
+        "scope": "V340 policy-aligned physical 6500 only; held-out lineage-safe OOF fold; no Dev-A and no Test-B.",
+        "dev_used": false,
+        "test_b_used": false
+      }
+    },
+    "v352_policy6500_oof_fold1": {
+      "route": "text",
+      "source_name": "V352_POLICY6500_LINEAGE_AWARE_OOF_FOLD1_20260731",
+      "data": {
+        "train_jsonl": "data/processed/v340_policy_aligned_coretrain6500/train_v340_policy_aligned_coretrain_6500.jsonl",
+        "internal_val": {
+          "val_id_file": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold-1_val_ids.txt"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "fdd38d203c3257f20d4fba6a6c6ead556bdeeeca16bc4fe4ed5fef98ceb9bc3f",
+        "val_id_file": "601a121069df310760fa2789ecf6f52d44592534c144b521e774f2437450309f"
+      },
+      "provenance": {
+        "manifest": "data/processed/v340_policy_aligned_coretrain6500/manifest_v340_policy_aligned_coretrain6500.json",
+        "fold_manifest": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold_manifest.json",
+        "fold_index": 1,
+        "fold_rows": 1300,
+        "core_train_rows": 6500,
+        "lineage_group_overlap_count": 0,
+        "policy_version": "internal_policy_v1",
+        "scope": "V340 policy-aligned physical 6500 only; held-out lineage-safe OOF fold; no Dev-A and no Test-B.",
+        "dev_used": false,
+        "test_b_used": false
+      }
+    },
+    "v352_policy6500_oof_fold2": {
+      "route": "text",
+      "source_name": "V352_POLICY6500_LINEAGE_AWARE_OOF_FOLD2_20260731",
+      "data": {
+        "train_jsonl": "data/processed/v340_policy_aligned_coretrain6500/train_v340_policy_aligned_coretrain_6500.jsonl",
+        "internal_val": {
+          "val_id_file": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold-2_val_ids.txt"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "fdd38d203c3257f20d4fba6a6c6ead556bdeeeca16bc4fe4ed5fef98ceb9bc3f",
+        "val_id_file": "5a12e556225281463caa2ede2b822f8a149a481ec0ca79f625f7f123d1a01d44"
+      },
+      "provenance": {
+        "manifest": "data/processed/v340_policy_aligned_coretrain6500/manifest_v340_policy_aligned_coretrain6500.json",
+        "fold_manifest": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold_manifest.json",
+        "fold_index": 2,
+        "fold_rows": 1300,
+        "core_train_rows": 6500,
+        "lineage_group_overlap_count": 0,
+        "policy_version": "internal_policy_v1",
+        "scope": "V340 policy-aligned physical 6500 only; held-out lineage-safe OOF fold; no Dev-A and no Test-B.",
+        "dev_used": false,
+        "test_b_used": false
+      }
+    },
+    "v352_policy6500_oof_fold3": {
+      "route": "text",
+      "source_name": "V352_POLICY6500_LINEAGE_AWARE_OOF_FOLD3_20260731",
+      "data": {
+        "train_jsonl": "data/processed/v340_policy_aligned_coretrain6500/train_v340_policy_aligned_coretrain_6500.jsonl",
+        "internal_val": {
+          "val_id_file": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold-3_val_ids.txt"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "fdd38d203c3257f20d4fba6a6c6ead556bdeeeca16bc4fe4ed5fef98ceb9bc3f",
+        "val_id_file": "f07b7e0c6dcba66e7b2db7ebe610c5cc762a5659f529c8cec63da12cd902f39e"
+      },
+      "provenance": {
+        "manifest": "data/processed/v340_policy_aligned_coretrain6500/manifest_v340_policy_aligned_coretrain6500.json",
+        "fold_manifest": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold_manifest.json",
+        "fold_index": 3,
+        "fold_rows": 1300,
+        "core_train_rows": 6500,
+        "lineage_group_overlap_count": 0,
+        "policy_version": "internal_policy_v1",
+        "scope": "V340 policy-aligned physical 6500 only; held-out lineage-safe OOF fold; no Dev-A and no Test-B.",
+        "dev_used": false,
+        "test_b_used": false
+      }
+    },
+    "v352_policy6500_oof_fold4": {
+      "route": "text",
+      "source_name": "V352_POLICY6500_LINEAGE_AWARE_OOF_FOLD4_20260731",
+      "data": {
+        "train_jsonl": "data/processed/v340_policy_aligned_coretrain6500/train_v340_policy_aligned_coretrain_6500.jsonl",
+        "internal_val": {
+          "val_id_file": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold-4_val_ids.txt"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "fdd38d203c3257f20d4fba6a6c6ead556bdeeeca16bc4fe4ed5fef98ceb9bc3f",
+        "val_id_file": "143c0f27e58d7eff80674d3f712c0f3d250263adec1ad441a7890e2d6c0a6f43"
+      },
+      "provenance": {
+        "manifest": "data/processed/v340_policy_aligned_coretrain6500/manifest_v340_policy_aligned_coretrain6500.json",
+        "fold_manifest": "data/processed/v329_qm_audited_backfill6500_20260725/folds/fold_manifest.json",
+        "fold_index": 4,
+        "fold_rows": 1300,
+        "core_train_rows": 6500,
+        "lineage_group_overlap_count": 0,
+        "policy_version": "internal_policy_v1",
+        "scope": "V340 policy-aligned physical 6500 only; held-out lineage-safe OOF fold; no Dev-A and no Test-B.",
+        "dev_used": false,
+        "test_b_used": false
+      }
+    },
+    "v354_policy6500_deva2_testb1580": {
+      "id": "v354_policy6500_deva2_testb1580",
+      "route": "text",
+      "source_name": "V354_POLICY6500_DEVA2_1801_TESTB1580_20260731",
+      "data": {
+        "train_jsonl": "data/processed/v340_policy_aligned_coretrain6500/train_v340_policy_aligned_coretrain_6500.jsonl",
+        "internal_val": {
+          "val_jsonl": "data/processed/v346_deva2_frozen_20260728/dev_a2_frozen_1801.jsonl"
+        },
+        "eval_csvs": {
+          "fraud12k_eval": "data/processed/v311_auditclosed6500_deva1733_testb1580_20260721/test_b_auditclosed_1580.csv"
+        }
+      },
+      "hashes": {
+        "train_jsonl": "fdd38d203c3257f20d4fba6a6c6ead556bdeeeca16bc4fe4ed5fef98ceb9bc3f",
+        "val_jsonl": "c8e42fcdf82dc3dab785c105ffdf3034783db070ecca0ff38775c69924fcc99b",
+        "test_csv": "0f764ffd98b59c94c430d0d5b77b4d09111d09dfb501f15111a0aa5aaddf171e"
+      },
+      "provenance": {
+        "policy_version": "internal_policy_v1",
+        "train_rows": 6500,
+        "dev_a2_rows": 1801,
+        "test_b_rows": 1580,
+        "evaluation_contract": "Frozen configurations; Dev-A2 and Test-B report-only; no threshold or checkpoint selection."
+      }
+    },
+    "v355_policy6500_originaldeva1801_testb1580": {
+      "route": "text",
+      "source_name": "V355_POLICY6500_ORIGINALDEVA1801_TESTB1580_20260731",
+      "data": {
+        "train_jsonl": "data/processed/v340_policy_aligned_coretrain6500/train_v340_policy_aligned_coretrain_6500.jsonl",
+        "internal_val": {
+          "val_jsonl": "data/processed/v314_auditclosed6500_deva1801_testb1580_20260721/dev_a_complete_1801.jsonl"
+        },
+        "eval_csvs": {
+          "fraud12k_eval": "data/processed/v311_auditclosed6500_deva1733_testb1580_20260721/test_b_auditclosed_1580.csv"
+        },
+        "external_audio_eval_config": "configs/external_audio_eval_datasets.json"
+      },
+      "hashes": {
+        "train_jsonl": "fdd38d203c3257f20d4fba6a6c6ead556bdeeeca16bc4fe4ed5fef98ceb9bc3f",
+        "val_jsonl": "69555a44ed9c842c6de81c7c5a1093829680ababf579ba1dfee3aabd0be2415d",
+        "test_csv": "0f764ffd98b59c94c430d0d5b77b4d09111d09dfb501f15111a0aa5aaddf171e"
+      }
+    },
+    "v356_policy6500_v337pairsidecar_deva2_devonly": {
+      "route": "text",
+      "source_name": "V356_POLICY6500_V337PAIRSIDECAR_DEVA2_DEVONLY_20260731",
+      "data": {
+        "train_jsonl": "data/processed/v340_policy_aligned_coretrain6500/train_v340_policy_aligned_coretrain_6500.jsonl",
+        "pair_jsonl": "data/processed/v356_v340_v337_pair_sidecar_20260731/v337_reviewed_boundary_pair_sidecar_300.jsonl",
+        "external_dev_a_jsonl": "data/processed/v346_deva2_frozen_20260728/dev_a2_frozen_1801.jsonl"
+      },
+      "hashes": {
+        "train_jsonl": "fdd38d203c3257f20d4fba6a6c6ead556bdeeeca16bc4fe4ed5fef98ceb9bc3f",
+        "pair_jsonl": "34c382f371f3a80716fed28ead8a72af4d8af346295c89ff97d559e9ddb0febd",
+        "external_dev_a_jsonl": "c8e42fcdf82dc3dab785c105ffdf3034783db070ecca0ff38775c69924fcc99b"
+      },
+      "provenance": {
+        "manifest": "data/processed/v356_v340_v337_pair_sidecar_20260731/manifest_v356_pair_sidecar.json",
+        "manifest_sha256": "11105e01baca597c4c9d776e0d47b6b2331e1080d9bf554729178871dc2cb3be",
+        "scope": "V340 internal_policy_v1 physical Core-Train 6500 plus V337 three-review-consensus 150 cross-class pairs as margin-only sidecar; frozen Dev-A2 1801; no Test-B.",
+        "train_rows": 6500,
+        "pair_sidecar_rows": 300,
+        "boundary_pairs": 150,
+        "external_dev_rows": 1801,
+        "pair_base_multitask_loss_weight": 0,
+        "policy_version": "internal_policy_v1",
+        "test_b_used": false
+      }
+    },
+    "v356_policy6500_v337pairsidecar_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V356_POLICY6500_V337PAIRSIDECAR_DEVA1801_DEVONLY_20260731",
+      "data": {
+        "train_jsonl": "data/processed/v340_policy_aligned_coretrain6500/train_v340_policy_aligned_coretrain_6500.jsonl",
+        "pair_jsonl": "data/processed/v356_v340_v337_pair_sidecar_20260731/v337_reviewed_boundary_pair_sidecar_300.jsonl",
+        "external_dev_a_jsonl": "data/processed/v314_auditclosed6500_deva1801_testb1580_20260721/dev_a_complete_1801.jsonl"
+      },
+      "hashes": {
+        "train_jsonl": "fdd38d203c3257f20d4fba6a6c6ead556bdeeeca16bc4fe4ed5fef98ceb9bc3f",
+        "pair_jsonl": "34c382f371f3a80716fed28ead8a72af4d8af346295c89ff97d559e9ddb0febd",
+        "external_dev_a_jsonl": "69555a44ed9c842c6de81c7c5a1093829680ababf579ba1dfee3aabd0be2415d"
+      },
+      "provenance": {
+        "manifest": "data/processed/v356_v340_v337_pair_sidecar_20260731/manifest_v356_pair_sidecar.json",
+        "manifest_sha256": "11105e01baca597c4c9d776e0d47b6b2331e1080d9bf554729178871dc2cb3be",
+        "scope": "V340 internal_policy_v1 physical Core-Train 6500 plus V337 three-review-consensus 150 cross-class pairs as margin-only sidecar; V341 legacy exposed Dev-A 1801 for checkpoint selection; Dev-A2 and Test-B are not read.",
+        "train_rows": 6500,
+        "pair_sidecar_rows": 300,
+        "boundary_pairs": 150,
+        "external_dev_rows": 1801,
+        "pair_base_multitask_loss_weight": 0,
+        "policy_version": "internal_policy_v1",
+        "test_b_used": false
+      }
+    },
+    "v356_policy6500_qwen_direct_deva1801_devonly": {
+      "route": "text",
+      "source_name": "V356_POLICY6500_QWEN_DIRECT_DEVA1801_DEVONLY_20260801",
+      "data": {
+        "train_jsonl": "data/processed/v340_policy_aligned_coretrain6500/train_v340_policy_aligned_coretrain_6500.jsonl",
+        "dev_queue_jsonl": "data/processed/v329_qm_oof_foundation_20260724/dev_a_v329_stage1_full_blind_queue.jsonl",
+        "dev_eval_key_jsonl": "data/processed/v328c_qm_cross_encoder_pack_20260724/dev_a_v328c_eval_key.jsonl",
+        "dev_child_key_jsonl": "data/processed/v329_qm_oof_foundation_20260724/dev_a_v329_child_eval_key.jsonl",
+        "child_rubrics_json": "data/processed/v329_qm_audited_backfill6500_20260725/label_subcategory_rubrics_official_v1.json"
+      },
+      "hashes": {
+        "train_jsonl": "fdd38d203c3257f20d4fba6a6c6ead556bdeeeca16bc4fe4ed5fef98ceb9bc3f",
+        "dev_queue_jsonl": "b88a0f2af95050a66bde7ffe7282a80759d6a32fa55eee736de25cfd46f64851",
+        "dev_eval_key_jsonl": "5264fa884e1d0551758c8ebeea8d62feec4298ad670108bd17102c75698f43de",
+        "dev_child_key_jsonl": "2cc35a6b6a607c9caf5d36f374ba2f445915ea1851acd1e25b7d041634f78854",
+        "child_rubrics_json": "ac83f2ae347ffef3de7dda88164aa4573283222fe9dbd1c3859d9d3cd824366d"
+      },
+      "provenance": {
+        "scope": "V340 internal_policy_v1 physical Core-Train 6500 with frozen exposed Dev-A 1801; Qwen direct-classification comparison only; no Test-B.",
+        "train_rows": 6500,
+        "optimizer_train_rows": 6500,
+        "dev_rows": 1801,
+        "dev_evaluation_tier": "exposed_dev",
+        "dev_gold_in_model_input": false,
+        "test_b_used": false,
+        "policy_version": "internal_policy_v1"
+      }
+    },
+    "v357_full13_policy_groups_oof": {
+      "id": "v357_full13_policy_groups_oof",
+      "route": "text",
+      "source_name": "V357_FULL13_POLICY_GROUPS_OOF_20260801",
+      "data": {
+        "prototype_json": "shared/configs/v346_policy_prototypes_internal_policy_v1.json",
+        "taxonomy_json": "shared/configs/label_subcategory_rubrics_official_v1.json",
+        "outer_fold_0": "data/processed/v357_full13_policy_groups_oof/outer_fold_0.jsonl",
+        "outer_fold_1": "data/processed/v357_full13_policy_groups_oof/outer_fold_1.jsonl",
+        "outer_fold_2": "data/processed/v357_full13_policy_groups_oof/outer_fold_2.jsonl",
+        "outer_fold_3": "data/processed/v357_full13_policy_groups_oof/outer_fold_3.jsonl",
+        "outer_fold_4": "data/processed/v357_full13_policy_groups_oof/outer_fold_4.jsonl"
+      },
+      "hashes": {
+        "prototype_json": "5e36d539cfdb076b446a54a096850d757de8cb4e447788b2d5437ed9bc8c0c6b",
+        "taxonomy_json": "ac83f2ae347ffef3de7dda88164aa4573283222fe9dbd1c3859d9d3cd824366d",
+        "outer_fold_0": "3837581f88293ab571a9ed2231bb3a5aff944a37394557685cbd765de73b41a0",
+        "outer_fold_1": "3838fa658a69a48064fa3b9a501526c554fa407bab1709d8bf985b7b373b352a",
+        "outer_fold_2": "42da31cee0fba3674f337c3c6e40a57c323ae3608d67ec1ef6cccc625f0b5eab",
+        "outer_fold_3": "f5664071161dc7c66b78c1022b393ff2303b1f64e4500972eb60c32771634c5b",
+        "outer_fold_4": "05c31f099ef996768bc608cb34fb8b37dcc27c584b8d21c357dc743f07456385"
+      },
+      "provenance": {
+        "manifest": "data/processed/v357_full13_policy_groups_oof/manifest_v357_full13.json",
+        "stage1_source": "v347_nested_candidate_groups_d1",
+        "candidate_count": 13,
+        "outer_folds": 5,
+        "outer_train_rows": 5200,
+        "outer_validation_rows": 1300,
+        "dev_used": false,
+        "test_b_used": false
+      }
+    },
+    "v357_train_dev_test_full13": {
+      "id": "v357_train_dev_test_full13",
+      "route": "text",
+      "source_name": "V357_TRAIN6500_DEVA2_1801_TESTB1580_FULL13_20260801",
+      "data": {
+        "prototype_json": "shared/configs/v346_policy_prototypes_internal_policy_v1.json",
+        "taxonomy_json": "shared/configs/label_subcategory_rubrics_official_v1.json",
+        "train_groups_jsonl": "data/processed/v357_train_dev_test_full13/train_full13_groups.jsonl",
+        "dev_groups_jsonl": "data/processed/v357_train_dev_test_full13/dev_full13_groups.jsonl",
+        "test_groups_jsonl": "data/processed/v357_train_dev_test_full13/test_full13_groups.jsonl"
+      },
+      "hashes": {
+        "prototype_json": "5e36d539cfdb076b446a54a096850d757de8cb4e447788b2d5437ed9bc8c0c6b",
+        "taxonomy_json": "ac83f2ae347ffef3de7dda88164aa4573283222fe9dbd1c3859d9d3cd824366d",
+        "train_groups_jsonl": "bbee8e7bc51200ccaca76b5cc30cc905ec44f4edd84c26b0030fe2a3a363bbb5",
+        "dev_groups_jsonl": "06cca1db01bd7a9edd28e78e73b0845e5a67fefe8790badbb6eb6353c53437a5",
+        "test_groups_jsonl": "fce16fa16c89328fea11d49b2509b454ea85410eaf85f2fe704437b82cabbe89"
+      },
+      "provenance": {
+        "manifest": "data/processed/v357_train_dev_test_full13/manifest.json",
+        "train_rows": 6500,
+        "dev_rows": 1801,
+        "test_rows": 1580,
+        "candidate_count": 13,
+        "test_b_exposed_once": true,
+        "test_b_used_for_tuning": false
+      }
+    },
+    "v361_longdoc_train6500_deva2_longdev": {
+      "id": "v361_longdoc_train6500_deva2_longdev",
+      "route": "text",
+      "source_name": "V361_LONGDOC_TRAIN6500_DEVA2_1801_LONGDEV240_20260824",
+      "data": {
+        "train_jsonl": "data/processed/v361_longdoc_text_route_20260824/train_v361_longdoc_6500.jsonl",
+        "external_dev_a2_jsonl": "data/processed/v346_deva2_frozen_20260728/dev_a2_frozen_1801.jsonl",
+        "long_dev_jsonl": "data/processed/v361_longdoc_text_route_20260824/long_dev_v361_240.jsonl"
+      },
+      "hashes": {
+        "train_jsonl": "9a5944c3e4b11b571cf065c1b9fe90e8ef4da6474b0b24c57fa407bdbaa749dc",
+        "external_dev_a2_jsonl": "c8e42fcdf82dc3dab785c105ffdf3034783db070ecca0ff38775c69924fcc99b",
+        "long_dev_jsonl": "771b32e5898f5aec2d7629dd499a771b845f2d3d63468ea397a21fe09f3da6bd"
+      },
+      "provenance": {
+        "train_rows": 6500,
+        "long_train_rows": 620,
+        "dev_a2_rows": 1801,
+        "long_dev_rows": 240,
+        "generated_rows_final_audit": 980,
+        "long_stress_frozen_during_selection": true,
+        "test_b_frozen_during_selection": true,
+        "oof_used": false,
+        "role_markers_excluded_from_model_input": true
+      }
+    },
+    "v361_phase1_deva2_longdev": {
+      "id": "v361_phase1_deva2_longdev",
+      "route": "text",
+      "source_name": "V361_PHASE1_DEVA2_1801_LONGDEV240_20260824",
+      "data": {
+        "external_dev_a2_jsonl": "data/processed/v346_deva2_frozen_20260728/dev_a2_frozen_1801.jsonl",
+        "long_dev_jsonl": "data/processed/v361_longdoc_text_route_20260824/long_dev_v361_240.jsonl"
+      },
+      "hashes": {
+        "external_dev_a2_jsonl": "c8e42fcdf82dc3dab785c105ffdf3034783db070ecca0ff38775c69924fcc99b",
+        "long_dev_jsonl": "771b32e5898f5aec2d7629dd499a771b845f2d3d63468ea397a21fe09f3da6bd"
+      },
+      "provenance": {
+        "dev_a2_rows": 1801,
+        "long_dev_rows": 240,
+        "purpose": "V361 phase-1 inference-only controls",
+        "train_used": false,
+        "long_stress_used": false,
+        "test_b_used": false,
+        "oof_used": false
+      }
+    },
+    "v361_routeB_smoke_deva2_longdev": {
+      "id": "v361_routeB_smoke_deva2_longdev",
+      "route": "text",
+      "source_name": "V361_ROUTEB_SMOKE_160_DEVA2_1801_LONGDEV240_20260911",
+      "data": {
+        "train_jsonl": "data/processed/v361_longdoc_text_route_20260824/smoke_train_192.jsonl",
+        "external_dev_a2_jsonl": "data/processed/v346_deva2_frozen_20260728/dev_a2_frozen_1801.jsonl",
+        "long_dev_jsonl": "data/processed/v361_longdoc_text_route_20260824/long_dev_v361_240.jsonl"
+      },
+      "hashes": {
+        "train_jsonl": "94e284ef730c1c57cdbdb49e11487f736b113306e4fdbc0606cc1a41217f6137",
+        "external_dev_a2_jsonl": "c8e42fcdf82dc3dab785c105ffdf3034783db070ecca0ff38775c69924fcc99b",
+        "long_dev_jsonl": "771b32e5898f5aec2d7629dd499a771b845f2d3d63468ea397a21fe09f3da6bd"
+      },
+      "provenance": {
+        "train_rows": 160,
+        "long_train_rows": 64,
+        "dev_a2_rows": 1801,
+        "long_dev_rows": 240,
+        "purpose": "route-B training smoke only; never used for model selection",
+        "long_stress_frozen_during_selection": true,
+        "test_b_frozen_during_selection": true,
+        "oof_used": false
+      }
+    },
+    "v361_testb1580_longstress120": {
+      "id": "v361_testb1580_longstress120",
+      "route": "text",
+      "source_name": "V361_TESTB1580_LONGSTRESS120_FINAL_REPORT_20260912",
+      "data": {
+        "eval_csvs": {
+          "fraud12k_eval": "data/processed/v311_auditclosed6500_deva1733_testb1580_20260721/test_b_auditclosed_1580.csv"
+        },
+        "long_dev_jsonl": "data/processed/v361_longdoc_text_route_20260824/long_stress_v361_120.jsonl"
+      },
+      "hashes": {
+        "test_csv": "0f764ffd98b59c94c430d0d5b77b4d09111d09dfb501f15111a0aa5aaddf171e",
+        "long_dev_jsonl": "f52e147b458055e5bf6622c00855ea1ed677305057e69de23d5d696717158b55"
+      },
+      "provenance": {
+        "test_b_rows": 1580,
+        "long_stress_rows": 120,
+        "evaluation_contract": "Frozen checkpoints; report-only evaluation; no model or threshold selection.",
+        "test_b_used_for_tuning": false,
+        "long_stress_used_for_tuning": false
+      }
+    }
+  },
+  "models": {
+    "roberta_wwm_ext_large": {
+      "routes": [
+        "text"
+      ],
+      "path": "models/hfl-chinese-roberta-wwm-ext-large",
+      "tokenizer_family": "hfl_chinese_wordpiece_21128",
+      "tokenizer_sha256": "53ff61207898738bbdc000f38abebef01041c8d23b6270c11855fc692d0a3ad6",
+      "vocab_sha256": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+    },
+    "macbert_large": {
+      "routes": [
+        "text"
+      ],
+      "path": "models/hfl-chinese-macbert-large",
+      "tokenizer_family": "hfl_chinese_wordpiece_21128",
+      "tokenizer_sha256": "53ff61207898738bbdc000f38abebef01041c8d23b6270c11855fc692d0a3ad6",
+      "vocab_sha256": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+    },
+    "qwen3_reranker_4b": {
+      "routes": [
+        "text"
+      ],
+      "path": "models/Qwen-Qwen3-Reranker-4B",
+      "architecture": "qwen3_reranker_causal_lm_lora",
+      "tokenizer_family": "qwen3_bpe_reranker",
+      "remote_preloaded": true
+    },
+    "whisper_large_v3_frozen": {
+      "routes": [
+        "audio"
+      ],
+      "path": "models/whisper-large-v3",
+      "architecture": "frozen_whisper_frame_tokens"
+    },
+    "whisper_large_v3_top4_lora": {
+      "routes": [
+        "audio"
+      ],
+      "path": "models/whisper-large-v3",
+      "architecture": "whisper_encoder_top4_qv_lora_frame_tokens",
+      "base_model_id": "whisper_large_v3_frozen"
+    },
+    "whisper_large_v3_top8_lora": {
+      "routes": [
+        "audio"
+      ],
+      "path": "models/whisper-large-v3",
+      "architecture": "whisper_encoder_top8_qvo_lora_trainable_layernorm_frame_tokens",
+      "base_model_id": "whisper_large_v3_frozen"
+    },
+    "qwen25_7b_instruct": {
+      "routes": [
+        "text"
+      ],
+      "path": "models/Qwen-Qwen2.5-7B-Instruct",
+      "architecture": "qwen25_7b_causal_encoder_lora_multitask",
+      "tokenizer_family": "qwen2_5_bpe",
+      "remote_preloaded": true
+    },
+    "whisper_large_v3_encoder8_decoder4_lora": {
+      "id": "whisper_large_v3_encoder8_decoder4_lora",
+      "routes": [
+        "audio"
+      ],
+      "path": "models/whisper-large-v3",
+      "architecture": "whisper_encoder_top8_decoder_top4_qvo_lora_cross_attention_direct13_call_transformer",
+      "base_model_id": "whisper_large_v3_frozen"
+    },
+    "erlangshen_megatronbert_1_3b": {
+      "routes": [
+        "text"
+      ],
+      "path": "models/IDEA-CCNL-Erlangshen-MegatronBert-1.3B",
+      "architecture": "megatron_bert_1_3b_discriminative_encoder",
+      "tokenizer_family": "bert_wordpiece_21248",
+      "config_sha256": "45a6a9ef651bc3e5cca9fd4ee4de2815b8229fb41b495d5ba627666283f16f80",
+      "vocab_sha256": "366fe2b1318c774fd28bdea58dbcfbd6d6aeae313fdcd9063d170cdc602fd51a",
+      "remote_preloaded": true
+    },
+    "paddlespeech_aishell3_fastspeech2_hifigan": {
+      "routes": [
+        "audio"
+      ],
+      "path": "data/raw/aishell3_test",
+      "architecture": "paddlespeech_fastspeech2_aishell3_plus_hifigan_aishell3_strict_clean_tts",
+      "toolkit": "paddlespeech",
+      "output_sample_rate": 16000
+    },
+    "qwen2_5_omni_7b_thinker_qlora": {
+      "routes": [
+        "audio"
+      ],
+      "path": "models/Qwen-Qwen2.5-Omni-7B",
+      "architecture": "qwen2_5_omni_7b_thinker_direct_multitask_qlora",
+      "processor_family": "qwen2_5_omni",
+      "precision": "nf4_qlora_bf16_compute",
+      "remote_preloaded": true,
+      "audio_input": true,
+      "text_output_head_used": false,
+      "talker_used": false
+    },
+    "whisper_large_v3_v338_decoder_query_multitask_lora": {
+      "id": "whisper_large_v3_v338_decoder_query_multitask_lora",
+      "routes": [
+        "audio"
+      ],
+      "path": "models/whisper-large-v3",
+      "architecture": "whisper_large_v3_fixed_zh_transcribe_prefix_softprompt20_parent_child_binary_queries_call_attention_decoder32_lora_optional_encoder_top8_lora",
+      "base_model_id": "whisper_large_v3_frozen"
+    },
+    "qwen3_8b": {
+      "routes": [
+        "text"
+      ],
+      "path": "models/Qwen-Qwen3-8B",
+      "architecture": "qwen3_8b_causal_encoder_lora",
+      "tokenizer_family": "qwen3_bpe",
+      "remote_preloaded": true,
+      "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+    }
+  },
+  "protocols": {
+    "text.v309.acc-only.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v309_acc_only_v1.json",
+      "sha256": "c07cada104df28379bde3cf9fbe90e8fc0b7b19032d0299b92dcfd4caee16fec",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large",
+        "macbert_large"
+      ],
+      "description": "V309 13 类文本训练：256 tokens、内部 label_13_accuracy 选点、Fraud12K 与 THCHS 仅最终报告。"
+    },
+    "text.v312.saved-checkpoint-eval.v1": {
+      "route": "text",
+      "operation": "diagnostic",
+      "source": "text_model/configs/profiles/text_v312_saved_checkpoint_eval.v1.json",
+      "sha256": "17b5b834426e299f210954af99cb92a89a8e54910a073bcd820bc7999d33b424",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V312 已选 checkpoint 的只推理评测；仅运行指定外部测试集，不训练、不选点。"
+    },
+    "text.v316.devonly.baseline.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v316_devonly_baseline.v1.json",
+      "sha256": "17f26459cc0d17ad201641a8c0d8cdc60698717bce55f00e6a3747e86a78f555",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V316 Dev-only 基线复现：只用 Dev-A 1801 选点，不读取 Test-B。"
+    },
+    "text.v316.devonly.binaryaux010.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v316_devonly_binaryaux010.v1.json",
+      "sha256": "d5f187ebe4784cdf49d52fee39b34ff4c7a4d7c31940100dd146554ecb5a9ef3",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V316 Dev-only 二分类辅助损失消融：dual_binary_loss_weight=0.10，不读取 Test-B。"
+    },
+    "text.v316.devonly.binaryaux005.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v316_devonly_binaryaux005.v1.json",
+      "sha256": "1039ee8957a6dc1277aebe008f5bb405c011e20605988466ce55705772027869",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V316 Dev-only 二分类辅助损失消融：dual_binary_loss_weight=0.05，不读取 Test-B。"
+    },
+    "text.v317.devonly.hier-binaryaux010.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v317_devonly_hier_binaryaux010.v1.json",
+      "sha256": "57aee145bcb6e912b62bbe0b83c6c20f79095fc05f3d1d2be1ec49d85136dfac",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V317 Dev-only 层级联合输出筛选：保留 binary auxiliary=0.10，不读取 Test-B。"
+    },
+    "text.v317.devonly.official39-binaryaux010.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v317_devonly_official39_binaryaux010.v1.json",
+      "sha256": "d7224e267e73a55a0ce9777c60a8720fb687c1c610650dc46c99899a3a4b2f83",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V317 Dev-only 官方 39 子类辅助头筛选：保留 binary auxiliary=0.10，不读取 Test-B。"
+    },
+    "text.v318.devonly.macbert-binaryaux010.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v318_devonly_macbert_binaryaux010.v1.json",
+      "sha256": "57fa418892647ace914c5de114099bf0cdb0c5531e1d40659d75db3907c31c04",
+      "compatible_model_ids": [
+        "macbert_large"
+      ],
+      "description": "V318 Dev-only MacBERT-large 公平模型对照：binary auxiliary=0.10，不读取 Test-B。"
+    },
+    "text.v318.devonly.roberta384-binaryaux010.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v318_devonly_roberta384_binaryaux010.v1.json",
+      "sha256": "aa749fc4edbf9cb390ee46fe8e186fc6d2116da37fb8fea8459d5a427d060536",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V318 Dev-only RoBERTa 384-token 长上下文对照：binary auxiliary=0.10，不读取 Test-B。"
+    },
+    "text.v321.devonly.binaryaux030.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v321_devonly_binaryaux030.v1.json",
+      "sha256": "a313ae3f213b7d5184556034c04bc2c5fe4dd52747e868e0848dec7576b78466",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V321 Dev-only Q-M 边界修复筛选：dual_binary_loss_weight=0.30，不读取 Test-B。"
+    },
+    "text.v321.devonly.binaryaux050.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v321_devonly_binaryaux050.v1.json",
+      "sha256": "35ca328a880b34fe1e5b910f3947308a1d21ba33db287df542073e763fc4df16",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V321 Dev-only Q-M 边界修复筛选：dual_binary_loss_weight=0.50，不读取 Test-B。"
+    },
+    "text.v323.devonly.normalweight150.binaryaux010.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v323_devonly_normalweight150_binaryaux010.v1.json",
+      "sha256": "48e5bc4ec4883fefa16240974e5b3882a5f1e6ebdf9340f0d8a2f9630f460da3",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V323 Dev-only Q-M 正常类主 CE 代价消融：normal_weight_scale=1.5、binary auxiliary=0.10，不读取 Test-B。"
+    },
+    "text.v323.devonly.normalweight200.binaryaux010.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v323_devonly_normalweight200_binaryaux010.v1.json",
+      "sha256": "c657be72dbfc70aa37b22300ee8aea4f661f89a6b35e8fceca9038d814595e2b",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V323 Dev-only Q-M 正常类主 CE 代价消融：normal_weight_scale=2.0、binary auxiliary=0.10，不读取 Test-B。"
+    },
+    "text.v326.devonly.qm-h1-hier.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v326_devonly_qm_h1_hier.v1.json",
+      "sha256": "47446a7bc0a146569ad7bc6ed80dd5fe3f9a6489c6afaf33c42b9cacd302e1f7",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V326 Q-M H1 真正二分类×12分类层级主模型；Dev-A 采用 normal FPR≤12% 后的字典序 checkpoint 选择，不读取 Test-B。"
+    },
+    "text.v326.devonly.qm-h2-hier-flataux.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v326_devonly_qm_h2_hier_flataux.v1.json",
+      "sha256": "c42528d303ced4f9216b63a33f175b65e64738fa8c09165bcce6da5aa106b546",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V326 Q-M H2 层级主模型加平坦13类辅助头与 normal/fraud 质量一致性；Dev-A 采用 normal FPR≤12% 后的字典序 checkpoint 选择，不读取 Test-B。"
+    },
+    "text.v327.devonly.error-directed.binaryaux010.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v327_devonly_error_directed_binaryaux010.v1.json",
+      "sha256": "6a97f86b1ac6a2ed4b3ef6cb6971014db8e1f3a313961edb3584d201ca56d94d",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V327 ED1：以 Q-M 三 seed 的 Dev-A 聚合稳定错误重配 39 子类，保持平坦 ce_dual_head；Dev-A 采用 normal FPR≤12% 后的字典序 checkpoint 选择，不读取 Test-B。"
+    },
+    "text.v328c.devonly.qm-cross-encoder-verifier.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v328c_devonly_qm_cross_encoder_verifier.v1.json",
+      "sha256": "7b8ee64ab4e5b7880c69842b13b6a16519827d7786571cb31df6c4cc7a3c3843",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V328-C Q-M 二阶段 label-conditioned cross-encoder verifier/reranker；训练 pairwise hard negatives，Dev-A blind queue 打分后单独 join eval key 扫 no-harm gate；不读取 Test-B。"
+    },
+    "text.v328c.devonly.qm-listwise-reranker.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v328c_devonly_qm_listwise_reranker.v1.json",
+      "sha256": "ba5c9039fc928428964999bd55568e4b72d7860f4718d544001767449cc96db8",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V328-C2 Q-M 二阶段 listwise cross-encoder reranker；以每条训练文本的 gold+边界 hard negatives 做组内 softmax 排序，Dev-A blind queue 打分后单独 join eval key，严格限制 harm=0，不读取 Test-B。"
+    },
+    "text.v328c.devonly.qm-listwise-reranker.v2": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v328c_devonly_qm_listwise_reranker.v2.json",
+      "sha256": "5799df95a045f04f699eccd619a92bbefedee18df54f604cf000dbfd833c36ba",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V328-C2B Q-M 二阶段 listwise cross-encoder reranker；保持组内 softmax 排序与严格 harm=0，最大长度固定为 256，以匹配当前通话文本长度并降低显存；不读取 Test-B。"
+    },
+    "text.v328d.devonly.qm-qwen4b-listwise-reranker.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v328d_devonly_qm_qwen4b_listwise_reranker.v1.json",
+      "sha256": "2618c29c55c7e0d4b4a50a729f9e3259d68155dc820ca97ea9385f00643ea9d2",
+      "compatible_model_ids": [
+        "qwen3_reranker_4b"
+      ],
+      "description": "V328-D1 Q-M 二阶段 Qwen3-Reranker-4B LoRA listwise reranker；以 gold+边界 hard negatives 做组内排序，仅对 Dev-A blind triggered candidates 打分并严格限制 harm=0；不读取 Test-B。"
+    },
+    "text.v328d.devonly.qm-qwen4b-listwise-reranker.v2": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v328d_devonly_qm_qwen4b_listwise_reranker.v2.json",
+      "sha256": "fd3dbe39ec9302916aca76f1f8dc9e78aaf881040ba4d56a4c9e832aee5b713b",
+      "compatible_model_ids": [
+        "qwen3_reranker_4b"
+      ],
+      "description": "V328-D1B 与 V328-D1 保持相同 Qwen3-Reranker-4B LoRA listwise 科学配置，仅切换至当前服务器可用的 korean 环境；严格 harm=0，不读取 Test-B。"
+    },
+    "text.v328d.devonly.qm-qwen4b-listwise-reranker.v3": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v328d_devonly_qm_qwen4b_listwise_reranker.v3.json",
+      "sha256": "33c70f9a49bab599f6db3a942b3b8f810860ce0a9d4a6c8bba6794afe681676f",
+      "compatible_model_ids": [
+        "qwen3_reranker_4b"
+      ],
+      "description": "V328-D1C 与 V328-D1 保持相同 Qwen3-Reranker-4B LoRA listwise 科学配置，仅使用当前最后一个候选运行环境 cosyvoice-vllm；严格 harm=0，不读取 Test-B。"
+    },
+    "text.v328d.devonly.qm-qwen4b-listwise-reranker.v4": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v328d_devonly_qm_qwen4b_listwise_reranker.v4.json",
+      "sha256": "85996dfb3ac11959a27f32cc645b7d47d48ce9efa9bc285f27caae8964b2887f",
+      "compatible_model_ids": [
+        "qwen3_reranker_4b"
+      ],
+      "description": "V328-D1D 使用已验证的 telefraud-llm 环境运行 Qwen3-Reranker-4B LoRA listwise reranker；max length 256、严格 harm=0，不读取 Test-B。"
+    },
+    "text.v328d.devonly.qm-qwen4b-listwise-reranker-bf16-smoke.v5": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v328d_devonly_qm_qwen4b_listwise_reranker_bf16_smoke.v5.json",
+      "sha256": "4538ca2b1aa2a758eeb804d76b649c15f4a08ff17e6cee7a60b8b13ec9011701",
+      "compatible_model_ids": [
+        "qwen3_reranker_4b"
+      ],
+      "description": "V328-D1E 仅用两个listwise训练组验证BF16冻结基座加FP32 native-LoRA的反向传播修复；不作为模型效果实验，不读取Test-B。"
+    },
+    "text.v328d.devonly.qm-qwen4b-listwise-reranker-bf16.v6": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v328d_devonly_qm_qwen4b_listwise_reranker_bf16.v6.json",
+      "sha256": "4b3ee13cb0d685e2662470a3e1b37125606f17f8b658e72b4890e8142ae2ce6d",
+      "compatible_model_ids": [
+        "qwen3_reranker_4b"
+      ],
+      "description": "V328-D1F 使用已通过真实优化器步烟测的BF16冻结基座加FP32 native-LoRA，完整训练6500个Q-M listwise组；max length 256、严格harm=0，不读取Test-B。"
+    },
+    "text.v324.devonly.qm-dual-logit-export.seed13.v1": {
+      "route": "text",
+      "operation": "diagnostic",
+      "source": "text_model/configs/profiles/text_v324_devonly_qm_dual_logit_export_seed13.v1.json",
+      "sha256": "1b991bab01f0ad2bc77893b88d57ae48489ced5688a228c03f02aa7a7d936e8b",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V324 Q-M seed13 已保存 checkpoint 的 Dev-A 双头 logits 导出；只推理，不读取 Test-B。"
+    },
+    "text.v324.devonly.qm-dual-logit-export.seed42.v1": {
+      "route": "text",
+      "operation": "diagnostic",
+      "source": "text_model/configs/profiles/text_v324_devonly_qm_dual_logit_export_seed42.v1.json",
+      "sha256": "d9cd0a2e8e87700aedd59dce1c516765d22f2a276d22ae81db72d9140f63c571",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V324 Q-M seed42 已保存 checkpoint 的 Dev-A 双头 logits 导出；只推理，不读取 Test-B。"
+    },
+    "text.v324.devonly.qm-dual-logit-export.seed202.v1": {
+      "route": "text",
+      "operation": "diagnostic",
+      "source": "text_model/configs/profiles/text_v324_devonly_qm_dual_logit_export_seed202.v1.json",
+      "sha256": "7aac57be700a53a9d219b5646699f51782eb5d5250bf24ff33f43ce6c4cadd15",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V324 Q-M seed202 已保存 checkpoint 的 Dev-A 双头 logits 导出；只推理，不读取 Test-B。"
+    },
+    "audio.v309.hierarchical-temporal-overfit-diagnostic.v1": {
+      "route": "audio",
+      "operation": "diagnostic",
+      "source": "audio_model/configs/profiles/frozen_whisper_hierarchical_diagnostic.v1.json",
+      "sha256": "3d88b7b57c36724387611439f81a7aa1f59eab7c5350139594cb9e613ea496b0",
+      "compatible_model_ids": [
+        "whisper_large_v3_frozen"
+      ],
+      "description": "V309 clean TTS frozen-Whisper Task34 层级时序路径的 BF16 微型过拟合工程诊断；不改动训练脚本，不用 Dev 指标选点，不读取 holdout/THCHS。"
+    },
+    "audio.v309.task33a-logit-boundary-audit.v1": {
+      "route": "audio",
+      "operation": "diagnostic",
+      "source": "audio_model/configs/profiles/task33a_logit_boundary_audit.v1.json",
+      "sha256": "e947f70fe0046b1b5e950fa96b7f286b44819136fa0a3155f05d25741f3e8656",
+      "compatible_model_ids": [
+        "whisper_large_v3_frozen"
+      ],
+      "description": "Task33A 冻结 checkpoint 的无训练 logits、fraud-only oracle 与 normal 边界审计；仅复用固定 fraud12k-dev260 token 缓存。"
+    },
+    "audio.v309.lora-text-teacher-distill-smoke.v1": {
+      "route": "audio",
+      "operation": "diagnostic",
+      "source": "audio_model/configs/profiles/audio_v309_lora_text_distill_smoke.v1.json",
+      "sha256": "60ffd592eca9fe5feae90b3adba069c797298af936fd06223977afad711baea5",
+      "compatible_model_ids": [
+        "whisper_large_v3_top4_lora"
+      ],
+      "description": "Task35 端到端 smoke：V309 完整训练文本仅生成按 sample_id 对齐的 teacher soft targets，Whisper 编码器末四层 Q/V LoRA 与直接音频 query-MIL 训练；Dev260 和推理均不读取文本。"
+    },
+    "audio.v309.task36a.lora-overlap-query-mil.v1": {
+      "route": "audio",
+      "operation": "diagnostic",
+      "source": "audio_model/configs/profiles/audio_v309_task36a_lora_overlap_query_mil.v1.json",
+      "sha256": "6f31a9f6ba8137800ff4633c54f4390a3a3497aee062ff9f7dbfa74250f7f298",
+      "compatible_model_ids": [
+        "whisper_large_v3_top8_lora"
+      ],
+      "description": "Task36A 纯音频最小验证：30 秒窗口、15 秒步长的完整通话重叠聚合；Whisper 顶八层 Q/V/output LoRA 与可训练 LayerNorm；无文本教师，holdout 与 THCHS 冻结。"
+    },
+    "audio.v309.task36a.static-dev1300-baseline.v1": {
+      "route": "audio",
+      "operation": "diagnostic",
+      "source": "audio_model/configs/profiles/audio_v309_task36a_static_dev1300_baseline.v1.json",
+      "sha256": "d7c00fd252bb2255f6d122ba8fe2bcd037ddd65612b5fcb63e4cac264be39938",
+      "compatible_model_ids": [
+        "whisper_large_v3_top8_lora"
+      ],
+      "checkpoint_selection_metric": false,
+      "external_reports": [],
+      "is_default": false,
+      "description": "Task36A 已保存 checkpoint 的一次性 Dev1300 基线推理；不重新选点，不读取 Test1300 或 THCHS。"
+    },
+    "audio.v309.task36b.hierarchical-dualbranch.v1": {
+      "route": "audio",
+      "operation": "diagnostic",
+      "source": "audio_model/configs/profiles/audio_v309_task36b_hierarchical_dualbranch.v1.json",
+      "sha256": "1eec40fa0fdfb3cdb5944e9155cbcbfa3c9446152071305daf8b2591954e2bf6",
+      "compatible_model_ids": [
+        "whisper_large_v3_top8_lora"
+      ],
+      "checkpoint_selection_metric": true,
+      "external_reports": [],
+      "is_default": false,
+      "description": "Task36B 纯音频双分支层级模型：自然二分类统计分支、均衡诈骗子类 query 分支与层级 13 类概率；只使用静态 Dev1300 选点。"
+    },
+    "text.v328k.devonly.qm-qwen4b-child39-accuracy-first.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v328k_devonly_qm_qwen4b_child39_accuracy_first.v1.json",
+      "sha256": "146444d74e6d2538ed078b0e7eab2b53f071c0e272445ac1475557cdf739944d",
+      "compatible_model_ids": [
+        "qwen3_reranker_4b"
+      ],
+      "description": "V328-K accuracy-first Qwen3-Reranker-4B LoRA：以官方39子类做listwise精确监督，Dev-A候选展开至子类并按父类max聚合；放宽no-harm限制直接优化Acc；max length 256；不读取Test-B。"
+    },
+    "text.v329.oof.qm-roberta.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v329_oof_qm_roberta.v1.json",
+      "sha256": "2fbb56a9c21b9964f71d7a3e33daa8971c93b532f8f83acc1d09c8cb7feb68bd",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V329 Q-M lineage-aware 5-fold OOF baseline; each run predicts one held-out 1300-row fold; no Dev-A or Test-B."
+    },
+    "text.v329.devonly.qm-qwen25-7b-multitask.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v329_devonly_qm_qwen25_7b_multitask.v1.json",
+      "sha256": "a5252b3d1d5b27b4d2728386c2f7c2774fc19e46c0dfde7a90a3f9a44e6f9f0d",
+      "compatible_model_ids": [
+        "qwen25_7b_instruct"
+      ],
+      "description": "V329 route A Qwen2.5-7B-Instruct LoRA multi-head classifier: parent13 + fraud-only child39 + fraud binary; max length 256; exposed Dev-A only; no Test-B."
+    },
+    "text.v330.devonly.qm-qwen25-7b-oof-decider.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v330_devonly_qm_qwen25_7b_oof_decider.v1.json",
+      "sha256": "e5900bdd981cfe37d27fd9e30f99f2e82306712eb2e7891daad8bb3a244db096",
+      "compatible_model_ids": [
+        "qwen25_7b_instruct"
+      ],
+      "description": "V330 route B Qwen2.5-7B-Instruct label-conditioned Top-3+Normal candidate decider trained from lineage-aware Train OOF; full 13-class Stage-1 probabilities; max length 256; no Dev threshold sweep and no Test-B."
+    },
+    "text.v329.devonly.audited6500-qwen25-7b-multitask.v2": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v329_devonly_audited6500_qwen25_7b_multitask.v2.json",
+      "sha256": "40b39cb5ae379a27bd05b2f5d95b96113e84ee6e6cb11def0015039deb70cdf1",
+      "compatible_model_ids": [
+        "qwen25_7b_instruct"
+      ],
+      "description": "V329-A2：审计闭环并显式补位后的物理 6500 条全部进入优化器；Qwen2.5-7B-Instruct LoRA，parent13 + fraud-only child39 + fraud binary，固定 2 epochs、max length 256、最后一轮 checkpoint；仅 exposed Dev-A，不读取 Test-B。"
+    },
+    "text.v330.devonly.audited6500-qwen25-7b-oof-decider.v2": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v330_devonly_audited6500_qwen25_7b_oof_decider.v2.json",
+      "sha256": "852d442290c81609d76f8aa57c110522f2cc1cd4782f4c6f69b613a163f07e7e",
+      "compatible_model_ids": [
+        "qwen25_7b_instruct"
+      ],
+      "description": "V330-B2：审计闭环的物理 6500 五折 OOF 全量参与 Qwen2.5-7B-Instruct 任务化 Top-3+Normal 候选决策器训练；线性融合器仅拟合 Train OOF，固定选择第2轮，Dev-A 只评估不调参；首个 backward 强制验证 LoRA 非零梯度；max length 256；不读取 Test-B。"
+    },
+    "audio.v309.task37a.whisper-decoder-direct13.v1": {
+      "id": "audio.v309.task37a.whisper-decoder-direct13.v1",
+      "route": "audio",
+      "operation": "diagnostic",
+      "source": "audio_model/configs/profiles/audio_v309_task37a_whisper_decoder_direct13.v1.json",
+      "sha256": "05ce0887c9a0b7e557b968883b994c3d97c44c09a11fd1afc390efafb2b63904",
+      "compatible_model_ids": [
+        "whisper_large_v3_encoder8_decoder4_lora"
+      ],
+      "description": "严格纯音频 Task37A：Whisper 编码器/解码器 LoRA 跨音频注意力，固定起始查询，不生成ASR文本，按顺序聚合完整通话并直接输出13类；Dev1300第4轮Macro-F1低于0.70自动止损，Test1300和THCHS冻结。"
+    },
+    "text.v331.devonly.audited6500-qwen25-7b-pairwise-choice.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v331_devonly_audited6500_qwen25_7b_pairwise_choice.v1.json",
+      "sha256": "4f35c2b7467fcd402eee6516db74d6a8a4d7f02786255cef8be211297959e598",
+      "compatible_model_ids": [
+        "qwen25_7b_instruct"
+      ],
+      "description": "V331：审计闭环物理6500的三seed匹配Train-OOF候选；Qwen2.5-7B比较A/B两张覆盖全部39子类机制的紧凑标签卡，直接预测A/B token并双向消除位置偏置；OOF难例采用固定全局权重归一化，完整Train-OOF自动选Top-6无序混淆对并加margin=0.2、loss weight=0.3；lineage heldout fold只用于checkpoint与融合器选择，Dev-A仅评估并报告13类/39子类、Top-K Oracle、到96差距及提示裁剪率，max length 256，不读取Test-B。"
+    },
+    "text.v331.devonly.audited6500-qwen25-7b-pairwise-choice-final6500.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v331_devonly_audited6500_qwen25_7b_pairwise_choice_final6500.v1.json",
+      "sha256": "4b7afc6155892b07e38e1403b50f3de1b3b05756456f478b29b80f2c04bd12c4",
+      "compatible_model_ids": [
+        "qwen25_7b_instruct"
+      ],
+      "description": "V331-B2 条件终训协议：仅当V331-B1通过94.5%/净提升54/harm≤15门槛后使用；Qwen2.5-7B A/B token模型在审计闭环物理6500全部样本上训练，固定复用B1仅由Train-OOF fold0拟合并锁哈希的校准器；max length 256，Dev-A仅暴露评估，不读取Test-B。"
+    },
+    "text.v331.devonly.qwen25-7b-pairwise-epoch1-recovery-eval.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v331_devonly_qwen25_7b_pairwise_epoch1_recovery_eval.v1.json",
+      "sha256": "da931e1cc7579282cd7ee17339bafba3a8aafc616f926d593bd7271bb49e41f7",
+      "compatible_model_ids": [
+        "qwen25_7b_instruct"
+      ],
+      "description": "V331-B1 epoch-1 恢复评估：加载已保存的 Qwen2.5-7B A/B LoRA adapter 与固定 Train-OOF calibrator，不做梯度更新，评估 fold0 与 exposed Dev-A；max length 256，不读取 Test-B。"
+    },
+    "text.v333.devonly.preexpert6500-qwen25-7b-causal-labels.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v333_devonly_preexpert6500_qwen25_7b_causal_labels.v1.json",
+      "sha256": "c31e7e55a332f283482450f42e7c2382e4bf750a3841a182e3c1ac0c9c87a881",
+      "compatible_model_ids": [
+        "qwen25_7b_instruct"
+      ],
+      "description": "V333 强文本模型预审计架构探针：Qwen2.5-7B CausalLM 单 token 父13/子39 verbalizer，诈骗样本计算39子类辅助损失，正常/诈骗辅助损失，max length 256；Core-Train固定6500，Dev-A exposed_dev，不读取Test-B。完整6500外部审计闭环前仅允许技术/预审计验证，不允许正式晋级。"
+    },
+    "text.v333.devonly.v332audit6500-qwen25-7b-causal-labels.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v333_devonly_v332audit6500_qwen25_7b_causal_labels.v1.json",
+      "sha256": "e060cfedce766c4cf3b84134c9d97d87670f858fb312d2f83b9d0645e91998a4",
+      "compatible_model_ids": [
+        "qwen25_7b_instruct"
+      ],
+      "description": "V333 正式强文本模型：使用V332三评审闭环的物理6500训练集，Qwen2.5-7B CausalLM单token父13/子39 verbalizer；76个模板重复簇按簇总权重1训练，1条歧义样本权重0.25；max length 256，Dev-A exposed_dev，不读取Test-B。"
+    },
+    "text.v333.technical-smoke.qwen25-7b-causal-labels.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v333_technical_smoke_qwen25_7b_causal_labels.v1.json",
+      "sha256": "f30795853d308cf17b1d0bfe10d1b1cf6e2d589fbf7a967b7a83c5aadfabc244",
+      "compatible_model_ids": [
+        "qwen25_7b_instruct"
+      ],
+      "description": "V333 远端技术冒烟：注册6500条Core-Train但仅32条参与梯度、64条Dev-A切片评估，用于验证Qwen2.5-7B BF16+FP32 LoRA、13父类/39子类verbalizer和评估链路；所有指标明确禁止作为科学比较或晋级依据，不读取Test-B。"
+    },
+    "text.v334.devonly.v332audit6500-roberta-binaryaux010.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v334_devonly_v332audit6500_roberta_binaryaux010.v1.json",
+      "sha256": "7fbd72fe1da0233ebf629f456d1e20326acf314e3f18427b2e0b95585397a906",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V334 audit-data causal control: exact V316/Q-M RoBERTa dual-head settings on the closed V332 physical-6500 file, with audited sample_weight; exposed Dev-A only; no Test-B."
+    },
+    "text.v334.devonly.v332audit6500-megatronbert13b-multitask.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v334_devonly_v332audit6500_megatronbert13b_multitask.v1.json",
+      "sha256": "f35c2e7565410a0203eefd1e0b744de6ad209a10e21c819e7b647a46070b67a2",
+      "compatible_model_ids": [
+        "erlangshen_megatronbert_1_3b"
+      ],
+      "description": "V334 strong discriminative-backbone run: Chinese Erlangshen-MegatronBERT-1.3B on the closed V332 physical-6500 audit set, parent13 main decision plus child39 and normal/fraud auxiliary supervision; max length 256; exposed Dev-A only; no Test-B."
+    },
+    "audio.v334.generate-v332-aligned-clean-tts-delta.v1": {
+      "route": "audio",
+      "operation": "diagnostic",
+      "source": "audio_model/configs/profiles/audio_v334_generate_v332_aligned_clean_tts_delta.v1.json",
+      "sha256": "1c57adff538f7f967551372ff4489d36965ade0d9accfc30f8fbb8799452f0f5",
+      "compatible_model_ids": [
+        "paddlespeech_aishell3_fastspeech2_hifigan"
+      ],
+      "checkpoint_selection_metric": false,
+      "external_reports": [],
+      "is_default": false,
+      "description": "V334 数据生成：仅为 V332 审计 6500 中无法复用 V309 音频的 1433 条生成严格干净 TTS；不读取 Fraud12k、Test1300 或 THCHS。"
+    },
+    "audio.v334.qwen25omni7b-technical-smoke.v1": {
+      "route": "audio",
+      "operation": "diagnostic",
+      "source": "audio_model/configs/profiles/audio_v334_qwen25omni7b_technical_smoke.v1.json",
+      "sha256": "60e0d68819f2278375acd4a875923c370501935ff75852a25aead80727ae3c10",
+      "compatible_model_ids": [
+        "qwen2_5_omni_7b_thinker_qlora"
+      ],
+      "checkpoint_selection_metric": false,
+      "external_reports": [],
+      "is_default": false,
+      "description": "V334 Qwen2.5-Omni-7B Thinker NF4 QLoRA 技术 smoke（SDPA）；使用固定复用音频清单中 39 子类各 1 条训练、13 父类各 1 条 Dev，仅验证工程链路，不用于模型选择。"
+    },
+    "audio.v334.qwen25omni7b-thinker-multitask.v1": {
+      "route": "audio",
+      "operation": "diagnostic",
+      "source": "audio_model/configs/profiles/audio_v334_qwen25omni7b_thinker_multitask.v1.json",
+      "sha256": "94b560b771f8ee780972fae25c207811aaaf69f533166191fa0d6ae76ab2d793",
+      "compatible_model_ids": [
+        "qwen2_5_omni_7b_thinker_qlora"
+      ],
+      "checkpoint_selection_metric": "fraud12k_dev1300.acc13",
+      "external_reports": [],
+      "is_default": false,
+      "description": "V334 纯音频强模型：Qwen2.5-Omni-7B Thinker NF4 QLoRA（SDPA），13 父类主头 + 39 子类和正常/诈骗辅助头；V332 对齐 clean 6500 训练，仅 Fraud12k-Dev1300 选模。"
+    },
+    "audio.v334.task36b.v332-aligned-clean-dualbranch.v1": {
+      "route": "audio",
+      "operation": "diagnostic",
+      "source": "audio_model/configs/profiles/audio_v334_task36b_v332_aligned_clean_dualbranch.v1.json",
+      "sha256": "6e9ed1e9449d91f2388406eb3c5ff3294ba7759c3d1d62ff57c724bc3ba643fd",
+      "compatible_model_ids": [
+        "whisper_large_v3_top8_lora"
+      ],
+      "checkpoint_selection_metric": "fraud12k_dev1300.macro_f1_13",
+      "external_reports": [],
+      "is_default": false,
+      "description": "V334 数据对齐因果对照：保持现有 Whisper-large-v3 Task36B 双分支架构，仅将训练数据替换为 V332 审计对齐的严格干净音频6500并使用样本权重；只在 Fraud12k-Dev1300 选模。"
+    },
+    "text.v335.devonly.v332audit6500-megatronbert-pairwise-decider.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v335_devonly_v332audit6500_megatronbert_pairwise_decider.v1.json",
+      "sha256": "0a71fa68f4947d0ce42cd7de1f8ca18a37b2eb19d5b108e9558dbcbe471cd764",
+      "compatible_model_ids": [
+        "erlangshen_megatronbert_1_3b"
+      ],
+      "description": "V335 task-aligned discriminative candidate decisioner: full-finetuned Erlangshen-MegatronBERT-1.3B learns symmetric A/B boundaries from V332-updated lineage Train-OOF Top-3+Normal candidates; all 39 children are represented by parent-qualified code suffixes and compact mechanisms; fold0 calibration only, max length 256, exposed Dev-A only, no Test-B."
+    },
+    "text.v335.devonly.v332audit6500-megatronbert-listwise-decider.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v335_devonly_v332audit6500_megatronbert_listwise_decider.v1.json",
+      "sha256": "717d44047cf8d5bc05d5cbf864b450a1c40dbc72695b3214b1a1121c66de98f0",
+      "compatible_model_ids": [
+        "erlangshen_megatronbert_1_3b"
+      ],
+      "description": "V335-B2 structural alternative: full-finetuned Erlangshen-MegatronBERT-1.3B independently scores each V332-updated lineage Train-OOF Top-3+Normal candidate and optimizes group listwise softmax; all 39 children are represented by parent-qualified code suffixes and compact mechanisms; fold0 calibration only, max length 256, exposed Dev-A only, no Test-B."
+    },
+    "text.v336.devonly.v332audit6500-megatronbert-semantic-parent-boundary.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v336_devonly_v332audit6500_megatronbert_semantic_parent_boundary.v1.json",
+      "sha256": "c1bfe9e84965b5f212c2cb38043218b3545b3737adfe1dda1edc78433809488d",
+      "compatible_model_ids": [
+        "erlangshen_megatronbert_1_3b"
+      ],
+      "description": "V336-P full-text semantic prototype decisioner: the dialogue alone receives 256 tokens; parent13 and child39 definitions are separately encoded as trainable prototypes; 10 frozen confusion experts use Train-OOF boundary supervision; all physical 6500 rows receive gradients; Dev-A is evaluated once after fixed epoch2; no Test-B."
+    },
+    "text.v336.devonly.v332audit6500-megatronbert-semantic-child-boundary.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v336_devonly_v332audit6500_megatronbert_semantic_child_boundary.v1.json",
+      "sha256": "f123d0d7dabe68f88d2671c24adadd67126c0885760fc1640cbabc23712d9a57",
+      "compatible_model_ids": [
+        "erlangshen_megatronbert_1_3b"
+      ],
+      "description": "V336-H full-text hierarchical semantic decisioner: normalized child39 prototype evidence is late-fused with parent13 evidence and 10 Train-OOF confusion experts; all physical 6500 rows receive gradients, definitions do not consume dialogue tokens, fixed epoch2 then one exposed Dev-A evaluation; no Test-B."
+    },
+    "text.v337.devonly.boundaryrepair6500-roberta-binaryaux010.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v337_devonly_boundaryrepair6500_roberta_binaryaux010.v1.json",
+      "sha256": "9552609832596ffa8bef4421e7dd9b8901995403432d972bbfb72080e0c5a627",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V337-A1 data-only causal control: exact V334/Q-M RoBERTa dual-head settings on the strict three-review boundary-repaired physical 6500; max length 256; exposed Dev-A only; no Test-B."
+    },
+    "text.v337.devonly.boundaryrepair6500-megatronbert13b-pairaware.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v337_devonly_boundaryrepair6500_megatronbert13b_pairaware.v1.json",
+      "sha256": "92ef7d9872f3e0b98dc015c835e8ab93bf42249043a4cfa8dd9ed29af00975f1",
+      "compatible_model_ids": [
+        "erlangshen_megatronbert_1_3b"
+      ],
+      "description": "V337-B1 full-finetuned MegatronBERT-1.3B: parent13 main loss, fraud-only child39 and binary auxiliaries, separate 150-pair loader with bidirectional margin; fixed epoch5, max length256, explicit trainer/core dependencies, exposed Dev-A once, no Test-B."
+    },
+    "audio.v338.preflight.whisper-decoder-query-multitask.v1": {
+      "compatible_model_ids": [
+        "whisper_large_v3_v338_decoder_query_multitask_lora"
+      ],
+      "description": "V338纯音频极限批处理硬门（no-GC）：B解冻阶段N=32窗口批量真实优化步、27位decoder契约、A/B梯度冻结、300秒推理和78条过拟合；不读取Test1300。",
+      "id": "audio.v338.preflight.whisper-decoder-query-multitask.v1",
+      "operation": "diagnostic",
+      "route": "audio",
+      "sha256": "8b3b07bcf091f5ce4d62ba152ba5bc2b364e47be28a1d59609668dd49d8bed44",
+      "source": "audio_model/configs/profiles/audio_v338_preflight_whisper_decoder_query_multitask.v1.json"
+    },
+    "audio.v338a.whisper-decoder-query-multitask.v1": {
+      "compatible_model_ids": [
+        "whisper_large_v3_v338_decoder_query_multitask_lora"
+      ],
+      "description": "V338-A纯音频单种子高速版：冻结encoder、decoder32层LoRA、关闭checkpointing；一次最多16条通话/32窗口，Dev最多32条/64窗口；有效batch仍16，固定6500和Dev1300，Test冻结。",
+      "id": "audio.v338a.whisper-decoder-query-multitask.v1",
+      "operation": "diagnostic",
+      "route": "audio",
+      "sha256": "a2acd692e234169b33b1b82ad988ec36b0e6a29fe01bb41165c99396f5d505e0",
+      "source": "audio_model/configs/profiles/audio_v338a_whisper_decoder_query_multitask.v1.json"
+    },
+    "audio.v338b.whisper-decoder-query-multitask.v1": {
+      "compatible_model_ids": [
+        "whisper_large_v3_v338_decoder_query_multitask_lora"
+      ],
+      "description": "V338-B纯音频单种子高速版：第2-4轮启用encoder顶部8层LoRA，decoder32层LoRA，关闭checkpointing；一次最多16条通话/32窗口，Dev最多32条/64窗口；有效batch仍16，Test冻结。",
+      "id": "audio.v338b.whisper-decoder-query-multitask.v1",
+      "operation": "diagnostic",
+      "route": "audio",
+      "sha256": "4ae278288d69133ed79ca0155361f415a1ed22bdc3cb528b60f08f0bcef5ba25",
+      "source": "audio_model/configs/profiles/audio_v338b_whisper_decoder_query_multitask.v1.json"
+    },
+    "text.v341.devonly.policy6500-megatronbert-multiaxis.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v341_devonly_policy6500_megatronbert_multiaxis.v1.json",
+      "sha256": "bd2b3617c75c543b3794c0b9210910b9031121a58e9d228c679a5066adb615c0",
+      "compatible_model_ids": [
+        "erlangshen_megatronbert_1_3b"
+      ],
+      "description": "V341-M1 fixed-epoch MegatronBERT-1.3B multi-axis classifier and replaceable internal_policy_v1 decoder: parent13, child39, fraud2, mechanism, identity and risk-action supervision with per-head masks, soft targets, duplicate normalization, policy-clear margin and >=95% complete semantic-axis coverage; max length256, exposed Dev only, no Test-B."
+    },
+    "text.v341.d1.devonly.policy6500-megatronbert13b-multitask.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v341_d1_devonly_policy6500_megatronbert13b_multitask.v1.json",
+      "sha256": "11a0470f688ad296b93ba1dd332d40d0e92e9c300305def4090a6c1d88a754d4",
+      "compatible_model_ids": [
+        "erlangshen_megatronbert_1_3b"
+      ],
+      "description": "V341-D1 data-causal control: repeats the V334-B1 MegatronBERT-1.3B parent13/child39/fraud multitask protocol with only the physical 6500-row internal_policy_v1 training overlay changed; max length256, fixed exposed legacy Dev-A, no Test-B."
+    },
+    "audio.v334.qwen25omni7b-best-epoch2-test1300-exposed.v1": {
+      "route": "audio",
+      "operation": "evaluate",
+      "source": "audio_model/configs/profiles/audio_v334_qwen25omni7b_best_epoch2_test1300_exposed.v1.json",
+      "sha256": "82b76d8a68ed2a1ed27cb41a06345fffc79233a9b9802838f4fad1a083b4aa01",
+      "compatible_model_ids": [
+        "qwen2_5_omni_7b_thinker_qlora"
+      ],
+      "checkpoint_id": "v334c_qwen25omni7b_best_epoch2",
+      "evaluation_tier": "exposed_test",
+      "description": "对已冻结的V334 Qwen2.5-Omni最佳epoch2执行一次Fraud12k-Test1300纯音频推理；13类各100条，无ASR/文本输入，结果永久标记exposed_test且不得用于调参。"
+    },
+    "audio.v339b0.qwen25omni-frozen-adaptive-windows-dev1300.v1": {
+      "route": "audio",
+      "operation": "diagnostic",
+      "source": "audio_model/configs/profiles/audio_v339b0_qwen25omni_frozen_adaptive_windows_dev1300.v1.json",
+      "sha256": "89127966aeafee21d11aed4321a2f9f18e110c6ff75f7d717d53cb970e8ef2f9",
+      "compatible_model_ids": [
+        "qwen2_5_omni_7b_thinker_qlora"
+      ],
+      "checkpoint_id": "v334c_qwen25omni7b_best_epoch2",
+      "checkpoint_selection_metric": "fraud12k_dev1300.acc13",
+      "description": "V339-B0纯音频冻结checkpoint窗口消融：30秒窗口、最大25秒步长完整覆盖；每个prompt最多2窗，跨prompt组均值logit；只评Dev1300，不改参数/标签/损失，不读取Test1300。"
+    },
+    "audio.v339qa.qwen25omni-epoch2-low-lr-continue-dev1300.v1": {
+      "route": "audio",
+      "operation": "diagnostic",
+      "source": "audio_model/configs/profiles/audio_v339qa_qwen25omni_epoch2_low_lr_continue_dev1300.v1.json",
+      "sha256": "61d62b9e7f7c8d1303bee376995d6a77df528e269dd94af56218e7faff2a51f6",
+      "compatible_model_ids": [
+        "qwen2_5_omni_7b_thinker_qlora"
+      ],
+      "checkpoint_id": "v334c_qwen25omni7b_best_epoch2",
+      "checkpoint_selection_metric": "fraud12k_dev1300.acc13",
+      "description": "V339-QA纯音频低LR续训：严格恢复V334 Qwen最佳epoch2 adapter/heads并先做13类代表样本预测契约；逻辑epoch3/4使用LR3e-5，保持原两窗口、数据、头与损失；仅Dev1300，不读取Test1300。"
+    },
+    "audio.v340a.qwen-parent-prototype-dev1300.v1": {
+      "route": "audio",
+      "operation": "diagnostic",
+      "source": "audio_model/configs/profiles/audio_v340a_qwen_parent_prototype_dev1300.v1.json",
+      "sha256": "717803169a8d6acba8e5b3d51aa94d22e39e6687279dafacc249a2c10f71e6fc",
+      "compatible_model_ids": [
+        "qwen2_5_omni_7b_thinker_qlora"
+      ],
+      "description": "V340-A 纯音频Qwen父类定义原型决策；固定6500/Dev1300与V334输入窗口，从锁定epoch2 checkpoint初始化；不读取Test1300。"
+    },
+    "audio.v340w.qwen-call-attention-dev1300.v1": {
+      "route": "audio",
+      "operation": "diagnostic",
+      "source": "audio_model/configs/profiles/audio_v340w_qwen_call_attention_dev1300.v1.json",
+      "sha256": "d8d8ef91f528942bc01d23c01dc72cffd1f4bd7d7e53e27f7e34153682aac352",
+      "compatible_model_ids": [
+        "qwen2_5_omni_7b_thinker_qlora"
+      ],
+      "description": "V340-W 冻结V334 Qwen，缓存完整通话双窗口prompt-group表示，仅训练Call Attention与分类头；Dev1300；不读取Test1300。"
+    },
+    "audio.v340b.qwen-hierarchical39-dev1300.v1": {
+      "route": "audio",
+      "operation": "diagnostic",
+      "source": "audio_model/configs/profiles/audio_v340b_qwen_hierarchical39_dev1300.v1.json",
+      "sha256": "085c0ba01da51e6b4c47ff9fc160bd8e18c14ec5d7427aab3fb0424362a6f1cb",
+      "compatible_model_ids": [
+        "qwen2_5_omni_7b_thinker_qlora"
+      ],
+      "description": "V340-B 纯音频Qwen父类+39子类定义原型与规范化层级聚合；固定6500/Dev1300；不读取Test1300。"
+    },
+    "audio.v340t.qwen25omni-thchs100-latency.v1": {
+      "id": "audio.v340t.qwen25omni-thchs100-latency.v1",
+      "route": "audio",
+      "operation": "diagnostic",
+      "source": "audio_model/configs/profiles/audio_v340t_qwen25omni_thchs100_latency.v1.json",
+      "sha256": "828f61938e034975822b49955d1b5cbfa2509e3557d535c4192b7371bfc06056",
+      "compatible_model_ids": [
+        "qwen2_5_omni_7b_thinker_qlora"
+      ],
+      "description": "冻结V334 Qwen2.5-Omni-7B epoch2，对THCHS正常类固定种子抽样100条执行纯音频顺序推理，报告正常误报及逐条端到端/模型延迟；不读取Test1300。"
+    },
+    "text.v346.oof.policy122-megatronbert.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v346_oof_policy122_megatronbert.v1.json",
+      "sha256": "02bc36bed556362b8f1f0e4640e444c30a10697ef6597ebf2c0b66fa5e8cc969",
+      "compatible_model_ids": [
+        "erlangshen_megatronbert_1_3b"
+      ],
+      "description": "V346 fixed two-epoch MegatronBERT-1.3B same-fold D1 control and one/two-fold exclusion P1/P2 training with 122 normalized policy prototypes. P1 excludes axes; P2 uses only 2150 reviewed three-axis rows with stop-gradient compatibility. No Dev/Test; max length 256."
+    },
+    "text.v348.ccl2023-case-ood-megatron-eval.v1": {
+      "route": "text",
+      "operation": "diagnostic",
+      "source": "text_model/configs/profiles/text_v348_ccl2023_case_ood_megatron_eval.v1.json",
+      "sha256": "6c7f4b17b592eac7c281794ad29effe433cfea0f00c1241b9bbf07d72c24f889",
+      "compatible_model_ids": [
+        "erlangshen_megatronbert_1_3b"
+      ],
+      "description": "冻结V341-D1 MegatronBERT-1.3B，在CCL2023真实案件叙述平衡2400条上执行一次只推理OOD诊断；不训练、不调参、不读取Test-B，也不作为真实通话验收。"
+    },
+    "text.v347.oof.nested-qwen-candidate-decider.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v347_oof_nested_qwen_candidate_decider.v1.json",
+      "sha256": "f1bed15de976d0de9a62370ef708a7766e84e97e3aa1ca2217afdd630689a900",
+      "compatible_model_ids": [
+        "qwen25_7b_instruct",
+        "qwen3_8b"
+      ],
+      "description": "V347 nested cross-fit QLoRA candidate decider: fixed Top-3 plus Normal candidates, outer validation never Gold-forced, 2 epochs, max length 256, no Dev/Test."
+    },
+    "text.v349.qwen3-8b-policy-executor-pilot.v1": {
+      "route": "text",
+      "operation": "diagnostic",
+      "source": "text_model/configs/profiles/text_v349_qwen3_8b_policy_executor_pilot.v1.json",
+      "sha256": "77e07f433c629df20ea2273d04b66d3135bc842a924487b37a5b22f2c218997e",
+      "compatible_model_ids": [
+        "qwen3_8b"
+      ],
+      "description": "V349 Core-Train OOF 300条Qwen3-8B零微调政策执行Pilot：55条1对7/12核心冲突、145条其他D1错误和100条D1正确对照；联合候选、显式政策JSON，不读取Dev/Test。"
+    },
+    "text.v350.qwen3-8b-joint-policy-choice-pilot.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v350_qwen3_8b_joint_policy_choice_pilot.v1.json",
+      "sha256": "322b4ec35991972ab816f42070ec50ce69ea50859d6e6e1af4176b5a943500e2",
+      "compatible_model_ids": [
+        "qwen3_8b"
+      ],
+      "description": "V350-P0现有标签联合候选政策选择Pilot：Qwen3-8B用Core-Train Gold、D1嵌套候选和已审政策原型做单字母completion-only QLoRA；仅Outer0，lineage安全拆分650校准/650最终检验，不读取Dev/Test。"
+    },
+    "text.v351.thchs100-megatron-eval.v1": {
+      "id": "text.v351.thchs100-megatron-eval.v1",
+      "route": "text",
+      "operation": "diagnostic",
+      "source": "text_model/configs/profiles/text_v351_thchs100_megatron_eval.v1.json",
+      "sha256": "8f4603ab7534091fd8d1c0a99f8cf25afc2f185a72db630821548720516f44df",
+      "compatible_model_ids": [
+        "erlangshen_megatronbert_1_3b"
+      ],
+      "description": "冻结V341-D1 MegatronBERT-1.3B，在与V340T音频诊断完全相同的100条THCHS通话转写文本上执行只推理正常类误报诊断；不训练、不调参、不读取Dev/Test-B。"
+    },
+    "text.v352.oof.roberta-direct-fixed-epoch4.v1": {
+      "id": "text.v352.oof.roberta-direct-fixed-epoch4.v1",
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v352_oof_roberta_direct_fixed_epoch4.v1.json",
+      "sha256": "26226e102349e64c36f374da1b734d4531a805f639f1954ff5b097412e7869c5",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V352 fixed-final-epoch4 RoBERTa-wwm-ext-large CE dual-head lineage-disjoint 5-fold OOF confirmation on V340 policy-aligned Core-Train 6500. Held-out fold is evaluated but never selects epoch or threshold; no Dev/Test."
+    },
+    "text.v352.oof.roberta-selective-pair-expert-fixed-epoch4.v1": {
+      "id": "text.v352.oof.roberta-selective-pair-expert-fixed-epoch4.v1",
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v352_oof_roberta_selective_pair_expert_fixed_epoch4.v1.json",
+      "sha256": "22c62f9763270c62316b39faee6ba12c95f606cec31aa759bed256e62aaa22ca",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V352 selective pair-expert RoBERTa fixed-final-epoch4 lineage-disjoint 5-fold OOF on V340 policy Core-Train 6500. Shared text representation with pair-specific left/right/KEEP heads for 1/7, 1/12, 7/12, 3/12, and 7/10; no Dev/Test."
+    },
+    "text.v352.oof.roberta-pairwise-boundary-expert-fixed-epoch4.v1": {
+      "id": "text.v352.oof.roberta-pairwise-boundary-expert-fixed-epoch4.v1",
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v352_oof_roberta_pairwise_boundary_expert_fixed_epoch4.v1.json",
+      "sha256": "7fac9573f9633a7b207eb73f4139a9c1428e791a80a8cb11410280804a631efa",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V352 pairwise boundary specialists on detached RoBERTa representations with cross-fit rejection, fixed epoch4 and lineage-disjoint OOF. Five frozen pairs; no Dev/Test."
+    },
+    "text.v352.oof.roberta-direct-swa8-fixed.v1": {
+      "id": "text.v352.oof.roberta-direct-swa8-fixed.v1",
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v352_oof_roberta_direct_swa8_fixed.v1.json",
+      "sha256": "de0bdd3721ce387b15f906bb2bf1ec6242310ad24b7f1e2c76e0b6af47b26557",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V352 fixed-epoch8 RoBERTa-wwm-ext-large CE dual-head lineage OOF with SWA over optimizer updates from epoch 5. Single-model deployment; no Dev/Test."
+    },
+    "text.v353.qwen3-8b-defer-correct-pilot.v1": {
+      "id": "text.v353.qwen3-8b-defer-correct-pilot.v1",
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v353_qwen3_8b_defer_correct_pilot.v1.json",
+      "sha256": "cda094364f6a723e28c0440512fa5737cbf6fd92a6ff567025ca47d57b134064",
+      "compatible_model_ids": [
+        "qwen3_8b"
+      ],
+      "description": "V353 Qwen3-8B defer-then-correct Outer0 architecture pilot with explicit KEEP decision and correctness head."
+    },
+    "text.v354.final.roberta-swa8-deva2-testb.v1": {
+      "id": "text.v354.final.roberta-swa8-deva2-testb.v1",
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v354_final_roberta_swa8_deva2_testb.v1.json",
+      "sha256": "080151a4c5a3a078d00ec37823f7369a3ea6cc2516ebace391c698a80890485e",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V354 final RoBERTa SWA8 train6500; report-only Dev-A2 and Test-B evaluation without tuning."
+    },
+    "text.v354.final.megatron-d1-epoch2-deva2-testb.v1": {
+      "id": "text.v354.final.megatron-d1-epoch2-deva2-testb.v1",
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v354_final_megatron_d1_epoch2_deva2_testb.v1.json",
+      "sha256": "4f7204971adf2f7df77438333fb02b750a546fae7c6f048aeda35917c9d48f34",
+      "compatible_model_ids": [
+        "erlangshen_megatronbert_1_3b"
+      ],
+      "description": "V354 final MegatronBERT D1 fixed epoch2 train6500; report-only Dev-A2 and Test-B evaluation without tuning."
+    },
+    "text.v354.v341best-epoch3-testb-eval.v1": {
+      "id": "text.v354.v341best-epoch3-testb-eval.v1",
+      "route": "text",
+      "operation": "diagnostic",
+      "source": "text_model/configs/profiles/text_v354_v341best_epoch3_testb_eval.v1.json",
+      "sha256": "021a0f432a7db90bfec6ebab42131050dae63fef5ec9f1ef1547fb6bbb559e5b",
+      "compatible_model_ids": [
+        "erlangshen_megatronbert_1_3b"
+      ],
+      "description": "Inference-only Test-B evaluation of the frozen historical V341-D1 best epoch3 checkpoint."
+    },
+    "text.v354.v341best-epoch3-deva2-eval.v1": {
+      "id": "text.v354.v341best-epoch3-deva2-eval.v1",
+      "route": "text",
+      "operation": "diagnostic",
+      "source": "text_model/configs/profiles/text_v354_v341best_epoch3_deva2_eval.v1.json",
+      "sha256": "e9aadf5ec03a5f7bb3e6ee492cd35341da1dccb9cb55929260424440c5744dc4",
+      "compatible_model_ids": [
+        "erlangshen_megatronbert_1_3b"
+      ],
+      "description": "Inference-only Dev-A2 evaluation of the frozen historical V341-D1 best epoch3 checkpoint."
+    },
+    "text.v355.roberta-exact-v341-config-deva-testb.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v355_roberta_exact_v341_config_deva_testb.v1.json",
+      "sha256": "8dc80bbb1793f5baeff5e111abaf575854d98a4dc2219aa3f389a7e475709deb",
+      "compatible_model_ids": [
+        "roberta_wwm_ext_large"
+      ],
+      "description": "V355 causal backbone control: exact V341-D1 six-epoch/early-stop recipe on the same policy-aligned Core-Train 6500 and original Dev-A checkpoint selection, replacing only MegatronBERT-1.3B with RoBERTa-wwm-ext-large; Test-B is report-only."
+    },
+    "text.v356.devonly.policy6500-v337pairsidecar-megatronbert13b.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v356_devonly_policy6500_v337pairsidecar_megatronbert13b.v1.json",
+      "sha256": "dab6fb982e6d401ce206b3a73d4f9b252b3c5fb3330af377e7252f10507adb6b",
+      "compatible_model_ids": [
+        "erlangshen_megatronbert_1_3b"
+      ],
+      "description": "Dedicated standalone V356B trainer reproducing V341 ce_dual_head additive binary2+subtype12 parent13 path, subtype1.0/child39-0.20/binary-0.10 losses and V341 legacy-Dev checkpoint rule on V340 Core-Train 6500, with V337 reviewed 150-pair sidecar contributing cross-class margin only; no shared V341/V337 trainer is modified or staged."
+    },
+    "text.v356c.devonly.policy6500-qwen3-8b-direct.v1": {
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v356c_devonly_policy6500_qwen3_8b_direct.v1.json",
+      "sha256": "461fb62c6ce635989ec031a3549b0f4881c46a2508617bb970ff50097a7b12f2",
+      "compatible_model_ids": [
+        "qwen3_8b"
+      ],
+      "description": "V356C：V340 internal_policy_v1物理6500训练Qwen3-8B LoRA直接分类器，last-token隐状态接parent13、child39和fraud2头；固定2 epochs和最后一轮checkpoint；旧Dev-A仅评估，不读取Test-B。"
+    },
+    "text.v357b.oof.policy-full13-qwen3-8b.v1": {
+      "id": "text.v357b.oof.policy-full13-qwen3-8b.v1",
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v357b_policy_full13_qwen3_8b.v1.json",
+      "sha256": "8c185cc824a1cca6c5ca808136ad67f51ddfa97d1cbbfe8e924848059e75baaa",
+      "compatible_model_ids": [
+        "qwen3_8b"
+      ],
+      "description": "V357B full 13-parent policy candidate Qwen3-8B QLoRA scorer, pairwise hard-negative margin only, Core-Train OOF only."
+    },
+    "text.v357.oof.policy-full13-qwen3-8b.v1": {
+      "id": "text.v357.oof.policy-full13-qwen3-8b.v1",
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v357_policy_full13_qwen3_8b.v1.json",
+      "sha256": "3359caec206386405d57b5ed4a2ddd2f3aefe07eeef0bb09b19f8b7b51c25521",
+      "compatible_model_ids": [
+        "qwen3_8b"
+      ],
+      "description": "V357A full 13-parent policy candidate Qwen3-8B QLoRA scorer, listwise CE plus hard-negative margin, Core-Train OOF only."
+    },
+    "text.v357a.train-dev-test.policy-full13-qwen3-8b.v1": {
+      "id": "text.v357a.train-dev-test.policy-full13-qwen3-8b.v1",
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v357a_train_dev_test_qwen3_8b.v1.json",
+      "sha256": "068a7825955a3f13cf9cbff7a4d39edb29c3b4d99b12d74dfc1c34b38c1df46d",
+      "compatible_model_ids": [
+        "qwen3_8b"
+      ],
+      "description": "V357A Qwen3-8B full13 policy listwise fixed epoch2 on Train6500, report-only Dev-A2 and one-time exposed Test-B."
+    },
+    "text.v357b.train-dev-test.policy-full13-qwen3-8b.v1": {
+      "id": "text.v357b.train-dev-test.policy-full13-qwen3-8b.v1",
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v357b_train_dev_test_qwen3_8b.v1.json",
+      "sha256": "2f035e75377279f534a6e4574d68f144a4ae136203ffd7332af665309210f4ac",
+      "compatible_model_ids": [
+        "qwen3_8b"
+      ],
+      "description": "V357B Qwen3-8B full13 policy pairwise fixed epoch2 on Train6500, report-only Dev-A2 and one-time exposed Test-B."
+    },
+    "text.v361.fixed-controls-deva2-longdev.v1": {
+      "id": "text.v361.fixed-controls-deva2-longdev.v1",
+      "route": "text",
+      "operation": "diagnostic",
+      "source": "text_model/configs/profiles/text_v361_fixed_controls_deva2_longdev.v1.json",
+      "sha256": "5650ecbaf23defce521b5dcf5b723feb6020b11f849da1692703c71f0ce7d373",
+      "compatible_model_ids": [
+        "erlangshen_megatronbert_1_3b"
+      ],
+      "description": "V361 phase-1 inference-only comparison: exact V341 256-token truncation versus full-text chunk320 overlap64 Max/Top2Mean/LogSumExp on Dev-A2 and Long-Dev."
+    },
+    "text.v361.routeB-gated-attention-train.v1": {
+      "id": "text.v361.routeB-gated-attention-train.v1",
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v361_routeB_gated_attention_train.v1.json",
+      "sha256": "b1c96482eacb11d015c417f2a11d523f57a5a47d140237c4f8c5f39a1a1b9b8f",
+      "compatible_model_ids": [
+        "erlangshen_megatronbert_1_3b"
+      ],
+      "description": "V361 route-B gated-attention training over the 6500-row long-document mix: warm start from V341-D1, chunk320 overlap64, compared across plain sliding windows and head-context 48/64/96 on frozen Dev-A2 and Long-Dev with four GPUs."
+    },
+    "text.v361.routeB-head96-final-eval.v1": {
+      "id": "text.v361.routeB-head96-final-eval.v1",
+      "route": "text",
+      "operation": "diagnostic",
+      "source": "text_model/configs/profiles/text_v361_routeB_head96_final_eval.v1.json",
+      "sha256": "404f9d0b667227c9940e95803a1ea126e46ea7152cf957fd38c36a026e4dc970",
+      "compatible_model_ids": [
+        "erlangshen_megatronbert_1_3b"
+      ],
+      "description": "Frozen Route-B head96 versus original V341-D1 256-token truncation baseline on Test-B 1580 and Long-Stress 120; inference-only and report-only."
+    },
+    "text.v361.routeA-hierarchical-transformer-train.v1": {
+      "id": "text.v361.routeA-hierarchical-transformer-train.v1",
+      "route": "text",
+      "operation": "train",
+      "source": "text_model/configs/profiles/text_v361_routeA_hierarchical_transformer_train.v1.json",
+      "sha256": "b794c76d0e91350aef53dd2330fa507280b81f6aadb4d19d70b6274ca7c245b6",
+      "compatible_model_ids": [
+        "erlangshen_megatronbert_1_3b"
+      ],
+      "description": "V361 Route-A hierarchical Transformer training on the frozen 6500-row long-document mix, comparing plain sliding windows and head-context 48/64/96 on Dev-A2 and Long-Dev with four GPUs."
+    },
+    "text.v361.routeA-final-eval.v1": {
+      "id": "text.v361.routeA-final-eval.v1",
+      "route": "text",
+      "operation": "diagnostic",
+      "source": "text_model/configs/profiles/text_v361_routeA_final_eval.v1.json",
+      "sha256": "1e57b603f325ca5363b22caf9951f2db5226343d2133c2131f7b03676910f44d",
+      "compatible_model_ids": [
+        "erlangshen_megatronbert_1_3b"
+      ],
+      "description": "Frozen Route-A a320_plain and a320_head64 on Test-B 1580 and Long-Stress 120; inference-only and report-only."
+    }
+  },
+  "defaults": {
+    "text": {
+      "train": "text.v309.acc-only.v1"
+    }
+  },
+  "checkpoint_registry": "shared/configs/checkpoint_registry.json"
+}

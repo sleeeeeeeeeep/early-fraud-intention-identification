@@ -1,0 +1,30 @@
+{
+  "expected": {
+    "train": 1500,
+    "dev": 200,
+    "test": 300
+  },
+  "actual": {
+    "train": 1500,
+    "dev": 200,
+    "test": 300
+  },
+  "label_counts_by_split": {
+    "train": {
+      "fraud": 600,
+      "normal": 600,
+      "ambiguous": 300
+    },
+    "dev": {
+      "fraud": 80,
+      "normal": 80,
+      "ambiguous": 40
+    },
+    "test": {
+      "fraud": 120,
+      "normal": 120,
+      "ambiguous": 60
+    }
+  },
+  "stress_and_blind_mapped_to_test": true
+}

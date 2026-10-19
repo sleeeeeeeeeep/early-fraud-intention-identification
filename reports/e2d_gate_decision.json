@@ -1,0 +1,290 @@
+{
+  "checks": [
+    {
+      "evidence": "V365 Dev source",
+      "group": "validity",
+      "id": "valid.dev_calls",
+      "limit": 200,
+      "observed": 200,
+      "operator": "==",
+      "passed": true
+    },
+    {
+      "evidence": "causal Dev prefixes",
+      "group": "validity",
+      "id": "valid.prefix_rows",
+      "limit": 4492,
+      "observed": 4492,
+      "operator": "==",
+      "passed": true
+    },
+    {
+      "evidence": "V361 long Dev source",
+      "group": "validity",
+      "id": "valid.long_rows",
+      "limit": 240,
+      "observed": 240,
+      "operator": "==",
+      "passed": true
+    },
+    {
+      "evidence": "E2-D aliases frozen M1 full probabilities",
+      "group": "validity",
+      "id": "valid.full_probabilities_immutable",
+      "limit": true,
+      "observed": true,
+      "operator": "==",
+      "passed": true
+    },
+    {
+      "evidence": "E2-D aliases frozen M1 long probabilities",
+      "group": "validity",
+      "id": "valid.long_probabilities_immutable",
+      "limit": true,
+      "observed": true,
+      "operator": "==",
+      "passed": true
+    },
+    {
+      "evidence": "unchanged M1 full artifact proof",
+      "group": "validity",
+      "id": "valid.full_byte_copy",
+      "limit": true,
+      "observed": true,
+      "operator": "==",
+      "passed": true
+    },
+    {
+      "evidence": "unchanged M1 long artifact proof",
+      "group": "validity",
+      "id": "valid.long_byte_copy",
+      "limit": true,
+      "observed": true,
+      "operator": "==",
+      "passed": true
+    },
+    {
+      "evidence": "E2-D alerts must be a subset of M1 k2",
+      "group": "validity",
+      "id": "valid.alert_subset",
+      "limit": 0,
+      "observed": 0,
+      "operator": "==",
+      "passed": true
+    },
+    {
+      "evidence": "M1 k1 remains diagnostic and unchanged",
+      "group": "validity",
+      "id": "valid.k1_unchanged",
+      "limit": 0,
+      "observed": 0,
+      "operator": "==",
+      "passed": true
+    },
+    {
+      "evidence": "gate cannot alter M1 probabilities",
+      "group": "validity",
+      "id": "valid.prefix_probabilities_unchanged",
+      "limit": 0,
+      "observed": 0,
+      "operator": "==",
+      "passed": true
+    },
+    {
+      "evidence": "every adjacent Dev prefix pair",
+      "group": "validity",
+      "id": "valid.gate_pair_coverage",
+      "limit": 4292,
+      "observed": 4292,
+      "operator": "==",
+      "passed": true
+    },
+    {
+      "evidence": "checkpoint and scaler fitted on Train only",
+      "group": "validity",
+      "id": "valid.train_isolation",
+      "limit": true,
+      "observed": true,
+      "operator": "==",
+      "passed": true
+    },
+    {
+      "evidence": "path guard and training manifest",
+      "group": "validity",
+      "id": "valid.test_reads",
+      "limit": 0,
+      "observed": 0,
+      "operator": "==",
+      "passed": true
+    },
+    {
+      "evidence": "frozen M1 full text",
+      "group": "noninferiority",
+      "id": "noninf.full.early_exact",
+      "limit": 13,
+      "observed": 13,
+      "operator": "==",
+      "passed": true
+    },
+    {
+      "evidence": "frozen M1 full text",
+      "group": "noninferiority",
+      "id": "noninf.full.explicit_exact",
+      "limit": 65,
+      "observed": 65,
+      "operator": "==",
+      "passed": true
+    },
+    {
+      "evidence": "frozen M1 full text",
+      "group": "noninferiority",
+      "id": "noninf.full.fraud_exact",
+      "limit": 78,
+      "observed": 78,
+      "operator": "==",
+      "passed": true
+    },
+    {
+      "evidence": "frozen M1 full text",
+      "group": "noninferiority",
+      "id": "noninf.full.normal_fp_exact",
+      "limit": 6,
+      "observed": 6,
+      "operator": "==",
+      "passed": true
+    },
+    {
+      "evidence": "E2-D k2 early",
+      "group": "noninferiority",
+      "id": "noninf.k2.early_effective",
+      "limit": 14,
+      "observed": 13,
+      "operator": ">=",
+      "passed": false
+    },
+    {
+      "evidence": "E2-D k2 all fraud",
+      "group": "noninferiority",
+      "id": "noninf.k2.all_effective",
+      "limit": 79,
+      "observed": 78,
+      "operator": ">=",
+      "passed": false
+    },
+    {
+      "evidence": "E2-D k2 normal",
+      "group": "noninferiority",
+      "id": "noninf.k2.normal_fp",
+      "limit": 11,
+      "observed": 8,
+      "operator": "<=",
+      "passed": true
+    },
+    {
+      "evidence": "E2-D k2 all fraud",
+      "group": "noninferiority",
+      "id": "noninf.k2.premature",
+      "limit": 57,
+      "observed": 30,
+      "operator": "<=",
+      "passed": true
+    },
+    {
+      "evidence": "E2-D k2 all fraud",
+      "group": "noninferiority",
+      "id": "noninf.k2.clean",
+      "limit": 22,
+      "observed": 48,
+      "operator": ">=",
+      "passed": true
+    },
+    {
+      "evidence": "E2-D k2 explicit",
+      "group": "noninferiority",
+      "id": "noninf.k2.before_ta",
+      "limit": 63,
+      "observed": 57,
+      "operator": ">=",
+      "passed": false
+    },
+    {
+      "evidence": "detected fraud",
+      "group": "noninferiority",
+      "id": "noninf.k2.delay_median",
+      "limit": 0,
+      "observed": 0.0,
+      "operator": "<=",
+      "passed": true
+    },
+    {
+      "evidence": "detected fraud",
+      "group": "noninferiority",
+      "id": "noninf.k2.delay_p75",
+      "limit": 1,
+      "observed": 2.0,
+      "operator": "<=",
+      "passed": false
+    },
+    {
+      "evidence": "frozen M1 V361 long Dev",
+      "group": "noninferiority",
+      "id": "noninf.long.tp_exact",
+      "limit": 120,
+      "observed": 120,
+      "operator": "==",
+      "passed": true
+    },
+    {
+      "evidence": "frozen M1 V361 long Dev",
+      "group": "noninferiority",
+      "id": "noninf.long.fp_exact",
+      "limit": 2,
+      "observed": 2,
+      "operator": "==",
+      "passed": true
+    },
+    {
+      "evidence": "E2-D k2 normal",
+      "group": "improvement",
+      "id": "improve.k2.normal_fp",
+      "limit": 10,
+      "observed": 8,
+      "operator": "<=",
+      "passed": true
+    },
+    {
+      "evidence": "E2-D k2 all fraud",
+      "group": "improvement",
+      "id": "improve.k2.premature",
+      "limit": 56,
+      "observed": 30,
+      "operator": "<=",
+      "passed": true
+    },
+    {
+      "evidence": "fixed harm-count sum",
+      "group": "improvement",
+      "id": "improve.k2.fp_plus_premature",
+      "limit": 65,
+      "observed": 38,
+      "operator": "<=",
+      "passed": true
+    },
+    {
+      "evidence": "E2-D k2 all fraud",
+      "group": "improvement",
+      "id": "improve.k2.clean",
+      "limit": 23,
+      "observed": 48,
+      "operator": ">=",
+      "passed": true
+    }
+  ],
+  "improvement_passed": true,
+  "noninferiority_passed": false,
+  "schema_version": "v365.e2d.gate.v1",
+  "status": "FAIL",
+  "test_or_restricted_files_opened": 0,
+  "test_policy": "LOCKED: no status authorizes or triggers V365 Test access",
+  "validity_passed": true
+}

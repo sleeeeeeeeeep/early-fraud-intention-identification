@@ -1,0 +1,191 @@
+{
+  "model": {
+    "architecture": "v361_fixed_controls",
+    "baseline_architecture": "ce_dual_head",
+    "model": "models/IDEA-CCNL-Erlangshen-MegatronBert-1.3B",
+    "baseline_max_length": 256,
+    "baseline_eval_batch_size": 16,
+    "ce_neck_dropout": -1.0,
+    "ce_neck_gate_bias": -1.0,
+    "ce_mid_adapter_layer": -1,
+    "ce_mid_adapter_bottleneck": 256,
+    "official_subcategory_loss_weight": 0.2,
+    "v361_training_script": "src/v361/inference/train_longdoc.py",
+    "v361_inference_script": "src/v361/inference/run_longdoc_inference.py",
+    "v361_chunker_module": "src/v361/data/longdoc_chunker.py",
+    "v361_collator_module": "src/v361/data/longdoc_collator.py",
+    "v361_role_markers_module": "src/v361/data/role_markers.py",
+    "v361_shared_chunk_encoder_module": "src/v361/models/shared_chunk_encoder.py",
+    "v361_longdoc_classifier_module": "src/v361/models/longdoc_multitask_classifier.py",
+    "v361_gated_aggregator_module": "src/v361/models/gated_attention_aggregator.py",
+    "v361_hierarchical_aggregator_module": "src/v361/models/hierarchical_transformer_aggregator.py",
+    "v361_evidence_pooling_module": "src/v361/models/evidence_pooling.py",
+    "v361_fixed_aggregator_module": "src/v361/models/fixed_logit_aggregator.py",
+    "v361_losses_module": "src/v361/training/longdoc_losses.py",
+    "v361_metrics_module": "src/v361/training/longdoc_metrics.py",
+    "v361_sampler_module": "src/v361/training/longdoc_sampler.py",
+    "v361_official_subcategories_module": "src/v361/scripts/inference/official_subcategories.py",
+    "v361_data_package_init": "src/v361/data/__init__.py",
+    "v361_models_package_init": "src/v361/models/__init__.py",
+    "v361_training_package_init": "src/v361/training/__init__.py",
+    "input_mode": "plain_sliding_chunks",
+    "chunk_length": 320,
+    "overlap": 64,
+    "head_context_length": 64,
+    "encoder_micro_batch_size": 12,
+    "fixed_eval_batch_size": 2,
+    "evidence_components": "attention,top1,top2,last,mean",
+    "asset_mode": "project"
+  },
+  "evaluation": {
+    "checkpoint_id": "v341d1_policy6500_megatronbert_seed202_best_epoch3",
+    "checkpoint_path": "runs/r_260727_042528_V341D1_Policy6500_MegatronBERT_DataCausal_DevOnly_s202_auto_a1/subruns/seed-202/best_model/pytorch_model.bin",
+    "inference_script": "scripts/inference/evaluate_saved_ce_checkpoint.py",
+    "core_inference_script": "scripts/inference/run_ce_supervised_13class_external_eval.py"
+  },
+  "phase1": {
+    "max_parallel": 2,
+    "jobs": [
+      {
+        "name": "baseline256_dev_a2",
+        "kind": "v341_baseline_256",
+        "data_key": "external_dev_a2_jsonl",
+        "eval_name": "dev_a2_1801",
+        "gpu": 0
+      },
+      {
+        "name": "baseline256_long_dev",
+        "kind": "v341_baseline_256",
+        "data_key": "long_dev_jsonl",
+        "eval_name": "long_dev_240",
+        "gpu": 1
+      },
+      {
+        "name": "fixed320_dev_a2",
+        "kind": "fixed_320_all",
+        "data_key": "external_dev_a2_jsonl",
+        "gpu": 0
+      },
+      {
+        "name": "fixed320_long_dev",
+        "kind": "fixed_320_all",
+        "data_key": "long_dev_jsonl",
+        "gpu": 1
+      }
+    ]
+  },
+  "runner": {
+    "entry": "scripts/cascade/run_v361_fixed_controls_suite_entry.py",
+    "conda_env": "korean",
+    "offline": true,
+    "progress_contract": "standard_progress.v1",
+    "success_file": "metrics.json",
+    "flags": [],
+    "args": {}
+  },
+  "execution": {
+    "resume": false,
+    "skip_completed": false,
+    "fail_fast": true,
+    "history_poll_seconds": 30,
+    "max_parallel": 1
+  },
+  "policy": {
+    "formal_run": true,
+    "no_training": true,
+    "phase1_controls_only": true,
+    "test_b_frozen": true,
+    "oof_used": false,
+    "history_required": false
+  },
+  "output": {
+    "subrun_output": "@subrun",
+    "success_file": "metrics.json",
+    "history_required": false,
+    "metrics": {
+      "phase1_runs": "runs"
+    }
+  },
+  "schema_version": "experiment_spec.v2",
+  "name": "V361P1_V341FixedControls_DevA2_LongDev_2GPU_a1",
+  "display_name": "V361-P1 V341 frozen baseline and fixed long-document controls (two GPUs)",
+  "summary": "Run the exact V341-D1 256-token baseline and the chunk320 overlap64 Max, Top-2 Mean, and LogSumExp controls on frozen Dev-A2 and Long-Dev with two GPUs. Test-B and Long-Stress remain unread.",
+  "tags": [
+    "V361",
+    "V341-D1-frozen",
+    "inference-only",
+    "sliding-window",
+    "fixed-controls",
+    "Dev-A2",
+    "Long-Dev",
+    "no-OOF",
+    "Test-B-frozen"
+  ],
+  "data": {
+    "external_dev_a2_jsonl": "data/processed/v346_deva2_frozen_20260728/dev_a2_frozen_1801.jsonl",
+    "long_dev_jsonl": "data/processed/v361_longdoc_text_route_20260824/long_dev_v361_240.jsonl"
+  },
+  "protocol": {
+    "id": "text.v361.fixed-controls-deva2-longdev.v1",
+    "operation": "diagnostic"
+  },
+  "subruns": {
+    "naming": [
+      "seed"
+    ],
+    "sweep_args": [
+      "seed"
+    ],
+    "matrix": [
+      {
+        "seed": 202,
+        "gpu": "0"
+      }
+    ],
+    "gpu_field": "gpu"
+  },
+  "input_lock": {
+    "schema_version": "experiment_input_lock.v1",
+    "dataset_id": "v361_phase1_deva2_longdev",
+    "source_name": "V361_PHASE1_DEVA2_1801_LONGDEV240_20260824",
+    "dataset_hashes": {
+      "external_dev_a2_jsonl": "c8e42fcdf82dc3dab785c105ffdf3034783db070ecca0ff38775c69924fcc99b",
+      "long_dev_jsonl": "771b32e5898f5aec2d7629dd499a771b845f2d3d63468ea397a21fe09f3da6bd"
+    },
+    "resolved_data_sha256": "ad349d5f3b57d76f03219b501dbf3cad184a6f0051d0c7948394790502eff484"
+  },
+  "resolution_lock": {
+    "schema_version": "experiment_resolution_lock.v1",
+    "intent": "configs/intents/V361P1_V341FixedControls_DevA2_LongDev_2GPU_a1.intent.json",
+    "intent_sha256": "5c99e5d312ab63563339c2651db7151685301de82f3a07e3219d75788b8cc797",
+    "operation": "diagnostic",
+    "protocol_id": "text.v361.fixed-controls-deva2-longdev.v1",
+    "protocol_entry_sha256": "e0ddd9604fa1a4828c19cb3c69d08d645e87c946a9a53870ddb197efeaf56f3d",
+    "protocol_source": "text_model/configs/profiles/text_v361_fixed_controls_deva2_longdev.v1.json",
+    "protocol_source_sha256": "5650ecbaf23defce521b5dcf5b723feb6020b11f849da1692703c71f0ce7d373",
+    "registry": "shared/configs/experiment_registry.json",
+    "registry_sha256": "815873afde2a3dd25a428a825c0fcea25b8b9106734764312294d004a5dc2283",
+    "dataset_id": "v361_phase1_deva2_longdev",
+    "dataset_entry_sha256": "4e2b9ab344830d6d158de4ac42acdc8265b3fed928a273a771bb0ced172f3446",
+    "model_id": "erlangshen_megatronbert_1_3b",
+    "model_entry_sha256": "eabb1399f057fd4d57290a3948bd26c0a8fce22b7a3ce3b4400ff8a02b534b3c",
+    "resolved_data_sha256": "ad349d5f3b57d76f03219b501dbf3cad184a6f0051d0c7948394790502eff484",
+    "resolved_model_path": "models/IDEA-CCNL-Erlangshen-MegatronBert-1.3B",
+    "subrun_matrix": [
+      {
+        "seed": 202,
+        "gpu": "0"
+      }
+    ],
+    "gpu_assignment": [
+      {
+        "seed": 202,
+        "gpu": "0"
+      }
+    ],
+    "seeds": [
+      202
+    ],
+    "resolved_spec_sha256": "500ae59fc8605fd0eaf48fb140396f851a9e42677b6b20a2403babd7220cd6a6"
+  }
+}

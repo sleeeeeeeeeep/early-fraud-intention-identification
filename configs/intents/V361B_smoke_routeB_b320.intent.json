@@ -1,0 +1,38 @@
+{
+  "schema_version": "experiment_intent.v1",
+  "name": "V361B_smoke_routeB_b320_a1",
+  "display_name": "V361 route-B gated attention smoke",
+  "summary": "Route-B gated-attention training smoke on 160 mixed short/long documents: verifies chunking, multi-window aggregation, MIL loss, AMP and checkpoint writing before the full two-GPU sweep.",
+  "route": "text",
+  "operation": "train",
+  "protocol": "text.v361.routeB-gated-attention-train.v1",
+  "registry": "shared/configs/experiment_registry.json",
+  "dataset": "v361_routeB_smoke_deva2_longdev",
+  "model": "erlangshen_megatronbert_1_3b",
+  "checkpoint": "v341d1_policy6500_megatronbert_seed202_best_epoch3",
+  "resources": {
+    "gpus": [0],
+    "max_parallel": 1
+  },
+  "matrix": [
+    {
+      "name": "smoke_b320_plain",
+      "seed": 202,
+      "epochs": 1,
+      "patience": 1,
+      "freeze_backbone_epochs": 0,
+      "top_layer_epochs": 1,
+      "dev_limit": 200,
+      "long_dev_limit": 40,
+      "save_every_epoch": false
+    }
+  ],
+  "tags": [
+    "smoke",
+    "route-B"
+  ],
+  "notes": [
+    "Smoke only: the 160-row mix is never used for model selection.",
+    "The full sweep uses the 6500-row mix on the same protocol."
+  ]
+}

@@ -1,0 +1,4727 @@
+{
+  "e2d_error_audit_count": 40,
+  "gate": {
+    "checks": [
+      {
+        "evidence": "V365 Dev source",
+        "group": "validity",
+        "id": "valid.dev_calls",
+        "limit": 200,
+        "observed": 200,
+        "operator": "==",
+        "passed": true
+      },
+      {
+        "evidence": "causal Dev prefixes",
+        "group": "validity",
+        "id": "valid.prefix_rows",
+        "limit": 4492,
+        "observed": 4492,
+        "operator": "==",
+        "passed": true
+      },
+      {
+        "evidence": "V361 long Dev source",
+        "group": "validity",
+        "id": "valid.long_rows",
+        "limit": 240,
+        "observed": 240,
+        "operator": "==",
+        "passed": true
+      },
+      {
+        "evidence": "E2-D aliases frozen M1 full probabilities",
+        "group": "validity",
+        "id": "valid.full_probabilities_immutable",
+        "limit": true,
+        "observed": true,
+        "operator": "==",
+        "passed": true
+      },
+      {
+        "evidence": "E2-D aliases frozen M1 long probabilities",
+        "group": "validity",
+        "id": "valid.long_probabilities_immutable",
+        "limit": true,
+        "observed": true,
+        "operator": "==",
+        "passed": true
+      },
+      {
+        "evidence": "unchanged M1 full artifact proof",
+        "group": "validity",
+        "id": "valid.full_byte_copy",
+        "limit": true,
+        "observed": true,
+        "operator": "==",
+        "passed": true
+      },
+      {
+        "evidence": "unchanged M1 long artifact proof",
+        "group": "validity",
+        "id": "valid.long_byte_copy",
+        "limit": true,
+        "observed": true,
+        "operator": "==",
+        "passed": true
+      },
+      {
+        "evidence": "E2-D alerts must be a subset of M1 k2",
+        "group": "validity",
+        "id": "valid.alert_subset",
+        "limit": 0,
+        "observed": 0,
+        "operator": "==",
+        "passed": true
+      },
+      {
+        "evidence": "M1 k1 remains diagnostic and unchanged",
+        "group": "validity",
+        "id": "valid.k1_unchanged",
+        "limit": 0,
+        "observed": 0,
+        "operator": "==",
+        "passed": true
+      },
+      {
+        "evidence": "gate cannot alter M1 probabilities",
+        "group": "validity",
+        "id": "valid.prefix_probabilities_unchanged",
+        "limit": 0,
+        "observed": 0,
+        "operator": "==",
+        "passed": true
+      },
+      {
+        "evidence": "every adjacent Dev prefix pair",
+        "group": "validity",
+        "id": "valid.gate_pair_coverage",
+        "limit": 4292,
+        "observed": 4292,
+        "operator": "==",
+        "passed": true
+      },
+      {
+        "evidence": "checkpoint and scaler fitted on Train only",
+        "group": "validity",
+        "id": "valid.train_isolation",
+        "limit": true,
+        "observed": true,
+        "operator": "==",
+        "passed": true
+      },
+      {
+        "evidence": "path guard and training manifest",
+        "group": "validity",
+        "id": "valid.test_reads",
+        "limit": 0,
+        "observed": 0,
+        "operator": "==",
+        "passed": true
+      },
+      {
+        "evidence": "frozen M1 full text",
+        "group": "noninferiority",
+        "id": "noninf.full.early_exact",
+        "limit": 13,
+        "observed": 13,
+        "operator": "==",
+        "passed": true
+      },
+      {
+        "evidence": "frozen M1 full text",
+        "group": "noninferiority",
+        "id": "noninf.full.explicit_exact",
+        "limit": 65,
+        "observed": 65,
+        "operator": "==",
+        "passed": true
+      },
+      {
+        "evidence": "frozen M1 full text",
+        "group": "noninferiority",
+        "id": "noninf.full.fraud_exact",
+        "limit": 78,
+        "observed": 78,
+        "operator": "==",
+        "passed": true
+      },
+      {
+        "evidence": "frozen M1 full text",
+        "group": "noninferiority",
+        "id": "noninf.full.normal_fp_exact",
+        "limit": 6,
+        "observed": 6,
+        "operator": "==",
+        "passed": true
+      },
+      {
+        "evidence": "E2-D k2 early",
+        "group": "noninferiority",
+        "id": "noninf.k2.early_effective",
+        "limit": 14,
+        "observed": 13,
+        "operator": ">=",
+        "passed": false
+      },
+      {
+        "evidence": "E2-D k2 all fraud",
+        "group": "noninferiority",
+        "id": "noninf.k2.all_effective",
+        "limit": 79,
+        "observed": 78,
+        "operator": ">=",
+        "passed": false
+      },
+      {
+        "evidence": "E2-D k2 normal",
+        "group": "noninferiority",
+        "id": "noninf.k2.normal_fp",
+        "limit": 11,
+        "observed": 8,
+        "operator": "<=",
+        "passed": true
+      },
+      {
+        "evidence": "E2-D k2 all fraud",
+        "group": "noninferiority",
+        "id": "noninf.k2.premature",
+        "limit": 57,
+        "observed": 30,
+        "operator": "<=",
+        "passed": true
+      },
+      {
+        "evidence": "E2-D k2 all fraud",
+        "group": "noninferiority",
+        "id": "noninf.k2.clean",
+        "limit": 22,
+        "observed": 48,
+        "operator": ">=",
+        "passed": true
+      },
+      {
+        "evidence": "E2-D k2 explicit",
+        "group": "noninferiority",
+        "id": "noninf.k2.before_ta",
+        "limit": 63,
+        "observed": 57,
+        "operator": ">=",
+        "passed": false
+      },
+      {
+        "evidence": "detected fraud",
+        "group": "noninferiority",
+        "id": "noninf.k2.delay_median",
+        "limit": 0,
+        "observed": 0.0,
+        "operator": "<=",
+        "passed": true
+      },
+      {
+        "evidence": "detected fraud",
+        "group": "noninferiority",
+        "id": "noninf.k2.delay_p75",
+        "limit": 1,
+        "observed": 2.0,
+        "operator": "<=",
+        "passed": false
+      },
+      {
+        "evidence": "frozen M1 V361 long Dev",
+        "group": "noninferiority",
+        "id": "noninf.long.tp_exact",
+        "limit": 120,
+        "observed": 120,
+        "operator": "==",
+        "passed": true
+      },
+      {
+        "evidence": "frozen M1 V361 long Dev",
+        "group": "noninferiority",
+        "id": "noninf.long.fp_exact",
+        "limit": 2,
+        "observed": 2,
+        "operator": "==",
+        "passed": true
+      },
+      {
+        "evidence": "E2-D k2 normal",
+        "group": "improvement",
+        "id": "improve.k2.normal_fp",
+        "limit": 10,
+        "observed": 8,
+        "operator": "<=",
+        "passed": true
+      },
+      {
+        "evidence": "E2-D k2 all fraud",
+        "group": "improvement",
+        "id": "improve.k2.premature",
+        "limit": 56,
+        "observed": 30,
+        "operator": "<=",
+        "passed": true
+      },
+      {
+        "evidence": "fixed harm-count sum",
+        "group": "improvement",
+        "id": "improve.k2.fp_plus_premature",
+        "limit": 65,
+        "observed": 38,
+        "operator": "<=",
+        "passed": true
+      },
+      {
+        "evidence": "E2-D k2 all fraud",
+        "group": "improvement",
+        "id": "improve.k2.clean",
+        "limit": 23,
+        "observed": 48,
+        "operator": ">=",
+        "passed": true
+      }
+    ],
+    "improvement_passed": true,
+    "noninferiority_passed": false,
+    "schema_version": "v365.e2d.gate.v1",
+    "status": "FAIL",
+    "test_or_restricted_files_opened": 0,
+    "test_policy": "LOCKED: no status authorizes or triggers V365 Test access",
+    "validity_passed": true
+  },
+  "m1_to_e2d_transition_counts": {
+    "clean_effective_transition": {
+      "0->0": 151,
+      "0->1": 27,
+      "1->0": 1,
+      "1->1": 21
+    },
+    "effective_transition": {
+      "0->0": 121,
+      "1->0": 1,
+      "1->1": 78
+    },
+    "normal_ever_false_alarm_transition": {
+      "0->0": 189,
+      "1->0": 3,
+      "1->1": 8
+    },
+    "premature_transition": {
+      "0->0": 143,
+      "1->0": 27,
+      "1->1": 30
+    }
+  },
+  "manifest": {
+    "code": {
+      "baseline": {
+        "path": "text_model/scripts/evaluation/report_v365_dev_baseline.py",
+        "sha256": "ca484affbbda81f1e317a978276068c71dbdcbbb43fb885c070026a7d64a63e9"
+      },
+      "gate_common": {
+        "path": "text_model/scripts/e2d/e2d_gate_common.py",
+        "sha256": "2aae29f49b49884e97b42245dd063369c656273b699d1980faeb98bf07e15bbf"
+      },
+      "report": {
+        "path": "text_model/scripts/e2d/report_e2d_dev_compare.py",
+        "sha256": "c0cb55dedff97fa9daa4b7fbf9265241f801ff2a9af500db61db4dc9a9477924"
+      }
+    },
+    "diagnostics": {
+      "alert_subset_violation_count": 0,
+      "alert_subset_violations": [],
+      "e2d_k2_alert_windows": 1638,
+      "evaluated_adjacent_pairs": 4292,
+      "expected_adjacent_pairs": 4292,
+      "gate_cpu_seconds": 0.012148774228990078,
+      "gate_threshold": 0.5,
+      "k1_mismatch_count": 0,
+      "m1_k2_alert_windows": 1932,
+      "probability_mismatch_count": 0,
+      "suppressed_m1_k2_windows": 294
+    },
+    "historical_schema_compatibility": {
+      "canonical_m1_exact_after_normalization": true,
+      "endpoint_recomputed_from_frozen_predictions": {
+        "calls": 200,
+        "max_abs_p_fraud_delta": 2.7418136596679688e-06,
+        "mean_abs_p_fraud_delta": 5.3957114349856286e-08,
+        "passed": true,
+        "threshold_flip_count": 0,
+        "tolerance": 0.0001
+      },
+      "historical_files_modified": false,
+      "long_diagnostics_recomputed_from_frozen_predictions": {
+        "calls_exceeding_diagnostic_12_chunks": 6,
+        "coverage_min": 1.0,
+        "diagnostic_max_chunks": 12,
+        "hard_chunk_cap": null,
+        "max_chunks_observed": 14,
+        "max_chunks_semantics": "diagnostic only; all chunks retained for full coverage"
+      },
+      "long_timing_derivations_verified": {
+        "evaluated_calls": 240,
+        "milliseconds_per_call": 302.1267589123454,
+        "seconds_per_call": 0.3021267589123454
+      },
+      "policy": "known auxiliary schema deltas only; exact metric equality retained"
+    },
+    "identity_proof": {
+      "full_byte_copy": {
+        "byte_identical": true,
+        "copy": "runs/v365_e2d_dev_compare_20261016_reportfix/proof/m1_unchanged/v365_fulltext_predictions.jsonl",
+        "copy_sha256": "ba6b4ba9f49bbb5cc41c0a8b1b4af06200b0aec72f73e74d8a89bb1f743d3711",
+        "source": "runs/v365_e2a_dev_compare_20261011/scored/m1_e1b/v365_fulltext_predictions.jsonl",
+        "source_sha256": "ba6b4ba9f49bbb5cc41c0a8b1b4af06200b0aec72f73e74d8a89bb1f743d3711"
+      },
+      "full_metric_byte_copy": {
+        "byte_identical": true,
+        "copy": "runs/v365_e2d_dev_compare_20261016_reportfix/proof/m1_unchanged/v365_fulltext_metrics.json",
+        "copy_sha256": "bb0738494536a5e187d26226aa56637e22249b190f91bcb16c3ac15256c26747",
+        "source": "runs/v365_e2a_dev_compare_20261011/scored/m1_e1b/v365_fulltext_metrics.json",
+        "source_sha256": "bb0738494536a5e187d26226aa56637e22249b190f91bcb16c3ac15256c26747"
+      },
+      "full_values_identical": true,
+      "long_byte_copy": {
+        "byte_identical": true,
+        "copy": "runs/v365_e2d_dev_compare_20261016_reportfix/proof/m1_unchanged/v361_longdev_predictions.jsonl",
+        "copy_sha256": "1c506629ce09b9e627a6762f50ef76e4443c212ac99878bef919350f2ab7204d",
+        "source": "runs/v365_e2a_dev_compare_20261011/scored/m1_e1b/v361_longdev_predictions.jsonl",
+        "source_sha256": "1c506629ce09b9e627a6762f50ef76e4443c212ac99878bef919350f2ab7204d"
+      },
+      "long_metric_byte_copy": {
+        "byte_identical": true,
+        "copy": "runs/v365_e2d_dev_compare_20261016_reportfix/proof/m1_unchanged/v361_longdev_metrics.json",
+        "copy_sha256": "8ad89734754b433b96d2ad8f2146a011a2378ba6d17f5b8c1185fc5e96a952f1",
+        "source": "runs/v365_e2a_dev_compare_20261011/scored/m1_e1b/v361_longdev_metrics.json",
+        "source_sha256": "8ad89734754b433b96d2ad8f2146a011a2378ba6d17f5b8c1185fc5e96a952f1"
+      },
+      "long_values_identical": true
+    },
+    "inputs": {
+      "data/processed/v361_longdoc_text_route_20260824/long_dev_v361_240.jsonl": "771b32e5898f5aec2d7629dd499a771b845f2d3d63468ea397a21fe09f3da6bd",
+      "data/processed/v365_2000_final_20260923/data/v365_calls_dev_final.jsonl": "4d3cc7f995c6a646c637f9185d4f565c1704f4803c1302c93df6a90e62772532",
+      "runs/v365_dev_baseline_compare_20261010/inputs/v365_dev_cumulative_prefix_label_blind.jsonl": "a6f582c1ee07717923b4c52ca2e25571738c58537b7da2e1fa991c7ed529eef3",
+      "runs/v365_e2a_dev_compare_20261011/reports/model_comparison.json": "966344dc5f94c7d816e7c9a3ed639f97d8d535bdfbc68a3aeb42e586e92afbe9",
+      "runs/v365_e2a_dev_compare_20261011/run_manifest.json": "39cd85c6224c1628ebb04822837e80e36959ac2d1672821da49904dc89af9f59",
+      "runs/v365_e2a_dev_compare_20261011/scored/m1_e1b/v361_longdev_metrics.json": "8ad89734754b433b96d2ad8f2146a011a2378ba6d17f5b8c1185fc5e96a952f1",
+      "runs/v365_e2a_dev_compare_20261011/scored/m1_e1b/v361_longdev_predictions.jsonl": "1c506629ce09b9e627a6762f50ef76e4443c212ac99878bef919350f2ab7204d",
+      "runs/v365_e2a_dev_compare_20261011/scored/m1_e1b/v365_fulltext_metrics.json": "bb0738494536a5e187d26226aa56637e22249b190f91bcb16c3ac15256c26747",
+      "runs/v365_e2a_dev_compare_20261011/scored/m1_e1b/v365_fulltext_predictions.jsonl": "ba6b4ba9f49bbb5cc41c0a8b1b4af06200b0aec72f73e74d8a89bb1f743d3711",
+      "runs/v365_e2a_dev_compare_20261011/scored/m1_e1b/v365_prefix_predictions.jsonl": "5b9435479133ff0f61cec0c17a6ed60cc831e5fb27b5f4a2fa161206111ca3f8",
+      "runs/v365_e2a_dev_compare_20261011/scored/m1_e1b/v365_temporal_metrics.json": "62c1469e88dc2ba46df5263b18a1da9321b3cf834ea3910c1bd54bbd34746467",
+      "runs/v365_e2b_dev_compare_20261012/reports/model_comparison.json": "572471bfd1be8a41b221c1ec9a8a5ab7a9415b7351470947e95e2342c3a98340",
+      "runs/v365_e2b_dev_compare_20261012/run_manifest.json": "9abbd8e153d3d1d9c7ec5972664333d76e5506f75704348db10a078a5423f336",
+      "runs/v365_e2c_dev_compare_20261013/reports/model_comparison.json": "772a62a69d96dbd3eb8b388d287291b4ccb2a92d944affc7dc101172c3c4c027",
+      "runs/v365_e2c_dev_compare_20261013/run_manifest.json": "2d1e66fe8c223a47fb3de88d3de42f1803fc8b39cca78724561831654b209701",
+      "runs/v365_e2d_temporal_gate_s202/temporal_gate.pt": "688696ca11d07d951026bc434ff9d6b46902e107dc57dfbef17436c025495b5e",
+      "runs/v365_e2d_temporal_gate_s202/training_manifest.json": "f7a3bc79de631c8d8841cad7a7f129db4bb430e0938253a5232f82376742771e",
+      "text_model/experiments/v365_e2d/e2d_preregistration.json": "45779bb33513d311a415924a7cb2d5fe8eeb6d78120e2362ad1e44661ffac4d8",
+      "text_model/scripts/e2d/e2d_gate_common.py": "2aae29f49b49884e97b42245dd063369c656273b699d1980faeb98bf07e15bbf",
+      "text_model/scripts/evaluation/report_v365_dev_baseline.py": "ca484affbbda81f1e317a978276068c71dbdcbbb43fb885c070026a7d64a63e9"
+    },
+    "k1_role": "unchanged_m1_diagnostic_only",
+    "models": {
+      "e2d_gate": {
+        "checkpoint": "runs/v365_e2d_temporal_gate_s202/temporal_gate.pt",
+        "feature_names": [
+          "previous_binary_margin",
+          "current_binary_margin",
+          "minimum_binary_margin",
+          "binary_margin_change",
+          "log_previous_token_length",
+          "log_current_token_length",
+          "log_current_turn",
+          "previous_chunk_count",
+          "current_chunk_count",
+          "chunk_count_change"
+        ],
+        "parameters": 193,
+        "sha256": "688696ca11d07d951026bc434ff9d6b46902e107dc57dfbef17436c025495b5e"
+      },
+      "m1_e1b": {
+        "checkpoint": "runs/v362_e1b_binary_60prefix_40replay_s202_conservative/best_model.pt",
+        "fulltext_and_longdoc_frozen": true,
+        "sha256": "0d4a6fdd08b3a371d1d29108a00fa5b683986a819532684f4c1965a8eb95e1ad"
+      }
+    },
+    "preregistration": {
+      "path": "text_model/experiments/v365_e2d/e2d_preregistration.json",
+      "sha256": "45779bb33513d311a415924a7cb2d5fe8eeb6d78120e2362ad1e44661ffac4d8"
+    },
+    "primary_policy": "frozen_m1_k2_and_gate_ge_0_5",
+    "safety": {
+      "dev_used_for_gate_or_scaler_fit": false,
+      "path_guard_before_every_open": true,
+      "test_or_restricted_files_opened": 0,
+      "test_remains_locked_after_pass": true,
+      "threshold_or_policy_tuned": false,
+      "training_performed_by_report": false,
+      "turn_stage_labels_used_as_independent_blind_labels": false
+    },
+    "schema_version": "v365.e2d.dev_compare.v1",
+    "threshold": 0.5,
+    "training_contract": {
+      "dev_rows_used_for_training": 0,
+      "gate_checkpoint_sha256": "688696ca11d07d951026bc434ff9d6b46902e107dc57dfbef17436c025495b5e",
+      "preregistration_sha256": "45779bb33513d311a415924a7cb2d5fe8eeb6d78120e2362ad1e44661ffac4d8",
+      "scaler_fit_scope": "train_only",
+      "test_or_restricted_files_opened": 0,
+      "training_manifest_isolation_verified": true
+    }
+  },
+  "v361_longdev": {
+    "e2a": {
+      "accuracy": 0.9916666666666667,
+      "balanced_accuracy": 0.9916666666666667,
+      "confusion": {
+        "fn": 0,
+        "fp": 2,
+        "tn": 118,
+        "tp": 120
+      },
+      "diagnostics": {
+        "calls_exceeding_diagnostic_12_chunks": 6,
+        "coverage_min": 1.0,
+        "diagnostic_max_chunks": 12,
+        "hard_chunk_cap": null,
+        "max_chunks_observed": 14,
+        "max_chunks_semantics": "diagnostic only; all chunks retained for full coverage"
+      },
+      "f1": 0.9917355371900827,
+      "negative_samples": 120,
+      "normal_fpr": 0.016666666666666666,
+      "positive_samples": 120,
+      "pr_auc_ap": 0.9982796920878241,
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "roc_auc": 0.9983333333333333,
+      "samples": 240,
+      "timing": {
+        "checkpoint_load_report": {
+          "checkpoint": "runs/v365_e2a_binary_te60_replay40_s202/best_model.pt",
+          "epoch": 1,
+          "missing": [],
+          "unexpected": []
+        },
+        "coverage_min_raw": 1.0,
+        "evaluated_calls": 240,
+        "latency_ms_mean_raw": 284.047642769292,
+        "latency_ms_p50_raw": 259.31789446622133,
+        "latency_ms_p95_raw": 450.35950490273535,
+        "milliseconds_per_call": 308.15634455066174,
+        "note": "Only timing/coverage/load diagnostics are used; built-in labels are ignored.",
+        "peak_gpu_memory_mb": 5427.96630859375,
+        "seconds_per_call": 0.30815634455066176,
+        "wall_time_seconds": 73.95752269215882
+      }
+    },
+    "e2b": {
+      "accuracy": 0.9916666666666667,
+      "balanced_accuracy": 0.9916666666666667,
+      "confusion": {
+        "fn": 0,
+        "fp": 2,
+        "tn": 118,
+        "tp": 120
+      },
+      "diagnostics": {
+        "calls_exceeding_diagnostic_12_chunks": 6,
+        "coverage_min": 1.0,
+        "diagnostic_max_chunks": 12,
+        "hard_chunk_cap": null,
+        "max_chunks_observed": 14,
+        "max_chunks_semantics": "diagnostic only; all chunks retained for full coverage"
+      },
+      "f1": 0.9917355371900827,
+      "negative_samples": 120,
+      "normal_fpr": 0.016666666666666666,
+      "positive_samples": 120,
+      "pr_auc_ap": 0.9997239155224932,
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "roc_auc": 0.9997222222222222,
+      "samples": 240,
+      "timing": {
+        "checkpoint_load_report": {
+          "checkpoint": "runs/v365_e2b_boundary_balanced_s202/best_model.pt",
+          "epoch": 1,
+          "missing": [],
+          "unexpected": []
+        },
+        "coverage_min_raw": 1.0,
+        "evaluated_calls": 240,
+        "latency_ms_mean_raw": 283.7044538173359,
+        "latency_ms_p50_raw": 258.81771207787097,
+        "latency_ms_p95_raw": 449.5746430475265,
+        "milliseconds_per_call": 306.6735373538298,
+        "note": "Only timing/coverage/load diagnostics are used; built-in labels are ignored.",
+        "peak_gpu_memory_mb": 5427.96630859375,
+        "seconds_per_call": 0.3066735373538298,
+        "wall_time_seconds": 73.60164896491915
+      }
+    },
+    "e2c": {
+      "accuracy": 0.9916666666666667,
+      "balanced_accuracy": 0.9916666666666667,
+      "confusion": {
+        "fn": 0,
+        "fp": 2,
+        "tn": 118,
+        "tp": 120
+      },
+      "diagnostics": {
+        "calls_exceeding_diagnostic_12_chunks": 6,
+        "coverage_min": 1.0,
+        "diagnostic_max_chunks": 12,
+        "hard_chunk_cap": null,
+        "max_chunks_observed": 14,
+        "max_chunks_semantics": "diagnostic only; all chunks retained for full coverage"
+      },
+      "f1": 0.9917355371900827,
+      "negative_samples": 120,
+      "normal_fpr": 0.016666666666666666,
+      "positive_samples": 120,
+      "pr_auc_ap": 0.9999999999999999,
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "roc_auc": 1.0,
+      "samples": 240,
+      "timing": {
+        "checkpoint_load_report": {
+          "checkpoint": "runs/v365_e2c_k2_pair_s202/best_model.pt",
+          "epoch": 1,
+          "missing": [],
+          "unexpected": []
+        },
+        "coverage_min_raw": 1.0,
+        "evaluated_calls": 240,
+        "latency_ms_mean_raw": 522.0368034769004,
+        "latency_ms_p50_raw": 510.7374789658934,
+        "latency_ms_p95_raw": 908.1760244444013,
+        "milliseconds_per_call": 564.3445419244623,
+        "note": "Only timing/coverage/load diagnostics are used; built-in labels are ignored.",
+        "peak_gpu_memory_mb": 5427.96630859375,
+        "seconds_per_call": 0.5643445419244624,
+        "wall_time_seconds": 135.44269006187096
+      }
+    },
+    "e2d": {
+      "accuracy": 0.9916666666666667,
+      "balanced_accuracy": 0.9916666666666667,
+      "confusion": {
+        "fn": 0,
+        "fp": 2,
+        "tn": 118,
+        "tp": 120
+      },
+      "f1": 0.9917355371900827,
+      "negative_samples": 120,
+      "normal_fpr": 0.016666666666666666,
+      "positive_samples": 120,
+      "pr_auc_ap": 0.9995867580424213,
+      "precision": 0.9836065573770492,
+      "probability_field": "p_binary[1]",
+      "recall": 1.0,
+      "roc_auc": 0.9995833333333333,
+      "samples": 240,
+      "threshold": 0.5,
+      "timing": {
+        "checkpoint_load_report": {
+          "checkpoint": "runs/v362_e1b_binary_60prefix_40replay_s202_conservative/best_model.pt",
+          "epoch": 1,
+          "missing": [],
+          "unexpected": []
+        },
+        "coverage_min_raw": 1.0,
+        "latency_ms_mean_raw": 277.5822685973253,
+        "latency_ms_p50_raw": 255.75462961569428,
+        "latency_ms_p95_raw": 442.32840789482,
+        "note": "Only timing/coverage/load diagnostics are used; built-in labels are ignored.",
+        "peak_gpu_memory_mb": 5427.96630859375,
+        "wall_time_seconds": 72.5104221389629
+      }
+    },
+    "m0_v361": {
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "confusion": {
+        "fn": 0,
+        "fp": 0,
+        "tn": 120,
+        "tp": 120
+      },
+      "diagnostics": {
+        "calls_exceeding_diagnostic_12_chunks": 6,
+        "coverage_min": 1.0,
+        "diagnostic_max_chunks": 12,
+        "hard_chunk_cap": null,
+        "max_chunks_observed": 14,
+        "max_chunks_semantics": "diagnostic only; all chunks retained for full coverage"
+      },
+      "f1": 1.0,
+      "negative_samples": 120,
+      "normal_fpr": 0.0,
+      "positive_samples": 120,
+      "pr_auc_ap": 0.9999999999999999,
+      "precision": 1.0,
+      "recall": 1.0,
+      "roc_auc": 1.0,
+      "samples": 240,
+      "timing": {
+        "checkpoint_load_report": {
+          "checkpoint": "runs/repro_v361b_b320_head96/best_model.pt",
+          "epoch": 4,
+          "missing": [],
+          "unexpected": []
+        },
+        "coverage_min_raw": 1.0,
+        "evaluated_calls": 240,
+        "latency_ms_mean_raw": 273.83543625668,
+        "latency_ms_p50_raw": 250.505042495206,
+        "latency_ms_p95_raw": 435.0030159112066,
+        "milliseconds_per_call": 296.3897426399247,
+        "note": "Only timing/coverage/load diagnostics are used; built-in labels are ignored.",
+        "peak_gpu_memory_mb": 5427.96630859375,
+        "seconds_per_call": 0.29638974263992474,
+        "wall_time_seconds": 71.13353823358193
+      }
+    },
+    "m1_e1b": {
+      "accuracy": 0.9916666666666667,
+      "balanced_accuracy": 0.9916666666666667,
+      "confusion": {
+        "fn": 0,
+        "fp": 2,
+        "tn": 118,
+        "tp": 120
+      },
+      "f1": 0.9917355371900827,
+      "negative_samples": 120,
+      "normal_fpr": 0.016666666666666666,
+      "positive_samples": 120,
+      "pr_auc_ap": 0.9995867580424213,
+      "precision": 0.9836065573770492,
+      "probability_field": "p_binary[1]",
+      "recall": 1.0,
+      "roc_auc": 0.9995833333333333,
+      "samples": 240,
+      "threshold": 0.5,
+      "timing": {
+        "checkpoint_load_report": {
+          "checkpoint": "runs/v362_e1b_binary_60prefix_40replay_s202_conservative/best_model.pt",
+          "epoch": 1,
+          "missing": [],
+          "unexpected": []
+        },
+        "coverage_min_raw": 1.0,
+        "latency_ms_mean_raw": 277.5822685973253,
+        "latency_ms_p50_raw": 255.75462961569428,
+        "latency_ms_p95_raw": 442.32840789482,
+        "note": "Only timing/coverage/load diagnostics are used; built-in labels are ignored.",
+        "peak_gpu_memory_mb": 5427.96630859375,
+        "wall_time_seconds": 72.5104221389629
+      }
+    }
+  },
+  "v365_fulltext": {
+    "e2a": {
+      "accuracy": 0.95625,
+      "ambiguous": {
+        "count_ge_0_5": 7,
+        "mean_p_fraud": 0.16904083966951972,
+        "median_p_fraud": 0.005450474331155419,
+        "p90_p_fraud_linear": 0.879881113767624,
+        "samples": 40
+      },
+      "balanced_accuracy": 0.95625,
+      "confusion": {
+        "fn": 2,
+        "fp": 5,
+        "tn": 75,
+        "tp": 78
+      },
+      "diagnostics": {
+        "calls_capped": 0,
+        "calls_exceeding_diagnostic_12_chunks": 1,
+        "coverage_min": 1.0,
+        "max_chunks_observed": 13,
+        "max_chunks_semantics": "diagnostic only; all chunks retained for full coverage"
+      },
+      "effective_samples": 160,
+      "excluded_ambiguous": 40,
+      "f1": 0.9570552147239264,
+      "negative_samples": 80,
+      "normal_fpr": 0.0625,
+      "positive_samples": 80,
+      "pr_auc_ap": 0.9923644353086686,
+      "precision": 0.9397590361445783,
+      "probability_field": "p_binary[1]",
+      "recall": 0.975,
+      "roc_auc": 0.99265625,
+      "scenario_macro": {
+        "fraud_recall": 0.9875,
+        "fraud_scenarios": 16,
+        "normal_fpr": 0.0625,
+        "normal_scenarios": 16
+      },
+      "scenario_metrics": {
+        "acquaintance_leader": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 1,
+            "rate": 0.2
+          }
+        },
+        "automatic_debit": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 1,
+            "rate": 0.5
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 9,
+            "rate": 0.9
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "bank_credit": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "courier_customs": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "dating_investment": {
+          "early_fraud_recall": {
+            "denominator": 1,
+            "numerator": 1,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "ecommerce_refund": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "government_tax": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "insurance_claim": {
+          "early_fraud_recall": {
+            "denominator": 1,
+            "numerator": 1,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "loan_credit_repair": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 1,
+            "rate": 0.2
+          }
+        },
+        "million_guarantee": {
+          "early_fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 10,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "platform_membership": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 2,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 10,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "public_security_regulator": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 2,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 1,
+            "rate": 0.2
+          }
+        },
+        "recruitment_education": {
+          "early_fraud_recall": {
+            "denominator": 1,
+            "numerator": 1,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "telecom_sim": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "travel_rebooking": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 2,
+            "rate": 0.4
+          }
+        },
+        "trial_expiry": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 1,
+            "rate": 0.5
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 9,
+            "rate": 0.9
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        }
+      },
+      "schema_version": "v365.dev.binary_metrics.v1",
+      "subgroups": {
+        "all_fraud": {
+          "denominator": 80,
+          "numerator": 78,
+          "rate": 0.975,
+          "wilson_95": [
+            0.9133556701442198,
+            0.9931171067970292
+          ]
+        },
+        "early_fraud": {
+          "denominator": 15,
+          "numerator": 13,
+          "rate": 0.8666666666666667,
+          "wilson_95": [
+            0.6211801716767764,
+            0.9626387408969346
+          ]
+        },
+        "explicit_fraud": {
+          "denominator": 65,
+          "numerator": 65,
+          "rate": 1.0,
+          "wilson_95": [
+            0.9441984686771432,
+            1.0
+          ]
+        },
+        "normal_false_positive": {
+          "denominator": 80,
+          "numerator": 5,
+          "rate": 0.0625,
+          "wilson_95": [
+            0.026989375670841982,
+            0.13810148767274424
+          ]
+        }
+      },
+      "threshold": 0.5,
+      "timing": {
+        "checkpoint_load_report": {
+          "checkpoint": "runs/v365_e2a_binary_te60_replay40_s202/best_model.pt",
+          "epoch": 1,
+          "missing": [],
+          "unexpected": []
+        },
+        "coverage_min_raw": 1.0,
+        "evaluated_calls": 200,
+        "latency_ms_mean_raw": 209.097236902453,
+        "latency_ms_p50_raw": 178.2965490128845,
+        "latency_ms_p95_raw": 348.5556384548545,
+        "milliseconds_per_call": 224.8136668256484,
+        "note": "Only timing/coverage/load diagnostics are used; built-in labels are ignored.",
+        "peak_gpu_memory_mb": 5427.87548828125,
+        "seconds_per_call": 0.2248136668256484,
+        "wall_time_seconds": 44.96273336512968
+      }
+    },
+    "e2b": {
+      "accuracy": 0.9625,
+      "ambiguous": {
+        "count_ge_0_5": 6,
+        "mean_p_fraud": 0.15051752476126518,
+        "median_p_fraud": 0.0021698755444958806,
+        "p90_p_fraud_linear": 0.8015045464038851,
+        "samples": 40
+      },
+      "balanced_accuracy": 0.9624999999999999,
+      "confusion": {
+        "fn": 2,
+        "fp": 4,
+        "tn": 76,
+        "tp": 78
+      },
+      "diagnostics": {
+        "calls_capped": 0,
+        "calls_exceeding_diagnostic_12_chunks": 1,
+        "coverage_min": 1.0,
+        "max_chunks_observed": 13,
+        "max_chunks_semantics": "diagnostic only; all chunks retained for full coverage"
+      },
+      "effective_samples": 160,
+      "excluded_ambiguous": 40,
+      "f1": 0.9629629629629629,
+      "negative_samples": 80,
+      "normal_fpr": 0.05,
+      "positive_samples": 80,
+      "pr_auc_ap": 0.994376396359259,
+      "precision": 0.9512195121951219,
+      "probability_field": "p_binary[1]",
+      "recall": 0.975,
+      "roc_auc": 0.994375,
+      "scenario_macro": {
+        "fraud_recall": 0.9875,
+        "fraud_scenarios": 16,
+        "normal_fpr": 0.05,
+        "normal_scenarios": 16
+      },
+      "scenario_metrics": {
+        "acquaintance_leader": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 1,
+            "rate": 0.2
+          }
+        },
+        "automatic_debit": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 1,
+            "rate": 0.5
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 9,
+            "rate": 0.9
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "bank_credit": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "courier_customs": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "dating_investment": {
+          "early_fraud_recall": {
+            "denominator": 1,
+            "numerator": 1,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "ecommerce_refund": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "government_tax": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "insurance_claim": {
+          "early_fraud_recall": {
+            "denominator": 1,
+            "numerator": 1,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "loan_credit_repair": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 1,
+            "rate": 0.2
+          }
+        },
+        "million_guarantee": {
+          "early_fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 10,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "platform_membership": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 2,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 10,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "public_security_regulator": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 2,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 1,
+            "rate": 0.2
+          }
+        },
+        "recruitment_education": {
+          "early_fraud_recall": {
+            "denominator": 1,
+            "numerator": 1,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "telecom_sim": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "travel_rebooking": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 1,
+            "rate": 0.2
+          }
+        },
+        "trial_expiry": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 1,
+            "rate": 0.5
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 9,
+            "rate": 0.9
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        }
+      },
+      "schema_version": "v365.dev.binary_metrics.v1",
+      "subgroups": {
+        "all_fraud": {
+          "denominator": 80,
+          "numerator": 78,
+          "rate": 0.975,
+          "wilson_95": [
+            0.9133556701442198,
+            0.9931171067970292
+          ]
+        },
+        "early_fraud": {
+          "denominator": 15,
+          "numerator": 13,
+          "rate": 0.8666666666666667,
+          "wilson_95": [
+            0.6211801716767764,
+            0.9626387408969346
+          ]
+        },
+        "explicit_fraud": {
+          "denominator": 65,
+          "numerator": 65,
+          "rate": 1.0,
+          "wilson_95": [
+            0.9441984686771432,
+            1.0
+          ]
+        },
+        "normal_false_positive": {
+          "denominator": 80,
+          "numerator": 4,
+          "rate": 0.05,
+          "wilson_95": [
+            0.01961355453554428,
+            0.1216227620464301
+          ]
+        }
+      },
+      "threshold": 0.5,
+      "timing": {
+        "checkpoint_load_report": {
+          "checkpoint": "runs/v365_e2b_boundary_balanced_s202/best_model.pt",
+          "epoch": 1,
+          "missing": [],
+          "unexpected": []
+        },
+        "coverage_min_raw": 1.0,
+        "evaluated_calls": 200,
+        "latency_ms_mean_raw": 208.12912747263908,
+        "latency_ms_p50_raw": 177.80150705948472,
+        "latency_ms_p95_raw": 348.44714403152466,
+        "milliseconds_per_call": 223.3658284158446,
+        "note": "Only timing/coverage/load diagnostics are used; built-in labels are ignored.",
+        "peak_gpu_memory_mb": 5427.87548828125,
+        "seconds_per_call": 0.2233658284158446,
+        "wall_time_seconds": 44.67316568316892
+      }
+    },
+    "e2c": {
+      "accuracy": 0.95625,
+      "ambiguous": {
+        "count_ge_0_5": 6,
+        "mean_p_fraud": 0.1424392406597093,
+        "median_p_fraud": 0.0016369789955206215,
+        "p90_p_fraud_linear": 0.7279133260250095,
+        "samples": 40
+      },
+      "balanced_accuracy": 0.95625,
+      "confusion": {
+        "fn": 3,
+        "fp": 4,
+        "tn": 76,
+        "tp": 77
+      },
+      "diagnostics": {
+        "calls_capped": 0,
+        "calls_exceeding_diagnostic_12_chunks": 1,
+        "coverage_min": 1.0,
+        "max_chunks_observed": 13,
+        "max_chunks_semantics": "diagnostic only; all chunks retained for full coverage"
+      },
+      "effective_samples": 160,
+      "excluded_ambiguous": 40,
+      "f1": 0.9565217391304348,
+      "negative_samples": 80,
+      "normal_fpr": 0.05,
+      "positive_samples": 80,
+      "pr_auc_ap": 0.9944999551074535,
+      "precision": 0.9506172839506173,
+      "probability_field": "p_binary[1]",
+      "recall": 0.9625,
+      "roc_auc": 0.994375,
+      "scenario_macro": {
+        "fraud_recall": 0.98125,
+        "fraud_scenarios": 16,
+        "normal_fpr": 0.05,
+        "normal_scenarios": 16
+      },
+      "scenario_metrics": {
+        "acquaintance_leader": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 1,
+            "rate": 0.2
+          }
+        },
+        "automatic_debit": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 1,
+            "rate": 0.5
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 9,
+            "rate": 0.9
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "bank_credit": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "courier_customs": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "dating_investment": {
+          "early_fraud_recall": {
+            "denominator": 1,
+            "numerator": 1,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "ecommerce_refund": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "government_tax": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "insurance_claim": {
+          "early_fraud_recall": {
+            "denominator": 1,
+            "numerator": 1,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "loan_credit_repair": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 1,
+            "rate": 0.2
+          }
+        },
+        "million_guarantee": {
+          "early_fraud_recall": {
+            "denominator": 4,
+            "numerator": 3,
+            "rate": 0.75
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 9,
+            "rate": 0.9
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "platform_membership": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 2,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 10,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "public_security_regulator": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 2,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 1,
+            "rate": 0.2
+          }
+        },
+        "recruitment_education": {
+          "early_fraud_recall": {
+            "denominator": 1,
+            "numerator": 1,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "telecom_sim": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "travel_rebooking": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 1,
+            "rate": 0.2
+          }
+        },
+        "trial_expiry": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 1,
+            "rate": 0.5
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 9,
+            "rate": 0.9
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        }
+      },
+      "schema_version": "v365.dev.binary_metrics.v1",
+      "subgroups": {
+        "all_fraud": {
+          "denominator": 80,
+          "numerator": 77,
+          "rate": 0.9625,
+          "wilson_95": [
+            0.8954527990995489,
+            0.9871654310800886
+          ]
+        },
+        "early_fraud": {
+          "denominator": 15,
+          "numerator": 12,
+          "rate": 0.8,
+          "wilson_95": [
+            0.5481455128483065,
+            0.9295245065301844
+          ]
+        },
+        "explicit_fraud": {
+          "denominator": 65,
+          "numerator": 65,
+          "rate": 1.0,
+          "wilson_95": [
+            0.9441984686771432,
+            1.0
+          ]
+        },
+        "normal_false_positive": {
+          "denominator": 80,
+          "numerator": 4,
+          "rate": 0.05,
+          "wilson_95": [
+            0.01961355453554428,
+            0.1216227620464301
+          ]
+        }
+      },
+      "threshold": 0.5,
+      "timing": {
+        "checkpoint_load_report": {
+          "checkpoint": "runs/v365_e2c_k2_pair_s202/best_model.pt",
+          "epoch": 1,
+          "missing": [],
+          "unexpected": []
+        },
+        "coverage_min_raw": 1.0,
+        "evaluated_calls": 200,
+        "latency_ms_mean_raw": 600.6996807898395,
+        "latency_ms_p50_raw": 557.4528030119836,
+        "latency_ms_p95_raw": 1067.4532200209796,
+        "milliseconds_per_call": 664.5460311998613,
+        "note": "Only timing/coverage/load diagnostics are used; built-in labels are ignored.",
+        "peak_gpu_memory_mb": 5427.87548828125,
+        "seconds_per_call": 0.6645460311998613,
+        "wall_time_seconds": 132.90920623997226
+      }
+    },
+    "e2d": {
+      "accuracy": 0.95,
+      "ambiguous": {
+        "count_ge_0_5": 6,
+        "mean_p_fraud": 0.15151652381758876,
+        "median_p_fraud": 0.0011717347952071577,
+        "p90_p_fraud_linear": 0.9694990754127503,
+        "samples": 40
+      },
+      "balanced_accuracy": 0.95,
+      "confusion": {
+        "fn": 2,
+        "fp": 6,
+        "tn": 74,
+        "tp": 78
+      },
+      "diagnostics": {
+        "calls_capped": 0,
+        "calls_exceeding_diagnostic_12_chunks": 1,
+        "coverage_min": 1.0,
+        "full_vs_final_prefix": {
+          "calls": 200,
+          "max_abs_p_fraud_delta": 2.7418136596679688e-06,
+          "mean_abs_p_fraud_delta": 5.3957114349856286e-08,
+          "passed": true,
+          "threshold_flip_count": 0,
+          "tolerance": 0.0001
+        },
+        "max_chunks_observed": 13,
+        "max_chunks_semantics": "diagnostic only; all chunks retained for full coverage"
+      },
+      "effective_samples": 160,
+      "excluded_ambiguous": 40,
+      "f1": 0.951219512195122,
+      "negative_samples": 80,
+      "normal_fpr": 0.075,
+      "positive_samples": 80,
+      "pr_auc_ap": 0.992614470221972,
+      "precision": 0.9285714285714286,
+      "probability_field": "p_binary[1]",
+      "recall": 0.975,
+      "roc_auc": 0.9923437500000001,
+      "scenario_macro": {
+        "fraud_recall": 0.9875,
+        "fraud_scenarios": 16,
+        "normal_fpr": 0.075,
+        "normal_scenarios": 16
+      },
+      "scenario_metrics": {
+        "acquaintance_leader": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 1,
+            "rate": 0.2
+          }
+        },
+        "automatic_debit": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 1,
+            "rate": 0.5
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 9,
+            "rate": 0.9
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "bank_credit": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "courier_customs": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "dating_investment": {
+          "early_fraud_recall": {
+            "denominator": 1,
+            "numerator": 1,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "ecommerce_refund": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "government_tax": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "insurance_claim": {
+          "early_fraud_recall": {
+            "denominator": 1,
+            "numerator": 1,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "loan_credit_repair": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 1,
+            "rate": 0.2
+          }
+        },
+        "million_guarantee": {
+          "early_fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 10,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "platform_membership": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 2,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 10,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "public_security_regulator": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 2,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 1,
+            "rate": 0.2
+          }
+        },
+        "recruitment_education": {
+          "early_fraud_recall": {
+            "denominator": 1,
+            "numerator": 1,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "telecom_sim": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "travel_rebooking": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 3,
+            "rate": 0.6
+          }
+        },
+        "trial_expiry": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 1,
+            "rate": 0.5
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 9,
+            "rate": 0.9
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        }
+      },
+      "schema_version": "v365.dev.binary_metrics.v1",
+      "subgroups": {
+        "all_fraud": {
+          "denominator": 80,
+          "numerator": 78,
+          "rate": 0.975,
+          "wilson_95": [
+            0.9133556701442198,
+            0.9931171067970292
+          ]
+        },
+        "early_fraud": {
+          "denominator": 15,
+          "numerator": 13,
+          "rate": 0.8666666666666667,
+          "wilson_95": [
+            0.6211801716767764,
+            0.9626387408969346
+          ]
+        },
+        "explicit_fraud": {
+          "denominator": 65,
+          "numerator": 65,
+          "rate": 1.0,
+          "wilson_95": [
+            0.9441984686771432,
+            1.0
+          ]
+        },
+        "normal_false_positive": {
+          "denominator": 80,
+          "numerator": 6,
+          "rate": 0.075,
+          "wilson_95": [
+            0.03482524929300514,
+            0.15412016081219287
+          ]
+        }
+      },
+      "threshold": 0.5,
+      "timing": {
+        "checkpoint_load_report": {
+          "checkpoint": "runs/v362_e1b_binary_60prefix_40replay_s202_conservative/best_model.pt",
+          "epoch": 1,
+          "missing": [],
+          "unexpected": []
+        },
+        "coverage_min_raw": 1.0,
+        "evaluated_calls": 200,
+        "latency_ms_mean_raw": 209.2518580588512,
+        "latency_ms_p50_raw": 178.59518714249134,
+        "latency_ms_p95_raw": 350.38071242161095,
+        "milliseconds_per_call": 224.29857292445377,
+        "note": "Only timing/coverage/load diagnostics are used; built-in labels are ignored.",
+        "peak_gpu_memory_mb": 5427.87548828125,
+        "seconds_per_call": 0.22429857292445377,
+        "wall_time_seconds": 44.85971458489075
+      }
+    },
+    "m0_v361": {
+      "accuracy": 0.9,
+      "ambiguous": {
+        "count_ge_0_5": 6,
+        "mean_p_fraud": 0.14814029368711745,
+        "median_p_fraud": 0.0007280812715180218,
+        "p90_p_fraud_linear": 0.9673522353172302,
+        "samples": 40
+      },
+      "balanced_accuracy": 0.9,
+      "confusion": {
+        "fn": 11,
+        "fp": 5,
+        "tn": 75,
+        "tp": 69
+      },
+      "diagnostics": {
+        "calls_capped": 0,
+        "calls_exceeding_diagnostic_12_chunks": 1,
+        "coverage_min": 1.0,
+        "max_chunks_observed": 13,
+        "max_chunks_semantics": "diagnostic only; all chunks retained for full coverage"
+      },
+      "effective_samples": 160,
+      "excluded_ambiguous": 40,
+      "f1": 0.8961038961038962,
+      "negative_samples": 80,
+      "normal_fpr": 0.0625,
+      "positive_samples": 80,
+      "pr_auc_ap": 0.9822557901273788,
+      "precision": 0.9324324324324325,
+      "probability_field": "p_binary[1]",
+      "recall": 0.8625,
+      "roc_auc": 0.98265625,
+      "scenario_macro": {
+        "fraud_recall": 0.93125,
+        "fraud_scenarios": 16,
+        "normal_fpr": 0.0625,
+        "normal_scenarios": 16
+      },
+      "scenario_metrics": {
+        "acquaintance_leader": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 1,
+            "rate": 0.2
+          }
+        },
+        "automatic_debit": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 0,
+            "rate": 0.0
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 7,
+            "rate": 0.7
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "bank_credit": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "courier_customs": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "dating_investment": {
+          "early_fraud_recall": {
+            "denominator": 1,
+            "numerator": 1,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "ecommerce_refund": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "government_tax": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "insurance_claim": {
+          "early_fraud_recall": {
+            "denominator": 1,
+            "numerator": 1,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "loan_credit_repair": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "million_guarantee": {
+          "early_fraud_recall": {
+            "denominator": 4,
+            "numerator": 2,
+            "rate": 0.5
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 7,
+            "rate": 0.7
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "platform_membership": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 2,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 9,
+            "rate": 0.9
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "public_security_regulator": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 2,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 1,
+            "rate": 0.2
+          }
+        },
+        "recruitment_education": {
+          "early_fraud_recall": {
+            "denominator": 1,
+            "numerator": 1,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "telecom_sim": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "travel_rebooking": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 3,
+            "rate": 0.6
+          }
+        },
+        "trial_expiry": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 0,
+            "rate": 0.0
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 6,
+            "rate": 0.6
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        }
+      },
+      "schema_version": "v365.dev.binary_metrics.v1",
+      "subgroups": {
+        "all_fraud": {
+          "denominator": 80,
+          "numerator": 69,
+          "rate": 0.8625,
+          "wilson_95": [
+            0.7703289993301339,
+            0.9214528567566089
+          ]
+        },
+        "early_fraud": {
+          "denominator": 15,
+          "numerator": 9,
+          "rate": 0.6,
+          "wilson_95": [
+            0.357468301206246,
+            0.8017550385865841
+          ]
+        },
+        "explicit_fraud": {
+          "denominator": 65,
+          "numerator": 60,
+          "rate": 0.9230769230769231,
+          "wilson_95": [
+            0.8322406672989,
+            0.9666964985048365
+          ]
+        },
+        "normal_false_positive": {
+          "denominator": 80,
+          "numerator": 5,
+          "rate": 0.0625,
+          "wilson_95": [
+            0.026989375670841982,
+            0.13810148767274424
+          ]
+        }
+      },
+      "threshold": 0.5,
+      "timing": {
+        "checkpoint_load_report": {
+          "checkpoint": "runs/repro_v361b_b320_head96/best_model.pt",
+          "epoch": 4,
+          "missing": [],
+          "unexpected": []
+        },
+        "coverage_min_raw": 1.0,
+        "evaluated_calls": 200,
+        "latency_ms_mean_raw": 206.31713080219924,
+        "latency_ms_p50_raw": 177.41484055295587,
+        "latency_ms_p95_raw": 347.45687805116177,
+        "milliseconds_per_call": 221.41918448498473,
+        "note": "Only timing/coverage/load diagnostics are used; built-in labels are ignored.",
+        "peak_gpu_memory_mb": 5427.87548828125,
+        "seconds_per_call": 0.22141918448498474,
+        "wall_time_seconds": 44.283836896996945
+      }
+    },
+    "m1_e1b": {
+      "accuracy": 0.95,
+      "ambiguous": {
+        "count_ge_0_5": 6,
+        "mean_p_fraud": 0.15151652381758876,
+        "median_p_fraud": 0.0011717347952071577,
+        "p90_p_fraud_linear": 0.9694990754127503,
+        "samples": 40
+      },
+      "balanced_accuracy": 0.95,
+      "confusion": {
+        "fn": 2,
+        "fp": 6,
+        "tn": 74,
+        "tp": 78
+      },
+      "diagnostics": {
+        "calls_capped": 0,
+        "calls_exceeding_diagnostic_12_chunks": 1,
+        "coverage_min": 1.0,
+        "full_vs_final_prefix": {
+          "calls": 200,
+          "max_abs_p_fraud_delta": 2.7418136596679688e-06,
+          "mean_abs_p_fraud_delta": 5.3957114349856286e-08,
+          "passed": true,
+          "threshold_flip_count": 0,
+          "tolerance": 0.0001
+        },
+        "max_chunks_observed": 13,
+        "max_chunks_semantics": "diagnostic only; all chunks retained for full coverage"
+      },
+      "effective_samples": 160,
+      "excluded_ambiguous": 40,
+      "f1": 0.951219512195122,
+      "negative_samples": 80,
+      "normal_fpr": 0.075,
+      "positive_samples": 80,
+      "pr_auc_ap": 0.992614470221972,
+      "precision": 0.9285714285714286,
+      "probability_field": "p_binary[1]",
+      "recall": 0.975,
+      "roc_auc": 0.9923437500000001,
+      "scenario_macro": {
+        "fraud_recall": 0.9875,
+        "fraud_scenarios": 16,
+        "normal_fpr": 0.075,
+        "normal_scenarios": 16
+      },
+      "scenario_metrics": {
+        "acquaintance_leader": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 1,
+            "rate": 0.2
+          }
+        },
+        "automatic_debit": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 1,
+            "rate": 0.5
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 9,
+            "rate": 0.9
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "bank_credit": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "courier_customs": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "dating_investment": {
+          "early_fraud_recall": {
+            "denominator": 1,
+            "numerator": 1,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "ecommerce_refund": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "government_tax": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "insurance_claim": {
+          "early_fraud_recall": {
+            "denominator": 1,
+            "numerator": 1,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "loan_credit_repair": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 1,
+            "rate": 0.2
+          }
+        },
+        "million_guarantee": {
+          "early_fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 10,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "platform_membership": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 2,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 10,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "public_security_regulator": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 2,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 1,
+            "rate": 0.2
+          }
+        },
+        "recruitment_education": {
+          "early_fraud_recall": {
+            "denominator": 1,
+            "numerator": 1,
+            "rate": 1.0
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "telecom_sim": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 3,
+            "numerator": 3,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        },
+        "travel_rebooking": {
+          "early_fraud_recall": {
+            "denominator": 0,
+            "numerator": 0,
+            "rate": null
+          },
+          "fraud_recall": {
+            "denominator": 4,
+            "numerator": 4,
+            "rate": 1.0
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 3,
+            "rate": 0.6
+          }
+        },
+        "trial_expiry": {
+          "early_fraud_recall": {
+            "denominator": 2,
+            "numerator": 1,
+            "rate": 0.5
+          },
+          "fraud_recall": {
+            "denominator": 10,
+            "numerator": 9,
+            "rate": 0.9
+          },
+          "normal_fpr": {
+            "denominator": 5,
+            "numerator": 0,
+            "rate": 0.0
+          }
+        }
+      },
+      "schema_version": "v365.dev.binary_metrics.v1",
+      "subgroups": {
+        "all_fraud": {
+          "denominator": 80,
+          "numerator": 78,
+          "rate": 0.975,
+          "wilson_95": [
+            0.9133556701442198,
+            0.9931171067970292
+          ]
+        },
+        "early_fraud": {
+          "denominator": 15,
+          "numerator": 13,
+          "rate": 0.8666666666666667,
+          "wilson_95": [
+            0.6211801716767764,
+            0.9626387408969346
+          ]
+        },
+        "explicit_fraud": {
+          "denominator": 65,
+          "numerator": 65,
+          "rate": 1.0,
+          "wilson_95": [
+            0.9441984686771432,
+            1.0
+          ]
+        },
+        "normal_false_positive": {
+          "denominator": 80,
+          "numerator": 6,
+          "rate": 0.075,
+          "wilson_95": [
+            0.03482524929300514,
+            0.15412016081219287
+          ]
+        }
+      },
+      "threshold": 0.5,
+      "timing": {
+        "checkpoint_load_report": {
+          "checkpoint": "runs/v362_e1b_binary_60prefix_40replay_s202_conservative/best_model.pt",
+          "epoch": 1,
+          "missing": [],
+          "unexpected": []
+        },
+        "coverage_min_raw": 1.0,
+        "evaluated_calls": 200,
+        "latency_ms_mean_raw": 209.2518580588512,
+        "latency_ms_p50_raw": 178.59518714249134,
+        "latency_ms_p95_raw": 350.38071242161095,
+        "milliseconds_per_call": 224.29857292445377,
+        "note": "Only timing/coverage/load diagnostics are used; built-in labels are ignored.",
+        "peak_gpu_memory_mb": 5427.87548828125,
+        "seconds_per_call": 0.22429857292445377,
+        "wall_time_seconds": 44.85971458489075
+      }
+    }
+  },
+  "v365_temporal": {
+    "e2a": {
+      "boundary_note": "turn_stage_labels are not used as independent labels; tE/tA only locate evaluation boundaries from final adjudication.",
+      "calls": 200,
+      "policies": {
+        "k1": {
+          "alarm_time_semantics": "end turn of the consecutive-hit window",
+          "ambiguous_trajectory_only": {
+            "calls": 40,
+            "ever_alert": {
+              "denominator": 40,
+              "numerator": 15,
+              "rate": 0.375
+            },
+            "ever_alert_calls": 15,
+            "mean_of_call_max_p_fraud": 0.3321462742271251,
+            "median_of_call_max_p_fraud": 0.06590375676751137
+          },
+          "consecutive_hits_required": 1,
+          "explicit_before_tA": {
+            "after_tA_n": 0,
+            "among_calls_with_nonempty_tE_to_tA_window": {
+              "denominator": 64,
+              "numerator": 64,
+              "rate": 1.0
+            },
+            "at_tA_n": 1,
+            "denominator": 65,
+            "invalid_or_missing_tA": 0,
+            "median_advance_turns": 8.0,
+            "no_effective_detection_n": 0,
+            "no_strict_pre_tA_window_n": 1,
+            "numerator": 64,
+            "p25_advance_turns": 4.0,
+            "p75_advance_turns": 12.5,
+            "rate": 0.9846153846153847,
+            "signed_tA_minus_first_valid_detected_n": 65,
+            "signed_tA_minus_first_valid_median": 8.0,
+            "strictly_before_tA": true
+          },
+          "normal_ever_false_alarm": {
+            "denominator": 80,
+            "numerator": 19,
+            "rate": 0.2375
+          },
+          "subsets": {
+            "all_fraud": {
+              "clean_effective_rate": {
+                "denominator": 80,
+                "numerator": 14,
+                "rate": 0.175
+              },
+              "delay": {
+                "detected_n": 80,
+                "median_turns": 0.0,
+                "missed_n": 0,
+                "p25_turns": 0.0,
+                "p75_turns": 0.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 78,
+                "numerator": 66,
+                "rate": 0.8461538461538461
+              },
+              "tE_after_effective_recall": {
+                "denominator": 80,
+                "numerator": 80,
+                "rate": 1.0
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 80,
+                "numerator": 66,
+                "rate": 0.825
+              }
+            },
+            "early_fraud": {
+              "clean_effective_rate": {
+                "denominator": 15,
+                "numerator": 4,
+                "rate": 0.26666666666666666
+              },
+              "delay": {
+                "detected_n": 15,
+                "median_turns": 0.0,
+                "missed_n": 0,
+                "p25_turns": 0.0,
+                "p75_turns": 0.5
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 15,
+                "numerator": 11,
+                "rate": 0.7333333333333333
+              },
+              "tE_after_effective_recall": {
+                "denominator": 15,
+                "numerator": 15,
+                "rate": 1.0
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 15,
+                "numerator": 11,
+                "rate": 0.7333333333333333
+              }
+            },
+            "explicit_fraud": {
+              "clean_effective_rate": {
+                "denominator": 65,
+                "numerator": 10,
+                "rate": 0.15384615384615385
+              },
+              "delay": {
+                "detected_n": 65,
+                "median_turns": 0.0,
+                "missed_n": 0,
+                "p25_turns": 0.0,
+                "p75_turns": 0.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 63,
+                "numerator": 55,
+                "rate": 0.873015873015873
+              },
+              "tE_after_effective_recall": {
+                "denominator": 65,
+                "numerator": 65,
+                "rate": 1.0
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 65,
+                "numerator": 55,
+                "rate": 0.8461538461538461
+              }
+            }
+          }
+        },
+        "k2": {
+          "alarm_time_semantics": "end turn of the consecutive-hit window",
+          "ambiguous_trajectory_only": {
+            "calls": 40,
+            "ever_alert": {
+              "denominator": 40,
+              "numerator": 8,
+              "rate": 0.2
+            },
+            "ever_alert_calls": 8,
+            "mean_of_call_max_p_fraud": 0.3321462742271251,
+            "median_of_call_max_p_fraud": 0.06590375676751137
+          },
+          "consecutive_hits_required": 2,
+          "explicit_before_tA": {
+            "after_tA_n": 0,
+            "among_calls_with_nonempty_tE_to_tA_window": {
+              "denominator": 64,
+              "numerator": 64,
+              "rate": 1.0
+            },
+            "at_tA_n": 1,
+            "denominator": 65,
+            "invalid_or_missing_tA": 0,
+            "median_advance_turns": 7.5,
+            "no_effective_detection_n": 0,
+            "no_strict_pre_tA_window_n": 1,
+            "numerator": 64,
+            "p25_advance_turns": 4.0,
+            "p75_advance_turns": 12.25,
+            "rate": 0.9846153846153847,
+            "signed_tA_minus_first_valid_detected_n": 65,
+            "signed_tA_minus_first_valid_median": 7.0,
+            "strictly_before_tA": true
+          },
+          "normal_ever_false_alarm": {
+            "denominator": 80,
+            "numerator": 14,
+            "rate": 0.175
+          },
+          "subsets": {
+            "all_fraud": {
+              "clean_effective_rate": {
+                "denominator": 80,
+                "numerator": 20,
+                "rate": 0.25
+              },
+              "delay": {
+                "detected_n": 79,
+                "median_turns": 0.0,
+                "missed_n": 1,
+                "p25_turns": 0.0,
+                "p75_turns": 1.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 78,
+                "numerator": 59,
+                "rate": 0.7564102564102564
+              },
+              "tE_after_effective_recall": {
+                "denominator": 80,
+                "numerator": 79,
+                "rate": 0.9875
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 80,
+                "numerator": 59,
+                "rate": 0.7375
+              }
+            },
+            "early_fraud": {
+              "clean_effective_rate": {
+                "denominator": 15,
+                "numerator": 5,
+                "rate": 0.3333333333333333
+              },
+              "delay": {
+                "detected_n": 14,
+                "median_turns": 0.0,
+                "missed_n": 1,
+                "p25_turns": 0.0,
+                "p75_turns": 1.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 15,
+                "numerator": 9,
+                "rate": 0.6
+              },
+              "tE_after_effective_recall": {
+                "denominator": 15,
+                "numerator": 14,
+                "rate": 0.9333333333333333
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 15,
+                "numerator": 9,
+                "rate": 0.6
+              }
+            },
+            "explicit_fraud": {
+              "clean_effective_rate": {
+                "denominator": 65,
+                "numerator": 15,
+                "rate": 0.23076923076923078
+              },
+              "delay": {
+                "detected_n": 65,
+                "median_turns": 0.0,
+                "missed_n": 0,
+                "p25_turns": 0.0,
+                "p75_turns": 1.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 63,
+                "numerator": 50,
+                "rate": 0.7936507936507936
+              },
+              "tE_after_effective_recall": {
+                "denominator": 65,
+                "numerator": 65,
+                "rate": 1.0
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 65,
+                "numerator": 50,
+                "rate": 0.7692307692307693
+              }
+            }
+          }
+        }
+      },
+      "prefixes": 4492,
+      "schema_version": "v365.dev.temporal_metrics.v1",
+      "threshold": 0.5,
+      "timing": {
+        "checkpoint_load_report": {
+          "checkpoint": "runs/v365_e2a_binary_te60_replay40_s202/best_model.pt",
+          "epoch": 1,
+          "missing": [],
+          "unexpected": []
+        },
+        "coverage_min_raw": 1.0,
+        "evaluated_prefixes": 4492,
+        "latency_ms_mean_raw": 149.3906913309019,
+        "latency_ms_p50_raw": 106.97234096005559,
+        "latency_ms_p95_raw": 367.3629146069288,
+        "milliseconds_per_prefix": 158.5715788706618,
+        "note": "Only timing/coverage/load diagnostics are used; built-in labels are ignored.",
+        "peak_gpu_memory_mb": 5458.15283203125,
+        "seconds_per_prefix": 0.15857157887066178,
+        "wall_time_seconds": 712.3035322870128
+      }
+    },
+    "e2b": {
+      "boundary_note": "turn_stage_labels are not used as independent labels; tE/tA only locate evaluation boundaries from final adjudication.",
+      "calls": 200,
+      "policies": {
+        "k1": {
+          "alarm_time_semantics": "end turn of the consecutive-hit window",
+          "ambiguous_trajectory_only": {
+            "calls": 40,
+            "ever_alert": {
+              "denominator": 40,
+              "numerator": 10,
+              "rate": 0.25
+            },
+            "ever_alert_calls": 10,
+            "mean_of_call_max_p_fraud": 0.3039509430869657,
+            "median_of_call_max_p_fraud": 0.05338926240801811
+          },
+          "consecutive_hits_required": 1,
+          "explicit_before_tA": {
+            "after_tA_n": 0,
+            "among_calls_with_nonempty_tE_to_tA_window": {
+              "denominator": 64,
+              "numerator": 64,
+              "rate": 1.0
+            },
+            "at_tA_n": 1,
+            "denominator": 65,
+            "invalid_or_missing_tA": 0,
+            "median_advance_turns": 8.0,
+            "no_effective_detection_n": 0,
+            "no_strict_pre_tA_window_n": 1,
+            "numerator": 64,
+            "p25_advance_turns": 4.0,
+            "p75_advance_turns": 12.25,
+            "rate": 0.9846153846153847,
+            "signed_tA_minus_first_valid_detected_n": 65,
+            "signed_tA_minus_first_valid_median": 8.0,
+            "strictly_before_tA": true
+          },
+          "normal_ever_false_alarm": {
+            "denominator": 80,
+            "numerator": 17,
+            "rate": 0.2125
+          },
+          "subsets": {
+            "all_fraud": {
+              "clean_effective_rate": {
+                "denominator": 80,
+                "numerator": 14,
+                "rate": 0.175
+              },
+              "delay": {
+                "detected_n": 79,
+                "median_turns": 0.0,
+                "missed_n": 1,
+                "p25_turns": 0.0,
+                "p75_turns": 0.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 78,
+                "numerator": 65,
+                "rate": 0.8333333333333334
+              },
+              "tE_after_effective_recall": {
+                "denominator": 80,
+                "numerator": 79,
+                "rate": 0.9875
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 80,
+                "numerator": 65,
+                "rate": 0.8125
+              }
+            },
+            "early_fraud": {
+              "clean_effective_rate": {
+                "denominator": 15,
+                "numerator": 3,
+                "rate": 0.2
+              },
+              "delay": {
+                "detected_n": 14,
+                "median_turns": 0.0,
+                "missed_n": 1,
+                "p25_turns": 0.0,
+                "p75_turns": 0.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 15,
+                "numerator": 11,
+                "rate": 0.7333333333333333
+              },
+              "tE_after_effective_recall": {
+                "denominator": 15,
+                "numerator": 14,
+                "rate": 0.9333333333333333
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 15,
+                "numerator": 11,
+                "rate": 0.7333333333333333
+              }
+            },
+            "explicit_fraud": {
+              "clean_effective_rate": {
+                "denominator": 65,
+                "numerator": 11,
+                "rate": 0.16923076923076924
+              },
+              "delay": {
+                "detected_n": 65,
+                "median_turns": 0.0,
+                "missed_n": 0,
+                "p25_turns": 0.0,
+                "p75_turns": 0.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 63,
+                "numerator": 54,
+                "rate": 0.8571428571428571
+              },
+              "tE_after_effective_recall": {
+                "denominator": 65,
+                "numerator": 65,
+                "rate": 1.0
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 65,
+                "numerator": 54,
+                "rate": 0.8307692307692308
+              }
+            }
+          }
+        },
+        "k2": {
+          "alarm_time_semantics": "end turn of the consecutive-hit window",
+          "ambiguous_trajectory_only": {
+            "calls": 40,
+            "ever_alert": {
+              "denominator": 40,
+              "numerator": 8,
+              "rate": 0.2
+            },
+            "ever_alert_calls": 8,
+            "mean_of_call_max_p_fraud": 0.3039509430869657,
+            "median_of_call_max_p_fraud": 0.05338926240801811
+          },
+          "consecutive_hits_required": 2,
+          "explicit_before_tA": {
+            "after_tA_n": 0,
+            "among_calls_with_nonempty_tE_to_tA_window": {
+              "denominator": 64,
+              "numerator": 64,
+              "rate": 1.0
+            },
+            "at_tA_n": 1,
+            "denominator": 65,
+            "invalid_or_missing_tA": 0,
+            "median_advance_turns": 7.5,
+            "no_effective_detection_n": 0,
+            "no_strict_pre_tA_window_n": 1,
+            "numerator": 64,
+            "p25_advance_turns": 4.0,
+            "p75_advance_turns": 12.0,
+            "rate": 0.9846153846153847,
+            "signed_tA_minus_first_valid_detected_n": 65,
+            "signed_tA_minus_first_valid_median": 7.0,
+            "strictly_before_tA": true
+          },
+          "normal_ever_false_alarm": {
+            "denominator": 80,
+            "numerator": 12,
+            "rate": 0.15
+          },
+          "subsets": {
+            "all_fraud": {
+              "clean_effective_rate": {
+                "denominator": 80,
+                "numerator": 21,
+                "rate": 0.2625
+              },
+              "delay": {
+                "detected_n": 79,
+                "median_turns": 0.0,
+                "missed_n": 1,
+                "p25_turns": 0.0,
+                "p75_turns": 1.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 78,
+                "numerator": 58,
+                "rate": 0.7435897435897436
+              },
+              "tE_after_effective_recall": {
+                "denominator": 80,
+                "numerator": 79,
+                "rate": 0.9875
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 80,
+                "numerator": 58,
+                "rate": 0.725
+              }
+            },
+            "early_fraud": {
+              "clean_effective_rate": {
+                "denominator": 15,
+                "numerator": 5,
+                "rate": 0.3333333333333333
+              },
+              "delay": {
+                "detected_n": 14,
+                "median_turns": 0.0,
+                "missed_n": 1,
+                "p25_turns": 0.0,
+                "p75_turns": 1.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 15,
+                "numerator": 9,
+                "rate": 0.6
+              },
+              "tE_after_effective_recall": {
+                "denominator": 15,
+                "numerator": 14,
+                "rate": 0.9333333333333333
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 15,
+                "numerator": 9,
+                "rate": 0.6
+              }
+            },
+            "explicit_fraud": {
+              "clean_effective_rate": {
+                "denominator": 65,
+                "numerator": 16,
+                "rate": 0.24615384615384617
+              },
+              "delay": {
+                "detected_n": 65,
+                "median_turns": 0.0,
+                "missed_n": 0,
+                "p25_turns": 0.0,
+                "p75_turns": 1.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 63,
+                "numerator": 49,
+                "rate": 0.7777777777777778
+              },
+              "tE_after_effective_recall": {
+                "denominator": 65,
+                "numerator": 65,
+                "rate": 1.0
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 65,
+                "numerator": 49,
+                "rate": 0.7538461538461538
+              }
+            }
+          }
+        }
+      },
+      "prefixes": 4492,
+      "schema_version": "v365.dev.temporal_metrics.v1",
+      "threshold": 0.5,
+      "timing": {
+        "checkpoint_load_report": {
+          "checkpoint": "runs/v365_e2b_boundary_balanced_s202/best_model.pt",
+          "epoch": 1,
+          "missing": [],
+          "unexpected": []
+        },
+        "coverage_min_raw": 1.0,
+        "evaluated_prefixes": 4492,
+        "latency_ms_mean_raw": 148.90163301951347,
+        "latency_ms_p50_raw": 106.48522106930614,
+        "latency_ms_p95_raw": 366.1786976736039,
+        "milliseconds_per_prefix": 158.01745460243052,
+        "note": "Only timing/coverage/load diagnostics are used; built-in labels are ignored.",
+        "peak_gpu_memory_mb": 5458.15283203125,
+        "seconds_per_prefix": 0.15801745460243052,
+        "wall_time_seconds": 709.8144060741179
+      }
+    },
+    "e2c": {
+      "boundary_note": "turn_stage_labels are not used as independent labels; tE/tA only locate evaluation boundaries from final adjudication.",
+      "calls": 200,
+      "policies": {
+        "k1": {
+          "alarm_time_semantics": "end turn of the consecutive-hit window",
+          "ambiguous_trajectory_only": {
+            "calls": 40,
+            "ever_alert": {
+              "denominator": 40,
+              "numerator": 10,
+              "rate": 0.25
+            },
+            "ever_alert_calls": 10,
+            "mean_of_call_max_p_fraud": 0.28769634869750005,
+            "median_of_call_max_p_fraud": 0.03998354449868202
+          },
+          "consecutive_hits_required": 1,
+          "explicit_before_tA": {
+            "after_tA_n": 0,
+            "among_calls_with_nonempty_tE_to_tA_window": {
+              "denominator": 64,
+              "numerator": 64,
+              "rate": 1.0
+            },
+            "at_tA_n": 1,
+            "denominator": 65,
+            "invalid_or_missing_tA": 0,
+            "median_advance_turns": 8.0,
+            "no_effective_detection_n": 0,
+            "no_strict_pre_tA_window_n": 1,
+            "numerator": 64,
+            "p25_advance_turns": 4.0,
+            "p75_advance_turns": 12.25,
+            "rate": 0.9846153846153847,
+            "signed_tA_minus_first_valid_detected_n": 65,
+            "signed_tA_minus_first_valid_median": 8.0,
+            "strictly_before_tA": true
+          },
+          "normal_ever_false_alarm": {
+            "denominator": 80,
+            "numerator": 15,
+            "rate": 0.1875
+          },
+          "subsets": {
+            "all_fraud": {
+              "clean_effective_rate": {
+                "denominator": 80,
+                "numerator": 19,
+                "rate": 0.2375
+              },
+              "delay": {
+                "detected_n": 79,
+                "median_turns": 0.0,
+                "missed_n": 1,
+                "p25_turns": 0.0,
+                "p75_turns": 0.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 78,
+                "numerator": 60,
+                "rate": 0.7692307692307693
+              },
+              "tE_after_effective_recall": {
+                "denominator": 80,
+                "numerator": 79,
+                "rate": 0.9875
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 80,
+                "numerator": 60,
+                "rate": 0.75
+              }
+            },
+            "early_fraud": {
+              "clean_effective_rate": {
+                "denominator": 15,
+                "numerator": 5,
+                "rate": 0.3333333333333333
+              },
+              "delay": {
+                "detected_n": 14,
+                "median_turns": 0.0,
+                "missed_n": 1,
+                "p25_turns": 0.0,
+                "p75_turns": 0.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 15,
+                "numerator": 9,
+                "rate": 0.6
+              },
+              "tE_after_effective_recall": {
+                "denominator": 15,
+                "numerator": 14,
+                "rate": 0.9333333333333333
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 15,
+                "numerator": 9,
+                "rate": 0.6
+              }
+            },
+            "explicit_fraud": {
+              "clean_effective_rate": {
+                "denominator": 65,
+                "numerator": 14,
+                "rate": 0.2153846153846154
+              },
+              "delay": {
+                "detected_n": 65,
+                "median_turns": 0.0,
+                "missed_n": 0,
+                "p25_turns": 0.0,
+                "p75_turns": 0.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 63,
+                "numerator": 51,
+                "rate": 0.8095238095238095
+              },
+              "tE_after_effective_recall": {
+                "denominator": 65,
+                "numerator": 65,
+                "rate": 1.0
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 65,
+                "numerator": 51,
+                "rate": 0.7846153846153846
+              }
+            }
+          }
+        },
+        "k2": {
+          "alarm_time_semantics": "end turn of the consecutive-hit window",
+          "ambiguous_trajectory_only": {
+            "calls": 40,
+            "ever_alert": {
+              "denominator": 40,
+              "numerator": 8,
+              "rate": 0.2
+            },
+            "ever_alert_calls": 8,
+            "mean_of_call_max_p_fraud": 0.28769634869750005,
+            "median_of_call_max_p_fraud": 0.03998354449868202
+          },
+          "consecutive_hits_required": 2,
+          "explicit_before_tA": {
+            "after_tA_n": 0,
+            "among_calls_with_nonempty_tE_to_tA_window": {
+              "denominator": 64,
+              "numerator": 64,
+              "rate": 1.0
+            },
+            "at_tA_n": 1,
+            "denominator": 65,
+            "invalid_or_missing_tA": 0,
+            "median_advance_turns": 7.0,
+            "no_effective_detection_n": 0,
+            "no_strict_pre_tA_window_n": 1,
+            "numerator": 64,
+            "p25_advance_turns": 4.0,
+            "p75_advance_turns": 12.0,
+            "rate": 0.9846153846153847,
+            "signed_tA_minus_first_valid_detected_n": 65,
+            "signed_tA_minus_first_valid_median": 7.0,
+            "strictly_before_tA": true
+          },
+          "normal_ever_false_alarm": {
+            "denominator": 80,
+            "numerator": 11,
+            "rate": 0.1375
+          },
+          "subsets": {
+            "all_fraud": {
+              "clean_effective_rate": {
+                "denominator": 80,
+                "numerator": 23,
+                "rate": 0.2875
+              },
+              "delay": {
+                "detected_n": 79,
+                "median_turns": 0.0,
+                "missed_n": 1,
+                "p25_turns": 0.0,
+                "p75_turns": 1.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 78,
+                "numerator": 56,
+                "rate": 0.717948717948718
+              },
+              "tE_after_effective_recall": {
+                "denominator": 80,
+                "numerator": 79,
+                "rate": 0.9875
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 80,
+                "numerator": 56,
+                "rate": 0.7
+              }
+            },
+            "early_fraud": {
+              "clean_effective_rate": {
+                "denominator": 15,
+                "numerator": 5,
+                "rate": 0.3333333333333333
+              },
+              "delay": {
+                "detected_n": 14,
+                "median_turns": 0.0,
+                "missed_n": 1,
+                "p25_turns": 0.0,
+                "p75_turns": 1.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 15,
+                "numerator": 9,
+                "rate": 0.6
+              },
+              "tE_after_effective_recall": {
+                "denominator": 15,
+                "numerator": 14,
+                "rate": 0.9333333333333333
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 15,
+                "numerator": 9,
+                "rate": 0.6
+              }
+            },
+            "explicit_fraud": {
+              "clean_effective_rate": {
+                "denominator": 65,
+                "numerator": 18,
+                "rate": 0.27692307692307694
+              },
+              "delay": {
+                "detected_n": 65,
+                "median_turns": 0.0,
+                "missed_n": 0,
+                "p25_turns": 0.0,
+                "p75_turns": 1.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 63,
+                "numerator": 47,
+                "rate": 0.746031746031746
+              },
+              "tE_after_effective_recall": {
+                "denominator": 65,
+                "numerator": 65,
+                "rate": 1.0
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 65,
+                "numerator": 47,
+                "rate": 0.7230769230769231
+              }
+            }
+          }
+        }
+      },
+      "prefixes": 4492,
+      "schema_version": "v365.dev.temporal_metrics.v1",
+      "threshold": 0.5,
+      "timing": {
+        "checkpoint_load_report": {
+          "checkpoint": "runs/v365_e2c_k2_pair_s202/best_model.pt",
+          "epoch": 1,
+          "missing": [],
+          "unexpected": []
+        },
+        "coverage_min_raw": 1.0,
+        "evaluated_prefixes": 4492,
+        "latency_ms_mean_raw": 351.85206297029123,
+        "latency_ms_p50_raw": 270.38002852350473,
+        "latency_ms_p95_raw": 876.1374724563211,
+        "milliseconds_per_prefix": 394.53438936576384,
+        "note": "Only timing/coverage/load diagnostics are used; built-in labels are ignored.",
+        "peak_gpu_memory_mb": 5458.15283203125,
+        "seconds_per_prefix": 0.39453438936576385,
+        "wall_time_seconds": 1772.2484770310111
+      }
+    },
+    "e2d": {
+      "boundary_note": "turn_stage_labels are not used as independent labels; tE/tA only locate evaluation boundaries from final adjudication.",
+      "calls": 200,
+      "endpoint_consistency": {
+        "calls": 200,
+        "max_abs_p_fraud_delta": 2.7418136596679688e-06,
+        "mean_abs_p_fraud_delta": 5.3957114349856286e-08,
+        "passed": true,
+        "threshold_flip_count": 0,
+        "tolerance": 0.0001
+      },
+      "policies": {
+        "k1": {
+          "alarm_time_semantics": "end turn of the consecutive-hit window",
+          "ambiguous_trajectory_only": {
+            "calls": 40,
+            "ever_alert": {
+              "denominator": 40,
+              "numerator": 11,
+              "rate": 0.275
+            },
+            "ever_alert_calls": 11,
+            "mean_of_call_max_p_fraud": 0.29954123100360447,
+            "median_of_call_max_p_fraud": 0.040005095303058624
+          },
+          "consecutive_hits_required": 1,
+          "explicit_before_tA": {
+            "after_tA_n": 0,
+            "among_calls_with_nonempty_tE_to_tA_window": {
+              "denominator": 64,
+              "numerator": 64,
+              "rate": 1.0
+            },
+            "at_tA_n": 1,
+            "denominator": 65,
+            "invalid_or_missing_tA": 0,
+            "median_advance_turns": 8.0,
+            "no_effective_detection_n": 0,
+            "no_strict_pre_tA_window_n": 1,
+            "numerator": 64,
+            "p25_advance_turns": 4.0,
+            "p75_advance_turns": 12.25,
+            "rate": 0.9846153846153847,
+            "signed_tA_minus_first_valid_detected_n": 65,
+            "signed_tA_minus_first_valid_median": 8.0,
+            "strictly_before_tA": true
+          },
+          "normal_ever_false_alarm": {
+            "denominator": 80,
+            "numerator": 14,
+            "rate": 0.175
+          },
+          "subsets": {
+            "all_fraud": {
+              "clean_effective_rate": {
+                "denominator": 80,
+                "numerator": 20,
+                "rate": 0.25
+              },
+              "delay": {
+                "detected_n": 79,
+                "median_turns": 0.0,
+                "missed_n": 1,
+                "p25_turns": 0.0,
+                "p75_turns": 0.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 78,
+                "numerator": 59,
+                "rate": 0.7564102564102564
+              },
+              "tE_after_effective_recall": {
+                "denominator": 80,
+                "numerator": 79,
+                "rate": 0.9875
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 80,
+                "numerator": 59,
+                "rate": 0.7375
+              }
+            },
+            "early_fraud": {
+              "clean_effective_rate": {
+                "denominator": 15,
+                "numerator": 5,
+                "rate": 0.3333333333333333
+              },
+              "delay": {
+                "detected_n": 14,
+                "median_turns": 0.0,
+                "missed_n": 1,
+                "p25_turns": 0.0,
+                "p75_turns": 0.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 15,
+                "numerator": 9,
+                "rate": 0.6
+              },
+              "tE_after_effective_recall": {
+                "denominator": 15,
+                "numerator": 14,
+                "rate": 0.9333333333333333
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 15,
+                "numerator": 9,
+                "rate": 0.6
+              }
+            },
+            "explicit_fraud": {
+              "clean_effective_rate": {
+                "denominator": 65,
+                "numerator": 15,
+                "rate": 0.23076923076923078
+              },
+              "delay": {
+                "detected_n": 65,
+                "median_turns": 0.0,
+                "missed_n": 0,
+                "p25_turns": 0.0,
+                "p75_turns": 0.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 63,
+                "numerator": 50,
+                "rate": 0.7936507936507936
+              },
+              "tE_after_effective_recall": {
+                "denominator": 65,
+                "numerator": 65,
+                "rate": 1.0
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 65,
+                "numerator": 50,
+                "rate": 0.7692307692307693
+              }
+            }
+          }
+        },
+        "k2": {
+          "alarm_time_semantics": "end turn of the consecutive-hit window",
+          "ambiguous_trajectory_only": {
+            "calls": 40,
+            "ever_alert": {
+              "denominator": 40,
+              "numerator": 6,
+              "rate": 0.15
+            },
+            "ever_alert_calls": 6,
+            "mean_of_call_max_p_fraud": 0.29954123100360447,
+            "median_of_call_max_p_fraud": 0.040005095303058624
+          },
+          "consecutive_hits_required": 2,
+          "explicit_before_tA": {
+            "after_tA_n": 2,
+            "among_calls_with_nonempty_tE_to_tA_window": {
+              "denominator": 64,
+              "numerator": 57,
+              "rate": 0.890625
+            },
+            "at_tA_n": 6,
+            "denominator": 65,
+            "invalid_or_missing_tA": 0,
+            "median_advance_turns": 8.0,
+            "no_effective_detection_n": 0,
+            "no_strict_pre_tA_window_n": 1,
+            "numerator": 57,
+            "p25_advance_turns": 4.0,
+            "p75_advance_turns": 12.0,
+            "rate": 0.8769230769230769,
+            "signed_tA_minus_first_valid_detected_n": 65,
+            "signed_tA_minus_first_valid_median": 6.0,
+            "strictly_before_tA": true
+          },
+          "normal_ever_false_alarm": {
+            "denominator": 80,
+            "numerator": 8,
+            "rate": 0.1
+          },
+          "subsets": {
+            "all_fraud": {
+              "clean_effective_rate": {
+                "denominator": 80,
+                "numerator": 48,
+                "rate": 0.6
+              },
+              "delay": {
+                "detected_n": 78,
+                "median_turns": 0.0,
+                "missed_n": 2,
+                "p25_turns": 0.0,
+                "p75_turns": 2.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 78,
+                "numerator": 30,
+                "rate": 0.38461538461538464
+              },
+              "tE_after_effective_recall": {
+                "denominator": 80,
+                "numerator": 78,
+                "rate": 0.975
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 80,
+                "numerator": 30,
+                "rate": 0.375
+              }
+            },
+            "early_fraud": {
+              "clean_effective_rate": {
+                "denominator": 15,
+                "numerator": 11,
+                "rate": 0.7333333333333333
+              },
+              "delay": {
+                "detected_n": 13,
+                "median_turns": 0.0,
+                "missed_n": 2,
+                "p25_turns": 0.0,
+                "p75_turns": 1.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 15,
+                "numerator": 2,
+                "rate": 0.13333333333333333
+              },
+              "tE_after_effective_recall": {
+                "denominator": 15,
+                "numerator": 13,
+                "rate": 0.8666666666666667
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 15,
+                "numerator": 2,
+                "rate": 0.13333333333333333
+              }
+            },
+            "explicit_fraud": {
+              "clean_effective_rate": {
+                "denominator": 65,
+                "numerator": 37,
+                "rate": 0.5692307692307692
+              },
+              "delay": {
+                "detected_n": 65,
+                "median_turns": 0.0,
+                "missed_n": 0,
+                "p25_turns": 0.0,
+                "p75_turns": 2.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 63,
+                "numerator": 28,
+                "rate": 0.4444444444444444
+              },
+              "tE_after_effective_recall": {
+                "denominator": 65,
+                "numerator": 65,
+                "rate": 1.0
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 65,
+                "numerator": 28,
+                "rate": 0.4307692307692308
+              }
+            }
+          }
+        }
+      },
+      "prefixes": 4492,
+      "schema_version": "v365.dev.temporal_metrics.v1",
+      "threshold": 0.5,
+      "timing": {
+        "checkpoint_load_report": {
+          "checkpoint": "runs/v362_e1b_binary_60prefix_40replay_s202_conservative/best_model.pt",
+          "epoch": 1,
+          "missing": [],
+          "unexpected": []
+        },
+        "coverage_min_raw": 1.0,
+        "evaluated_prefixes": 4492,
+        "frozen_m1_inference_reused": true,
+        "gate_cpu_seconds": 0.012148774228990078,
+        "gate_parameters": 193,
+        "latency_ms_mean_raw": 150.11313521051954,
+        "latency_ms_p50_raw": 107.20928991213441,
+        "latency_ms_p95_raw": 369.9788600206375,
+        "milliseconds_per_prefix": 159.2375143034714,
+        "note": "Only timing/coverage/load diagnostics are used; built-in labels are ignored.",
+        "peak_gpu_memory_mb": 5458.15283203125,
+        "seconds_per_prefix": 0.15923751430347138,
+        "wall_time_seconds": 715.2949142511934
+      }
+    },
+    "m0_v361": {
+      "boundary_note": "turn_stage_labels are not used as independent labels; tE/tA only locate evaluation boundaries from final adjudication.",
+      "calls": 200,
+      "policies": {
+        "k1": {
+          "alarm_time_semantics": "end turn of the consecutive-hit window",
+          "ambiguous_trajectory_only": {
+            "calls": 40,
+            "ever_alert": {
+              "denominator": 40,
+              "numerator": 10,
+              "rate": 0.25
+            },
+            "ever_alert_calls": 10,
+            "mean_of_call_max_p_fraud": 0.2829657100199256,
+            "median_of_call_max_p_fraud": 0.03294086083769798
+          },
+          "consecutive_hits_required": 1,
+          "explicit_before_tA": {
+            "after_tA_n": 0,
+            "among_calls_with_nonempty_tE_to_tA_window": {
+              "denominator": 64,
+              "numerator": 61,
+              "rate": 0.953125
+            },
+            "at_tA_n": 3,
+            "denominator": 65,
+            "invalid_or_missing_tA": 0,
+            "median_advance_turns": 8.0,
+            "no_effective_detection_n": 1,
+            "no_strict_pre_tA_window_n": 1,
+            "numerator": 61,
+            "p25_advance_turns": 4.0,
+            "p75_advance_turns": 12.0,
+            "rate": 0.9384615384615385,
+            "signed_tA_minus_first_valid_detected_n": 64,
+            "signed_tA_minus_first_valid_median": 6.0,
+            "strictly_before_tA": true
+          },
+          "normal_ever_false_alarm": {
+            "denominator": 80,
+            "numerator": 13,
+            "rate": 0.1625
+          },
+          "subsets": {
+            "all_fraud": {
+              "clean_effective_rate": {
+                "denominator": 80,
+                "numerator": 22,
+                "rate": 0.275
+              },
+              "delay": {
+                "detected_n": 77,
+                "median_turns": 0.0,
+                "missed_n": 3,
+                "p25_turns": 0.0,
+                "p75_turns": 0.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 78,
+                "numerator": 55,
+                "rate": 0.7051282051282052
+              },
+              "tE_after_effective_recall": {
+                "denominator": 80,
+                "numerator": 77,
+                "rate": 0.9625
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 80,
+                "numerator": 55,
+                "rate": 0.6875
+              }
+            },
+            "early_fraud": {
+              "clean_effective_rate": {
+                "denominator": 15,
+                "numerator": 4,
+                "rate": 0.26666666666666666
+              },
+              "delay": {
+                "detected_n": 13,
+                "median_turns": 0.0,
+                "missed_n": 2,
+                "p25_turns": 0.0,
+                "p75_turns": 0.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 15,
+                "numerator": 9,
+                "rate": 0.6
+              },
+              "tE_after_effective_recall": {
+                "denominator": 15,
+                "numerator": 13,
+                "rate": 0.8666666666666667
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 15,
+                "numerator": 9,
+                "rate": 0.6
+              }
+            },
+            "explicit_fraud": {
+              "clean_effective_rate": {
+                "denominator": 65,
+                "numerator": 18,
+                "rate": 0.27692307692307694
+              },
+              "delay": {
+                "detected_n": 64,
+                "median_turns": 0.0,
+                "missed_n": 1,
+                "p25_turns": 0.0,
+                "p75_turns": 0.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 63,
+                "numerator": 46,
+                "rate": 0.7301587301587301
+              },
+              "tE_after_effective_recall": {
+                "denominator": 65,
+                "numerator": 64,
+                "rate": 0.9846153846153847
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 65,
+                "numerator": 46,
+                "rate": 0.7076923076923077
+              }
+            }
+          }
+        },
+        "k2": {
+          "alarm_time_semantics": "end turn of the consecutive-hit window",
+          "ambiguous_trajectory_only": {
+            "calls": 40,
+            "ever_alert": {
+              "denominator": 40,
+              "numerator": 8,
+              "rate": 0.2
+            },
+            "ever_alert_calls": 8,
+            "mean_of_call_max_p_fraud": 0.2829657100199256,
+            "median_of_call_max_p_fraud": 0.03294086083769798
+          },
+          "consecutive_hits_required": 2,
+          "explicit_before_tA": {
+            "after_tA_n": 4,
+            "among_calls_with_nonempty_tE_to_tA_window": {
+              "denominator": 64,
+              "numerator": 58,
+              "rate": 0.90625
+            },
+            "at_tA_n": 1,
+            "denominator": 65,
+            "invalid_or_missing_tA": 0,
+            "median_advance_turns": 7.0,
+            "no_effective_detection_n": 2,
+            "no_strict_pre_tA_window_n": 1,
+            "numerator": 58,
+            "p25_advance_turns": 4.0,
+            "p75_advance_turns": 11.75,
+            "rate": 0.8923076923076924,
+            "signed_tA_minus_first_valid_detected_n": 63,
+            "signed_tA_minus_first_valid_median": 6.0,
+            "strictly_before_tA": true
+          },
+          "normal_ever_false_alarm": {
+            "denominator": 80,
+            "numerator": 11,
+            "rate": 0.1375
+          },
+          "subsets": {
+            "all_fraud": {
+              "clean_effective_rate": {
+                "denominator": 80,
+                "numerator": 25,
+                "rate": 0.3125
+              },
+              "delay": {
+                "detected_n": 76,
+                "median_turns": 0.0,
+                "missed_n": 4,
+                "p25_turns": 0.0,
+                "p75_turns": 1.25
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 78,
+                "numerator": 51,
+                "rate": 0.6538461538461539
+              },
+              "tE_after_effective_recall": {
+                "denominator": 80,
+                "numerator": 76,
+                "rate": 0.95
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 80,
+                "numerator": 51,
+                "rate": 0.6375
+              }
+            },
+            "early_fraud": {
+              "clean_effective_rate": {
+                "denominator": 15,
+                "numerator": 5,
+                "rate": 0.3333333333333333
+              },
+              "delay": {
+                "detected_n": 13,
+                "median_turns": 0.0,
+                "missed_n": 2,
+                "p25_turns": 0.0,
+                "p75_turns": 2.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 15,
+                "numerator": 8,
+                "rate": 0.5333333333333333
+              },
+              "tE_after_effective_recall": {
+                "denominator": 15,
+                "numerator": 13,
+                "rate": 0.8666666666666667
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 15,
+                "numerator": 8,
+                "rate": 0.5333333333333333
+              }
+            },
+            "explicit_fraud": {
+              "clean_effective_rate": {
+                "denominator": 65,
+                "numerator": 20,
+                "rate": 0.3076923076923077
+              },
+              "delay": {
+                "detected_n": 63,
+                "median_turns": 0.0,
+                "missed_n": 2,
+                "p25_turns": 0.0,
+                "p75_turns": 1.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 63,
+                "numerator": 43,
+                "rate": 0.6825396825396826
+              },
+              "tE_after_effective_recall": {
+                "denominator": 65,
+                "numerator": 63,
+                "rate": 0.9692307692307692
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 65,
+                "numerator": 43,
+                "rate": 0.6615384615384615
+              }
+            }
+          }
+        }
+      },
+      "prefixes": 4492,
+      "schema_version": "v365.dev.temporal_metrics.v1",
+      "threshold": 0.5,
+      "timing": {
+        "checkpoint_load_report": {
+          "checkpoint": "runs/repro_v361b_b320_head96/best_model.pt",
+          "epoch": 4,
+          "missing": [],
+          "unexpected": []
+        },
+        "coverage_min_raw": 1.0,
+        "evaluated_prefixes": 4492,
+        "latency_ms_mean_raw": 150.7597845347303,
+        "latency_ms_p50_raw": 106.461948947981,
+        "latency_ms_p95_raw": 369.1653381101787,
+        "milliseconds_per_prefix": 160.14397779926625,
+        "note": "Only timing/coverage/load diagnostics are used; built-in labels are ignored.",
+        "peak_gpu_memory_mb": 5458.15283203125,
+        "seconds_per_prefix": 0.16014397779926626,
+        "wall_time_seconds": 719.366748274304
+      }
+    },
+    "m1_e1b": {
+      "boundary_note": "turn_stage_labels are not used as independent labels; tE/tA only locate evaluation boundaries from final adjudication.",
+      "calls": 200,
+      "endpoint_consistency": {
+        "calls": 200,
+        "max_abs_p_fraud_delta": 2.7418136596679688e-06,
+        "mean_abs_p_fraud_delta": 5.3957114349856286e-08,
+        "passed": true,
+        "threshold_flip_count": 0,
+        "tolerance": 0.0001
+      },
+      "policies": {
+        "k1": {
+          "alarm_time_semantics": "end turn of the consecutive-hit window",
+          "ambiguous_trajectory_only": {
+            "calls": 40,
+            "ever_alert": {
+              "denominator": 40,
+              "numerator": 11,
+              "rate": 0.275
+            },
+            "ever_alert_calls": 11,
+            "mean_of_call_max_p_fraud": 0.29954123100360447,
+            "median_of_call_max_p_fraud": 0.040005095303058624
+          },
+          "consecutive_hits_required": 1,
+          "explicit_before_tA": {
+            "after_tA_n": 0,
+            "among_calls_with_nonempty_tE_to_tA_window": {
+              "denominator": 64,
+              "numerator": 64,
+              "rate": 1.0
+            },
+            "at_tA_n": 1,
+            "denominator": 65,
+            "invalid_or_missing_tA": 0,
+            "median_advance_turns": 8.0,
+            "no_effective_detection_n": 0,
+            "no_strict_pre_tA_window_n": 1,
+            "numerator": 64,
+            "p25_advance_turns": 4.0,
+            "p75_advance_turns": 12.25,
+            "rate": 0.9846153846153847,
+            "signed_tA_minus_first_valid_detected_n": 65,
+            "signed_tA_minus_first_valid_median": 8.0,
+            "strictly_before_tA": true
+          },
+          "normal_ever_false_alarm": {
+            "denominator": 80,
+            "numerator": 14,
+            "rate": 0.175
+          },
+          "subsets": {
+            "all_fraud": {
+              "clean_effective_rate": {
+                "denominator": 80,
+                "numerator": 20,
+                "rate": 0.25
+              },
+              "delay": {
+                "detected_n": 79,
+                "median_turns": 0.0,
+                "missed_n": 1,
+                "p25_turns": 0.0,
+                "p75_turns": 0.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 78,
+                "numerator": 59,
+                "rate": 0.7564102564102564
+              },
+              "tE_after_effective_recall": {
+                "denominator": 80,
+                "numerator": 79,
+                "rate": 0.9875
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 80,
+                "numerator": 59,
+                "rate": 0.7375
+              }
+            },
+            "early_fraud": {
+              "clean_effective_rate": {
+                "denominator": 15,
+                "numerator": 5,
+                "rate": 0.3333333333333333
+              },
+              "delay": {
+                "detected_n": 14,
+                "median_turns": 0.0,
+                "missed_n": 1,
+                "p25_turns": 0.0,
+                "p75_turns": 0.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 15,
+                "numerator": 9,
+                "rate": 0.6
+              },
+              "tE_after_effective_recall": {
+                "denominator": 15,
+                "numerator": 14,
+                "rate": 0.9333333333333333
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 15,
+                "numerator": 9,
+                "rate": 0.6
+              }
+            },
+            "explicit_fraud": {
+              "clean_effective_rate": {
+                "denominator": 65,
+                "numerator": 15,
+                "rate": 0.23076923076923078
+              },
+              "delay": {
+                "detected_n": 65,
+                "median_turns": 0.0,
+                "missed_n": 0,
+                "p25_turns": 0.0,
+                "p75_turns": 0.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 63,
+                "numerator": 50,
+                "rate": 0.7936507936507936
+              },
+              "tE_after_effective_recall": {
+                "denominator": 65,
+                "numerator": 65,
+                "rate": 1.0
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 65,
+                "numerator": 50,
+                "rate": 0.7692307692307693
+              }
+            }
+          }
+        },
+        "k2": {
+          "alarm_time_semantics": "end turn of the consecutive-hit window",
+          "ambiguous_trajectory_only": {
+            "calls": 40,
+            "ever_alert": {
+              "denominator": 40,
+              "numerator": 8,
+              "rate": 0.2
+            },
+            "ever_alert_calls": 8,
+            "mean_of_call_max_p_fraud": 0.29954123100360447,
+            "median_of_call_max_p_fraud": 0.040005095303058624
+          },
+          "consecutive_hits_required": 2,
+          "explicit_before_tA": {
+            "after_tA_n": 1,
+            "among_calls_with_nonempty_tE_to_tA_window": {
+              "denominator": 64,
+              "numerator": 63,
+              "rate": 0.984375
+            },
+            "at_tA_n": 1,
+            "denominator": 65,
+            "invalid_or_missing_tA": 0,
+            "median_advance_turns": 7.0,
+            "no_effective_detection_n": 0,
+            "no_strict_pre_tA_window_n": 1,
+            "numerator": 63,
+            "p25_advance_turns": 4.0,
+            "p75_advance_turns": 12.0,
+            "rate": 0.9692307692307692,
+            "signed_tA_minus_first_valid_detected_n": 65,
+            "signed_tA_minus_first_valid_median": 7.0,
+            "strictly_before_tA": true
+          },
+          "normal_ever_false_alarm": {
+            "denominator": 80,
+            "numerator": 11,
+            "rate": 0.1375
+          },
+          "subsets": {
+            "all_fraud": {
+              "clean_effective_rate": {
+                "denominator": 80,
+                "numerator": 22,
+                "rate": 0.275
+              },
+              "delay": {
+                "detected_n": 79,
+                "median_turns": 0.0,
+                "missed_n": 1,
+                "p25_turns": 0.0,
+                "p75_turns": 1.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 78,
+                "numerator": 57,
+                "rate": 0.7307692307692307
+              },
+              "tE_after_effective_recall": {
+                "denominator": 80,
+                "numerator": 79,
+                "rate": 0.9875
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 80,
+                "numerator": 57,
+                "rate": 0.7125
+              }
+            },
+            "early_fraud": {
+              "clean_effective_rate": {
+                "denominator": 15,
+                "numerator": 5,
+                "rate": 0.3333333333333333
+              },
+              "delay": {
+                "detected_n": 14,
+                "median_turns": 0.0,
+                "missed_n": 1,
+                "p25_turns": 0.0,
+                "p75_turns": 1.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 15,
+                "numerator": 9,
+                "rate": 0.6
+              },
+              "tE_after_effective_recall": {
+                "denominator": 15,
+                "numerator": 14,
+                "rate": 0.9333333333333333
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 15,
+                "numerator": 9,
+                "rate": 0.6
+              }
+            },
+            "explicit_fraud": {
+              "clean_effective_rate": {
+                "denominator": 65,
+                "numerator": 17,
+                "rate": 0.26153846153846155
+              },
+              "delay": {
+                "detected_n": 65,
+                "median_turns": 0.0,
+                "missed_n": 0,
+                "p25_turns": 0.0,
+                "p75_turns": 1.0
+              },
+              "premature_rate_among_calls_with_opportunity": {
+                "denominator": 63,
+                "numerator": 48,
+                "rate": 0.7619047619047619
+              },
+              "tE_after_effective_recall": {
+                "denominator": 65,
+                "numerator": 65,
+                "rate": 1.0
+              },
+              "tE_before_premature_alarm_rate": {
+                "denominator": 65,
+                "numerator": 48,
+                "rate": 0.7384615384615385
+              }
+            }
+          }
+        }
+      },
+      "prefixes": 4492,
+      "schema_version": "v365.dev.temporal_metrics.v1",
+      "threshold": 0.5,
+      "timing": {
+        "checkpoint_load_report": {
+          "checkpoint": "runs/v362_e1b_binary_60prefix_40replay_s202_conservative/best_model.pt",
+          "epoch": 1,
+          "missing": [],
+          "unexpected": []
+        },
+        "coverage_min_raw": 1.0,
+        "evaluated_prefixes": 4492,
+        "latency_ms_mean_raw": 150.11313521051954,
+        "latency_ms_p50_raw": 107.20928991213441,
+        "latency_ms_p95_raw": 369.9788600206375,
+        "milliseconds_per_prefix": 159.2375143034714,
+        "note": "Only timing/coverage/load diagnostics are used; built-in labels are ignored.",
+        "peak_gpu_memory_mb": 5458.15283203125,
+        "seconds_per_prefix": 0.15923751430347138,
+        "wall_time_seconds": 715.2949142511934
+      }
+    }
+  }
+}

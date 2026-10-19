@@ -1,0 +1,18 @@
+{
+  "schema_version": "experiment_intent.v1",
+  "name": "V361D_RouteA_Plain_Head64_TestB_LongStress_gpu23_a1",
+  "display_name": "V361-D Route-A plain/head64 on Test-B and Long-Stress",
+  "summary": "Inference-only evaluation of frozen Route-A a320_plain and a320_head64 checkpoints on Test-B 1580 and Long-Stress 120.",
+  "route": "text",
+  "operation": "diagnostic",
+  "protocol": "text.v361.routeA-final-eval.v1",
+  "registry": "shared/configs/experiment_registry.json",
+  "dataset": "v361_testb1580_longstress120",
+  "model": "erlangshen_megatronbert_1_3b",
+  "resources": {"gpus": [2, 3], "max_parallel": 2},
+  "matrix": [
+    {"name": "a320_plain", "kind": "route_a", "input_mode": "plain_sliding_chunks", "head_context_length": 64},
+    {"name": "a320_head64", "kind": "route_a", "input_mode": "head_context_enhanced_chunks", "head_context_length": 64}
+  ],
+  "tags": ["frozen-checkpoints", "report-only", "parallel-comparison"]
+}

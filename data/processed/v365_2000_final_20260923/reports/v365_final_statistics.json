@@ -1,0 +1,40 @@
+{
+  "record_count": 2000,
+  "split_counts": {
+    "train": 1500,
+    "dev": 200,
+    "test": 300
+  },
+  "label_counts": {
+    "fraud": 800,
+    "normal": 800,
+    "ambiguous": 400
+  },
+  "split_label_counts": {
+    "train": {
+      "fraud": 600,
+      "normal": 600,
+      "ambiguous": 300
+    },
+    "dev": {
+      "fraud": 80,
+      "normal": 80,
+      "ambiguous": 40
+    },
+    "test": {
+      "fraud": 120,
+      "normal": 120,
+      "ambiguous": 60
+    }
+  },
+  "candidate_count": 1741,
+  "review_count": 1741,
+  "duplicate_normalized_groups": 0,
+  "high_frequency_dialogue_groups": 0,
+  "high_frequency_turn_template_groups": 0,
+  "high_frequency_three_turn_template_groups": 0,
+  "approximate_sentence_pairs_for_review": 21,
+  "approximate_three_turn_pairs_for_review": 0,
+  "short_phrase_exemptions": 2,
+  "cross_split_duplicate_groups": 0
+}

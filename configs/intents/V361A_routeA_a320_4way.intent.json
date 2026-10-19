@@ -1,0 +1,25 @@
+{
+  "schema_version": "experiment_intent.v1",
+  "name": "V361A_routeA_a320_4way_a1",
+  "display_name": "V361 route-A hierarchical Transformer chunk320 input-mode sweep",
+  "summary": "Route-A hierarchical Transformer training on the same V361 data and optimization recipe as Route-B, comparing plain sliding windows with head-context 48/64/96 on four GPUs.",
+  "route": "text",
+  "operation": "train",
+  "protocol": "text.v361.routeA-hierarchical-transformer-train.v1",
+  "registry": "shared/configs/experiment_registry.json",
+  "dataset": "v361_longdoc_train6500_deva2_longdev",
+  "model": "erlangshen_megatronbert_1_3b",
+  "checkpoint": "v341d1_policy6500_megatronbert_seed202_best_epoch3",
+  "resources": {"gpus": [0, 1, 2, 3], "max_parallel": 4},
+  "matrix": [
+    {"name": "a320_plain", "seed": 202, "input_mode": "plain_sliding_chunks", "head_context_length": 64},
+    {"name": "a320_head48", "seed": 202, "input_mode": "head_context_enhanced_chunks", "head_context_length": 48},
+    {"name": "a320_head64", "seed": 202, "input_mode": "head_context_enhanced_chunks", "head_context_length": 64},
+    {"name": "a320_head96", "seed": 202, "input_mode": "head_context_enhanced_chunks", "head_context_length": 96}
+  ],
+  "tags": ["route-A", "chunk320", "input-mode-sweep", "four-gpu"],
+  "notes": [
+    "Only the document aggregator changes from Route-B gated attention to Route-A hierarchical Transformer.",
+    "Test-B and Long-Stress remain report-only and are excluded from training and checkpoint selection."
+  ]
+}

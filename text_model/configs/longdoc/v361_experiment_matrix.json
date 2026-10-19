@@ -1,0 +1,80 @@
+{
+  "schema_version": "v361.longdoc_experiment_matrix.v1",
+  "status": "ready_for_phase1_fixed_controls",
+  "shared": {
+    "baseline": "V341-D1",
+    "window_overlap": 64,
+    "initial_window": 320,
+    "seeds": [202, 3407, 42],
+    "selection_data": ["Dev-A2", "Long-Dev"],
+    "final_only_data": ["Long-Stress", "Test-B"],
+    "test_b_runs": 1,
+    "screening_checkpoint_policy": "metrics_only",
+    "final_checkpoint_policy": "best_only"
+  },
+  "phases": [
+    {
+      "phase": 1,
+      "name": "baseline_and_fixed_controls",
+      "runs": [
+        {"mode": "v341_exact_truncation", "chunk_length": 256, "seed": 202},
+        {"mode": "max", "chunk_length": 320, "seed": 202},
+        {"mode": "top2_mean", "chunk_length": 320, "seed": 202},
+        {"mode": "logsumexp", "chunk_length": 320, "seed": 202}
+      ]
+    },
+    {
+      "phase": 2,
+      "name": "route_b_input_mode",
+      "runs": [
+        {"route": "B", "input_mode": "plain_sliding_chunks", "head_context_length": 64},
+        {"route": "B", "input_mode": "head_context_enhanced_chunks", "head_context_length": 48},
+        {"route": "B", "input_mode": "head_context_enhanced_chunks", "head_context_length": 64},
+        {"route": "B", "input_mode": "head_context_enhanced_chunks", "head_context_length": 96}
+      ]
+    },
+    {
+      "phase": 3,
+      "name": "route_b_window_length",
+      "runs": [
+        {"route": "B", "chunk_length": 256},
+        {"route": "B", "chunk_length": 320},
+        {"route": "B", "chunk_length": 384}
+      ]
+    },
+    {
+      "phase": 4,
+      "name": "route_b_pooling_and_mil_ablation",
+      "runs": [
+        {"name": "full", "evidence_components": "attention,top1,top2,last,mean", "mil_weight": 0.2, "window_evidence_weight": 0.1},
+        {"name": "without_last", "evidence_components": "attention,top1,top2,mean"},
+        {"name": "without_top2", "evidence_components": "attention,top1,last,mean"},
+        {"name": "attention_mean", "evidence_components": "attention,mean"},
+        {"name": "without_mil", "mil_weight": 0.0},
+        {"name": "without_window_evidence", "window_evidence_weight": 0.0}
+      ]
+    },
+    {
+      "phase": 5,
+      "name": "route_a_matched_ablation",
+      "runs": [
+        {"route": "A", "name": "full"},
+        {"route": "A", "name": "without_last", "evidence_components": "attention,top1,top2,mean"},
+        {"route": "A", "name": "without_mil", "mil_weight": 0.0},
+        {"route": "A", "name": "without_window_evidence", "window_evidence_weight": 0.0}
+      ]
+    },
+    {
+      "phase": 6,
+      "name": "final_three_seeds",
+      "runs": [
+        {"route": "A", "seed": 202},
+        {"route": "A", "seed": 3407},
+        {"route": "A", "seed": 42},
+        {"route": "B", "seed": 202},
+        {"route": "B", "seed": 3407},
+        {"route": "B", "seed": 42}
+      ]
+    }
+  ]
+}

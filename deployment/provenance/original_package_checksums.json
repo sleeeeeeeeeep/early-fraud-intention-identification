@@ -1,0 +1,142 @@
+[
+  {
+    "path": "BUILD_PROVENANCE.json",
+    "bytes": 2099,
+    "sha256": "7c0fe9545860e861dc2fca9470d887fc34de068cc565c982c39254c05b561307"
+  },
+  {
+    "path": "config/inference.json",
+    "bytes": 695,
+    "sha256": "1240264176ac4a371fb9b5cc10bd7d2bde335690e2b311556ff802639924ed68"
+  },
+  {
+    "path": "manifest.json",
+    "bytes": 8101,
+    "sha256": "8f13a1ae903cbf1459b41d8a79c3cc5cc3ceb03c45c6d2f408ee8641d2220cfb"
+  },
+  {
+    "path": "models/encoder_config/config.json",
+    "bytes": 440,
+    "sha256": "45a6a9ef651bc3e5cca9fd4ee4de2815b8229fb41b495d5ba627666283f16f80"
+  },
+  {
+    "path": "models/m1_e1b/model_state.pt",
+    "bytes": 5053464995,
+    "sha256": "bc845ff795b9a5189b17f7d4276dff4fa71223102cd9bf026c1e540b614d49a6"
+  },
+  {
+    "path": "models/tokenizer/special_tokens_map.json",
+    "bytes": 125,
+    "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"
+  },
+  {
+    "path": "models/tokenizer/tokenizer.json",
+    "bytes": 439383,
+    "sha256": "6f546f534f221377639b2ff83c463bf9dd4e160fc899162f1e91f5eba92bdd86"
+  },
+  {
+    "path": "models/tokenizer/tokenizer_config.json",
+    "bytes": 1270,
+    "sha256": "ae57eda34a3d4e3bbab5edd30c5b7e4ee3c493fa48c2e1af1443b6bd619afc19"
+  },
+  {
+    "path": "models/tokenizer/vocab.txt",
+    "bytes": 109534,
+    "sha256": "366fe2b1318c774fd28bdea58dbcfbd6d6aeae313fdcd9063d170cdc602fd51a"
+  },
+  {
+    "path": "predict.py",
+    "bytes": 22565,
+    "sha256": "bd5f7156d7950babf0dce8261c773af514ba15a00e729844d9c517e3c8aba6af"
+  },
+  {
+    "path": "requirements.txt",
+    "bytes": 158,
+    "sha256": "fe16cf3aff43a19ca5768cb499f0193579c809a452bbd51cb1791e1c31a3ffdb"
+  },
+  {
+    "path": "run.py",
+    "bytes": 27965,
+    "sha256": "be4007b58f08965af6452d1e31c941691826db49950e638784cde82290286ca1"
+  },
+  {
+    "path": "src/release_model.py",
+    "bytes": 8357,
+    "sha256": "223b8865b62128977fc1b0fd93447e68741486177be22472f8745428a89cfaae"
+  },
+  {
+    "path": "src/text_model/__init__.py",
+    "bytes": 35,
+    "sha256": "7dafda13e1cef2735ea2401652d73127bf3dccb02c1fb10c91ac11af3678f7b0"
+  },
+  {
+    "path": "src/text_model/data/__init__.py",
+    "bytes": 35,
+    "sha256": "7dafda13e1cef2735ea2401652d73127bf3dccb02c1fb10c91ac11af3678f7b0"
+  },
+  {
+    "path": "src/text_model/data/longdoc_chunker.py",
+    "bytes": 18300,
+    "sha256": "d583cdc46d3575aebf583670fe6f1a02e67e228c66108fa06a3a736f7bbc1ef8"
+  },
+  {
+    "path": "src/text_model/data/longdoc_collator.py",
+    "bytes": 14020,
+    "sha256": "951df2d603bddb4b337f47bd0ab40c251e1ce9ca95740ec8eb667ec7dad7eca6"
+  },
+  {
+    "path": "src/text_model/data/role_markers.py",
+    "bytes": 3601,
+    "sha256": "0bfe8a2e15dc97e60deb45aafe97c9071719fd4cd51af9d71f44b09238c5200b"
+  },
+  {
+    "path": "src/text_model/models/__init__.py",
+    "bytes": 35,
+    "sha256": "7dafda13e1cef2735ea2401652d73127bf3dccb02c1fb10c91ac11af3678f7b0"
+  },
+  {
+    "path": "src/text_model/models/evidence_pooling.py",
+    "bytes": 5698,
+    "sha256": "80dfbc6c84b29efad3e5c6455b6fd8abed7ac94bc426a4915ba7e28be9dd050b"
+  },
+  {
+    "path": "src/text_model/models/gated_attention_aggregator.py",
+    "bytes": 4761,
+    "sha256": "086f9f183e7739e6f2ca38726bbd5dae80cbb53a817a1e9acd585a816803c918"
+  },
+  {
+    "path": "src/text_model/models/hierarchical_transformer_aggregator.py",
+    "bytes": 5361,
+    "sha256": "c93da214d35081c454fb60455f2358204551984a619228e6c5c9929e211f752e"
+  },
+  {
+    "path": "src/text_model/models/longdoc_multitask_classifier.py",
+    "bytes": 10696,
+    "sha256": "d316b7f65f80e3ac26e67a2efe98ed476197d125ae076d3665cfbc1bb289be94"
+  },
+  {
+    "path": "src/text_model/models/shared_chunk_encoder.py",
+    "bytes": 5402,
+    "sha256": "2f890d95a90ea78b60cc68ac6806e3399f658cf1dde986ca69390511552b6b90"
+  },
+  {
+    "path": "src/web_helpers.py",
+    "bytes": 6527,
+    "sha256": "8899a757f3d37dd6214726eb0a982800260f6b329cbb8a22b49fb744e45cf3e5"
+  },
+  {
+    "path": "启动服务.py",
+    "bytes": 1160,
+    "sha256": "03e165b7b2aa7dc34e261f6737e02b908300412d72db3e1cbc73c50d250cb18c"
+  },
+  {
+    "path": "校验部署包.py",
+    "bytes": 738,
+    "sha256": "117d20765675f530b10d15529e8eb3164cbf83ab43f739f59b95425ed606f0c7"
+  },
+  {
+    "path": "部署说明.md",
+    "bytes": 2783,
+    "sha256": "f730414dedd08094e86e7dfdce63d5c1008761ee826c54d0d48e27fa73a73138"
+  }
+]

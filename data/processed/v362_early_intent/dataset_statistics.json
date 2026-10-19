@@ -1,0 +1,679 @@
+{
+  "scope": "V362 前缀数据集（不含隔离与缺失样本）",
+  "total_prefix_rows": 974,
+  "split_totals": {
+    "long_dev": 239,
+    "long_stress": 120,
+    "long_train": 615
+  },
+  "decision_totals": {
+    "ambiguous": 284,
+    "early_fraud": 186,
+    "explicit_fraud": 9,
+    "normal": 495
+  },
+  "original_full_binary_label_totals": {
+    "0": 489,
+    "1": 485
+  },
+  "prefix_relation_totals": {
+    "ambiguous_prefix": 284,
+    "clean_normal": 444,
+    "early_fraud_prefix": 186,
+    "explicit_operation_prefix": 9,
+    "pre_evidence_or_not_yet_detectable": 51
+  },
+  "scenario_totals": {
+    "anti_fraud_education": 32,
+    "business_consultation": 30,
+    "business_license_annual_review": 150,
+    "customer_reports_past_scam": 31,
+    "douyin_live_membership": 147,
+    "general_taxonomy_longcall": 129,
+    "long_service_complaint": 29,
+    "million_protection": 149,
+    "official_bank_notice": 32,
+    "official_customer_service": 32,
+    "official_tax_guidance": 32,
+    "order_refund_official_path": 31,
+    "private_number_douyin_official": 150
+  },
+  "confidence_totals": {
+    "high": 647,
+    "low": 7,
+    "medium": 320
+  },
+  "review_required_totals": {
+    "False": 962,
+    "True": 12
+  },
+  "sample_weight_totals": {
+    "0.0": 284,
+    "0.4": 51,
+    "1.0": 639
+  },
+  "stage_loss_mask_totals": {
+    "0": 12,
+    "1": 962
+  },
+  "cross_tabs": {
+    "split_x_decision": {
+      "long_dev": {
+        "ambiguous": 83,
+        "early_fraud": 38,
+        "explicit_fraud": 4,
+        "normal": 114
+      },
+      "long_stress": {
+        "ambiguous": 30,
+        "early_fraud": 32,
+        "normal": 58
+      },
+      "long_train": {
+        "ambiguous": 171,
+        "early_fraud": 116,
+        "explicit_fraud": 5,
+        "normal": 323
+      }
+    },
+    "split_x_original_full_binary_label": {
+      "long_dev": {
+        "0": 120,
+        "1": 119
+      },
+      "long_stress": {
+        "0": 60,
+        "1": 60
+      },
+      "long_train": {
+        "0": 309,
+        "1": 306
+      }
+    },
+    "split_x_prefix_relation": {
+      "long_dev": {
+        "ambiguous_prefix": 83,
+        "clean_normal": 108,
+        "early_fraud_prefix": 38,
+        "explicit_operation_prefix": 4,
+        "pre_evidence_or_not_yet_detectable": 6
+      },
+      "long_stress": {
+        "ambiguous_prefix": 30,
+        "clean_normal": 58,
+        "early_fraud_prefix": 32
+      },
+      "long_train": {
+        "ambiguous_prefix": 171,
+        "clean_normal": 278,
+        "early_fraud_prefix": 116,
+        "explicit_operation_prefix": 5,
+        "pre_evidence_or_not_yet_detectable": 45
+      }
+    },
+    "decision_x_original_full_binary_label": {
+      "ambiguous": {
+        "0": 45,
+        "1": 239
+      },
+      "early_fraud": {
+        "1": 186
+      },
+      "explicit_fraud": {
+        "1": 9
+      },
+      "normal": {
+        "0": 444,
+        "1": 51
+      }
+    },
+    "scenario_x_decision": {
+      "anti_fraud_education": {
+        "normal": 32
+      },
+      "business_consultation": {
+        "normal": 30
+      },
+      "business_license_annual_review": {
+        "ambiguous": 38,
+        "early_fraud": 17,
+        "explicit_fraud": 3,
+        "normal": 92
+      },
+      "customer_reports_past_scam": {
+        "ambiguous": 1,
+        "normal": 30
+      },
+      "douyin_live_membership": {
+        "ambiguous": 66,
+        "early_fraud": 32,
+        "explicit_fraud": 3,
+        "normal": 46
+      },
+      "general_taxonomy_longcall": {
+        "ambiguous": 64,
+        "early_fraud": 59,
+        "normal": 6
+      },
+      "long_service_complaint": {
+        "normal": 29
+      },
+      "million_protection": {
+        "ambiguous": 44,
+        "early_fraud": 54,
+        "explicit_fraud": 1,
+        "normal": 50
+      },
+      "official_bank_notice": {
+        "ambiguous": 2,
+        "normal": 30
+      },
+      "official_customer_service": {
+        "ambiguous": 1,
+        "normal": 31
+      },
+      "official_tax_guidance": {
+        "normal": 32
+      },
+      "order_refund_official_path": {
+        "normal": 31
+      },
+      "private_number_douyin_official": {
+        "ambiguous": 68,
+        "early_fraud": 24,
+        "explicit_fraud": 2,
+        "normal": 56
+      }
+    }
+  },
+  "tE_turn": {
+    "n": 195,
+    "min": 1,
+    "mean": 6.52,
+    "median": 5,
+    "max": 51
+  },
+  "review_required_samples": {
+    "n": 12,
+    "sample_ids": [
+      "V361_LONG_train_0080",
+      "V361_LONG_train_0107",
+      "V361_LONG_train_0137",
+      "V361_LONG_train_0201",
+      "V361_LONG_train_0238",
+      "V361_LONG_train_0315",
+      "V361_LONG_train_0336",
+      "V361_LONG_train_0339",
+      "V361_LONG_train_0349",
+      "V361_LONG_train_0361",
+      "V361_LONG_train_0521",
+      "V361_LONG_train_0576"
+    ],
+    "all_ambiguous": true,
+    "stage_loss_mask": 0
+  },
+  "per_split": {
+    "long_train": {
+      "n": 615,
+      "decision_counts": {
+        "ambiguous": 171,
+        "early_fraud": 116,
+        "explicit_fraud": 5,
+        "normal": 323
+      },
+      "original_full_binary_label_counts": {
+        "0": 309,
+        "1": 306
+      },
+      "scenario_counts": {
+        "anti_fraud_education": 24,
+        "business_consultation": 23,
+        "business_license_annual_review": 90,
+        "customer_reports_past_scam": 24,
+        "douyin_live_membership": 88,
+        "general_taxonomy_longcall": 69,
+        "long_service_complaint": 22,
+        "million_protection": 89,
+        "official_bank_notice": 24,
+        "official_customer_service": 24,
+        "official_tax_guidance": 24,
+        "order_refund_official_path": 24,
+        "private_number_douyin_official": 90
+      },
+      "prefix_relation_counts": {
+        "ambiguous_prefix": 171,
+        "clean_normal": 278,
+        "early_fraud_prefix": 116,
+        "explicit_operation_prefix": 5,
+        "pre_evidence_or_not_yet_detectable": 45
+      },
+      "length": {
+        "prefix_turns": {
+          "n": 615,
+          "min": 2,
+          "mean": 13.19,
+          "median": 10,
+          "max": 58
+        },
+        "prefix_chars": {
+          "n": 615,
+          "min": 58,
+          "mean": 506.59,
+          "median": 408,
+          "max": 2405
+        },
+        "by_turn_bucket": {
+          "turns_01_05": 79,
+          "turns_06_10": 238,
+          "turns_11_15": 122,
+          "turns_16_20": 74,
+          "turns_21_30": 66,
+          "turns_31_45": 28,
+          "turns_46_plus": 8
+        },
+        "prefix_wordpieces": {
+          "n": 615,
+          "min": 57,
+          "mean": 489.87,
+          "median": 389,
+          "max": 2348
+        },
+        "by_wordpiece_bucket": {
+          "wp_000_128": 30,
+          "wp_1025_1600": 43,
+          "wp_129_256": 110,
+          "wp_1601_plus": 9,
+          "wp_257_385": 165,
+          "wp_386_512": 103,
+          "wp_513_1024": 155
+        }
+      }
+    },
+    "long_dev": {
+      "n": 239,
+      "decision_counts": {
+        "ambiguous": 83,
+        "early_fraud": 38,
+        "explicit_fraud": 4,
+        "normal": 114
+      },
+      "original_full_binary_label_counts": {
+        "0": 120,
+        "1": 119
+      },
+      "scenario_counts": {
+        "anti_fraud_education": 5,
+        "business_consultation": 5,
+        "business_license_annual_review": 40,
+        "customer_reports_past_scam": 5,
+        "douyin_live_membership": 39,
+        "general_taxonomy_longcall": 40,
+        "long_service_complaint": 5,
+        "million_protection": 40,
+        "official_bank_notice": 5,
+        "official_customer_service": 5,
+        "official_tax_guidance": 5,
+        "order_refund_official_path": 5,
+        "private_number_douyin_official": 40
+      },
+      "prefix_relation_counts": {
+        "ambiguous_prefix": 83,
+        "clean_normal": 108,
+        "early_fraud_prefix": 38,
+        "explicit_operation_prefix": 4,
+        "pre_evidence_or_not_yet_detectable": 6
+      },
+      "length": {
+        "prefix_turns": {
+          "n": 239,
+          "min": 2,
+          "mean": 12.91,
+          "median": 10,
+          "max": 36
+        },
+        "prefix_chars": {
+          "n": 239,
+          "min": 60,
+          "mean": 514.46,
+          "median": 406,
+          "max": 1561
+        },
+        "by_turn_bucket": {
+          "turns_01_05": 35,
+          "turns_06_10": 88,
+          "turns_11_15": 45,
+          "turns_16_20": 27,
+          "turns_21_30": 32,
+          "turns_31_45": 12
+        },
+        "prefix_wordpieces": {
+          "n": 239,
+          "min": 59,
+          "mean": 497.39,
+          "median": 394,
+          "max": 1523
+        },
+        "by_wordpiece_bucket": {
+          "wp_000_128": 17,
+          "wp_1025_1600": 25,
+          "wp_129_256": 44,
+          "wp_257_385": 58,
+          "wp_386_512": 38,
+          "wp_513_1024": 57
+        }
+      }
+    },
+    "long_stress": {
+      "n": 120,
+      "decision_counts": {
+        "ambiguous": 30,
+        "early_fraud": 32,
+        "normal": 58
+      },
+      "original_full_binary_label_counts": {
+        "0": 60,
+        "1": 60
+      },
+      "scenario_counts": {
+        "anti_fraud_education": 3,
+        "business_consultation": 2,
+        "business_license_annual_review": 20,
+        "customer_reports_past_scam": 2,
+        "douyin_live_membership": 20,
+        "general_taxonomy_longcall": 20,
+        "long_service_complaint": 2,
+        "million_protection": 20,
+        "official_bank_notice": 3,
+        "official_customer_service": 3,
+        "official_tax_guidance": 3,
+        "order_refund_official_path": 2,
+        "private_number_douyin_official": 20
+      },
+      "prefix_relation_counts": {
+        "ambiguous_prefix": 30,
+        "clean_normal": 58,
+        "early_fraud_prefix": 32
+      },
+      "length": {
+        "prefix_turns": {
+          "n": 120,
+          "min": 2,
+          "mean": 12.88,
+          "median": 10.0,
+          "max": 46
+        },
+        "prefix_chars": {
+          "n": 120,
+          "min": 70,
+          "mean": 520.16,
+          "median": 378.5,
+          "max": 1677
+        },
+        "by_turn_bucket": {
+          "turns_01_05": 17,
+          "turns_06_10": 44,
+          "turns_11_15": 27,
+          "turns_16_20": 14,
+          "turns_21_30": 12,
+          "turns_31_45": 5,
+          "turns_46_plus": 1
+        },
+        "prefix_wordpieces": {
+          "n": 120,
+          "min": 67,
+          "mean": 505.1,
+          "median": 369.5,
+          "max": 1646
+        },
+        "by_wordpiece_bucket": {
+          "wp_000_128": 6,
+          "wp_1025_1600": 13,
+          "wp_129_256": 24,
+          "wp_1601_plus": 1,
+          "wp_257_385": 34,
+          "wp_386_512": 11,
+          "wp_513_1024": 31
+        }
+      }
+    }
+  },
+  "evidence_type_totals": {
+    "abnormal_process": 53,
+    "blocks_verification": 22,
+    "fabricated_enrollment": 134,
+    "false_consequence": 27,
+    "fee_threat": 110,
+    "identity_anomaly": 43,
+    "urgency": 24
+  },
+  "excluded": {
+    "quarantine": {
+      "n": 5,
+      "sample_ids": [
+        "V361_LONG_dev_0208",
+        "V361_LONG_train_0025",
+        "V361_LONG_train_0105",
+        "V361_LONG_train_0170",
+        "V361_LONG_train_0206"
+      ],
+      "reasons": {
+        "V361_LONG_dev_0208": "对话原文含‘虚构会员工单’，属于生成污染/标签泄漏式措辞。",
+        "V361_LONG_train_0025": "对话原文含‘虚构会员单号’，属于生成污染/标签泄漏式措辞。",
+        "V361_LONG_train_0105": "来电人直接说‘冒充公众人物建立信任后索财’，属于标签语义泄漏。",
+        "V361_LONG_train_0170": "对话原文含‘虚构会员单号’，属于生成污染/标签泄漏式措辞。",
+        "V361_LONG_train_0206": "已复核批次中的‘虚构工单’措辞与其余正常流程冲突。"
+      },
+      "enters_training": false,
+      "enters_main_metrics": false
+    },
+    "missing": {
+      "n": 1,
+      "sample_ids": [
+        "V361_LONG_train_0256"
+      ],
+      "label_guessed": false
+    }
+  },
+  "length_all": {
+    "prefix_turns": {
+      "n": 974,
+      "min": 2,
+      "mean": 13.08,
+      "median": 10.0,
+      "max": 58
+    },
+    "prefix_chars": {
+      "n": 974,
+      "min": 58,
+      "mean": 510.19,
+      "median": 404.5,
+      "max": 2405
+    },
+    "by_turn_bucket": {
+      "turns_01_05": 131,
+      "turns_06_10": 370,
+      "turns_11_15": 194,
+      "turns_16_20": 115,
+      "turns_21_30": 110,
+      "turns_31_45": 45,
+      "turns_46_plus": 9
+    },
+    "prefix_wordpieces": {
+      "n": 974,
+      "min": 57,
+      "mean": 493.59,
+      "median": 385.0,
+      "max": 2348
+    },
+    "by_wordpiece_bucket": {
+      "wp_000_128": 53,
+      "wp_1025_1600": 81,
+      "wp_129_256": 178,
+      "wp_1601_plus": 10,
+      "wp_257_385": 257,
+      "wp_386_512": 152,
+      "wp_513_1024": 243
+    }
+  },
+  "length_by_decision": {
+    "normal": {
+      "prefix_turns": {
+        "n": 495,
+        "min": 2,
+        "mean": 13.24,
+        "median": 10,
+        "max": 52
+      },
+      "prefix_chars": {
+        "n": 495,
+        "min": 89,
+        "mean": 534.06,
+        "median": 416,
+        "max": 1944
+      },
+      "by_turn_bucket": {
+        "turns_01_05": 20,
+        "turns_06_10": 228,
+        "turns_11_15": 107,
+        "turns_16_20": 63,
+        "turns_21_30": 59,
+        "turns_31_45": 16,
+        "turns_46_plus": 2
+      },
+      "prefix_wordpieces": {
+        "n": 495,
+        "min": 86,
+        "mean": 517.32,
+        "median": 401,
+        "max": 1885
+      },
+      "by_wordpiece_bucket": {
+        "wp_000_128": 4,
+        "wp_1025_1600": 36,
+        "wp_129_256": 74,
+        "wp_1601_plus": 5,
+        "wp_257_385": 150,
+        "wp_386_512": 87,
+        "wp_513_1024": 139
+      }
+    },
+    "ambiguous": {
+      "prefix_turns": {
+        "n": 284,
+        "min": 2,
+        "mean": 11.24,
+        "median": 8.0,
+        "max": 50
+      },
+      "prefix_chars": {
+        "n": 284,
+        "min": 58,
+        "mean": 433.36,
+        "median": 330.0,
+        "max": 1795
+      },
+      "by_turn_bucket": {
+        "turns_01_05": 88,
+        "turns_06_10": 87,
+        "turns_11_15": 46,
+        "turns_16_20": 19,
+        "turns_21_30": 25,
+        "turns_31_45": 18,
+        "turns_46_plus": 1
+      },
+      "prefix_wordpieces": {
+        "n": 284,
+        "min": 57,
+        "mean": 419.32,
+        "median": 318.5,
+        "max": 1746
+      },
+      "by_wordpiece_bucket": {
+        "wp_000_128": 41,
+        "wp_1025_1600": 27,
+        "wp_129_256": 73,
+        "wp_1601_plus": 1,
+        "wp_257_385": 64,
+        "wp_386_512": 35,
+        "wp_513_1024": 43
+      }
+    },
+    "early_fraud": {
+      "prefix_turns": {
+        "n": 186,
+        "min": 2,
+        "mean": 15.2,
+        "median": 13.0,
+        "max": 58
+      },
+      "prefix_chars": {
+        "n": 186,
+        "min": 60,
+        "mean": 555.7,
+        "median": 449.0,
+        "max": 2405
+      },
+      "by_turn_bucket": {
+        "turns_01_05": 23,
+        "turns_06_10": 54,
+        "turns_11_15": 39,
+        "turns_16_20": 29,
+        "turns_21_30": 25,
+        "turns_31_45": 10,
+        "turns_46_plus": 6
+      },
+      "prefix_wordpieces": {
+        "n": 186,
+        "min": 59,
+        "mean": 535.65,
+        "median": 432.5,
+        "max": 2348
+      },
+      "by_wordpiece_bucket": {
+        "wp_000_128": 8,
+        "wp_1025_1600": 16,
+        "wp_129_256": 30,
+        "wp_1601_plus": 4,
+        "wp_257_385": 43,
+        "wp_386_512": 28,
+        "wp_513_1024": 57
+      }
+    },
+    "explicit_fraud": {
+      "prefix_turns": {
+        "n": 9,
+        "min": 8,
+        "mean": 18.44,
+        "median": 18,
+        "max": 32
+      },
+      "prefix_chars": {
+        "n": 9,
+        "min": 256,
+        "mean": 681.44,
+        "median": 617,
+        "max": 1319
+      },
+      "by_turn_bucket": {
+        "turns_06_10": 1,
+        "turns_11_15": 2,
+        "turns_16_20": 4,
+        "turns_21_30": 1,
+        "turns_31_45": 1
+      },
+      "prefix_wordpieces": {
+        "n": 9,
+        "min": 249,
+        "mean": 663.0,
+        "median": 600,
+        "max": 1284
+      },
+      "by_wordpiece_bucket": {
+        "wp_1025_1600": 2,
+        "wp_129_256": 1,
+        "wp_386_512": 2,
+        "wp_513_1024": 4
+      }
+    }
+  }
+}

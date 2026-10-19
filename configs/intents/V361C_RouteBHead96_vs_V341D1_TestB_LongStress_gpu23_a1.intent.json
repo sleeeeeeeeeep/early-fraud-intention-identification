@@ -1,0 +1,18 @@
+{
+  "schema_version": "experiment_intent.v1",
+  "name": "V361C_RouteBHead96_vs_V341D1_TestB_LongStress_gpu23_a1",
+  "display_name": "V361-C Route-B head96 versus V341-D1 on Test-B and Long-Stress",
+  "summary": "Inference-only comparison of frozen Route-B head96 and the original 256-token truncation baseline on Test-B 1580 and Long-Stress 120.",
+  "route": "text",
+  "operation": "diagnostic",
+  "protocol": "text.v361.routeB-head96-final-eval.v1",
+  "registry": "shared/configs/experiment_registry.json",
+  "dataset": "v361_testb1580_longstress120",
+  "model": "erlangshen_megatronbert_1_3b",
+  "resources": {"gpus": [2, 3], "max_parallel": 2},
+  "matrix": [
+    {"name": "route_b_head96", "kind": "route_b_head96"},
+    {"name": "baseline_256", "kind": "baseline_256"}
+  ],
+  "tags": ["frozen-checkpoints", "report-only", "parallel-comparison"]
+}

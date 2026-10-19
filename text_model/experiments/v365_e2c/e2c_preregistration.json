@@ -1,0 +1,109 @@
+{
+  "schema_version": "v365.e2c.preregistration.v1",
+  "experiment_id": "v365_e2c_k2_pair_s202",
+  "created_at": "2026-10-12T16:30:00+08:00",
+  "status": "frozen_before_data_build_and_training",
+  "hypothesis": "A sequence-aligned adjacent-prefix penalty can reduce two-consecutive-turn premature and normal alarms without reducing tE detection or long-text capability.",
+  "score": "p_binary[1]",
+  "threshold": 0.5,
+  "primary_alarm_policy": {
+    "consecutive_positive_turns": 2,
+    "k1_role": "diagnostic_only"
+  },
+  "training": {
+    "init_model": "M0",
+    "seed": 202,
+    "physical_rows": 6500,
+    "physical_rows_identical_to_e2b_after_removing_e2c_fields": true,
+    "v365_prefix_rows": 3900,
+    "replay_rows": 2600,
+    "overall_fraud_rows": 3250,
+    "overall_normal_rows": 3250,
+    "epochs": 1,
+    "batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "task_learning_rate": 0.000002,
+    "encoder_learning_rate": 0.0,
+    "backbone_frozen": true,
+    "route": "B",
+    "input_mode": "head_context_enhanced_chunks",
+    "chunk_length": 320,
+    "overlap": 64,
+    "head_context_length": 96,
+    "max_chunks_diagnostic_value": 12
+  },
+  "pair_data": {
+    "paired_draws": 3838,
+    "paired_fraud_draws": 1279,
+    "paired_normal_draws": 2559,
+    "unpaired_draws": 2662,
+    "fraud_rule": "adjacent cumulative pair fully before tE; current endpoint in 2..tE-1",
+    "fraud_priority": [2, "tE-1", 3, "tE-2", "alternate inward"],
+    "normal_rule": "adjacent cumulative pair from same complete V365 Train normal call",
+    "normal_priority": [2, 3, "n_full_turns", 4, "n_full_turns-1", "alternate inward"],
+    "assignment": "sample_id-sorted physical occurrences cycle through the deterministic priority",
+    "max_pairs_per_physical_draw": 1,
+    "auxiliary_hard_label": false,
+    "normal_pair_may_extend_beyond_separate_main_prefix": true
+  },
+  "loss": {
+    "main": "weighted binary cross entropy on the 6500 physical rows",
+    "pair_margin": "margin = logit_fraud - logit_normal",
+    "k2_pair": "relu(min(margin_prev, margin_curr) + 0.0)",
+    "k2_pair_weight": 0.2,
+    "k2_margin_buffer": 0.0,
+    "e2b_rank_or_cap_retained": false
+  },
+  "validity": {
+    "expected_v365_dev_calls": 200,
+    "expected_v365_prefix_rows": 4492,
+    "expected_v361_longdev_rows": 240,
+    "full_final_prefix_threshold_flips_max": 0,
+    "full_final_prefix_max_abs_probability_delta_max": 0.0001,
+    "coverage_required": 1.0,
+    "strict_missing_keys_max": 0,
+    "strict_unexpected_keys_max": 0,
+    "test_or_restricted_files_read_max": 0
+  },
+  "gates": {
+    "noninferiority": {
+      "fulltext": {
+        "early_hits_min": 13,
+        "explicit_hits_min": 65,
+        "fraud_hits_min": 78,
+        "normal_fp_max": 6
+      },
+      "temporal_k2": {
+        "early_te_after_min": 14,
+        "all_te_after_min": 79,
+        "normal_ever_fp_max": 11,
+        "all_premature_max": 57,
+        "clean_effective_min": 22,
+        "explicit_before_ta_min": 63,
+        "all_delay_median_max": 0.0,
+        "all_delay_p75_max": 1.0
+      },
+      "longdev": {
+        "fraud_hits_min": 120,
+        "normal_fp_max": 2,
+        "new_false_negative_max": 0
+      }
+    },
+    "improvement": {
+      "temporal_k2": {
+        "normal_ever_fp_max": 10,
+        "all_premature_max": 56,
+        "normal_fp_plus_premature_max": 65,
+        "clean_effective_min": 23
+      }
+    }
+  },
+  "status_rules": {
+    "invalid": "any validity check fails",
+    "fail": "validity passes but any noninferiority gate fails",
+    "hold": "noninferiority passes but any improvement gate fails",
+    "pass_for_freeze": "validity, noninferiority, and improvement gates all pass; Test remains locked"
+  },
+  "selection_policy": "one fixed training run and one fixed Dev evaluation; no threshold, weight, epoch, or checkpoint selection",
+  "test_policy": "never read or evaluate V365 Test/restricted labels in this experiment"
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": "experiment_intent.v1",
+  "name": "V361P1_V341FixedControls_DevA2_LongDev_4GPU_a1",
+  "display_name": "V361-P1 V341 frozen baseline and fixed long-document controls",
+  "summary": "Run the exact V341-D1 256-token baseline and the chunk320 overlap64 Max, Top-2 Mean, and LogSumExp controls on frozen Dev-A2 and Long-Dev. Test-B and Long-Stress remain unread.",
+  "route": "text",
+  "operation": "diagnostic",
+  "protocol": "text.v361.fixed-controls-deva2-longdev.v1",
+  "registry": "shared/configs/experiment_registry.json",
+  "dataset": "v361_phase1_deva2_longdev",
+  "model": "erlangshen_megatronbert_1_3b",
+  "checkpoint": "v341d1_policy6500_megatronbert_seed202_best_epoch3",
+  "seeds": [202],
+  "resources": {
+    "gpus": [0, 1, 2, 3],
+    "max_parallel": 4
+  },
+  "stage": "V361-phase1-inference-only",
+  "change": {
+    "data": true,
+    "architecture": false,
+    "decode": true,
+    "external_eval_data": true
+  },
+  "notes": [
+    "The baseline uses the original V341 tokenizer truncation at 256 tokens.",
+    "The fixed controls encode every chunk once and reuse the logits for all three pooling rules.",
+    "No training, OOF, Test-B, or Long-Stress access is permitted in this run."
+  ]
+}

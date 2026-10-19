@@ -1,0 +1,150 @@
+version: official_taxonomy_v1
+source: text_model/scripts/cascade/fraudce_agent/rubric_label_cards.py::LABEL_RUBRICS
+labels:
+  0:
+    name: 正常通话或非诈骗
+    positive_evidence:
+      - 官方或正常业务提醒
+      - 普通咨询或合法交易
+      - 明确不诱导转账、不索取敏感信息、不下载非官方应用
+    required_evidence_count: 2
+    negative_evidence:
+      - 转账、垫付、保证金或安全账户
+      - 验证码、密码、屏幕共享或远程控制
+      - 非官方链接、下载或私域继续办理
+    common_confusions: [1, 2, 5, 7, 10, 12]
+  1:
+    name: 冒充电商平台、物流或客服
+    positive_evidence:
+      - 网购订单、快递包裹或平台会员异常
+      - 退款、退货、理赔或售后处理
+      - 诱导链接、下载、信息提交或付款
+    required_evidence_count: 2
+    negative_evidence:
+      - 普通商品或服务交易优先标签7
+      - 贷款信用卡主题优先标签4
+      - 公检法政府压力优先标签2
+    common_confusions: [0, 7, 12]
+  2:
+    name: 冒充公检法、政府或监管机构
+    positive_evidence:
+      - 警察、法院、检察院、政府或监管身份
+      - 涉案、通缉、冻结、协查或处罚压力
+      - 安全账户、备案平台或配合调查操作
+    required_evidence_count: 2
+    negative_evidence:
+      - 普通平台或银行风控不属于本类
+      - 贷款审批优先标签4
+      - 征信修复优先标签9
+    common_confusions: [0, 4, 9, 12]
+  3:
+    name: 刷单、做任务、返佣与持续垫资
+    positive_evidence:
+      - 刷单、做任务、点赞、关注或抢单
+      - 佣金、返利或小额返现
+      - 垫付、充值、连单、补单或提现受阻
+    required_evidence_count: 2
+    negative_evidence:
+      - 投资博彩平台优先标签6
+      - 无任务链条的中奖或红包类按标签12判断
+    common_confusions: [0, 6, 12]
+  4:
+    name: 贷款、信用卡、额度与授信诈骗
+    positive_evidence:
+      - 贷款、信用卡、额度、提额或套现
+      - 保证金、手续费、解冻金或验资
+      - 流水、审批、放款或额度压力
+    required_evidence_count: 2
+    negative_evidence:
+      - 征信或信用修复主题优先标签9
+      - 投资理财或博彩资金盘优先标签6
+    common_confusions: [2, 6, 9, 12]
+  5:
+    name: 冒充军警、部队或消防等单位采购
+    positive_evidence:
+      - 军警、部队、消防等单位身份
+      - 采购、订餐、订货或物资需求
+      - 指定供应商、代购或先行垫付
+    required_evidence_count: 2
+    negative_evidence:
+      - 没有军警单位采购身份不属于本类
+      - 普通购物服务交易优先标签7
+    common_confusions: [0, 7, 10, 12]
+  6:
+    name: 投资、理财、博彩与资金盘
+    positive_evidence:
+      - 投资、理财、博彩、数字资产或平台充值
+      - 老师带单、稳赚、高收益或内幕名额
+      - 提现受阻、继续补缴或持续投入资金
+    required_evidence_count: 2
+    negative_evidence:
+      - 刷单任务返利优先标签3
+      - 无投资资金链的一次性中奖类按标签12判断
+    common_confusions: [0, 3, 8, 12]
+  7:
+    name: 虚假商品、服务、票务或代办交易
+    positive_evidence:
+      - 商品、服务、票务、代办、租赁或维修交易
+      - 定金、尾款、手续费或私下付款
+      - 承诺交付但交易证据指向虚假
+    required_evidence_count: 2
+    negative_evidence:
+      - 冒充电商物流客服优先标签1
+      - 游戏账号装备等产品优先标签11
+    common_confusions: [0, 1, 11, 12]
+  8:
+    name: 婚恋、交友与关系诱导
+    positive_evidence:
+      - 婚恋、相亲、交友或网恋关系
+      - 会员、认证、见面、礼物或关系费用
+      - 关系建立或维持是主要诱因
+    required_evidence_count: 2
+    negative_evidence:
+      - 明确引导投资理财或博彩充值优先标签6
+      - 普通熟人领导借钱优先标签10
+    common_confusions: [0, 6, 10, 12]
+  9:
+    name: 征信、信用记录与不良记录修复
+    positive_evidence:
+      - 征信、信用记录、校园贷或黑名单
+      - 消除、修复、注销或验证信用问题
+      - 诱导付款、转账或指定操作
+    required_evidence_count: 2
+    negative_evidence:
+      - 贷款或信用卡办理本身优先标签4
+      - 公检法政府权威压力优先标签2
+    common_confusions: [0, 2, 4, 12]
+  10:
+    name: 冒充领导、亲友、同事或熟人
+    positive_evidence:
+      - 领导、老板、亲友、同事或熟人身份
+      - 借钱、垫款、代付或转账
+      - 紧急、保密、不便出面或临时换号
+    required_evidence_count: 2
+    negative_evidence:
+      - 陌生婚恋交友优先标签8
+      - 官方客服或平台身份不属于本类
+    common_confusions: [0, 5, 8, 12]
+  11:
+    name: 游戏账号、装备、点卡与代练交易
+    positive_evidence:
+      - 游戏账号、装备、皮肤、点卡或游戏币
+      - 代练、充值或游戏交易平台
+      - 付款后交付异常或继续收费
+    required_evidence_count: 2
+    negative_evidence:
+      - 非游戏商品服务优先标签7
+      - 刷单任务链条优先标签3
+    common_confusions: [0, 3, 7, 12]
+  12:
+    name: 其他无法归入1至11的诈骗兜底类
+    positive_evidence:
+      - 中奖、招聘、机票退改签、慈善或其他杂项场景
+      - 存在虚假身份、虚假事实或故意误导
+      - 存在诱导付款、敏感信息、下载或私域操作
+    required_evidence_count: 2
+    negative_evidence:
+      - 能归入标签1至11的具体类别时不得使用标签12
+      - 没有诈骗闭环时应归标签0
+    common_confusions: [0, 1, 2, 3, 6, 7]
+    fallback_policy: true

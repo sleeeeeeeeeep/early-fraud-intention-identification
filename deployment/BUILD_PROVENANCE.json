@@ -1,0 +1,34 @@
+{
+  "model_version": "telefraud-longtext-m1-e1b-20261014",
+  "source_checkpoint_sha256": "0d4a6fdd08b3a371d1d29108a00fa5b683986a819532684f4c1965a8eb95e1ad",
+  "source_checkpoint_alias": "M1_E1B_best_model",
+  "checkpoint_export": "complete tensor state; exact values, no dtype conversion or retraining",
+  "model_parameter_tensors": 429,
+  "state_elements": 1263329863,
+  "source_code_sha256": {
+    "data/role_markers.py": "0bfe8a2e15dc97e60deb45aafe97c9071719fd4cd51af9d71f44b09238c5200b",
+    "data/longdoc_chunker.py": "d583cdc46d3575aebf583670fe6f1a02e67e228c66108fa06a3a736f7bbc1ef8",
+    "data/longdoc_collator.py": "951df2d603bddb4b337f47bd0ab40c251e1ce9ca95740ec8eb667ec7dad7eca6",
+    "models/evidence_pooling.py": "80dfbc6c84b29efad3e5c6455b6fd8abed7ac94bc426a4915ba7e28be9dd050b",
+    "models/shared_chunk_encoder.py": "2f890d95a90ea78b60cc68ac6806e3399f658cf1dde986ca69390511552b6b90",
+    "models/gated_attention_aggregator.py": "086f9f183e7739e6f2ca38726bbd5dae80cbb53a817a1e9acd585a816803c918",
+    "models/hierarchical_transformer_aggregator.py": "c93da214d35081c454fb60455f2358204551984a619228e6c5c9929e211f752e",
+    "models/longdoc_multitask_classifier.py": "d316b7f65f80e3ac26e67a2efe98ed476197d125ae076d3665cfbc1bb289be94"
+  },
+  "base_config_sha256": "45a6a9ef651bc3e5cca9fd4ee4de2815b8229fb41b495d5ba627666283f16f80",
+  "tokenizer_files_sha256": {
+    "tokenizer.json": "6f546f534f221377639b2ff83c463bf9dd4e160fc899162f1e91f5eba92bdd86",
+    "vocab.txt": "366fe2b1318c774fd28bdea58dbcfbd6d6aeae313fdcd9063d170cdc602fd51a",
+    "special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+    "tokenizer_config.json": "ae57eda34a3d4e3bbab5edd30c5b7e4ee3c493fa48c2e1af1443b6bd619afc19"
+  },
+  "training_data_included": false,
+  "private_evaluation_data_included": false,
+  "v365_test_accessed": false,
+  "version_date": "2026-10-14",
+  "delivery_variant": "web_and_cli",
+  "model_unchanged_from_verified_cli_delivery": true,
+  "frozen_inference_files_unchanged": true,
+  "web_added_without_training": true,
+  "web_validation_status": "PASS"
+}
